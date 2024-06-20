@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home | Portfolio</title>
+  </head>
+
+  <body>
+    <h1>Working on it :)</h1>
+
+    <style>
+      .content{
+        display: flex;
+        text-align: center;
+        color: white;
+        margin: 20px 0px;
+      }
+      .center{
+        margin: auto;
+        width: 200px;
+      }
+      .wing{
+        width: 0;
+        overflow: hidden;
+        transition: width 0.2s ease-out;
+      }
+    </style>
+    <script>
+      function OpenWing(id)
+      {
+        const wing = document.getElementById(id);
+        wing.style.width = "40%";
+      }
+      function CloseWing(id)
+      {
+        const wing = document.getElementById(id);
+        wing.style.width = "0";
+      }
+    </script>
+    <div class="content">
+      <div class="wing" id="one" style="background:red;">
+        CV
+      </div>
+      <div class="center" style="background:green;">
+        Profile
+      </div>
+      <div class="wing" id="two" style="background:blue;">
+        Projects
+      </div>
+    </div>
+    
+    <button onClick="OpenWing('one')">Open One</button>
+    <button onClick="CloseWing('one')">Reset One</button><br><br>
+    <button onClick="OpenWing('two')">Open Two</button>
+    <button onClick="CloseWing('two')">Reset Two</button><br><br>
+
+    CV: https://drive.google.com/file/d/1ctXI2PNAnqvRLMoUbHaqPnIhxCBq-79C/view?usp=sharing<br>
+    <br>
+    Projects | Here are some of the projects I've worked on
+    <br>
+    Stealing Stuff | University (Year 3) Group Project | Lead Programmer | Unreal BP / C++ | https://drive.google.com/file/d/1cdI1I8MREgJK1mekxHXm8Wkr70h945SV/view?usp=sharing<br>
+    An arcade-style game where players steal objects in the environment by moving them to a specified zone, while avoiding detection<br>
+    https://www.youtube.com/watch?v=tQ39e2bVUx4<br>
+    This project achieved 3rd place in both the Sumo Digital award for Game Design and Rockstar Leeds award for Best Team at the Game Republic Student Showcase 2020<br>
+    <br>
+    Modular Weapon System | University (Year 3) Solo Project | No Role | Unreal BP / C++ | https://drive.google.com/file/d/1FL7JC5MxsdYON5pJxCFDuFscflnT7bJb/view?usp=sharing<br>
+    A Modular weapon system, which uses 'Cores' to define the firing mechanism of the weapon and 'Modifiers' to change the behaviour of the weapon<br>
+    <br>
+    Blackjack | Personal Project | No Role | C++ | New: https://drive.google.com/file/d/1Dxu2lgY2xsNZEycIBGS2qDypsPgd5VhF/view?usp=sharing / Old: https://drive.google.com/file/d/1JCQQ-3-ZvVsFoVryRTLTLAlAmcz7fBsg/view?usp=sharing<br>
+    A simple windows console application which allows player(s) to engage in a game of Blackjack<br>
+    <br>
+    Dungeon Hunt | University (Year 3) Group Project | Programmer | DirectX API / C++ | https://drive.google.com/file/d/1i81KKi6N1ZZGR5Nc-6496tDg0xMDQbjF/view?usp=sharing<br>
+    A first person shooter game developed using the DirectX API<br>
+    <br>
+    Minion Madness | University (Year 2) Group Project | Programmer | Unity / C++ | https://drive.google.com/file/d/1EvgnnruRGRzwtB_LAU4ZSZl4HAreMn7F/view?usp=sharing<br>
+    A chess-like 2 player turn based game
+    
+  </body>
+</html>
