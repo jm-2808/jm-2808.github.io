@@ -7,5 +7,52 @@
   <body>
     <h1>Working on it :)</h1>
     <a href="https://jackmagnay2808.wixsite.com/portfolio">Old Portfolio</a>
+
+    <style>
+      .content{
+        display: flex;
+        text-align: center;
+        color: white;
+        margin: 20px 0px;
+      }
+      .center{
+        margin: auto;
+        width: 200px;
+      }
+      .wing{
+        width: 0;
+        overflow: hidden;
+        transition: width 0.2s ease-out;
+      }
+    </style>
+    <script>
+      function OpenWing(id)
+      {
+        const wing = document.getElementById(id);
+        wing.style.width = "40%";
+      }
+      function CloseWing(id)
+      {
+        const wing = document.getElementById(id);
+        wing.style.width = "0";
+      }
+    </script>
+    <div class="content">
+      <div class="wing" id="one" style="background:red;">
+        test
+      </div>
+      <div class="center" style="background:green;">
+        test
+      </div>
+      <div class="wing" id="two" style="background:blue;">
+        test
+      </div>
+    </div>
+    
+    <button onClick="OpenWing('one')">Open One</button>
+    <button onClick="CloseWing('one')">Reset One</button><br><br>
+    <button onClick="OpenWing('two')">Open Two</button>
+    <button onClick="CloseWing('two')">Reset Two</button>
+    
   </body>
 </html>
