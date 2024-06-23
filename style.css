@@ -235,6 +235,11 @@ footer div:first-child
     width: 50%;
     margin: 0.25em auto 1.25em;
 }
+.profile .profile-links a
+{
+    margin: auto;
+    padding: 0;
+}
 .profile .profile-links button
 {
     width: var(--button-size);
