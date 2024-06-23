@@ -237,7 +237,7 @@ footer div:first-child
     width: 50%;
     margin: 0.25em auto 1.25em;
 }
-.profile .profile-links > a
+.profile .profile-links a
 {
     display: flex;
     margin: auto;
