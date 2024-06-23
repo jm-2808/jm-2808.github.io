@@ -1,78 +1,368 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Home | Portfolio</title>
-  </head>
+    <head>
 
-  <body>
-    <h1>Working on it :)</h1>
+        <title></title>
 
-    <style>
-      .content{
-        display: flex;
-        text-align: center;
-        color: white;
-        margin: 20px 0px;
-      }
-      .center{
-        margin: auto;
-        width: 200px;
-      }
-      .wing{
-        width: 0;
-        overflow: hidden;
-        transition: width 0.2s ease-out;
-      }
-    </style>
+        <!--<link rel='icon' type='image/x-icon' href='assets/favicon.ico'>-->
+        
+        <!-- External Fonts/Icons -->
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins:ital,wght@0,700;1,700&display=swap'>
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap'>
+        <script src='https://unpkg.com/lucide@latest'></script>
+
+        <!-- General Includes -->
+        <link id='theme' rel='stylesheet' href='style/theme-dark.css'>
+        <link rel='stylesheet' href='style/main.css'>
+        <script src='code/main.js'></script>
+
+        <link rel='stylesheet' href='style/arcade.css'>
+        <script src='code/arcade.js'></script>
+
+    </head>
+    <body>
+        <header id='header'>
+
+            <div class='title'>
+                <h1>Jack Magnay</h1>Video Game Programmer
+            </div>
+            <table class='menu'>
+                <tr>
+                    <td><button title='Change Theme' onClick='SetTheme((CurrentTheme == "light" ? "dark" : "light"));'><i data-lucide='sun-moon'></i></button></td>
+                    <td class='theme-label'>Theme</td>
+                    <td class='navigation-label'>Navigation</td>
+                    <td><button title='Home' onClick='ShowPage("Home");'><i data-lucide='house'></i></button></td>
+                    <td><button title='Projects' onClick='ShowPage("Projects");'><i data-lucide='folder'></i></button></td>
+                    <td><button title='Arcade' onClick='ShowPage("Arcade");'><i data-lucide='gamepad-2'></i></button></td>
+                </tr>
+            </table>
+
+        </header>
+        <main>
+
+            <div class='profile'>
+                <span class='profile-detail'><img src='assets/profile.png'></span>
+                <span class='profile-detail'><h1>Jack Magnay</h1></span>
+                <hr>
+                <span class='profile-detail'>Video Game Programmer with 5 years industry experience</span>
+                <span class='profile-detail'>BSc (1st Class Honours) Computer Science for Games, Sheffield Hallam University</span>
+                <span class='profile-detail'><a href='https://drive.google.com/file/d/1_PTcyZpu6s96YmVSy9Tj0wgc9CwT_OcZ/view?usp=sharing' target='_blank'><button title='View CV'>View CV</button></a></span>
+                <span class='profile-detail'><button title='View Projects' onClick='ShowPage("Projects");'>View Projects</button></span>
+                <div class='profile-links'>
+                    <a href='mailto:jack.magnay.2808@gmail.com' target='_blank'><button title='Email'><i data-lucide='mail'></i></button></a>
+                    <a href='https://www.mobygames.com/person/1144805/jack-magnay/' target='_blank'><button title='MobyGames'><i data-lucide='user'></i></button></a>
+                    <a href='https://www.linkedin.com/in/jack-magnay-a70595316/' target='_blank'><button title='LinkedIn'><i data-lucide='linkedin'></i></button></a>
+                    <a href='https://github.com/jm-2808' target='_blank'><button title='GitHub'><i data-lucide='github'></i></button></a>
+                </div>
+            </div>
+
+            <div class='page' id='Projects'>
+
+                <div class='block'>
+                    <div class='menu'>
+                        <button title='Sumo Digital' onClick='ScrollToBlock("projects-sumo");'>Sumo Digital</button>
+                        <button title='University Assignments' onClick='ScrollToBlock("projects-university");'>University</button>
+                        <button title='Personal Projects' onClick='ScrollToBlock("projects-personal");'>Personal</button>
+                    </div>
+                </div>
+
+                <div class='block' id='projects-sumo'>
+                    <div class='block-title' style='background:#BE1E2D;'>
+                        <img class='icon' src='assets/logo-sumo.png'>
+                        <h1>Sumo Digital</h1>
+                    </div>
+                    <div class='project'>
+                        <div class='project-content'>
+                            <div class='details'>
+                                <h2>Unannounced Project</h2>
+                                <table class='experience'>
+                                    <tr>
+                                        <td>08/2023 - Current</td>
+                                        <td>Programmer</td>
+                                        <td>Unreal Engine 5 (BP / C++)</td>
+                                    </tr>
+                                </table>
+                                <p>An unannounced multiplayer platformer developed in Unreal Engine 5</p>
+                                <p>
+                                    I worked on and took ownership of various gameplay mechanics, which involved:<br>
+                                    - Taking design documentation to cost and breaking down into tasks<br>
+                                    - Communicating daily with the design and UI disciplines alongside bi-weekly scrums<br>
+                                    - Owning, implementing and maintaining various gameplay features<br>
+                                    - Partaking in show-and-tell meetings and feature reviews
+                                </p>
+                            </div>
+                        </div>
+                        <div class='project-icon'>
+                            <i data-lucide='image'></i> &nbsp; No Image
+                        </div>
+                    </div>
+                    <div class='project'>
+                        <div class='project-content'>
+                            <div class='details'>
+                                <h2>Unannounced Project</h2>
+                                <table class='experience'>
+                                    <tr>
+                                        <td>06/2022 - 07/2023</td>
+                                        <td>Programmer</td>
+                                        <td>Unreal Engine 5 (BP / C++)</td>
+                                    </tr>
+                                </table>
+                                <p>An unannounced third-person shooter developed in Unreal Engine 5</p>
+                                <p>
+                                    I worked on various aspects of the player character, including character abilities using the Unreal GAS system and weapons which were designed using a custom modular approach.
+                                    I was resposible for prototyping the modular weapon system and presenting the proposal in a feature review meeting
+                                </p>
+                            </div>
+                        </div>
+                        <div class='project-icon'>
+                            <i data-lucide='image'></i> &nbsp; No Image
+                        </div>
+                    </div>
+                    <div class='project'>
+                        <div class='project-content'>
+                            <div class='details'>
+                                <h2>Unannounced Project</h2>
+                                <table class='experience'>
+                                    <tr>
+                                        <td>11/2020 - 06/2022</td>
+                                        <td>Junior Programmer</td>
+                                        <td>C++</td>
+                                    </tr>
+                                </table>
+                                <p>An unannounced sports game developed using an in-house engine</p>
+                                <p>
+                                    I worked on a system for tracking various stats during gameplay to allow them to be presented to the player, the framework for various smaller gameplay segments and assisted with the implementation of some of these segments
+                                </p>
+                            </div>
+                        </div>
+                        <div class='project-icon'>
+                            <i data-lucide='image'></i> &nbsp; No Image
+                        </div>
+                    </div>
+                    <div class='project'>
+                        <div class='project-content'>
+                            <div class='details'>
+                                <h2>Sackboy: A Big Adventure</h2>
+                                <table class='experience'>
+                                    <tr>
+                                        <td>08/2020 - 11/2020</td>
+                                        <td>Junior Programmer</td>
+                                        <td>Unreal Engine 4 (BP / C++)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>07/2018 - 08/2019</td>
+                                        <td>Placement</td>
+                                        <td>Unreal Engine 4 (BP / C++)</td>
+                                    </tr>
+                                </table>
+                                <p>"Iconic PlayStation® hero Sackboy bursts back into breathtaking action with a huge, fun and frantic 3D multiplayer platforming adventure - and a whole new edgy sackitude!"</p>
+                                <p>
+                                    I worked on multiple areas of this game, both during my placement year and as a full-time employee, including
+                                    sackboy himself, 
+                                    an automated testing system to play through test levels then output telemetry results to a web front-end 
+                                    and automated lighting build tools
+                                </p>
+                            </div>
+                            <div class='media'>
+                                <iframe src="https://www.youtube.com/embed/ZOk3fj5ujNM?si=MSVHAEmzO_4ow3yL" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <img class='project-icon' src='assets/project-sackboy.png'>
+                    </div>
+                </div>
+
+                <div class='block' id='projects-university'>
+                    <div class='block-title'>
+                        <span class='icon'><i data-lucide='graduation-cap'></i></span>
+                        <h1>University Assignments</h1>
+                    </div>
+                    <div class='project'>
+                        <div class='project-content'>
+                            <div class='details'>
+                                <h2>
+                                    Modular Weapons
+                                    <a href='https://github.com/jm-2808/sample-project_niobium' target='_blank'><button title='View Sample Files'><i data-lucide='github'></i></button></a>
+                                </h2>
+                                <table class='experience'>
+                                    <tr>
+                                        <td>2020</td>
+                                        <td>Programmer</td>
+                                        <td>Unreal Engine 4 (BP / C++)</td>
+                                    </tr>
+                                </table>
+                                <p>
+                                    My final project at university, this modular weapon system ( codenamed <em>Project_Niobium</em> ) uses 'Cores' to define base attributes of the weapon and 'Modifiers' to alter the weapon's behaviour. 
+                                    The parameters of these weapons could be altered at runtime to allow the user/player to dynamically adjust and test configurations
+                                </p>
+                            </div>
+                        </div>
+                        <div class='project-icon'>
+                            <i data-lucide='image'></i> &nbsp; No Image
+                        </div>
+                    </div>
+                    <div class='project'>
+                        <div class='project-content'>
+                            <div class='details'>
+                                <h2>
+                                    Stealing Stuff
+                                    <a href='https://github.com/jm-2808/sample-stealing_stuff' target='_blank'><button title='View Sample Files'><i data-lucide='github'></i></button></a>
+                                </h2>
+                                <table class='experience'>
+                                    <tr>
+                                        <td>2020</td>
+                                        <td>Lead Programmer</td>
+                                        <td>Unreal Engine 4 (BP / C++)</td>
+                                    </tr>
+                                </table>
+                                <p>A group project from my final year, Stealing Stuff is an arcade-style game where players sneak around and steal everything that isn't nailed down, working together as a team to steal larger items</p> 
+                                <p>This project achieved <b>3rd place</b> in both the <b>Sumo Digital Award for Game Design</b> and <b>Rockstar Leeds Award for Best Team</b> at the Game Republic Student Showcase 2020</p> 
+                            </div>
+                            <div class='media'>
+                                <iframe src="https://www.youtube.com/embed/tQ39e2bVUx4?si=PSeu7iPj9aQScJCb" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <img class='project-icon' src='assets/project-stealingstuff.png'>
+                    </div>
+                    <div class='project'>
+                        <div class='project-content'>
+                            <div class='details'>
+                                <h2>
+                                    Dungeon Hunt
+                                    <a href='https://github.com/jm-2808/sample-dungeon_hunt' target='_blank'><button title='View Sample Files'><i data-lucide='github'></i></button></a>
+                                </h2>
+                                <table class='experience'>
+                                    <tr>
+                                        <td>2020</td>
+                                        <td>Programmer</td>
+                                        <td>DirectX API (C++)</td>
+                                    </tr>
+                                </table>
+                                <p>A group project from my final year, Dungeon Hunt is a first person combat game developed using the DirectX API where the player makes their way through a series of levels using weapons to defeat enemy drones</p>
+                            </div>
+                        </div>
+                        <img class='project-icon' src='assets/project-dungeonhunt.png'>
+                    </div>
+                </div>
+
+                <div class='block' id='projects-personal'>
+                    <div class='block-title'>
+                        <span class='icon'><i data-lucide='folder'></i></span>
+                        <h1>Personal Projects</h1>
+                    </div>
+                    <div class='project'>
+                        <div class='project-content'>
+                            <div class='details'>
+                                <h2>
+                                    Blackjack
+                                    <a href='https://github.com/jm-2808/sample-blackjack' target='_blank'><button title='View Sample Files'><i data-lucide='github'></i></button></a>
+                                </h2>
+                                <table class='experience'>
+                                    <tr>
+                                        <td>2018 / 2020</td>
+                                        <td>Programmer</td>
+                                        <td>C++</td>
+                                    </tr>
+                                </table>
+                                <p>
+                                    A simple windows console application which allows player(s) to engage in a game of Blackjack. Two versions are available:<br>
+                                    - The older version was made during early university and uses a simple linear execution style<br>
+                                    - The newer version was made during later university and uses threading to emulate an engine's game/input thread system
+                                </p>
+                            </div>
+                        </div>
+                        <img class='project-icon' src='assets/project-blackjack.png'>
+                    </div>
+                    <div class='project'>
+                        <div class='project-content'>
+                            <div class='details'>
+                                <h2>
+                                    Portfolio Website
+                                    <a href='https://github.com/jm-2808/jm-2808.github.io' target='_blank'><button title='View Sample Files'><i data-lucide='github'></i></button></a>
+                                </h2>
+                                <table class='experience'>
+                                    <tr>
+                                        <td>06/2024+</td>
+                                        <td>Developer</td>
+                                        <td>HTML / CSS / JS</td>
+                                    </tr>
+                                </table>
+                                <p>
+                                    This portfolio website was programmed by me! My apologies if it breaks on weird resolutions, the page is only designed with 16:9 aspect ratios in mind for now<br>
+                                    The site is hosted using <b>Github Pages</b> (See page footer)
+                                </p>
+                            </div>
+                        </div>
+                        <div class='project-icon'>
+                            <i data-lucide='arrow-left'></i> &nbsp; This
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class='page' id='Arcade'>
+
+                <div class='gamepad'>
+                    <div class='body'>
+                        <div class='grip'>
+                            <div class='ring'></div>
+                            <div class='dpad'>
+                                    <button onClick='GAMEPAD.Press(BUTTON.DPADUP);'></button>
+                                    <button onClick='GAMEPAD.Press(BUTTON.DPADRIGHT);'></button>
+                                    <button onClick='GAMEPAD.Press(BUTTON.DPADDOWN);'></button>
+                                    <button onClick='GAMEPAD.Press(BUTTON.DPADLEFT);'></button>
+                                    <button onClick='GAMEPAD.Press(BUTTON.DPADCENTER);'><div class='indent'></div></button>
+                            </div>
+                        </div>
+                        <div class='grip right'>
+                            <div class='buttonpad'>
+                                <button onClick='GAMEPAD.Press(BUTTON.Y);'>Y</button>
+                                <button onClick='GAMEPAD.Press(BUTTON.X);'>X</button>
+                            </div>
+                            <div class='buttonpad'>
+                                <button onClick='GAMEPAD.Press(BUTTON.B);'>B</button>
+                                <button onClick='GAMEPAD.Press(BUTTON.A);'>A</button>
+                            </div>
+                        </div>
+                        <div class='cable'></div>
+                        <div class='light'></div>
+                        <div class='center'>
+                            <button onClick='GAMEPAD.Press(BUTTON.SELECT);'>Select</button>
+                            <button onClick='GAMEPAD.Press(BUTTON.START); CheckCombos();'>Start</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='gamescreen'>
+
+                    <div class='blackjack'>
+                        <div class='hand'>
+                            <!-- WIP - Blackjack game to go here -->
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+        <footer>
+
+            <div class='lucide'>
+                Icons from <a href='https://lucide.dev/'>Lucide</a><br>
+                ISC License<br>
+                Copyright (c) 2020, Lucide Contributors
+            </div>
+            <div class='github'>
+                Hosted via <a href='https://pages.github.com/'>Github Pages</a><br>
+                Last Updated - July 2024
+            </div>
+
+        </footer>
+    </body>
     <script>
-      function OpenWing(id)
-      {
-        const wing = document.getElementById(id);
-        wing.style.width = "40%";
-      }
-      function CloseWing(id)
-      {
-        const wing = document.getElementById(id);
-        wing.style.width = "0";
-      }
-    </script>
-    <div class="content">
-      <div class="wing" id="one" style="background:red;">
-        CV
-      </div>
-      <div class="center" style="background:green;">
-        Profile
-      </div>
-      <div class="wing" id="two" style="background:blue;">
-        Projects
-      </div>
-    </div>
-    
-    <button onClick="OpenWing('one')">Open One</button>
-    <button onClick="CloseWing('one')">Reset One</button><br><br>
-    <button onClick="OpenWing('two')">Open Two</button>
-    <button onClick="CloseWing('two')">Reset Two</button><br><br>
 
-    CV: https://drive.google.com/file/d/1ctXI2PNAnqvRLMoUbHaqPnIhxCBq-79C/view?usp=sharing<br>
-    <br>
-    Projects | Here are some of the projects I've worked on
-    <br>
-    Stealing Stuff | University (Year 3) Group Project | Lead Programmer | Unreal BP / C++ | https://drive.google.com/file/d/1cdI1I8MREgJK1mekxHXm8Wkr70h945SV/view?usp=sharing<br>
-    An arcade-style game where players steal objects in the environment by moving them to a specified zone, while avoiding detection<br>
-    https://www.youtube.com/watch?v=tQ39e2bVUx4<br>
-    This project achieved 3rd place in both the Sumo Digital award for Game Design and Rockstar Leeds award for Best Team at the Game Republic Student Showcase 2020<br>
-    <br>
-    Modular Weapon System | University (Year 3) Solo Project | No Role | Unreal BP / C++ | https://drive.google.com/file/d/1FL7JC5MxsdYON5pJxCFDuFscflnT7bJb/view?usp=sharing<br>
-    A Modular weapon system, which uses 'Cores' to define the firing mechanism of the weapon and 'Modifiers' to change the behaviour of the weapon<br>
-    <br>
-    Blackjack | Personal Project | No Role | C++ | New: https://drive.google.com/file/d/1Dxu2lgY2xsNZEycIBGS2qDypsPgd5VhF/view?usp=sharing / Old: https://drive.google.com/file/d/1JCQQ-3-ZvVsFoVryRTLTLAlAmcz7fBsg/view?usp=sharing<br>
-    A simple windows console application which allows player(s) to engage in a game of Blackjack<br>
-    <br>
-    Dungeon Hunt | University (Year 3) Group Project | Programmer | DirectX API / C++ | https://drive.google.com/file/d/1i81KKi6N1ZZGR5Nc-6496tDg0xMDQbjF/view?usp=sharing<br>
-    A first person shooter game developed using the DirectX API<br>
-    <br>
-    Minion Madness | University (Year 2) Group Project | Programmer | Unity / C++ | https://drive.google.com/file/d/1EvgnnruRGRzwtB_LAU4ZSZl4HAreMn7F/view?usp=sharing<br>
-    A chess-like 2 player turn based game
-    
-  </body>
+        SetTitle("Home");
+        lucide.createIcons(); // This has to go last because it won't generate icons for things lower down the page than the function call
+
+    </script>
 </html>
