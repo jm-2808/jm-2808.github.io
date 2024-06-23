@@ -237,6 +237,7 @@ footer div:first-child
 }
 .profile .profile-links a
 {
+    display: flex;
     margin: auto;
     padding: 0;
 }
