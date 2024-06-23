@@ -215,6 +215,8 @@ footer div:first-child
     background: var(--primary);
 
     display: flex;
+    align-items: center;
+    justify-content: center;
     height: 3.75em;
     padding: 0 15%;
 }
