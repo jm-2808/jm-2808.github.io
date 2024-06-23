@@ -86,6 +86,13 @@ button:hover
     background: var(--secondary);
     color: var(--accent-background);
 }
+button:disabled
+{
+    opacity: 0.5;
+    background: #555;
+    border-color: #555;
+    color: white;
+}
 a:has(button)
 { 
     text-decoration: none;
