@@ -207,8 +207,7 @@ footer div:first-child
 }
 .profile .profile-detail
 {
-    margin: auto;
-    margin-bottom: 1em;
+    margin: 0 auto 1em;
     padding: 0 0.5em;
 }
 .profile .profile-links
@@ -233,9 +232,11 @@ footer div:first-child
     border: 0.15em solid var(--accent-background);
     margin-bottom: 1.5em;
 }
+
 .profile .profile-detail button
 {
-    width: 12em;
+    display: inline-block;
+    width: 12vw;
     margin: auto
 }
 .profile .profile-links a
@@ -247,7 +248,6 @@ footer div:first-child
 .profile .profile-links button
 {
     width: var(--button-size);
-    margin: auto;
 }
 
 /*=== Pages ======================================================================================*/
@@ -388,14 +388,15 @@ footer div:first-child
 {
     margin: 0.4em 0;
 }
-.project .project-content .experience td:nth-child(1)
+.project .project-content .experience td
 {
-    border-right: 1px solid var(--border);
-    padding-right: 0.5em;
+    border-left: 1px solid var(--border);
+    padding: 0 0.5em;
 }
-.project .project-content .experience td:nth-child(2)
+.project .project-content .experience td:first-child
 {
-    padding-left: 0.5em;
+    border-left: none;
+    padding-left: 0;
 }
 
 .project .project-content p

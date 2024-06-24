@@ -34,7 +34,7 @@ function ShowPage(id)
 // Set the title of the webpage 
 function SetTitle(text)
 {
-    document.title = "Portfolio | " + text.toUpperCase();
+    document.title = "JM | " + text;
 }
 
 // Set the visibility of a page (make sure delays match the transition duration of the page class in css file)
