@@ -19,12 +19,16 @@
             <div class='title'>
                 <h1>Jack Magnay</h1>Video Game Programmer
             </div>
-            <div class='menu'>
-                <button title='Change Theme' onClick='ToggleTheme();'><i data-lucide='sun-moon'></i></button>
-                <button title='Change Theme' onClick='ShowPage("Home");'><i data-lucide='house'></i></button>
-                <button title='Change Theme' onClick='ShowPage("Projects");'><i data-lucide='folder'></i></button>
-                <button title='Change Theme' onClick='ShowPage("Terminal");'><i data-lucide='gamepad-2'></i></button>
-            </div>
+            <table class='menu'>
+                <tr>
+                    <td><button title='Change Theme' onClick='ToggleTheme();'><i data-lucide='sun-moon'></i></button></td>
+                    <td class='theme'>Theme</td>
+                    <td class='navigation'>Navigation</td>
+                    <td><button title='Home' onClick='ShowPage("Home");'><i data-lucide='house'></i></button></td>
+                    <td><button title='Projects' onClick='ShowPage("Projects");'><i data-lucide='folder'></i></button></td>
+                    <td><button title='Gamepad' onClick='ShowPage("Gamepad");'><i data-lucide='gamepad-2'></i></button></td>
+                </tr>
+            </table>
 
         </header>
         <main>
@@ -83,7 +87,7 @@
                             <div class='details'>
                                 <h2>
                                     Modular Weapons
-                                    <a href='https://github.com/jm-2808/project_niobium-sample' target='_blank'><button title='View Sample Files'><i data-lucide='download'></i></button></a>
+                                    <a href='https://github.com/jm-2808/sample-project_niobium' target='_blank'><button title='View Sample Files'><i data-lucide='download'></i></button></a>
                                 </h2>
                                 <table class='experience'>
                                     <tr>
@@ -104,7 +108,7 @@
                             <div class='details'>
                                 <h2>
                                     Stealing Stuff
-                                    <a href='https://github.com/jm-2808/stealing_stuff-sample' target='_blank'><button title='View Sample Files'><i data-lucide='download'></i></button></a>
+                                    <a href='https://github.com/jm-2808/sample-stealing_stuff' target='_blank'><button title='View Sample Files'><i data-lucide='download'></i></button></a>
                                 </h2>
                                 <table class='experience'>
                                     <tr>
@@ -127,7 +131,7 @@
                             <div class='details'>
                                 <h2>
                                     Dungeon Hunt
-                                    <a href='https://github.com/jm-2808/dungeon_hunt-sample' target='_blank'><button title='View Sample Files'><i data-lucide='download'></i></button></a>
+                                    <a href='https://github.com/jm-2808/sample-dungeon_hunt' target='_blank'><button title='View Sample Files'><i data-lucide='download'></i></button></a>
                                 </h2>
                                 <table class='experience'>
                                     <tr>
@@ -153,7 +157,7 @@
                             <div class='details'>
                                 <h2>
                                     Blackjack
-                                    <a href='https://github.com/jm-2808/blackjack-sample' target='_blank'><button title='View Sample Files'><i data-lucide='download'></i></button></a>
+                                    <a href='https://github.com/jm-2808/sample-blackjack' target='_blank'><button title='View Sample Files'><i data-lucide='download'></i></button></a>
                                 </h2>
                                 <table class='experience'>
                                     <tr>
@@ -195,7 +199,7 @@
                 </div>
 
             </div>
-            <div class='page' id='Terminal'>
+            <div class='page' id='Gamepad'>
 
                 <h1>A space for easter eggs should exists here, but unfortunately it does not</h1>
                 <em>Maybe the developer didn't program it yet...</em>

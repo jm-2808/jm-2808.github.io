@@ -163,20 +163,22 @@ header .title h1:before
     margin-right: 0.4em;
 }
 
-header .menu
+header .menu td
 {
-    display: flex;
-    justify-content: right;
-    width: 25%;
+    padding: 0 0.2em;
+}
+header .menu .theme
+{
+    padding: 0 1.5em 0 1.0em;
+    border-right: 1px solid var(--border);
+}
+header .menu .navigation
+{
+    padding: 0 1.0em 0 1.5em;
 }
 header .menu button
 {
     width: var(--button-size);
-    margin-left: 0.6em;
-}
-header .menu button:first-child
-{
-    margin-right: 0.8em;
 }
 
 footer
