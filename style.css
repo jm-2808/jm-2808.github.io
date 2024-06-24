@@ -71,10 +71,10 @@ button
     display: flex;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
     height: var(--button-size);
     border: 0.25em solid var(--accent-background);
     border-radius: 1.25em;
-    padding: auto;
     text-decoration: none;
     text-align: center;
 
@@ -163,26 +163,20 @@ header .title h1:before
     margin-right: 0.4em;
 }
 
-header .theme
-{
-    width: 3%;
-}
-header .theme button
-{
-    width: var(--button-size);
-    margin: auto;
-}
-
 header .menu
 {
     display: flex;
-    width: 22%;
+    justify-content: right;
+    width: 25%;
 }
 header .menu button
 {
-    flex-basis: 0;
-    flex-grow: 1;
-    margin-left: 0.4em;
+    width: var(--button-size);
+    margin-left: 0.6em;
+}
+header .menu button:first-child
+{
+    margin-right: 0.8em;
 }
 
 footer
@@ -239,10 +233,10 @@ footer div:first-child
     border: 0.15em solid var(--accent-background);
     margin-bottom: 1.5em;
 }
-.profile button
+.profile .profile-detail button
 {
-    width: 50%;
-    margin: 0.25em auto 1.25em;
+    width: 12em;
+    margin: auto
 }
 .profile .profile-links a
 {
