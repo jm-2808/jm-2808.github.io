@@ -19,13 +19,11 @@
             <div class='title'>
                 <h1>Portfolio</h1>Jack Magnay
             </div>
-            <div class='theme'>
-                <button title='Change Theme' onClick='ToggleTheme();'><i data-lucide='sun-moon'></i></button>
-            </div>
             <div class='menu'>
-                <button onClick='ShowPage("Home");'>Home</button>
-                <button onClick='ShowPage("Projects");'>Projects</button>
-                <button onClick='ShowPage("Terminal");'><i data-lucide='gamepad-2'></i></button>
+                <button title='Change Theme' onClick='ToggleTheme();'><i data-lucide='sun-moon'></i></button>
+                <button title='Change Theme' onClick='ShowPage("Home");'><i data-lucide='house'></i></button>
+                <button title='Change Theme' onClick='ShowPage("Projects");'><i data-lucide='folder'></i></button>
+                <button title='Change Theme' onClick='ShowPage("Terminal");'><i data-lucide='gamepad-2'></i></button>
             </div>
 
         </header>
@@ -37,7 +35,8 @@
                 <hr>
                 <span class='profile-detail'>Video Game Programmer with 4 years professional experience</span>
                 <span class='profile-detail'>BSc (1st Class Honours) Computer Science for Games, Sheffield Hallam University</span>
-                <a href='https://drive.google.com/file/d/1ctXI2PNAnqvRLMoUbHaqPnIhxCBq-79C/view?usp=sharing' target='_blank'><button title='View CV' disabled>View CV</button></a>
+                <span class='profile-detail'><a href='https://drive.google.com/file/d/1ctXI2PNAnqvRLMoUbHaqPnIhxCBq-79C/view?usp=sharing' target='_blank'><button title='View CV' disabled>View CV</button></a></span>
+                <span class='profile-detail'><button title='View Projects' onClick='ShowPage("Projects");'>View Projects</button></span>
                 <div class='profile-links'>
                     <button title='Email' disabled><i data-lucide='mail'></i></button>
                     <a href='https://www.mobygames.com/person/1144805/jack-magnay/' target='_blank'><button title='MobyGames'><i data-lucide='user'></i></button></a>
