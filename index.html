@@ -201,8 +201,38 @@
             </div>
             <div class='page' id='Gamepad'>
 
-                <h1>A space for easter eggs should exists here, but unfortunately it does not</h1>
-                <em>Maybe the developer didn't program it yet...</em>
+                <div class='gamepad'>
+                    <div class='body'>
+                        <div class='grip'>
+                            <div class='ring'></div>
+                            <div class='dpad'>
+                                    <button onClick='AddCombo("du");'></button>
+                                    <button onClick='AddCombo("dr");'></button>
+                                    <button onClick='AddCombo("dd");'></button>
+                                    <button onClick='AddCombo("dl");'></button>
+                                    <button onClick='AddCombo("dc");'><div class='dot'></div></button>
+                            </div>
+                        </div>
+                        <div class='grip right'>
+                            <div class='buttonpad'>
+                                <button onClick='AddCombo("by");'>Y</button>
+                                <button onClick='AddCombo("bx");'>X</button>
+                            </div>
+                            <div class='buttonpad'>
+                                <button onClick='AddCombo("bb");'>B</button>
+                                <button onClick='AddCombo("ba");'>A</button>
+                            </div>
+                        </div>
+                        <div class='cable'></div>
+                        <div class='light'></div>
+                        <div class='center'>
+                            <button onClick='AddCombo("select");'>Select</button>
+                            <button onClick='AddCombo("start");'>Start</button>
+                        </div>
+                    </div>
+                </div>
+
+                <h1 id='placeholderoutput' style='height: 4em;'></h1>
 
             </div>
 

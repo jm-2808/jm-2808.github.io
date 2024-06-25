@@ -26,6 +26,7 @@ function ShowPage(id)
     }
 
     SetTitle(id);
+    ClearCombo();
     currentPage = id;
 }
 
@@ -67,4 +68,46 @@ function SetTheme(theme)
 }
 
 
-//=== Easter Eggs =====================================================================================
+//=== Gamepad =========================================================================================
+
+var combo = [ ];
+
+function AddCombo(button)
+{
+    if(combo.length > 15)
+    {
+        combo.shift();
+    }
+
+    combo.push(button);
+
+    if(CheckCombo(["du", "du", "dd", "dd", "dl", "dr", "dl", "dr", "bb", "ba", "start"])) // Konami Code
+    {
+        const element = document.getElementById("placeholderoutput");
+        element.textContent = "Konami Code!";
+    }
+    else
+    {
+        const element = document.getElementById("placeholderoutput");
+        element.textContent = "";
+    }
+}
+
+function CheckCombo(compare)
+{
+    for (let index = 0; index < compare.length; ++index) 
+    {
+
+        if(combo[combo.length - index] != compare[compare.length - index])
+        {
+            return false;
+        }
+    }
+
+    return true;
+}
+
+function ClearCombo()
+{
+    combo = [];
+}
