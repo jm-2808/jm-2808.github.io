@@ -3,6 +3,8 @@
     <head>
 
         <title></title>
+
+        <!--<link rel='icon' type='image/x-icon' href='assets/favicon.ico'>-->
         
         <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins:ital,wght@0,700;1,700&display=swap'>
         <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap'>
@@ -26,7 +28,7 @@
                     <td class='navigation'>Navigation</td>
                     <td><button title='Home' onClick='ShowPage("Home");'><i data-lucide='house'></i></button></td>
                     <td><button title='Projects' onClick='ShowPage("Projects");'><i data-lucide='folder'></i></button></td>
-                    <td><button title='Gamepad' onClick='ShowPage("Gamepad");'><i data-lucide='gamepad-2'></i></button></td>
+                    <td><button title='Secret' onClick='ShowPage("Secret");'><i data-lucide='gamepad-2'></i></button></td>
                 </tr>
             </table>
 
@@ -42,9 +44,9 @@
                 <span class='profile-detail'><a href='https://drive.google.com/file/d/1ctXI2PNAnqvRLMoUbHaqPnIhxCBq-79C/view?usp=sharing' target='_blank'><button title='View CV' disabled>View CV</button></a></span>
                 <span class='profile-detail'><button title='View Projects' onClick='ShowPage("Projects");'>View Projects</button></span>
                 <div class='profile-links'>
-                    <button title='Email' disabled><i data-lucide='mail'></i></button>
+                    <a href='' target='_blank'><button title='Email' disabled><i data-lucide='mail'></i></button></a>
                     <a href='https://www.mobygames.com/person/1144805/jack-magnay/' target='_blank'><button title='MobyGames'><i data-lucide='user'></i></button></a>
-                    <button title='GitHub' disabled><i data-lucide='github'></i></button>
+                    <a href='https://github.com/jm-2808' target='_blank'><button title='GitHub'><i data-lucide='github'></i></button></a>
                 </div>
             </div>
 
@@ -87,7 +89,7 @@
                             <div class='details'>
                                 <h2>
                                     Modular Weapons
-                                    <a href='https://github.com/jm-2808/sample-project_niobium' target='_blank'><button title='View Sample Files'><i data-lucide='download'></i></button></a>
+                                    <a href='https://github.com/jm-2808/sample-project_niobium' target='_blank'><button title='View Sample Files'><i data-lucide='github'></i></button></a>
                                 </h2>
                                 <table class='experience'>
                                     <tr>
@@ -108,7 +110,7 @@
                             <div class='details'>
                                 <h2>
                                     Stealing Stuff
-                                    <a href='https://github.com/jm-2808/sample-stealing_stuff' target='_blank'><button title='View Sample Files'><i data-lucide='download'></i></button></a>
+                                    <a href='https://github.com/jm-2808/sample-stealing_stuff' target='_blank'><button title='View Sample Files'><i data-lucide='github'></i></button></a>
                                 </h2>
                                 <table class='experience'>
                                     <tr>
@@ -131,7 +133,7 @@
                             <div class='details'>
                                 <h2>
                                     Dungeon Hunt
-                                    <a href='https://github.com/jm-2808/sample-dungeon_hunt' target='_blank'><button title='View Sample Files'><i data-lucide='download'></i></button></a>
+                                    <a href='https://github.com/jm-2808/sample-dungeon_hunt' target='_blank'><button title='View Sample Files'><i data-lucide='github'></i></button></a>
                                 </h2>
                                 <table class='experience'>
                                     <tr>
@@ -157,7 +159,7 @@
                             <div class='details'>
                                 <h2>
                                     Blackjack
-                                    <a href='https://github.com/jm-2808/sample-blackjack' target='_blank'><button title='View Sample Files'><i data-lucide='download'></i></button></a>
+                                    <a href='https://github.com/jm-2808/sample-blackjack' target='_blank'><button title='View Sample Files'><i data-lucide='github'></i></button></a>
                                 </h2>
                                 <table class='experience'>
                                     <tr>
@@ -168,7 +170,7 @@
                                 </table>
                                 <p>
                                     A simple windows console application which allows player(s) to engage in a game of Blackjack. Two versions are viewable:<br>
-                                    - The older version was made during early university and a simple linear execution style<br>
+                                    - The older version was made during early university and uses a simple linear execution style<br>
                                     - The newer version was made during later university and uses threading to emulate a game/input thread system
                                 </p>
                             </div>
@@ -178,7 +180,10 @@
                     <div class='project'>
                         <div class='project-content'>
                             <div class='details'>
-                                <h2>Portfolio Website</h2>
+                                <h2>
+                                    Portfolio Website
+                                    <a href='https://github.com/jm-2808/jm-2808.github.io' target='_blank'><button title='View Sample Files'><i data-lucide='github'></i></button></a>
+                                </h2>
                                 <table class='experience'>
                                     <tr>
                                         <td>2024</td>
@@ -199,40 +204,40 @@
                 </div>
 
             </div>
-            <div class='page' id='Gamepad'>
+            <div class='page' id='Secret'>
 
                 <div class='gamepad'>
                     <div class='body'>
                         <div class='grip'>
                             <div class='ring'></div>
                             <div class='dpad'>
-                                    <button onClick='AddCombo("du");'></button>
-                                    <button onClick='AddCombo("dr");'></button>
-                                    <button onClick='AddCombo("dd");'></button>
-                                    <button onClick='AddCombo("dl");'></button>
-                                    <button onClick='AddCombo("dc");'><div class='dot'></div></button>
+                                    <button onClick='RegisterPress(BUTTON.DPADUP);'></button>
+                                    <button onClick='RegisterPress(BUTTON.DPADRIGHT);'></button>
+                                    <button onClick='RegisterPress(BUTTON.DPADDOWN);'></button>
+                                    <button onClick='RegisterPress(BUTTON.DPADLEFT);'></button>
+                                    <button onClick='RegisterPress(BUTTON.DPADCENTER);'><div class='indent'></div></button>
                             </div>
                         </div>
                         <div class='grip right'>
                             <div class='buttonpad'>
-                                <button onClick='AddCombo("by");'>Y</button>
-                                <button onClick='AddCombo("bx");'>X</button>
+                                <button onClick='RegisterPress(BUTTON.Y);'>Y</button>
+                                <button onClick='RegisterPress(BUTTON.X);'>X</button>
                             </div>
                             <div class='buttonpad'>
-                                <button onClick='AddCombo("bb");'>B</button>
-                                <button onClick='AddCombo("ba");'>A</button>
+                                <button onClick='RegisterPress(BUTTON.B);'>B</button>
+                                <button onClick='RegisterPress(BUTTON.A);'>A</button>
                             </div>
                         </div>
                         <div class='cable'></div>
                         <div class='light'></div>
                         <div class='center'>
-                            <button onClick='AddCombo("select");'>Select</button>
-                            <button onClick='AddCombo("start");'>Start</button>
+                            <button onClick='RegisterPress(BUTTON.SELECT);'>Select</button>
+                            <button onClick='RegisterPress(BUTTON.START);'>Start</button>
                         </div>
                     </div>
                 </div>
 
-                <h1 id='placeholderoutput' style='height: 4em;'></h1>
+                <h1 id='Gamepad-Output'></h1>
 
             </div>
 

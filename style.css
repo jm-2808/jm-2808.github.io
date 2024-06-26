@@ -378,11 +378,15 @@ footer div:first-child
     aspect-ratio: 1 / 1;
 }
 
+.project .project-content .details h2 
+{
+    display: flex;
+}
+
 .project .project-content .details h2 button
 {
-    display: inline;
-    height: 2.25em;
-    margin-left: 0.5em;
+    display: flex;
+    margin-left: 1.5em;
     font-size: 16px;
 }
 
@@ -411,8 +415,8 @@ footer div:first-child
 
 .gamepad
 {
-    --gamepad-primary: #E6E6E6;
-    --gamepad-secondary: #B8B8B8;
+    --gamepad-primary: #CDCDCD;
+    --gamepad-secondary: #9A9A9A;
     --gamepad-tertiary: #333333;
     --gamepad-light: #0099FF;
 
@@ -501,7 +505,7 @@ footer div:first-child
 .gamepad .body .grip .dpad button:nth-child(3) { bottom: 0; margin-bottom: -1.5em; }
 .gamepad .body .grip .dpad button:nth-child(4) { left: 0; margin-left: -1.5em; }
 
-.gamepad .body .grip .dpad button .dot
+.gamepad .body .grip .dpad button .indent
 {
     background: color-mix(in srgb, var(--gamepad-tertiary), black 30%);
     width: 80%;
@@ -593,4 +597,12 @@ footer div:first-child
 .gamepad .body .center button:hover
 {
     background: color-mix(in srgb, var(--gamepad-tertiary), black 25%);
+}
+
+#Gamepad-Output
+{
+    width: 100%;
+    height: 3em;
+    margin: 1em auto;
+    text-align: center;
 }

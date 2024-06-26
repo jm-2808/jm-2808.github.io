@@ -1,33 +1,33 @@
 //=== General =========================================================================================
 
-var currentTheme = "light";
-var currentPage = "Home";
+var CurrentTheme = "light";
+var CurrentPage = "Home";
 
 // Toggle between light and dark themes
 function ToggleTheme()
 {
-    SetTheme((currentTheme == "light" ? "dark" : "light"));
+    SetTheme((CurrentTheme == "light" ? "dark" : "light"));
 }
 
 // Show the specified page and hide any other pages
 function ShowPage(id)
 {
-    if(id == currentPage)
+    if(id == CurrentPage)
         return;
 
-    if(currentPage == "Home")
+    if(CurrentPage == "Home")
     {
         SetPageVisibility(id, true);
     }
     else
     {
-        SetPageVisibility(currentPage, false);
+        SetPageVisibility(CurrentPage, false);
         setTimeout(function() { SetPageVisibility(id, true); }, 250);
     }
 
     SetTitle(id);
-    ClearCombo();
-    currentPage = id;
+    GamepadHistory = [];
+    CurrentPage = id;
 }
 
 //--- Helper Functions ----------------------------------------
@@ -58,7 +58,7 @@ function SetPageVisibility(id, visible)
 // Set the website colour scheme
 function SetTheme(theme)
 {
-    currentTheme = theme;
+    CurrentTheme = theme;
     const root = document.querySelector(':root');
     root.style.setProperty("--primary", "var(--" + theme + "-primary)");
     root.style.setProperty("--secondary", "var(--" + theme + "-secondary)");
@@ -70,44 +70,51 @@ function SetTheme(theme)
 
 //=== Gamepad =========================================================================================
 
-var combo = [ ];
+const BUTTON = Object.freeze({
+    DPADUP: 0,
+    DPADDOWN: 1,
+    DPADLEFT: 2,
+    DPADRIGHT: 3,
+    DPADCENTER: 4,
+    A: 5,
+    B: 6,
+    X: 7,
+    Y: 8,
+    START: 9,
+    SELECT: 10
+});
+var GamepadHistory = [ ];
 
-function AddCombo(button)
+function RegisterPress(button)
 {
-    if(combo.length > 15)
+    if(GamepadHistory.length > 15)
     {
-        combo.shift();
+        GamepadHistory.shift();
     }
 
-    combo.push(button);
+    GamepadHistory.push(button);
 
-    if(CheckCombo(["du", "du", "dd", "dd", "dl", "dr", "dl", "dr", "bb", "ba", "start"])) // Konami Code
+    if(EvaluateCombo([BUTTON.DPADUP, BUTTON.DPADUP, BUTTON.DPADDOWN, BUTTON.DPADDOWN, BUTTON.DPADLEFT, BUTTON.DPADRIGHT, BUTTON.DPADLEFT, BUTTON.DPADRIGHT, BUTTON.B, BUTTON.A, BUTTON.START])) // Konami Code
     {
-        const element = document.getElementById("placeholderoutput");
+        const element = document.getElementById("Gamepad-Output");
         element.textContent = "Konami Code!";
     }
     else
     {
-        const element = document.getElementById("placeholderoutput");
+        const element = document.getElementById("Gamepad-Output");
         element.textContent = "";
     }
 }
 
-function CheckCombo(compare)
+function EvaluateCombo(combo)
 {
-    for (let index = 0; index < compare.length; ++index) 
+    for (let index = 0; index < combo.length; ++index) 
     {
-
-        if(combo[combo.length - index] != compare[compare.length - index])
+        if(GamepadHistory[GamepadHistory.length - index] != combo[combo.length - index])
         {
             return false;
         }
     }
 
     return true;
-}
-
-function ClearCombo()
-{
-    combo = [];
 }
