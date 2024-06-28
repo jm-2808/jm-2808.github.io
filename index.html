@@ -16,7 +16,7 @@
 
     </head>
     <body>
-        <header>
+        <header id='header'>
 
             <div class='title'>
                 <h1>Jack Magnay</h1>Video Game Programmer
@@ -44,8 +44,9 @@
                 <span class='profile-detail'><a href='https://drive.google.com/file/d/1ctXI2PNAnqvRLMoUbHaqPnIhxCBq-79C/view?usp=sharing' target='_blank'><button title='View CV' disabled>View CV</button></a></span>
                 <span class='profile-detail'><button title='View Projects' onClick='ShowPage("Projects");'>View Projects</button></span>
                 <div class='profile-links'>
-                    <a href='' target='_blank'><button title='Email' disabled><i data-lucide='mail'></i></button></a>
+                    <a href='mailto:jack.magnay.2808@gmail.com' target='_blank'><button title='Email'><i data-lucide='mail'></i></button></a>
                     <a href='https://www.mobygames.com/person/1144805/jack-magnay/' target='_blank'><button title='MobyGames'><i data-lucide='user'></i></button></a>
+                    <a href='https://www.linkedin.com/in/jack-magnay-a70595316/' target='_blank'><button title='LinkedIn'><i data-lucide='linkedin'></i></button></a>
                     <a href='https://github.com/jm-2808' target='_blank'><button title='GitHub'><i data-lucide='github'></i></button></a>
                 </div>
             </div>
@@ -53,9 +54,74 @@
             <div class='page' id='Projects'>
 
                 <div class='block'>
+                    <div class='menu'>
+                        <button title='Sumo Digital' onClick='ScrollToBlock("projects-sumo");'>Sumo Digital</button>
+                        <button title='University Assignments' onClick='ScrollToBlock("projects-university");'>University</button>
+                        <button title='Personal Projects' onClick='ScrollToBlock("projects-personal");'>Personal</button>
+                    </div>
+                </div>
+
+                <div class='block' id='projects-sumo'>
                     <div class='block-title' style='background:#BE1E2D;'>
                         <img class='icon' src='assets/logo-sumo.png'>
                         <h1>Sumo Digital</h1>
+                    </div>
+                    <div class='project'>
+                        <div class='project-content'>
+                            <div class='details'>
+                                <h2>Unannounced Project</h2>
+                                <table class='experience'>
+                                    <tr>
+                                        <td>2024</td>
+                                        <td>Programmer</td>
+                                        <td>Unreal Engine 5, Blueprint, C++</td>
+                                    </tr>
+                                </table>
+                                <p>An unannounced multiplayer platformer developed in Unreal Engine 5</p>
+                                <p>I worked on and took ownership of various gameplay mechanics</p>
+                            </div>
+                        </div>
+                        <div class='project-icon'>
+                            <i data-lucide='image'></i> &nbsp; No Image
+                        </div>
+                    </div>
+                    <div class='project'>
+                        <div class='project-content'>
+                            <div class='details'>
+                                <h2>Unannounced Project</h2>
+                                <table class='experience'>
+                                    <tr>
+                                        <td>2023</td>
+                                        <td>Programmer</td>
+                                        <td>Unreal Engine 5, Blueprint, C++</td>
+                                    </tr>
+                                </table>
+                                <p>An unannounced third-person shooter developed in Unreal Engine 5</p>
+                                <p>I worked on various aspects of the player character, including character abilities using the Unreal GAS system and weapons which were designed using a custom modular approach</p>
+                            </div>
+                        </div>
+                        <div class='project-icon'>
+                            <i data-lucide='image'></i> &nbsp; No Image
+                        </div>
+                    </div>
+                    <div class='project'>
+                        <div class='project-content'>
+                            <div class='details'>
+                                <h2>Unannounced Project</h2>
+                                <table class='experience'>
+                                    <tr>
+                                        <td>2022</td>
+                                        <td>Junior Programmer</td>
+                                        <td>C++</td>
+                                    </tr>
+                                </table>
+                                <p>An unannounced sports game</p>
+                                <p>I worked on a system for tracking various stats during gameplay to allow them to be presented to the player, the framework for various smaller gameplay segments and assisted with the implementation of some of these segments</p>
+                            </div>
+                        </div>
+                        <div class='project-icon'>
+                            <i data-lucide='image'></i> &nbsp; No Image
+                        </div>
                     </div>
                     <div class='project'>
                         <div class='project-content'>
@@ -65,11 +131,16 @@
                                     <tr>
                                         <td>2020</td>
                                         <td>Junior Programmer</td>
-                                        <td>C++, Unreal Blueprint</td>
+                                        <td>Unreal Engine 4, Blueprint, C++</td>
                                     </tr>
                                 </table>
                                 <p>"Iconic PlayStation® hero Sackboy bursts back into breathtaking action with a huge, fun and frantic 3D multiplayer platforming adventure - and a whole new edgy sackitude!"</p>
-                                <p>I worked on multiple areas of this game, most notably an automated system for running Sackboy through test levels and outputting results to a web front-end</p>
+                                <p>
+                                    I worked on multiple areas of this game, both during my placement year and as a full-time employee, including
+                                    sackboy himself, 
+                                    an automated testing system to play through test levels then output telemetry results to a web front-end 
+                                    and automated lighting build tools
+                                </p>
                             </div>
                             <div class='media'>
                                 <iframe src="https://www.youtube.com/embed/ZOk3fj5ujNM?si=MSVHAEmzO_4ow3yL" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -79,10 +150,10 @@
                     </div>
                 </div>
 
-                <div class='block'>
+                <div class='block' id='projects-university'>
                     <div class='block-title'>
                         <span class='icon'><i data-lucide='graduation-cap'></i></span>
-                        <h1>University Projects</h1>
+                        <h1>University Assignments</h1>
                     </div>
                     <div class='project'>
                         <div class='project-content'>
@@ -95,14 +166,17 @@
                                     <tr>
                                         <td>2020</td>
                                         <td>Programmer</td>
-                                        <td>C++, Unreal Blueprint</td>
+                                        <td>Unreal Engine 4, Blueprint, C++</td>
                                     </tr>
                                 </table>
-                                <p>My final project at university, this modular weapon system (codenamed <b>Project_Niobium</b>) uses 'Cores' to define base attributes of the weapon and 'Modifiers' to alter the weapon's behaviour</p>
+                                <p>
+                                    My final project at university, this modular weapon system ( codenamed <em>Project_Niobium</em> ) uses 'Cores' to define base attributes of the weapon and 'Modifiers' to alter the weapon's behaviour. 
+                                    The parameters of these weapons could be altered at runtime to allow the user/player to dynamically adjust and test configurations
+                                </p>
                             </div>
                         </div>
                         <div class='project-icon'>
-                            <i data-lucide='cog'></i> &nbsp; No Image
+                            <i data-lucide='image'></i> &nbsp; No Image
                         </div>
                     </div>
                     <div class='project'>
@@ -116,11 +190,11 @@
                                     <tr>
                                         <td>2020</td>
                                         <td>Lead Programmer</td>
-                                        <td>C++, Unreal Blueprint</td>
+                                        <td>Unreal Engine 4, Blueprint, C++</td>
                                     </tr>
                                 </table>
-                                <p>A group project from my final year, <b>Stealing Stuff</b> is an arcade-style game where players sneak around and steal everything that isn't nailed down, working together as a team to steal larger items</p> 
-                                <p>This project achieved <b>3rd place</b> in both the <b>Sumo Digital award for Game Design</b> and <b>Rockstar Leeds award for Best Team</b> at the Game Republic Student Showcase 2020</p> 
+                                <p>A group project from my final year, Stealing Stuff is an arcade-style game where players sneak around and steal everything that isn't nailed down, working together as a team to steal larger items</p> 
+                                <p>This project achieved <b>3rd place</b> in both the <b>Sumo Digital Award for Game Design</b> and <b>Rockstar Leeds Award for Best Team</b> at the Game Republic Student Showcase 2020</p> 
                             </div>
                             <div class='media'>
                                 <iframe src="https://www.youtube.com/embed/tQ39e2bVUx4?si=PSeu7iPj9aQScJCb" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -139,17 +213,17 @@
                                     <tr>
                                         <td>2020</td>
                                         <td>Programmer</td>
-                                        <td>C++, DirectX API</td>
+                                        <td>DirectX API, C++</td>
                                     </tr>
                                 </table>
-                                <p>A group project from my final year, <b>Dungeon Hunt</b> is a first person combat game developed using the DirectX API where the player makes their way through a series of levels using weapons to defeat enemy drones</p>
+                                <p>A group project from my final year, Dungeon Hunt is a first person combat game developed using the DirectX API where the player makes their way through a series of levels using weapons to defeat enemy drones</p>
                             </div>
                         </div>
                         <img class='project-icon' src='assets/project-dungeonhunt.png'>
                     </div>
                 </div>
 
-                <div class='block'>
+                <div class='block' id='projects-personal'>
                     <div class='block-title'>
                         <span class='icon'><i data-lucide='folder'></i></span>
                         <h1>Personal Projects</h1>
@@ -169,9 +243,9 @@
                                     </tr>
                                 </table>
                                 <p>
-                                    A simple windows console application which allows player(s) to engage in a game of Blackjack. Two versions are viewable:<br>
+                                    A simple windows console application which allows player(s) to engage in a game of Blackjack. Two versions are available:<br>
                                     - The older version was made during early university and uses a simple linear execution style<br>
-                                    - The newer version was made during later university and uses threading to emulate a game/input thread system
+                                    - The newer version was made during later university and uses threading to emulate an engine's game/input thread system
                                 </p>
                             </div>
                         </div>
@@ -198,7 +272,7 @@
                             </div>
                         </div>
                         <div class='project-icon'>
-                            <i data-lucide='cog'></i> &nbsp; No Image
+                            <i data-lucide='arrow-left'></i> &nbsp; This
                         </div>
                     </div>
                 </div>
@@ -257,8 +331,10 @@
         </footer>
     </body>
     <script>
+
         SetTitle("Home");
         SetTheme("dark");
         lucide.createIcons(); // This has to go last because it won't generate icons for things lower down the page than the function call
+
     </script>
 </html>

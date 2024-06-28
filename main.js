@@ -30,6 +30,18 @@ function ShowPage(id)
     CurrentPage = id;
 }
 
+// Scroll the page down to a block, accounting for the header
+function ScrollToBlock(id)
+{
+    const header = document.getElementsByTagName("header")[0];
+    const project = document.getElementById(id);
+
+    const rect = project.getBoundingClientRect();
+    var pos = (rect.top - (header.offsetHeight + 10));
+
+    window.scrollTo(0, pos);
+}
+
 //--- Helper Functions ----------------------------------------
 
 // Set the title of the webpage 
