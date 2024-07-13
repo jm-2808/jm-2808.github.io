@@ -6,13 +6,18 @@
 
         <!--<link rel='icon' type='image/x-icon' href='assets/favicon.ico'>-->
         
+        <!-- External Fonts/Icons -->
         <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins:ital,wght@0,700;1,700&display=swap'>
         <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap'>
-
         <script src='https://unpkg.com/lucide@latest'></script>
 
-        <link rel='stylesheet' href='style.css'>
-        <script src='main.js'></script>
+        <!-- General Includes -->
+        <link id='theme' rel='stylesheet' href='style/theme-dark.css'>
+        <link rel='stylesheet' href='style/main.css'>
+        <script src='code/main.js'></script>
+
+        <link rel='stylesheet' href='style/arcade.css'>
+        <script src='code/arcade.js'></script>
 
     </head>
     <body>
@@ -23,12 +28,12 @@
             </div>
             <table class='menu'>
                 <tr>
-                    <td><button title='Change Theme' onClick='ToggleTheme();'><i data-lucide='sun-moon'></i></button></td>
-                    <td class='theme'>Theme</td>
-                    <td class='navigation'>Navigation</td>
+                    <td><button title='Change Theme' onClick='SetTheme((CurrentTheme == "light" ? "dark" : "light"));'><i data-lucide='sun-moon'></i></button></td>
+                    <td class='theme-label'>Theme</td>
+                    <td class='navigation-label'>Navigation</td>
                     <td><button title='Home' onClick='ShowPage("Home");'><i data-lucide='house'></i></button></td>
                     <td><button title='Projects' onClick='ShowPage("Projects");'><i data-lucide='folder'></i></button></td>
-                    <td><button title='Secret' onClick='ShowPage("Secret");'><i data-lucide='gamepad-2'></i></button></td>
+                    <td><button title='Arcade' onClick='ShowPage("Arcade");'><i data-lucide='gamepad-2'></i></button></td>
                 </tr>
             </table>
 
@@ -287,40 +292,48 @@
                 </div>
 
             </div>
-            <div class='page' id='Secret'>
+            <div class='page' id='Arcade'>
 
                 <div class='gamepad'>
                     <div class='body'>
                         <div class='grip'>
                             <div class='ring'></div>
                             <div class='dpad'>
-                                    <button onClick='RegisterPress(BUTTON.DPADUP);'></button>
-                                    <button onClick='RegisterPress(BUTTON.DPADRIGHT);'></button>
-                                    <button onClick='RegisterPress(BUTTON.DPADDOWN);'></button>
-                                    <button onClick='RegisterPress(BUTTON.DPADLEFT);'></button>
-                                    <button onClick='RegisterPress(BUTTON.DPADCENTER);'><div class='indent'></div></button>
+                                    <button onClick='GAMEPAD.Press(BUTTON.DPADUP);'></button>
+                                    <button onClick='GAMEPAD.Press(BUTTON.DPADRIGHT);'></button>
+                                    <button onClick='GAMEPAD.Press(BUTTON.DPADDOWN);'></button>
+                                    <button onClick='GAMEPAD.Press(BUTTON.DPADLEFT);'></button>
+                                    <button onClick='GAMEPAD.Press(BUTTON.DPADCENTER);'><div class='indent'></div></button>
                             </div>
                         </div>
                         <div class='grip right'>
                             <div class='buttonpad'>
-                                <button onClick='RegisterPress(BUTTON.Y);'>Y</button>
-                                <button onClick='RegisterPress(BUTTON.X);'>X</button>
+                                <button onClick='GAMEPAD.Press(BUTTON.Y);'>Y</button>
+                                <button onClick='GAMEPAD.Press(BUTTON.X);'>X</button>
                             </div>
                             <div class='buttonpad'>
-                                <button onClick='RegisterPress(BUTTON.B);'>B</button>
-                                <button onClick='RegisterPress(BUTTON.A);'>A</button>
+                                <button onClick='GAMEPAD.Press(BUTTON.B);'>B</button>
+                                <button onClick='GAMEPAD.Press(BUTTON.A);'>A</button>
                             </div>
                         </div>
                         <div class='cable'></div>
                         <div class='light'></div>
                         <div class='center'>
-                            <button onClick='RegisterPress(BUTTON.SELECT);'>Select</button>
-                            <button onClick='RegisterPress(BUTTON.START);'>Start</button>
+                            <button onClick='GAMEPAD.Press(BUTTON.SELECT);'>Select</button>
+                            <button onClick='GAMEPAD.Press(BUTTON.START); CheckCombos();'>Start</button>
                         </div>
                     </div>
                 </div>
 
-                <h1 id='Gamepad-Output'></h1>
+                <div class='gamescreen'>
+
+                    <div class='blackjack'>
+                        <div class='hand'>
+                            <!-- WIP - Blackjack game to go here -->
+                        </div>
+                    </div>
+
+                </div>
 
             </div>
 
@@ -342,7 +355,6 @@
     <script>
 
         SetTitle("Home");
-        SetTheme("dark");
         lucide.createIcons(); // This has to go last because it won't generate icons for things lower down the page than the function call
 
     </script>
