@@ -377,6 +377,11 @@ footer div:first-child
     justify-content: center;
     aspect-ratio: 1 / 1;
 }
+.project .project-icon .placeholder
+{
+    width: 50%;
+    height: 50%;
+}
 
 .project .project-content .details h2 
 {
