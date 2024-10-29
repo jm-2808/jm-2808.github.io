@@ -60,9 +60,42 @@
 
                 <div class='block'>
                     <div class='menu'>
+                        <button title='Black Tower' onClick='ScrollToBlock("projects-blacktower");'>Black Tower</button>
                         <button title='Sumo Digital' onClick='ScrollToBlock("projects-sumo");'>Sumo Digital</button>
                         <button title='University Assignments' onClick='ScrollToBlock("projects-university");'>University</button>
                         <button title='Personal Projects' onClick='ScrollToBlock("projects-personal");'>Personal</button>
+                    </div>
+                </div>
+
+                <div class='block' id='projects-blacktower'>
+                    <div class='block-title' style='background:#0A1218;'>
+                        <img class='icon' src='assets/logo-blacktower.png'>
+                        <h1>Black Tower Studios</h1>
+                    </div>
+                    <div class='project'>
+                        <div class='project-content'>
+                            <div class='details'>
+                                <h2>
+                                    The Texas Chainsaw Massacre
+                                    <a href='https://www.txchainsawgame.com/' target='_blank'><button title='Visit Website'><i data-lucide='external-link'></i></button></a>
+                                </h2>
+                                <table class='experience'>
+                                    <tr>
+                                        <td>10/2024 - Current</td>
+                                        <td>Programmer</td>
+                                        <td>Unreal Engine 4 (BP / C++)</td>
+                                    </tr>
+                                </table>
+                                <p>"An asymmetrical horror experience based on the groundbreaking and iconic 1974 horror film"</p>
+                                <p>
+                                    I worked on providing post-release support and bug fixes for various character abilities and gameplay features
+                                </p>
+                            </div>
+                            <div class='media'>
+                                <iframe src="https://www.youtube.com/embed/ISCbJ9RlDgU" title="The Texas Chain Saw Massacre - Trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <img class='project-icon' src='assets/project-texaschainsaw.png'>
                     </div>
                 </div>
 
@@ -167,7 +200,7 @@
                                 </p>
                             </div>
                             <div class='media'>
-                                <iframe src="https://www.youtube.com/embed/ZOk3fj5ujNM?si=MSVHAEmzO_4ow3yL" title="YouTube Video Player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <iframe src="https://www.youtube.com/embed/ZOk3fj5ujNM" title="Sackboy: A Big Adventure - Trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             </div>
                         </div>
                         <img class='project-icon' src='assets/project-sackboy.png'>
@@ -219,7 +252,7 @@
                                 <p>This project achieved <b>3rd place</b> in both the <b>Sumo Digital Award for Game Design</b> and <b>Rockstar Leeds Award for Best Team</b> at the Game Republic Student Showcase 2020</p> 
                             </div>
                             <div class='media'>
-                                <iframe src="https://www.youtube.com/embed/tQ39e2bVUx4?si=PSeu7iPj9aQScJCb" title="YouTube Video Player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <iframe src="https://www.youtube.com/embed/tQ39e2bVUx4" title="Stealing Stuff - Trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                             </div>
                         </div>
                         <img class='project-icon' src='assets/project-stealingstuff.png'>
@@ -325,11 +358,11 @@
                         <div class='grip'>
                             <div class='ring'></div>
                             <div class='dpad'>
-                                    <button onClick='GAMEPAD.Press(BUTTON.DPADUP);'></button>
-                                    <button onClick='GAMEPAD.Press(BUTTON.DPADRIGHT);'></button>
-                                    <button onClick='GAMEPAD.Press(BUTTON.DPADDOWN);'></button>
-                                    <button onClick='GAMEPAD.Press(BUTTON.DPADLEFT);'></button>
-                                    <button onClick='GAMEPAD.Press(BUTTON.DPADCENTER);'><div class='indent'></div></button>
+                                <button onClick='GAMEPAD.Press(BUTTON.DPADUP);'></button>
+                                <button onClick='GAMEPAD.Press(BUTTON.DPADRIGHT);'></button>
+                                <button onClick='GAMEPAD.Press(BUTTON.DPADDOWN);'></button>
+                                <button onClick='GAMEPAD.Press(BUTTON.DPADLEFT);'></button>
+                                <button onClick='GAMEPAD.Press(BUTTON.DPADCENTER);'><div class='indent'></div></button>
                             </div>
                         </div>
                         <div class='grip right'>
@@ -373,7 +406,7 @@
             </div>
             <div class='github'>
                 Hosted via <a href='https://pages.github.com/'>Github Pages</a><br>
-                Last Updated - July 2024
+                Last Updated - October 2024
             </div>
 
         </footer>

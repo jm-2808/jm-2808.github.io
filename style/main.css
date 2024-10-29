@@ -176,7 +176,7 @@ footer div:first-child
     flex-grow: 1;
 }
 
-/*=== Profile ====================================================================================*/
+/*=== General ====================================================================================*/
 
 .profile
 {
@@ -235,6 +235,16 @@ footer div:first-child
 .profile .profile-links button
 {
     width: var(--button-size);
+}
+
+.lucide
+{
+    text-align: left;
+}
+
+.github
+{
+    text-align: right;
 }
 
 /*=== Pages ======================================================================================*/
@@ -302,6 +312,7 @@ footer div:first-child
 .page .block .block-title h1
 {
     margin: 0;
+    margin-left: 0.4em;
 
     font-size: 30px;
     color: var(--accent-text);
