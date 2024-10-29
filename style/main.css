@@ -302,6 +302,7 @@ footer div:first-child
 .page .block .block-title h1
 {
     margin: 0;
+    margin-left: 0.4em;
 
     font-size: 30px;
     color: var(--accent-text);
