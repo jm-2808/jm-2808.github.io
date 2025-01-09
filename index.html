@@ -32,12 +32,18 @@
                     <td class='theme-label'>Theme</td>
                     <td class='navigation-label'>Navigation</td>
                     <td><button title='Home' onClick='ShowPage("Home");'><i data-lucide='house'></i></button></td>
-                    <td><button title='Projects' onClick='ShowPage("Projects");'><i data-lucide='folder'></i></button></td>
+                    <td><button title='Professional Projects' onClick='ShowPage("Professional");'><i data-lucide='folder-cog'></i></button></td>
+                    <td><button title='Personal Projects' onClick='ShowPage("Personal");'><i data-lucide='folder-heart'></i></button></td>
                     <td><button title='Arcade' onClick='ShowPage("Arcade");'><i data-lucide='gamepad-2'></i></button></td>
                 </tr>
             </table>
 
         </header>
+
+        <div id='StartHint'>
+            <b>Get started here!</b><i data-lucide='corner-right-up'></i>
+        </div>
+
         <main>
 
             <div class='profile'>
@@ -47,7 +53,7 @@
                 <span class='profile-detail'>Video Game Programmer with 5 years industry experience</span>
                 <span class='profile-detail'>BSc (1st Class Honours) Computer Science for Games, Sheffield Hallam University</span>
                 <span class='profile-detail'><a href='https://drive.google.com/file/d/1_PTcyZpu6s96YmVSy9Tj0wgc9CwT_OcZ/view?usp=sharing' target='_blank'><button title='View CV'>View CV</button></a></span>
-                <span class='profile-detail'><button title='View Projects' onClick='ShowPage("Projects");'>View Projects</button></span>
+                <span class='profile-detail'><button title='View Games' onClick='ShowPage("Professional");'>View Games</button></span>
                 <div class='profile-links'>
                     <a href='mailto:jack.magnay.2808@gmail.com' target='_blank'><button title='Email'><i data-lucide='mail'></i></button></a>
                     <a href='https://www.mobygames.com/person/1144805/jack-magnay/' target='_blank'><button title='MobyGames'><i data-lucide='user'></i></button></a>
@@ -56,14 +62,15 @@
                 </div>
             </div>
 
-            <div class='page' id='Projects'>
-
+            <div class='page' id='Professional'>
                 <div class='block'>
+                    <div class='block-title'>
+                        <span class='icon'><i data-lucide='compass'></i></span>
+                        <h1>Professional Projects</h1>
+                    </div>
                     <div class='menu'>
-                        <button title='Black Tower' onClick='ScrollToBlock("projects-blacktower");'>Black Tower</button>
+                        <button title='Black Tower Studios' onClick='ScrollToBlock("projects-blacktower");'>Black Tower</button>
                         <button title='Sumo Digital' onClick='ScrollToBlock("projects-sumo");'>Sumo Digital</button>
-                        <button title='University Assignments' onClick='ScrollToBlock("projects-university");'>University</button>
-                        <button title='Personal Projects' onClick='ScrollToBlock("projects-personal");'>Personal</button>
                     </div>
                 </div>
 
@@ -71,6 +78,7 @@
                     <div class='block-title' style='background:#0A1218;'>
                         <img class='icon' src='assets/logo-blacktower.png'>
                         <h1>Black Tower Studios</h1>
+                        <h2>Tokyo, Japan</h2>
                     </div>
                     <div class='project'>
                         <div class='project-content'>
@@ -82,13 +90,13 @@
                                 <table class='experience'>
                                     <tr>
                                         <td>10/2024 - Current</td>
-                                        <td>Programmer</td>
+                                        <td>Game Programmer</td>
                                         <td>Unreal Engine 4 (BP / C++)</td>
                                     </tr>
                                 </table>
                                 <p>"An asymmetrical horror experience based on the groundbreaking and iconic 1974 horror film"</p>
                                 <p>
-                                    I worked on providing post-release support and bug fixes for various character abilities and gameplay features
+                                    I worked on providing post-release support and bug fixes for various gameplay features, notably character abilities and environmental objects
                                 </p>
                             </div>
                             <div class='media'>
@@ -103,6 +111,7 @@
                     <div class='block-title' style='background:#BE1E2D;'>
                         <img class='icon' src='assets/logo-sumo.png'>
                         <h1>Sumo Digital</h1>
+                        <h2>Sheffield, England</h2>
                     </div>
                     <div class='project'>
                         <div class='project-content'>
@@ -111,7 +120,7 @@
                                 <table class='experience'>
                                     <tr>
                                         <td>08/2023 - 07/2024</td>
-                                        <td>Programmer</td>
+                                        <td>Gameplay Programmer</td>
                                         <td>Unreal Engine 5 (BP / C++)</td>
                                     </tr>
                                 </table>
@@ -126,7 +135,7 @@
                             </div>
                         </div>
                         <div class='project-icon'>
-                            <i class='placeholder' data-lucide='land-plot'></i>
+                            <i class='placeholder' data-lucide='package-open'></i>
                         </div>
                     </div>
                     <div class='project'>
@@ -136,7 +145,7 @@
                                 <table class='experience'>
                                     <tr>
                                         <td>06/2022 - 07/2023</td>
-                                        <td>Programmer</td>
+                                        <td>Gameplay Programmer</td>
                                         <td>Unreal Engine 5 (BP / C++)</td>
                                     </tr>
                                 </table>
@@ -148,7 +157,7 @@
                             </div>
                         </div>
                         <div class='project-icon'>
-                            <i class='placeholder' data-lucide='pocket-knife'></i>
+                            <i class='placeholder' data-lucide='rocket'></i>
                         </div>
                     </div>
                     <div class='project'>
@@ -169,7 +178,7 @@
                             </div>
                         </div>
                         <div class='project-icon'>
-                            <i class='placeholder' data-lucide='medal'></i>
+                            <i class='placeholder' data-lucide='trophy'></i>
                         </div>
                     </div>
                     <div class='project'>
@@ -206,9 +215,105 @@
                         <img class='project-icon' src='assets/project-sackboy.png'>
                     </div>
                 </div>
+                
+            </div>
+
+            <div class='page' id='Personal'>
+                <div class='block'>
+                    <div class='block-title'>
+                        <span class='icon'><i data-lucide='compass'></i></span>
+                        <h1>Personal Projects</h1>
+                    </div>
+                    <div class='menu'>
+                        <button title='Independent Projects' onClick='ScrollToBlock("projects-independent");'>Independent</button>
+                        <button title='University Assignments' onClick='ScrollToBlock("projects-university");'>University</button>
+                    </div>
+                </div>
+
+                <div class='block' id='projects-website'>
+                    <div class='block-title'>
+                        <span class='icon'><i data-lucide='link-2'></i></span>
+                        <h1>Portfolio Website</h1>
+                    </div>
+                    <div class='project'>
+                        <div class='project-content'>
+                            <div class='details'>
+                                <h2>
+                                    Github Pages Portfolio
+                                    <a href='https://github.com/jm-2808/jm-2808.github.io' target='_blank'><button title='View Source Files'><i data-lucide='github'></i></button></a>
+                                </h2>
+                                <table class='experience'>
+                                    <tr>
+                                        <td>06/2024 - Current</td>
+                                        <td>Developer</td>
+                                        <td>HTML / CSS / JS</td>
+                                    </tr>
+                                </table>
+                                <p>
+                                    This portfolio website was programmed by me! My apologies if it breaks on weird resolutions, the page is only designed with 16:9 aspect ratios in mind for now<br>
+                                    The site is hosted using <b>Github Pages</b> (See page footer)
+                                </p>
+                            </div>
+                        </div>
+                        <div class='project-icon'>
+                            <i data-lucide='arrow-left'></i> &nbsp; This &nbsp; <i data-lucide='arrow-right'></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='block' id='projects-independent'>
+                    <div class='block-title'>
+                        <span class='icon'><i data-lucide='folder'></i></span>
+                        <h1>Independent Projects</h1>
+                    </div>
+                    <div class='project'>
+                        <div class='project-content'>
+                            <div class='details'>
+                                <h2>Project Azimov</h2>
+                                <table class='experience'>
+                                    <tr>
+                                        <td>07/2024 - Current</td>
+                                        <td>Programmer</td>
+                                        <td>Godot 4.2 (C#)</td>
+                                    </tr>
+                                </table>
+                                <p>
+                                    Set in a 3D grid-based environment, Azimov tasks the player with using a simple scripting language to program drones and complete various puzzles. 
+                                    The puzzles range from simple goals, such as helping a single drone reach a destination, to complex manipulation of multiple drones to accomplish tasks simultaneously
+                                </p>
+                            </div>
+                        </div>
+                        <div class='project-icon'>
+                            <i class='placeholder' data-lucide='bot'></i>
+                        </div>
+                    </div>
+                    <div class='project'>
+                        <div class='project-content'>
+                            <div class='details'>
+                                <h2>
+                                    Blackjack
+                                    <a href='https://github.com/jm-2808/sample-blackjack' target='_blank'><button title='View Sample Files'><i data-lucide='github'></i></button></a>
+                                </h2>
+                                <table class='experience'>
+                                    <tr>
+                                        <td>2018 / 2020</td>
+                                        <td>Programmer</td>
+                                        <td>C++</td>
+                                    </tr>
+                                </table>
+                                <p>
+                                    A simple windows console application which allows player(s) to engage in a game of Blackjack. Two versions are available:<br>
+                                    - The older version was made during early university and uses a simple linear execution style<br>
+                                    - The newer version was made during later university and uses threading to emulate an engine's game/input thread system
+                                </p>
+                            </div>
+                        </div>
+                        <img class='project-icon' src='assets/project-blackjack.png'>
+                    </div>
+                </div>
 
                 <div class='block' id='projects-university'>
-                    <div class='block-title'>
+                    <div class='block-title' style='background:#B60050;'>
                         <span class='icon'><i data-lucide='graduation-cap'></i></span>
                         <h1>University Assignments</h1>
                     </div>
@@ -278,78 +383,6 @@
                     </div>
                 </div>
 
-                <div class='block' id='projects-personal'>
-                    <div class='block-title'>
-                        <span class='icon'><i data-lucide='folder'></i></span>
-                        <h1>Personal Projects</h1>
-                    </div>
-                    <div class='project'>
-                        <div class='project-content'>
-                            <div class='details'>
-                                <h2>Unnamed Project</h2>
-                                <table class='experience'>
-                                    <tr>
-                                        <td>07/2024 - Current</td>
-                                        <td>Programmer</td>
-                                        <td>Godot 4.2 (C#)</td>
-                                    </tr>
-                                </table>
-                                <p>A game where the player uses a simple scripting language to program drones and complete various puzzles</p>
-                            </div>
-                        </div>
-                        <div class='project-icon'>
-                            <i class='placeholder' data-lucide='bot'></i>
-                        </div>
-                    </div>
-                    <div class='project'>
-                        <div class='project-content'>
-                            <div class='details'>
-                                <h2>
-                                    Blackjack
-                                    <a href='https://github.com/jm-2808/sample-blackjack' target='_blank'><button title='View Sample Files'><i data-lucide='github'></i></button></a>
-                                </h2>
-                                <table class='experience'>
-                                    <tr>
-                                        <td>2018 / 2020</td>
-                                        <td>Programmer</td>
-                                        <td>C++</td>
-                                    </tr>
-                                </table>
-                                <p>
-                                    A simple windows console application which allows player(s) to engage in a game of Blackjack. Two versions are available:<br>
-                                    - The older version was made during early university and uses a simple linear execution style<br>
-                                    - The newer version was made during later university and uses threading to emulate an engine's game/input thread system
-                                </p>
-                            </div>
-                        </div>
-                        <img class='project-icon' src='assets/project-blackjack.png'>
-                    </div>
-                    <div class='project'>
-                        <div class='project-content'>
-                            <div class='details'>
-                                <h2>
-                                    Portfolio Website
-                                    <a href='https://github.com/jm-2808/jm-2808.github.io' target='_blank'><button title='View Sample Files'><i data-lucide='github'></i></button></a>
-                                </h2>
-                                <table class='experience'>
-                                    <tr>
-                                        <td>06/2024 - Current</td>
-                                        <td>Developer</td>
-                                        <td>HTML / CSS / JS</td>
-                                    </tr>
-                                </table>
-                                <p>
-                                    This portfolio website was programmed by me! My apologies if it breaks on weird resolutions, the page is only designed with 16:9 aspect ratios in mind for now<br>
-                                    The site is hosted using <b>Github Pages</b> (See page footer)
-                                </p>
-                            </div>
-                        </div>
-                        <div class='project-icon'>
-                            <i data-lucide='arrow-left'></i> &nbsp; This &nbsp; <i data-lucide='arrow-right'></i>
-                        </div>
-                    </div>
-                </div>
-
             </div>
             <div class='page' id='Arcade'>
 
@@ -397,6 +430,11 @@
             </div>
 
         </main>
+        
+        <div id='ScrollTop'>
+            <span><button title='Scroll To Top' onClick='ScrollToTop();'><i data-lucide='arrow-up-from-line'></i></button></span>
+        </div>
+
         <footer>
 
             <div class='lucide'>
@@ -406,7 +444,7 @@
             </div>
             <div class='github'>
                 Hosted via <a href='https://pages.github.com/'>Github Pages</a><br>
-                Last Updated - October 2024
+                Last Updated - January 2025
             </div>
 
         </footer>

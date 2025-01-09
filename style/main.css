@@ -237,6 +237,35 @@ footer div:first-child
     width: var(--button-size);
 }
 
+#StartHint
+{
+    position: fixed;
+    right: 9em;
+    padding-top: 10px;
+}
+
+#ScrollTop
+{
+    display: none;
+    position: fixed;
+    bottom: 4.8em;
+    width: 100%;
+}
+#ScrollTop span
+{
+    display: block;
+    margin: auto;
+    border-radius: 1.75em;
+    padding: 8px 10px;
+    width: 6em;
+    background: rgba(0, 0, 0, 0.35);
+}
+#ScrollTop button
+{
+    width: 100%;
+    
+}
+
 .lucide
 {
     text-align: left;
@@ -312,9 +341,19 @@ footer div:first-child
 .page .block .block-title h1
 {
     margin: 0;
+    margin-top: 1px;
     margin-left: 0.4em;
 
     font-size: 30px;
+    color: var(--accent-text);
+}
+.page .block .block-title h2
+{
+    margin: 0;
+    margin-top: 15px;
+    margin-left: 1.2em;
+
+    font-size: 15px;
     color: var(--accent-text);
 }
 

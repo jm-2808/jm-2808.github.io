@@ -2,6 +2,18 @@
 
 var CurrentTheme = "dark";
 var CurrentPage = "Home";
+var DisplayHint = true;
+
+window.onscroll = function() {
+    if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)
+    {
+        document.getElementById("ScrollTop").style.display = "block";
+    }
+    else
+    {
+        document.getElementById("ScrollTop").style.display = "none";
+    }
+}
 
 // Show the specified page and hide any other pages
 function ShowPage(id)
@@ -23,6 +35,12 @@ function ShowPage(id)
 
     if(id == CurrentPage)
         return;
+
+    if(DisplayHint)
+    {
+        DisplayHint = false;
+        document.getElementById("StartHint").style.display = "none";
+    }
 
     if(CurrentPage == "Home")
     {
@@ -63,4 +81,10 @@ function ScrollToBlock(id)
     var pos = (rect.top - (header.offsetHeight + 10));
 
     window.scrollTo(0, pos);
+}
+
+// Scroll the page up to the top
+function ScrollToTop()
+{
+    window.scrollTo(0, 0);
 }
