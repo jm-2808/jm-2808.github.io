@@ -18,12 +18,6 @@ window.onscroll = function() {
 // Show the specified page and hide any other pages
 function ShowPage(id)
 {
-    if(DisplayHint)
-    {
-        DisplayHint = false;
-        document.getElementById("StartHint").style.display = "none";
-    }
-
     var setPageVisible = function(id, visible)
     {
         const element = document.getElementById(id);
@@ -41,6 +35,12 @@ function ShowPage(id)
 
     if(id == CurrentPage)
         return;
+
+    if(DisplayHint)
+    {
+        DisplayHint = false;
+        document.getElementById("StartHint").style.display = "none";
+    }
 
     if(CurrentPage == "Home")
     {
