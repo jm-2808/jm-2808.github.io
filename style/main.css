@@ -248,7 +248,7 @@ footer div:first-child
 {
     display: none;
     position: fixed;
-    bottom: 4.8em;
+    bottom: 0.5em;
     width: 100%;
 }
 #ScrollTop span
