@@ -80,7 +80,7 @@ SITE.LoadTheme = function(theme)
     }
 
     const style = document.getElementById("theme-style");
-    style.href = "site/themes/" + theme + ".css";
+    style.href = "site/Themes/" + theme + ".css";
 }
 
 //-----------------------------------------------------------------
