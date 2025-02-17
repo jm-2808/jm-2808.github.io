@@ -766,8 +766,8 @@ i[data-skill="blender"]             { background: #E87D0D; color: #265787; }
 i[data-skill="blender"]:before      { content: "blender"; }
 i[data-skill="perforce"]            { background: #000000; color: #FFFFFF; }
 i[data-skill="perforce"]:before     { content: "perforce"; }
-i[data-skill="git"]                 { background: #F05033; color: #FFFFFF; }
-i[data-skill="git"]:before          { content: "git"; }
+i[data-skill="github"]              { background: #F05033; color: #FFFFFF; }
+i[data-skill="github"]:before       { content: "github"; }
 
 /*--- Gamepad -----------------------*/
 

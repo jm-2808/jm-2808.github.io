@@ -1,5 +1,16 @@
 //=== Events ==========================================================================================
 
+// Slight delay so html loads before attempting to create icons
+setTimeout(function(){
+
+    lucide.createIcons();
+
+    SITE.SetTitle("loading...");
+
+}, 5);
+
+//-----------------------------------------------------------------
+
 window.onload = function()
 {
     SITE.LoadPage("home");
