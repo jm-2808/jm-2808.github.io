@@ -155,7 +155,7 @@ hr
 
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
-    font-size: 0.7vw;
+    font-size: 0.8vw;
 
     transition: color var(--theme-transition) ease-in-out;
 }
@@ -238,7 +238,7 @@ button.theme-button svg, a.theme-button svg
 
 #menu #profile h1
 {
-    font-size: 1.8vw;
+    font-size: 1.85vw;
 }
 
 #menu #profile hr
