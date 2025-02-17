@@ -1,459 +1,396 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
 
         <title></title>
-
         <!--<link rel='icon' type='image/x-icon' href='assets/favicon.ico'>-->
         
         <!-- External Fonts/Icons -->
-        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins:ital,wght@0,700;1,700&display=swap'>
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Russo+One&display=swap'>
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins:ital,wght@0,600,700;1,600,700&display=swap'>
         <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap'>
         <script src='https://unpkg.com/lucide@latest'></script>
 
-        <!-- General Includes -->
-        <link id='theme' rel='stylesheet' href='style/theme-dark.css'>
-        <link rel='stylesheet' href='style/main.css'>
-        <script src='code/main.js'></script>
-
-        <link rel='stylesheet' href='style/arcade.css'>
-        <script src='code/arcade.js'></script>
+        <!-- Style/Code -->
+        <link id='theme-style' rel='stylesheet' href='site/themes/dark.css'>
+        <link rel='stylesheet' href='site/main.css'>
+        <script src='site/main.js'></script>
 
     </head>
-    <body>
-        <header id='header'>
+    <body class='theme-back'>
+        <header id='menu' class='theme-menu'>
 
-            <div class='title'>
-                <h1>Jack Magnay</h1>Video Game Programmer
+            <div id='profile'>
+                <img src='site/logo.png'>
+                <h1 class='font-title'>Jack Magnay</h1><hr><h2 class='font-subtitle'>Game Developer</h2>
+                <div class='links-bar'>
+                    <a class='theme-button' title='View CV' href='https://drive.google.com/file/d/1_PTcyZpu6s96YmVSy9Tj0wgc9CwT_OcZ/view?usp=sharing' target='_blank'><i data-lucide='file-user'></i></a>
+                    <a class='theme-button' title='Mail' href='mailto:jack.magnay.2808@gmail.com' target='_blank'><i data-lucide='mail'></i></a>
+                    <a class='theme-button' title='MobyGames' href='https://www.mobygames.com/person/1144805/jack-magnay/' target='_blank'><i data-lucide='fish'></i></a>
+                    <a class='theme-button' title='LinkedIn' href='https://www.linkedin.com/in/jack-magnay-a70595316/' target='_blank'><i data-lucide='linkedin'></i></a>
+                    <a class='theme-button' title='Github' href='https://github.com/jm-2808' target='_blank'><i data-lucide='github'></i></a>
+                </div>
             </div>
-            <table class='menu'>
-                <tr>
-                    <td><button title='Change Theme' onClick='SetTheme((CurrentTheme == "light" ? "dark" : "light"));'><i data-lucide='sun-moon'></i></button></td>
-                    <td class='theme-label'>Theme</td>
-                    <td class='navigation-label'>Navigation</td>
-                    <td><button title='Home' onClick='ShowPage("Home");'><i data-lucide='house'></i></button></td>
-                    <td><button title='Professional Projects' onClick='ShowPage("Professional");'><i data-lucide='folder-cog'></i></button></td>
-                    <td><button title='Personal Projects' onClick='ShowPage("Personal");'><i data-lucide='folder-heart'></i></button></td>
-                    <td><button title='Arcade' onClick='ShowPage("Arcade");'><i data-lucide='gamepad-2'></i></button></td>
-                </tr>
-            </table>
-
+            <nav>
+                <button class='font-title' title='Home' onClick='SITE.LoadPage("home");'> <i data-lucide='house'></i>HOME </button>
+                <button class='font-title' title='About Me' onClick='SITE.LoadPage("about");'> <i data-lucide='person-standing'></i>ABOUT ME </button>
+                <button class='font-title' title='Games' onClick='SITE.LoadPage("games");'> <i data-lucide='gamepad-2'></i>GAMES </button>
+                <button class='font-title' title='Projects' onClick='SITE.LoadPage("projects");'> <i data-lucide='brain-circuit'></i>PROJECTS </button>
+            </nav>
+            <div id='scroll-top'>
+                <button id='scroll-top-button' class='theme-button' title='Return to the top of the page' onClick='SITE.ScrollTo("top");' style='display:none;'><i data-lucide='arrow-up-to-line'></i></button>
+            </div>
+            <div id='theme'>
+                <label class='toggle'>
+                    <input id='theme-toggle' type='checkbox' onclick='SITE.LoadTheme("toggle");'>
+                    <span class='slider'><i class='icon light' data-lucide='sun'></i><i class='icon dark' data-lucide='moon'></i></span>
+                </label>
+            </div>
+            <div id='details' class='font-text small'>
+                <div id='lucide'>
+                    Icons from <a href='https://lucide.dev/'>Lucide</a> (ISC License)<br>
+                    Copyright (c) 2020, Lucide Contributors
+                </div><br>
+                <div id='github'>
+                    Hosted via <a href='https://pages.github.com/'>Github Pages</a><br>
+                    Last Updated - February 2025
+                </div>
+            </div>
+    
         </header>
 
-        <div id='StartHint'>
-            <b>Get started here!</b><i data-lucide='corner-right-up'></i>
+        <div id='loading-screen' class='theme-back'>
+            <h1 class='font-title huge'>NOW LOADING...</h1>
+            <div class='spinner'><div class='outer'></div><div class='inner'></div></div>
+            <div id='loading-hint' class='font-subtitle'>A loading screen tip should appear momentarily...</div>
         </div>
 
-        <main>
+        <main id='home'>
+            
+            <div class='content theme-main'>
+                <h1 class='font-title'>HOME</h1>
+                <p class='font-text'>
+                    Welcome to my (updated) portfolio! 
+                    This page and the "About Me" page are still work-in-progress, but "Games" and "Projects" have been fully integrated into the new layout; please feel free to look through the things I have worked on
+                </p>
+            </div>
+            
+        </main>
 
-            <div class='profile'>
-                <span class='profile-detail'><img src='assets/profile.png'></span>
-                <span class='profile-detail'><h1>Jack Magnay</h1></span>
-                <hr>
-                <span class='profile-detail'>Video Game Programmer with 5 years industry experience</span>
-                <span class='profile-detail'>BSc (1st Class Honours) Computer Science for Games, Sheffield Hallam University</span>
-                <span class='profile-detail'><a href='https://drive.google.com/file/d/1_PTcyZpu6s96YmVSy9Tj0wgc9CwT_OcZ/view?usp=sharing' target='_blank'><button title='View CV'>View CV</button></a></span>
-                <span class='profile-detail'><button title='View Games' onClick='ShowPage("Professional");'>View Games</button></span>
-                <div class='profile-links'>
-                    <a href='mailto:jack.magnay.2808@gmail.com' target='_blank'><button title='Email'><i data-lucide='mail'></i></button></a>
-                    <a href='https://www.mobygames.com/person/1144805/jack-magnay/' target='_blank'><button title='MobyGames'><i data-lucide='user'></i></button></a>
-                    <a href='https://www.linkedin.com/in/jack-magnay-a70595316/' target='_blank'><button title='LinkedIn'><i data-lucide='linkedin'></i></button></a>
-                    <a href='https://github.com/jm-2808' target='_blank'><button title='GitHub'><i data-lucide='github'></i></button></a>
-                </div>
+        <main id='about' hidden>
+            
+            <div class='content theme-main'>
+                <h1 class='font-title'>ABOUT ME</h1>
+                <p class='font-text'>This page is a work-in-progress, watch this space!</p>
             </div>
 
-            <div class='page' id='Professional'>
-                <div class='block'>
-                    <div class='block-title'>
-                        <span class='icon'><i data-lucide='compass'></i></span>
-                        <h1>Professional Projects</h1>
-                    </div>
-                    <div class='menu'>
-                        <button title='Black Tower Studios' onClick='ScrollToBlock("projects-blacktower");'>Black Tower</button>
-                        <button title='Sumo Digital' onClick='ScrollToBlock("projects-sumo");'>Sumo Digital</button>
-                    </div>
+            <div class='split'>
+
+                <div class='content theme-main'>
+                    <p class='font-text'>Side by</p>
                 </div>
 
-                <div class='block' id='projects-blacktower'>
-                    <div class='block-title' style='background:#0A1218;'>
-                        <img class='icon' src='assets/logo-blacktower.png'>
-                        <h1>Black Tower Studios</h1>
-                        <h2>Tokyo, Japan</h2>
-                    </div>
-                    <div class='project'>
-                        <div class='project-content'>
-                            <div class='details'>
-                                <h2>
-                                    The Texas Chainsaw Massacre
-                                    <a href='https://www.txchainsawgame.com/' target='_blank'><button title='Visit Website'><i data-lucide='external-link'></i></button></a>
-                                </h2>
-                                <table class='experience'>
-                                    <tr>
-                                        <td>10/2024 - 02/2025</td>
-                                        <td>Game Programmer</td>
-                                        <td>Unreal Engine 4 (BP / C++)</td>
-                                    </tr>
-                                </table>
-                                <p>"An asymmetrical horror experience based on the groundbreaking and iconic 1974 horror film"</p>
-                                <p>
-                                    I worked on providing post-release support and bug fixes for various gameplay features, notably character abilities and environmental objects
-                                </p>
-                            </div>
-                            <div class='media'>
-                                <iframe src="https://www.youtube.com/embed/ISCbJ9RlDgU" title="The Texas Chain Saw Massacre - Trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            </div>
-                        </div>
-                        <img class='project-icon' src='assets/project-texaschainsaw.png'>
-                    </div>
-                </div>
-
-                <div class='block' id='projects-sumo'>
-                    <div class='block-title' style='background:#BE1E2D;'>
-                        <img class='icon' src='assets/logo-sumo.png'>
-                        <h1>Sumo Digital</h1>
-                        <h2>Sheffield, England</h2>
-                    </div>
-                    <div class='project'>
-                        <div class='project-content'>
-                            <div class='details'>
-                                <h2>Unannounced Project</h2>
-                                <table class='experience'>
-                                    <tr>
-                                        <td>08/2023 - 07/2024</td>
-                                        <td>Gameplay Programmer</td>
-                                        <td>Unreal Engine 5 (BP / C++)</td>
-                                    </tr>
-                                </table>
-                                <p>An unannounced multiplayer platformer developed in Unreal Engine 5</p>
-                                <p>
-                                    I worked on and took ownership of various gameplay mechanics, which involved:<br>
-                                    - Taking design documentation to cost and breaking down into tasks<br>
-                                    - Communicating daily with the design and UI disciplines alongside bi-weekly scrums<br>
-                                    - Owning, implementing and maintaining various gameplay features<br>
-                                    - Partaking in show-and-tell meetings and feature reviews
-                                </p>
-                            </div>
-                        </div>
-                        <div class='project-icon'>
-                            <i class='placeholder' data-lucide='package-open'></i>
-                        </div>
-                    </div>
-                    <div class='project'>
-                        <div class='project-content'>
-                            <div class='details'>
-                                <h2>Unannounced Project</h2>
-                                <table class='experience'>
-                                    <tr>
-                                        <td>06/2022 - 07/2023</td>
-                                        <td>Gameplay Programmer</td>
-                                        <td>Unreal Engine 5 (BP / C++)</td>
-                                    </tr>
-                                </table>
-                                <p>An unannounced third-person shooter developed in Unreal Engine 5</p>
-                                <p>
-                                    I worked on various aspects of the player character, including character abilities using the Unreal GAS system and weapons which were designed using a custom modular approach.
-                                    I was resposible for prototyping the modular weapon system and presenting the proposal in a feature review meeting
-                                </p>
-                            </div>
-                        </div>
-                        <div class='project-icon'>
-                            <i class='placeholder' data-lucide='rocket'></i>
-                        </div>
-                    </div>
-                    <div class='project'>
-                        <div class='project-content'>
-                            <div class='details'>
-                                <h2>Unannounced Project</h2>
-                                <table class='experience'>
-                                    <tr>
-                                        <td>11/2020 - 06/2022</td>
-                                        <td>Junior Programmer</td>
-                                        <td>C++</td>
-                                    </tr>
-                                </table>
-                                <p>An unannounced sports game developed using an in-house engine</p>
-                                <p>
-                                    I worked on a system for tracking various stats during gameplay to allow them to be presented to the player, the framework for various smaller gameplay segments and assisted with the implementation of some of these segments
-                                </p>
-                            </div>
-                        </div>
-                        <div class='project-icon'>
-                            <i class='placeholder' data-lucide='trophy'></i>
-                        </div>
-                    </div>
-                    <div class='project'>
-                        <div class='project-content'>
-                            <div class='details'>
-                                <h2>
-                                    Sackboy: A Big Adventure
-                                    <a href='https://www.playstation.com/en-gb/games/sackboy-a-big-adventure/' target='_blank'><button title='Visit Website'><i data-lucide='external-link'></i></button></a>
-                                </h2>
-                                <table class='experience'>
-                                    <tr>
-                                        <td>08/2020 - 11/2020</td>
-                                        <td>Junior Programmer</td>
-                                        <td>Unreal Engine 4 (BP / C++)</td>
-                                    </tr>
-                                    <tr>
-                                        <td>07/2018 - 08/2019</td>
-                                        <td>Placement</td>
-                                        <td>Unreal Engine 4 (BP / C++)</td>
-                                    </tr>
-                                </table>
-                                <p>"Iconic PlayStation® hero Sackboy bursts back into breathtaking action with a huge, fun and frantic 3D multiplayer platforming adventure - and a whole new edgy sackitude!"</p>
-                                <p>
-                                    I worked on multiple areas of this game, both during my placement year and as a full-time employee, including
-                                    sackboy himself, 
-                                    an automated testing system to play through test levels then output telemetry results to a web front-end 
-                                    and automated lighting build tools
-                                </p>
-                            </div>
-                            <div class='media'>
-                                <iframe src="https://www.youtube.com/embed/ZOk3fj5ujNM" title="Sackboy: A Big Adventure - Trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            </div>
-                        </div>
-                        <img class='project-icon' src='assets/project-sackboy.png'>
-                    </div>
+                <div class='content theme-main'>
+                    <p class='font-text'>side :)</p>
                 </div>
                 
             </div>
 
-            <div class='page' id='Personal'>
-                <div class='block'>
-                    <div class='block-title'>
-                        <span class='icon'><i data-lucide='compass'></i></span>
-                        <h1>Personal Projects</h1>
-                    </div>
-                    <div class='menu'>
-                        <button title='Independent Projects' onClick='ScrollToBlock("projects-independent");'>Independent</button>
-                        <button title='University Assignments' onClick='ScrollToBlock("projects-university");'>University</button>
-                    </div>
-                </div>
+        </main>
 
-                <div class='block' id='projects-website'>
-                    <div class='block-title'>
-                        <span class='icon'><i data-lucide='link-2'></i></span>
-                        <h1>Portfolio Website</h1>
-                    </div>
-                    <div class='project'>
-                        <div class='project-content'>
-                            <div class='details'>
-                                <h2>
-                                    Github Pages Portfolio
-                                    <a href='https://github.com/jm-2808/jm-2808.github.io' target='_blank'><button title='View Source Files'><i data-lucide='github'></i></button></a>
-                                </h2>
-                                <table class='experience'>
-                                    <tr>
-                                        <td>06/2024 - Current</td>
-                                        <td>Developer</td>
-                                        <td>HTML / CSS / JS</td>
-                                    </tr>
-                                </table>
-                                <p>
-                                    This portfolio website was programmed by me! My apologies if it breaks on weird resolutions, the page is only designed with 16:9 aspect ratios in mind for now<br>
-                                    The site is hosted using <b>Github Pages</b> (See page footer)
-                                </p>
-                            </div>
-                        </div>
-                        <div class='project-icon'>
-                            <i data-lucide='arrow-left'></i> &nbsp; This &nbsp; <i data-lucide='arrow-right'></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class='block' id='projects-independent'>
-                    <div class='block-title'>
-                        <span class='icon'><i data-lucide='folder'></i></span>
-                        <h1>Independent Projects</h1>
-                    </div>
-                    <div class='project'>
-                        <div class='project-content'>
-                            <div class='details'>
-                                <h2>Project Azimov</h2>
-                                <table class='experience'>
-                                    <tr>
-                                        <td>07/2024 - Current</td>
-                                        <td>Programmer</td>
-                                        <td>Godot 4.2 (C#)</td>
-                                    </tr>
-                                </table>
-                                <p>
-                                    Set in a 3D grid-based environment, Azimov tasks the player with using a simple scripting language to program drones and complete various puzzles. 
-                                    The puzzles range from simple goals, such as helping a single drone reach a destination, to complex manipulation of multiple drones to accomplish tasks simultaneously
-                                </p>
-                            </div>
-                        </div>
-                        <div class='project-icon'>
-                            <i class='placeholder' data-lucide='bot'></i>
-                        </div>
-                    </div>
-                    <div class='project'>
-                        <div class='project-content'>
-                            <div class='details'>
-                                <h2>
-                                    Blackjack
-                                    <a href='https://github.com/jm-2808/sample-blackjack' target='_blank'><button title='View Sample Files'><i data-lucide='github'></i></button></a>
-                                </h2>
-                                <table class='experience'>
-                                    <tr>
-                                        <td>2018 / 2020</td>
-                                        <td>Programmer</td>
-                                        <td>C++</td>
-                                    </tr>
-                                </table>
-                                <p>
-                                    A simple windows console application which allows player(s) to engage in a game of Blackjack. Two versions are available:<br>
-                                    - The older version was made during early university and uses a simple linear execution style<br>
-                                    - The newer version was made during later university and uses threading to emulate an engine's game/input thread system
-                                </p>
-                            </div>
-                        </div>
-                        <img class='project-icon' src='assets/project-blackjack.png'>
-                    </div>
-                </div>
-
-                <div class='block' id='projects-university'>
-                    <div class='block-title' style='background:#B60050;'>
-                        <span class='icon'><i data-lucide='graduation-cap'></i></span>
-                        <h1>University Assignments</h1>
-                        <h2>Sheffield Hallam University</h2>
-                    </div>
-                    <div class='project'>
-                        <div class='project-content'>
-                            <div class='details'>
-                                <h2>
-                                    Modular Weapons
-                                    <a href='https://github.com/jm-2808/sample-project_niobium' target='_blank'><button title='View Sample Files'><i data-lucide='github'></i></button></a>
-                                </h2>
-                                <table class='experience'>
-                                    <tr>
-                                        <td>09/2019 - 05/2020</td>
-                                        <td>Programmer</td>
-                                        <td>Unreal Engine 4 (BP / C++)</td>
-                                    </tr>
-                                </table>
-                                <p>
-                                    My final project at university, this modular weapon system ( codenamed <em>Project_Niobium</em> ) uses 'Cores' to define base attributes of the weapon and 'Modifiers' to alter the weapon's behaviour. 
-                                    The parameters of these weapons could be altered at runtime to allow the user/player to dynamically adjust and test configurations
-                                </p>
-                            </div>
-                        </div>
-                        <img class='project-icon' src='assets/project-niobium.png'>
-                    </div>
-                    <div class='project'>
-                        <div class='project-content'>
-                            <div class='details'>
-                                <h2>
-                                    Stealing Stuff
-                                    <a href='https://github.com/jm-2808/sample-stealing_stuff' target='_blank'><button title='View Sample Files'><i data-lucide='github'></i></button></a>
-                                </h2>
-                                <table class='experience'>
-                                    <tr>
-                                        <td>01/2020 - 05/2020</td>
-                                        <td>Lead Programmer</td>
-                                        <td>Unreal Engine 4 (BP / C++)</td>
-                                    </tr>
-                                </table>
-                                <p>A group project from my final year, Stealing Stuff is an arcade-style game where players sneak around and steal everything that isn't nailed down, working together as a team to steal larger items</p> 
-                                <p>This project achieved <b>3rd place</b> in both the <b>Sumo Digital Award for Game Design</b> and <b>Rockstar Leeds Award for Best Team</b> at the Game Republic Student Showcase 2020</p> 
-                            </div>
-                            <div class='media'>
-                                <iframe src="https://www.youtube.com/embed/tQ39e2bVUx4" title="Stealing Stuff - Trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            </div>
-                        </div>
-                        <img class='project-icon' src='assets/project-stealingstuff.png'>
-                    </div>
-                    <div class='project'>
-                        <div class='project-content'>
-                            <div class='details'>
-                                <h2>
-                                    Dungeon Hunt
-                                    <a href='https://github.com/jm-2808/sample-dungeon_hunt' target='_blank'><button title='View Sample Files'><i data-lucide='github'></i></button></a>
-                                </h2>
-                                <table class='experience'>
-                                    <tr>
-                                        <td>09/2019 - 12/2019</td>
-                                        <td>Programmer</td>
-                                        <td>DirectX API (C++)</td>
-                                    </tr>
-                                </table>
-                                <p>A group project from my final year, Dungeon Hunt is a first person combat game developed using the DirectX API where the player makes their way through a series of levels using weapons to defeat enemy drones</p>
-                            </div>
-                        </div>
-                        <img class='project-icon' src='assets/project-dungeonhunt.png'>
-                    </div>
-                </div>
-
+        <main id='games' hidden>
+            
+            <div class='content theme-main'>
+                <h1 class='font-title'>GAMES</h1>
+                <p class='font-text'>Browse through games I have worked on professionally</p>
+                <nav>
+                    <button class='theme-button' onClick='SITE.ScrollTo("games-blacktower");'>BLACK TOWER</button>
+                    <button class='theme-button' onClick='SITE.ScrollTo("games-sumodigital");'>SUMO DIGITAL</button>
+                </nav>
             </div>
-            <div class='page' id='Arcade'>
 
-                <div class='gamepad'>
-                    <div class='body'>
-                        <div class='grip'>
-                            <div class='ring'></div>
-                            <div class='dpad'>
-                                <button onClick='GAMEPAD.Press(BUTTON.DPADUP);'></button>
-                                <button onClick='GAMEPAD.Press(BUTTON.DPADRIGHT);'></button>
-                                <button onClick='GAMEPAD.Press(BUTTON.DPADDOWN);'></button>
-                                <button onClick='GAMEPAD.Press(BUTTON.DPADLEFT);'></button>
-                                <button onClick='GAMEPAD.Press(BUTTON.DPADCENTER);'><div class='indent'></div></button>
-                            </div>
-                        </div>
-                        <div class='grip right'>
-                            <div class='buttonpad'>
-                                <button onClick='GAMEPAD.Press(BUTTON.Y);'>Y</button>
-                                <button onClick='GAMEPAD.Press(BUTTON.X);'>X</button>
-                            </div>
-                            <div class='buttonpad'>
-                                <button onClick='GAMEPAD.Press(BUTTON.B);'>B</button>
-                                <button onClick='GAMEPAD.Press(BUTTON.A);'>A</button>
-                            </div>
-                        </div>
-                        <div class='cable'></div>
-                        <div class='light'></div>
-                        <div class='center'>
-                            <button onClick='GAMEPAD.Press(BUTTON.SELECT);'>Select</button>
-                            <button onClick='GAMEPAD.Press(BUTTON.START); CheckCombos();'>Start</button>
-                        </div>
+            <div id='games-blacktower' class='content theme-main'>
+                <div class='studio blacktower'>
+                    <img class='logo' src='site/studios/studio-blacktower.png'>
+                    <div class='banner font-title'>
+                        <h1 class='name'>BLACK TOWER STUDIOS</h1>
+                        <span class='location'>Tokyo, Japan</span>
+                    </div>
+                    <div class='details font-subtitle'>
+                        <div class='role theme-accent'>Gameplay Programmer</div>10/2024 - 02/2025
                     </div>
                 </div>
-
-                <div class='gamescreen'>
-
-                    <div class='blackjack'>
-                        <div class='hand'>
-                            <!-- WIP - Blackjack game to go here -->
-                        </div>
+                <div id='project-chainsaw' class='project'>
+                    <div class='media'>
+                        <iframe src="https://www.youtube.com/embed/ISCbJ9RlDgU" title="The Texas Chain Saw Massacre - Trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <img src='site/projects/project-texaschainsaw.png'>
+                        <a class='theme-button' href='https://www.txchainsawgame.com/' title='Visit Website' target='_blank'><i data-lucide='external-link'></i></a>
                     </div>
-
+                    <h2 class='title font-subtitle'>The Texas Chainsaw Massacre</h2>
+                    <div class='timespan font-subtitle'>10/2024 - 02/2025</div>
+                    <div class='tagline font-text'>"An asymmetrical horror experience based on the groundbreaking and iconic 1974 horror film"</div>
+                    <div class='skill-list'>
+                        <i data-skill='cpp'></i><i data-skill='uebp'></i><i data-skill='unreal'>4</i><i data-skill='vs'></i><i data-skill='perforce'></i>
+                    </div>
+                    <p class='font-text'>
+                        I worked on providing post-release support and bug fixes for various gameplay features, notably character abilities and environmental objects
+                    </p>
+                    <div class='toggle'><button class='theme-button' onClick='SITE.ToggleProject("chainsaw");'>Open</button></div>
                 </div>
+            </div>
 
+            <div id='games-sumodigital' class='content theme-main'>
+                <div class='studio sumodigital'>
+                    <img class='logo' src='site/studios/studio-sumodigital.png'>
+                    <div class='banner font-title'>
+                        <h1 class='name'>SUMO DIGITAL</h1>
+                        <span class='location'>Sheffield, England</span>
+                    </div>
+                    <div class='details font-subtitle'>
+                        <div class='role theme-accent'>Gameplay Programmer</div>06/2022 - 07/2024<div class='vr'></div>
+                        <div class='role theme-accent'>Junior Programmer</div>08/2020 - 06/2022<div class='vr'></div>
+                        <div class='role theme-accent'>Placement Programmer</div>07/2018 - 08/2019
+                    </div>
+                </div>
+                <div id='project-scramble' class='project'>
+                    <div class='media'>
+                        <div class='placeholder'><i data-lucide='package-open'></i></div>
+                    </div>
+                    <h2 class='title font-subtitle'>Unannounced Project</h2>
+                    <div class='timespan font-subtitle'>08/2023 - 07/2024</div>
+                    <div class='tagline font-text'>An unannounced multiplayer platformer developed in Unreal Engine 5</div>
+                    <div class='skill-list'>
+                        <i data-skill='cpp'></i><i data-skill='uebp'></i><i data-skill='unreal'>5</i><i data-skill='vs'></i><i data-skill='perforce'></i>
+                    </div>
+                    <p class='font-text'>
+                        I worked on and took ownership of various gameplay mechanics, which involved:<br>
+                        - Taking design documentation to cost and breaking down into tasks<br>
+                        - Communicating daily with the design and UI disciplines alongside bi-weekly scrums<br>
+                        - Owning, implementing and maintaining various gameplay features<br>
+                        - Partaking in show-and-tell meetings and feature reviews
+                    </p>
+                    <div class='toggle'><button class='theme-button' onClick='SITE.ToggleProject("scramble");'>Open</button></div>
+                </div>
+                <hr>
+                <div id='project-firebird' class='project'>
+                    <div class='media'>
+                        <div class='placeholder'><i data-lucide='rocket'></i></div>
+                    </div>
+                    <h2 class='title font-subtitle'>Unannounced Project</h2>
+                    <div class='timespan font-subtitle'>06/2022 - 07/2023</div>
+                    <div class='tagline font-text'>An unannounced third-person shooter developed in Unreal Engine 5</div>
+                    <div class='skill-list'>
+                        <i data-skill='cpp'></i><i data-skill='uebp'></i><i data-skill='unreal'>5</i><i data-skill='vs'></i><i data-skill='perforce'></i>
+                    </div>
+                    <p class='font-text'>
+                        I worked on various aspects of the player character, including character abilities using the Unreal GAS system and weapons which were designed using a custom modular approach.
+                        I was resposible for prototyping the modular weapon system and presenting the proposal in a feature review meeting
+                    </p>
+                    <div class='toggle'><button class='theme-button' onClick='SITE.ToggleProject("firebird");'>Open</button></div>
+                </div>
+                <hr>
+                <div id='project-cadillac' class='project'>
+                    <div class='media'>
+                        <div class='placeholder'><i data-lucide='trophy'></i></div>
+                    </div>
+                    <h2 class='title font-subtitle'>Unannounced Project</h2>
+                    <div class='timespan font-subtitle'>11/2020 - 06/2022</div>
+                    <div class='tagline font-text'>An unannounced sports game developed using an in-house engine</div>
+                    <div class='skill-list'>
+                        <i data-skill='cpp'></i><i data-skill='lua'></i><i data-skill='vs'></i><i data-skill='perforce'></i>
+                    </div>
+                    <p class='font-text'>
+                        I worked on a system for tracking various stats during gameplay to allow them to be presented to the player, the framework for various smaller gameplay segments and assisted with the implementation of some of these segments
+                    </p>
+                    <div class='toggle'><button class='theme-button' onClick='SITE.ToggleProject("cadillac");'>Open</button></div>
+                </div>
+                <hr>
+                <div id='project-gingerbread' class='project'>
+                    <div class='media'>
+                        <iframe src="https://www.youtube.com/embed/ZOk3fj5ujNM" title="Sackboy: A Big Adventure - Trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <img src='site/projects/project-sackboy.png'>
+                        <a class='theme-button' href='https://www.playstation.com/en-gb/games/sackboy-a-big-adventure/' title='Visit Website' target='_blank'><i data-lucide='external-link'></i></a>
+                    </div>
+                    <h2 class='title font-subtitle'>Sackboy: A Big Adventure</a></h2>
+                    <div class='timespan font-subtitle'>08/2020 - 11/2020 / 07/2018 - 08/2019</div>
+                    <div class='tagline font-text'>"Iconic PlayStation® hero Sackboy bursts back into breathtaking action with a huge, fun and frantic 3D multiplayer platforming adventure - and a whole new edgy sackitude!"</div>
+                    <div class='skill-list'>
+                        <i data-skill='cpp'></i><i data-skill='uebp'></i><i data-skill='unreal'>4</i><i data-skill='vs'></i><i data-skill='perforce'></i>
+                    </div>
+                    <p class='font-text'>
+                        I worked on multiple areas of this game, both during my placement year and as a full-time employee, including sackboy himself, 
+                        an automated testing system to play through test levels then output telemetry results and automated lighting build tools
+                    </p>
+                    <div class='skill-list'>
+                        <i data-skill='cs'></i><i data-skill='html'></i><i data-skill='css'></i><i data-skill='js'></i>
+                    </div>
+                    <p class='font-text'>
+                        The automated testing tools were built using a combination of unreal, a c# helper program and server with a web front-end
+                    </p>
+                    <div class='toggle'><button class='theme-button' onClick='SITE.ToggleProject("gingerbread");'>Open</button></div>
+                </div>
             </div>
 
         </main>
-        
-        <div id='ScrollTop'>
-            <span><button title='Scroll To Top' onClick='ScrollToTop();'><i data-lucide='arrow-up-from-line'></i></button></span>
-        </div>
 
-        <footer>
+        <main id='projects' hidden>
 
-            <div class='lucide'>
-                Icons from <a href='https://lucide.dev/'>Lucide</a><br>
-                ISC License<br>
-                Copyright (c) 2020, Lucide Contributors
-            </div>
-            <div class='github'>
-                Hosted via <a href='https://pages.github.com/'>Github Pages</a><br>
-                Last Updated - January 2025
+            <div class='content theme-main'>
+                <h1 class='font-title'>PROJECTS</h1>
+                <p class='font-text'>Browse through projects I have worked on in my free time (or at university)</p>
+                <nav>
+                    <button class='theme-button' onClick='SITE.ScrollTo("projects-independent");'>INDEPENDENT</button>
+                    <button class='theme-button' onClick='SITE.ScrollTo("projects-university");'>UNIVERSITY</button>
+                </nav>
             </div>
 
-        </footer>
+            <div id='projects-independent' class='content theme-main'>
+                <div class='studio self'>
+                    <img class='logo' src='site/logo.png'>
+                    <div class='banner font-title'>
+                        <h1 class='name'>Independent Projects</h1>
+                        <span class='location'>192.168.0.1</span>
+                    </div>
+                    <div class='details font-subtitle'>
+                        <div class='role theme-accent'>Jack of All Trades</div>
+                    </div>
+                </div>
+                <div id='project-portfolio' class='project'>
+                    <div class='media'>
+                        <div class='placeholder'><i data-lucide='code'></i></div>
+                        <a class='theme-button' href='https://github.com/jm-2808/jm-2808.github.io' title='View Source Files' target='_blank'><i data-lucide='github'></i></a>
+                    </div>
+                    <h2 class='title font-subtitle'>Portfolio</h2>
+                    <div class='timespan font-subtitle'>06/2024 - Current</div>
+                    <div class='tagline font-text'>You're looking at it</div>
+                    <div class='skill-list'>
+                        <i data-skill='html'></i><i data-skill='css'></i><i data-skill='js'></i><i data-skill='vsc'></i>
+                    </div>
+                    <p class='font-text'>
+                        This portfolio website was designed and coded by me! My apologies if it breaks on weird resolutions, the page is only designed with 16:9 aspect ratios in mind for now
+                    </p>
+                    <p class='font-text'>
+                        The site is hosted using <b>Github Pages</b> (See bottom left of the page)
+                    </p>
+                    <div class='toggle'><button class='theme-button' onClick='SITE.ToggleProject("portfolio");'>Open</button></div>
+                </div>
+                <hr>
+                <div id='project-azimov' class='project'>
+                    <div class='media'>
+                        <div class='placeholder'><i data-lucide='bot'></i></div>
+                    </div>
+                    <h2 class='title font-subtitle'>Azimov</h2>
+                    <div class='timespan font-subtitle'>07/2024 - Current</div>
+                    <div class='tagline font-text'>"4. A robot may forsake the third rule if the company deems it appropriate"</div>
+                    <div class='skill-list'>
+                        <i data-skill='cs'></i><i data-skill='godot'> 4.3</i><i data-skill='git'></i>
+                    </div>
+                    <p class='font-text'>
+                        Set in a 3D grid-based environment, Azimov tasks the player with using a simple scripting language to program drones and complete various puzzles. 
+                        The puzzles range from simple goals, such as helping a single drone reach a destination, to complex manipulation of multiple drones to accomplish tasks simultaneously
+                    </p>
+                    <div class='toggle'><button class='theme-button' onClick='SITE.ToggleProject("azimov");'>Open</button></div>
+                </div>
+                <hr>
+                <div id='project-blackjack' class='project'>
+                    <div class='media'>
+                        <img src='site/projects/project-blackjack.png'>
+                        <a class='theme-button' href='https://github.com/jm-2808/sample-blackjack' title='View Sample Files' target='_blank'><i data-lucide='github'></i></a>
+                    </div>
+                    <h2 class='title font-subtitle'>Blackjack</h2>
+                    <div class='timespan font-subtitle'>2018 / 2020</div>
+                    <div class='tagline font-text'>"Hit, Stand or Surrender"</div>
+                    <div class='skill-list'>
+                        <i data-skill='cpp'></i><i data-skill='vs'></i>
+                    </div>
+                    <p class='font-text'>
+                        A simple windows console application which allows player(s) to engage in a game of Blackjack. Two versions are available:<br>
+                        - The older version was made during early university and uses a simple linear execution style<br>
+                        - The newer version was made during later university and uses threading to emulate an engine's game/input thread system
+                    </p>
+                    <div class='toggle'><button class='theme-button' onClick='SITE.ToggleProject("blackjack");'>Open</button></div>
+                </div>
+            </div>
+
+            <div id='gamepad' class='gamepad-container'>
+                <link rel='stylesheet' href='arcade/gamepad.css'>
+                <script src='arcade/gamepad.js'></script>
+                <script>GAMEPAD.Generate("gamepad");</script>
+            </div>
+
+            <div id='projects-university' class='content theme-main'>
+                <div class='studio university'>
+                    <img class='logo' src='site/studios/studio-university.png'>
+                    <div class='banner font-title'>
+                        <h1 class='name'>UNIVERSITY ASSIGNMENTS</h1>
+                        <span class='location'>Sheffield Hallam University</span>
+                    </div>
+                    <div class='details font-subtitle'>
+                        <div class='role theme-accent'>BSc Computer Science for Games</div>09/2016 - 08/2020
+                    </div>
+                </div>
+                <div id='project-niobium' class='project'>
+                    <div class='media'>
+                        <img src='site/projects/project-niobium.png'>
+                        <a class='theme-button' href='https://github.com/jm-2808/sample-project_niobium' title='View Sample Files' target='_blank'><i data-lucide='github'></i></a>
+                    </div>
+                    <h2 class='title font-subtitle'>Modular Weapon System</h2>
+                    <div class='timespan font-subtitle'>09/2019 - 05/2020</div>
+                    <div class='tagline font-text'>"[Project_Niobium] Weapon System Status: Online"</div>
+                    <div class='skill-list'>
+                        <i data-skill='cpp'></i><i data-skill='uebp'></i><i data-skill='unreal'>4</i><i data-skill='vs'></i><i data-skill='git'></i>
+                    </div>
+                    <p class='font-text'>
+                        My final project at university, this modular weapon system uses 'Cores' to define base attributes of the weapon and 'Modifiers' to alter the weapon's behaviour. 
+                        The parameters of these weapons could be altered at runtime to allow the user/player to dynamically adjust and test configurations
+                    </p>
+                    <div class='toggle'><button class='theme-button' onClick='SITE.ToggleProject("niobium");'>Open</button></div>
+                </div>
+                <hr>
+                <div id='project-rambler' class='project'>
+                    <div class='media'>
+                        <iframe src="https://www.youtube.com/embed/tQ39e2bVUx4" title="Stealing Stuff - Trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <img src='site/projects/project-stealingstuff.png'>
+                        <a class='theme-button' href='https://github.com/jm-2808/sample-stealing_stuff' title='View Sample Files' target='_blank'><i data-lucide='github'></i></a>
+                    </div>
+                    <h2 class='title font-subtitle'>Stealing Stuff</a></h2>
+                    <div class='timespan font-subtitle'>01/2020 - 05/2020</div>
+                    <div class='tagline font-text'>"You know what they say about 'if it ain't nailed down', but if it is ... find a claw hammer"</div>
+                    <div class='skill-list'>
+                        <i data-skill='cpp'></i><i data-skill='uebp'></i><i data-skill='unreal'>4</i><i data-skill='vs'></i></i><i data-skill='git'></i>
+                    </div>
+                    <p class='font-text'>
+                        A group project from my final year, Stealing Stuff is an arcade-style game where players sneak around and steal everything that isn't nailed down, working together as a team to steal larger items. 
+                        I acted as the <b>Lead Programmer</b> for this project, which involved delegating tasks to other programmers on the team
+                    </p>
+                    <p class='font-text'>
+                        This project achieved <b>3rd place</b> in both the <b>Sumo Digital Award for Game Design</b> and <b>Rockstar Leeds Award for Best Team</b> categories at the Game Republic Student Showcase 2020
+                    </p>
+                    <div class='toggle'><button class='theme-button' onClick='SITE.ToggleProject("rambler");'>Open</button></div>
+                </div>
+                <hr>
+                <div id='project-dungeon' class='project'>
+                    <div class='media'>
+                        <img src='site/projects/project-dungeonhunt.png'>
+                        <a class='theme-button' href='https://github.com/jm-2808/sample-dungeon_hunt' title='View Sample Files' target='_blank'><i data-lucide='github'></i></a>
+                    </div>
+                    <h2 class='title font-subtitle'>Dungeon Hunt</h2>
+                    <div class='timespan font-subtitle'>09/2019 - 12/2019</div>
+                    <div class='tagline font-text'>Remind me to put something funny here later</b></div>
+                    <div class='skill-list'>
+                        <i data-skill='cpp'></i><i data-skill='cmd'>directX</i><i data-skill='vs'></i><i data-skill='git'></i>
+                    </div>
+                    <p class='font-text'>
+                        A group project from my final year, Dungeon Hunt is a first person combat game developed using the DirectX API where the player makes their way through a series of levels using weapons to defeat enemy drones
+                    </p>
+                    <div class='toggle'><button class='theme-button' onClick='SITE.ToggleProject("dungeon");'>Open</button></div>
+                </div>
+            </div>
+
+        </main>
+
     </body>
-    <script>
 
-        SetTitle("Home");
-        lucide.createIcons(); // This has to go last because it won't generate icons for things lower down the page than the function call
+    <script>lucide.createIcons();</script>
 
-    </script>
 </html>

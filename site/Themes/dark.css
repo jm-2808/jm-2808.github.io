@@ -1,0 +1,14 @@
+:root 
+{
+    --theme-body-back: #1B1B1F;
+    --theme-body-menu: #121214;
+    --theme-body-main: #161618;
+    --theme-body-text: #FFFFFF;
+
+    --theme-accent-main: #232D6D;
+    --theme-accent-text: #FFFFFF;
+    
+    --theme-highlight: #466da8;
+
+    --theme-border: rgba(from white r g b / 0.3);
+}
