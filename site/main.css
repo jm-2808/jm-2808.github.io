@@ -764,9 +764,9 @@ i[data-skill="vsc"]                 { background: #0089D2; color: #FFFFFF; }
 i[data-skill="vsc"]:before          { content: "visual studio code"; }
 i[data-skill="blender"]             { background: #E87D0D; color: #265787; }
 i[data-skill="blender"]:before      { content: "blender"; }
-i[data-skill="perforce"]            { background: #000000; color: #FFFFFF; }
+i[data-skill="perforce"]            { background: #F05033; color: #FFFFFF; }
 i[data-skill="perforce"]:before     { content: "perforce"; }
-i[data-skill="github"]              { background: #F05033; color: #FFFFFF; }
+i[data-skill="github"]              { background: #0D1827; color: #FFFFFF; }
 i[data-skill="github"]:before       { content: "github"; }
 
 /*--- Gamepad -----------------------*/

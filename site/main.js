@@ -1,6 +1,6 @@
 //=== Events ==========================================================================================
+// Delayed Page Open
 
-// Slight delay so html loads before attempting to create icons
 setTimeout(function(){
 
     lucide.createIcons();
@@ -10,6 +10,7 @@ setTimeout(function(){
 }, 5);
 
 //-----------------------------------------------------------------
+// On Load
 
 window.onload = function()
 {
@@ -17,6 +18,7 @@ window.onload = function()
 }
 
 //-----------------------------------------------------------------
+// On Scroll
 
 window.onscroll = function() 
 {
@@ -45,6 +47,7 @@ SITE.Hints = Object.freeze([
     "Cannot find 'Package McPackageface'",
     "transcendental cha-cha time",
     "&#8593; &#8593; &#8595; &#8595; &#8592; &#8594; &#8592; &#8594; B A",
+    "&#8593; &#8594; &#8595; &#8595; &#8595;",
     "Press A to jump",
     "The Robotniks have entered the chat",
     "<a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ' target='_blank'>Never gonna give you up</a>"
@@ -55,6 +58,16 @@ SITE.Hints = Object.freeze([
 SITE.SetTitle = function(title)
 {
     document.title = "JM | " + title.toUpperCase();
+}
+
+//-----------------------------------------------------------------
+
+SITE.ShuffleHint = function()
+{
+    const hint = document.getElementById("loading-hint");
+
+    const index = Math.floor(Math.random() * SITE.Hints.length);
+    hint.innerHTML = SITE.Hints[index];
 }
 
 //-----------------------------------------------------------------
@@ -102,10 +115,8 @@ SITE.LoadPage = function(page)
     if(SITE.Page == "loading")   { return; }
 
     const loadAnim = 500;
-    const loadTime = 1000;
 
     const screen = document.getElementById("loading-screen");
-    const hint = document.getElementById("loading-hint");
     const oldPage = document.getElementById(SITE.Page);
     const newPage = document.getElementById(page);
 
@@ -123,7 +134,7 @@ SITE.LoadPage = function(page)
     }
     
     // Switch opacity when loading duration has elapsed
-    duration += ( (SITE.Page != "blank") ? loadTime : 500 );
+    duration += ( (SITE.Page != "blank") ? 500 : 250 );
     setTimeout(function(){
 
         screen.style.opacity = 0;
@@ -137,7 +148,7 @@ SITE.LoadPage = function(page)
         SITE.Page = page;
         SITE.SetTitle(SITE.Page);
 
-        screen.style.pointerEvents = "none";
+        screen.style.pointerEvents = "";
 
         hint.innerHTML = "";
 
@@ -146,13 +157,11 @@ SITE.LoadPage = function(page)
     // Set properties to begin animation
     SITE.Page = "loading";
     SITE.SetTitle("loading...");
+    SITE.ShuffleHint();
     SITE.ScrollTo("top");
 
     screen.style.opacity = 1;
     screen.style.pointerEvents = "auto";
-
-    const index = Math.floor(Math.random() * SITE.Hints.length);
-    hint.innerHTML = SITE.Hints[index];
 }
 
 //-----------------------------------------------------------------
