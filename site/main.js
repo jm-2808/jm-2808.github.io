@@ -1,4 +1,14 @@
 //=== Events ==========================================================================================
+// Delayed Page Open
+
+setTimeout(function(){
+
+    lucide.createIcons();
+
+}, 5);
+
+//-----------------------------------------------------------------
+// On Load
 
 window.onload = function()
 {
@@ -6,6 +16,7 @@ window.onload = function()
 }
 
 //-----------------------------------------------------------------
+// On Scroll
 
 window.onscroll = function() 
 {
@@ -30,13 +41,24 @@ SITE.Page = "blank";
 //-----------------------------------------------------------------
 
 SITE.Hints = Object.freeze([
-    "This loading screen doesn't need to be here, but it looks nicer than the new page instantly appearing",
+    // General
+    "This loading screen is purely aesthetic",
     "Cannot find 'Package McPackageface'",
-    "transcendental cha-cha time",
     "&#8593; &#8593; &#8595; &#8595; &#8592; &#8594; &#8592; &#8594; B A",
+    // Games
     "Press A to jump",
+    "Gotta go fast",
+    "Where's that damn fourth Chaos Emerald",
+    "&#8593; &#8594; &#8595; &#8595; &#8595;",
+    "*ping* WE'RE RICH *ping* WE'RE RICH *ping* WE'RE RICH",
+    // TV
+    "Secret material: HIDEN Metal [ METAL CLUSTER HOPPER ] It's high quality",
+    "Get ready for BOOST and MAGNUM! Ready? Fight!",
+    // Pop Culture
     "The Robotniks have entered the chat",
-    "<a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ' target='_blank'>Never gonna give you up</a>"
+    "<a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ' target='_blank'>Never gonna give you up</a>",
+    "<a href='https://www.youtube.com/watch?v=Nk6tzVF1wQc' target='_blank'>idonevenevenwannasellittyouanyway</a>",
+    "transcendental cha-cha time"
 ]);
 
 //-----------------------------------------------------------------
@@ -44,6 +66,23 @@ SITE.Hints = Object.freeze([
 SITE.SetTitle = function(title)
 {
     document.title = "JM | " + title.toUpperCase();
+}
+
+//-----------------------------------------------------------------
+
+SITE.ShuffleHint = function()
+{
+    const element = document.getElementById("loading-hint");
+
+    var hint = "";
+    do
+    {
+        const index = Math.floor(Math.random() * SITE.Hints.length);
+        var hint = SITE.Hints[index];
+    } 
+    while(hint == element.innerHTML)
+    
+    element.innerHTML = hint;
 }
 
 //-----------------------------------------------------------------
@@ -80,7 +119,7 @@ SITE.LoadTheme = function(theme)
     }
 
     const style = document.getElementById("theme-style");
-    style.href = "site/themes/" + theme + ".css";
+    style.href = "site/Themes/" + theme + ".css";
 }
 
 //-----------------------------------------------------------------
@@ -91,10 +130,8 @@ SITE.LoadPage = function(page)
     if(SITE.Page == "loading")   { return; }
 
     const loadAnim = 500;
-    const loadTime = 1000;
 
     const screen = document.getElementById("loading-screen");
-    const hint = document.getElementById("loading-hint");
     const oldPage = document.getElementById(SITE.Page);
     const newPage = document.getElementById(page);
 
@@ -112,7 +149,7 @@ SITE.LoadPage = function(page)
     }
     
     // Switch opacity when loading duration has elapsed
-    duration += ( (SITE.Page != "blank") ? loadTime : 500 );
+    duration += ( (SITE.Page != "blank") ? 500 : 250 );
     setTimeout(function(){
 
         screen.style.opacity = 0;
@@ -126,22 +163,18 @@ SITE.LoadPage = function(page)
         SITE.Page = page;
         SITE.SetTitle(SITE.Page);
 
-        screen.style.pointerEvents = "none";
-
-        hint.innerHTML = "";
+        screen.style.pointerEvents = "";
 
     }, duration);
 
     // Set properties to begin animation
     SITE.Page = "loading";
     SITE.SetTitle("loading...");
+    SITE.ShuffleHint();
     SITE.ScrollTo("top");
 
     screen.style.opacity = 1;
     screen.style.pointerEvents = "auto";
-
-    const index = Math.floor(Math.random() * SITE.Hints.length);
-    hint.innerHTML = SITE.Hints[index];
 }
 
 //-----------------------------------------------------------------
