@@ -5,8 +5,6 @@ setTimeout(function(){
 
     lucide.createIcons();
 
-    SITE.SetTitle("loading...");
-
 }, 5);
 
 //-----------------------------------------------------------------
@@ -43,14 +41,21 @@ SITE.Page = "blank";
 //-----------------------------------------------------------------
 
 SITE.Hints = Object.freeze([
-    "This loading screen doesn't need to be here, but it looks nicer than the new page instantly appearing",
+    // General
+    "This loading screen is purely aesthetic",
     "Cannot find 'Package McPackageface'",
-    "transcendental cha-cha time",
     "&#8593; &#8593; &#8595; &#8595; &#8592; &#8594; &#8592; &#8594; B A",
-    "&#8593; &#8594; &#8595; &#8595; &#8595;",
+    // Games
     "Press A to jump",
+    "Gotta go fast",
+    "Where's that damn fourth Chaos Emerald",
+    "&#8593; &#8594; &#8595; &#8595; &#8595;",
+    "*ping* WE'RE RICH *ping* WE'RE RICH *ping* WE'RE RICH",
+    // Pop Culture
     "The Robotniks have entered the chat",
-    "<a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ' target='_blank'>Never gonna give you up</a>"
+    "<a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ' target='_blank'>Never gonna give you up</a>",
+    "<a href='https://www.youtube.com/watch?v=Nk6tzVF1wQc' target='_blank'>idonevenevenwannasellittyouanyway</a>",
+    "transcendental cha-cha time"
 ]);
 
 //-----------------------------------------------------------------
@@ -64,10 +69,17 @@ SITE.SetTitle = function(title)
 
 SITE.ShuffleHint = function()
 {
-    const hint = document.getElementById("loading-hint");
+    const element = document.getElementById("loading-hint");
 
-    const index = Math.floor(Math.random() * SITE.Hints.length);
-    hint.innerHTML = SITE.Hints[index];
+    var hint = "";
+    do
+    {
+        const index = Math.floor(Math.random() * SITE.Hints.length);
+        var hint = SITE.Hints[index];
+    } 
+    while(hint == element.innerHTML)
+    
+    element.innerHTML = hint;
 }
 
 //-----------------------------------------------------------------
