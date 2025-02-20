@@ -4,16 +4,14 @@
     --theme-transition: .6s;
     --project-transition: .3s;
     --hover-transition: .4s;
-
-    --box-shadow: rgba(0, 0, 0, 0.4);
 }
 
 /*=== Data ========================================================*/
 /*--- Locations -------------------------*/
 
-.content[data-location="university"] .banner .title   { background: #B60050; color: white; }
-.content[data-location="sumodigital"] .banner .title  { background: #BE1E2D; color: white; }
-.content[data-location="blacktower"] .banner .title   { background: #0A0E11; color: white; }
+.content[data-studio="university"] .banner .title   { background: #B60050; color: white; }
+.content[data-studio="sumodigital"] .banner .title  { background: #BE1E2D; color: white; }
+.content[data-studio="blacktower"] .banner .title   { background: #0A0E11; color: white; }
 
 /*--- Skills ----------------------------*/
 /* Languages */
@@ -49,6 +47,8 @@ body
     flex-direction: row;
 
     margin: 0;
+
+    font-family: sans-serif;
 }
 
 main
@@ -237,9 +237,9 @@ button.theme-button svg, a.theme-button svg
     box-sizing: border-box;
     width: 16%;
     height: 100vh;
-    padding: 1em;
+    padding: 1vw;
     
-    box-shadow: 0.1vw 0 0.3vw var(--box-shadow);
+    box-shadow: 0.1vw 0 0.3vw var(--theme-shadow);
 
     text-align: center;
 }
@@ -360,7 +360,7 @@ button.theme-button svg, a.theme-button svg
     border-radius: 1.5vw;
     
     background: var(--theme-body-back);
-    box-shadow: 0 0 0.5vw var(--box-shadow) inset;
+    box-shadow: 0 0 0.5vw var(--theme-shadow) inset;
 
     /* Slide Transition */
     transition: var(--theme-transition);
@@ -514,10 +514,22 @@ main nav button
     position: relative;
     padding: 1vw;
 
-    box-shadow: 0.1vw 0.1vw 0.3vw var(--box-shadow);
+    box-shadow: 0.1vw 0.1vw 0.3vw var(--theme-shadow);
 }
 
-.split .content { flex-grow: 0.5; }
+.content.center
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.split .content
+{
+    flex-grow: 1;
+    flex-basis: 0;
+}
 
 .content hr { margin: 1vh 0; }
 
@@ -531,7 +543,7 @@ main nav button
     height: 4vw;
 }
 
-.banner .logo
+.banner .icon
 {
     display: flex;
     flex-direction: row;
@@ -544,7 +556,7 @@ main nav button
     height: 4vw;
 }
 
-.banner .logo svg
+.banner .icon svg
 {
     width: 2.25vw;
     height: 2.25vw;
@@ -719,7 +731,6 @@ main nav button
     height: 100%;
 
     background: var(--theme-body-main);
-
     mask-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
 
     /* Theme Transition */
@@ -740,14 +751,44 @@ main nav button
 i[data-skill]
 {
     display: inline-block;
-    border-radius: 0.5em;
-    min-width: 3em;
-    padding: 0.1em 0.75em;
+    border-radius: 0.5vw;
+    min-width: 2vw;
+    padding: 0.1vw 0.75vw;
 
     text-align: center;
     font-family: 'Russo One', sans-serif;
     font-style: normal;
-    font-size: 1.25em;
+    font-size: 0.8vw;
+}
+
+/*--- Polaroid ----------------------*/
+
+.polaroid
+{
+    margin: 0.5vw;
+    padding: 1vw;
+    width: 20vw;
+
+    background: white;
+    color: black;
+    box-shadow: 0.1vw 0.1vw 0.3vw var(--theme-shadow);
+}
+
+.polaroid img
+{
+    max-width: 100%;
+
+    box-shadow: 0 0 0.5vw var(--theme-shadow) inset;
+}
+
+.polaroid span
+{
+    display: block;
+    margin-top: 1vh;
+    width: 100%;
+
+    text-align: center;
+    font-size: 0.7vw !important;
 }
 
 /*--- Gamepad -----------------------*/
@@ -759,7 +800,7 @@ i[data-skill]
     padding: 1vw 1vw 0.4vw;
     width: 50%;
 
-    box-shadow: 0 0 0.5vw var(--box-shadow) inset;
+    box-shadow: 0 0 0.5vw var(--theme-shadow) inset;
 }
 
 /*=================================================================*/

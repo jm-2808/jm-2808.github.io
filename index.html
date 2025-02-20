@@ -77,11 +77,32 @@
 
             <div class='split'>
 
-                <div class='content theme-main'>
+                <div class='content theme-main center'>
                     <button class='theme-button font-title' title='Games' onClick='SITE.LoadPage("games");' style='height:4vw;'> GAMES </button>
                 </div>
 
                 <div class='content theme-main'>
+                    <div class='banner'>
+                        <div class='icon theme-accent'><i data-lucide='flag'></i></div>
+                        <div class='title theme-accent font-title'>
+                            <h1>New Portfolio!</h1>
+                        </div>
+                        <div class='subtitle font-subtitle'>
+                            20/02/2024
+                        </div>
+                    </div>
+                    <p class='font-text'>
+                        New portfolio layout/design has been uploaded!
+                    </p>
+                    <p class='font-text'>
+                        <b>HOME</b> and <b>ABOUT ME</b> are still under construction, but <b>GAMES</b> and <b>PROJECTS</b> are (mostly) complete (projects will be updated with more information over time)
+                    </p>
+                    <p class='font-text'>
+                        I have added temporary buttons to the home page (see either side of this notice) for the completed pages
+                    </p>
+                </div>
+
+                <div class='content theme-main center'>
                     <button class='theme-button font-title' title='Projects' onClick='SITE.LoadPage("projects");' style='height:4vw;'> PROJECTS </button>
                 </div>
                 
@@ -99,13 +120,44 @@
             <div class='split'>
 
                 <div class='content theme-main'>
-                    <p class='font-text'>Video Game Programmer with 5 years industry experience</p>
+                    <h1 class='font-title'>QUALIFICATIONS</h1>
+                    <p class='font-text'>Gameplay programmer with 5 years industry experience</p>
+                    <p class='font-text'>BSc (1st Class Honours) Computer Science for Games, Sheffield Hallam University</p>
                 </div>
 
                 <div class='content theme-main'>
-                    <p class='font-text'>BSc (1st Class Honours) Computer Science for Games, Sheffield Hallam University</p>
+                    <h1 class='font-title'>INTERESTS</h1>
+                    <p class='font-text'>Playing games</p>
+                    <p class='font-text'>Making games (<b>PROJECTS</b> has some things I have made in my spare time)</p>
                 </div>
                 
+            </div>
+
+            <div class='content theme-main'>
+                <div class='polaroid' style='float:right; transform: rotate(-3deg);'>
+                    <img src='site/Assets/insomniacmuseum.png'>
+                    <span class='font-title'>Insomniac Museum, Planet Burbank<br>Ratchet & Clank: Going Commando (2003)</span>
+                </div>
+                <h1 class='font-title'>ORIGIN STORY</h1>
+                <p class='font-text'>
+                    Sometime around 2003, I acquired <b>Ratchet & Clank: Going Commando</b> for the <b>Playstation 2</b>, which to this day I still cite as my favourite game of all time.
+                    I could talk for hours on end about my love for the game, but for the purposes of this page I wish to talk about a hidden location within the game known as the <b>Insomniac Museum</b>.
+                </p>
+                <p>
+                    <span class='font-text'>
+                        There are multiple ways to reach this location: fully upgrading every weapon, using a teleporter on Planet Boldan which is only active between 3AM - 4AM, and <em>(my personal favourite)</em> the "power line exploit" also found on Planet Boldan.
+                        Upon reaching the museum, the player is free to explore and browse the various exhibits showcasing unused material alongside developer commentaries, which include:
+                    </span>
+                    <ul class='font-text'>
+                        <li><b>Developement resources</b> - Notably a large testing area for the player's movement</li>
+                        <li><b>Feature demonstrations</b> - Particle effects, breakable meshes and gravity surfaces to name a few</li>
+                        <li><b>Scrapped content</b> - Models for weapons and enemies which were ultimately removed</li>
+                    </ul>
+                    <span class='font-text'>
+                        This look behind the curtain, showcasing aspects of development which would usually be kept within the studio's walls and explaining what made the game tick, left a lasting impression which inspires me to this day.
+                        
+                    </span>
+                </p>
             </div>
 
         </main>
@@ -121,9 +173,9 @@
                 </nav>
             </div>
 
-            <div id='games-blacktower' class='content theme-main' data-location='blacktower'>
+            <div id='games-blacktower' class='content theme-main' data-studio='blacktower'>
                 <div class='banner'>
-                    <img class='logo' src='site/Studios/studio-blacktower.png'>
+                    <img class='icon' src='site/Studios/studio-blacktower.png'>
                     <div class='title font-title'>
                         <h1>BLACK TOWER STUDIOS</h1> Tokyo, Japan
                     </div>
@@ -150,9 +202,9 @@
                 </div>
             </div>
 
-            <div id='games-sumodigital' class='content theme-main' data-location='sumodigital'>
+            <div id='games-sumodigital' class='content theme-main' data-studio='sumodigital'>
                 <div class='banner'>
-                    <img class='logo' src='site/Studios/studio-sumodigital.png'>
+                    <img class='icon' src='site/Studios/studio-sumodigital.png'>
                     <div class='title font-title'>
                         <h1>SUMO DIGITAL</h1> Sheffield, England
                     </div>
@@ -256,7 +308,7 @@
 
             <div id='projects-independent' class='content theme-main'>
                 <div class='banner'>
-                    <img class='logo' src='site/logo.png'>
+                    <img class='icon' src='site/logo.png'>
                     <div class='title theme-accent font-title'>
                         <h1>INDEPENDENT PROJECTS</h1> 192.168.0.1
                     </div>
@@ -327,9 +379,9 @@
                 <script>GAMEPAD.Generate("gamepad");</script>
             </div>
 
-            <div id='projects-university' class='content theme-main' data-location='university'>
+            <div id='projects-university' class='content theme-main' data-studio='university'>
                 <div class='banner university'>
-                    <img class='logo' src='site/Studios/studio-university.png'>
+                    <img class='icon' src='site/Studios/studio-university.png'>
                     <div class='title font-title'>
                         <h1>UNIVERSITY ASSIGNMENTS</h1> Sheffield Hallam University
                     </div>
