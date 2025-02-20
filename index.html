@@ -32,10 +32,10 @@
                 </div>
             </div>
             <nav>
-                <button class='font-title' title='Home' onClick='SITE.LoadPage("home");'> <i data-lucide='house'></i>HOME </button>
-                <button class='font-title' title='About Me' onClick='SITE.LoadPage("about");'> <i data-lucide='person-standing'></i>ABOUT ME </button>
-                <button class='font-title' title='Games' onClick='SITE.LoadPage("games");'> <i data-lucide='gamepad-2'></i>GAMES </button>
-                <button class='font-title' title='Projects' onClick='SITE.LoadPage("projects");'> <i data-lucide='brain-circuit'></i>PROJECTS </button>
+                <button class='theme-menu font-title' title='Home' onClick='SITE.LoadPage("home");'> <i data-lucide='house'></i>HOME </button>
+                <button class='theme-menu font-title' title='About Me' onClick='SITE.LoadPage("about");'> <i data-lucide='person-standing'></i>ABOUT ME </button>
+                <button class='theme-menu font-title' title='Games' onClick='SITE.LoadPage("games");'> <i data-lucide='gamepad-2'></i>GAMES </button>
+                <button class='theme-menu font-title' title='Projects' onClick='SITE.LoadPage("projects");'> <i data-lucide='brain-circuit'></i>PROJECTS </button>
             </nav>
             <div id='scroll-top'>
                 <button id='scroll-top-button' class='theme-button' title='Return to the top of the page' onClick='SITE.ScrollTo("top");' style='display:none;'><i data-lucide='arrow-up-to-line'></i></button>
@@ -71,8 +71,20 @@
                 <h1 class='font-title'>HOME</h1>
                 <p class='font-text'>
                     Welcome to my (updated) portfolio! 
-                    This page and the "About Me" page are still work-in-progress, but "Games" and "Projects" have been fully integrated into the new layout; please feel free to look through the things I have worked on
+                    This page and the "About Me" page are still under construction, but "Games" and "Projects" have been fully integrated into the new layout; please feel free to look through the things I have worked on!
                 </p>
+            </div>
+
+            <div class='split'>
+
+                <div class='content theme-main'>
+                    <button class='theme-button font-title' title='Games' onClick='SITE.LoadPage("games");' style='height:4vw;'> GAMES </button>
+                </div>
+
+                <div class='content theme-main'>
+                    <button class='theme-button font-title' title='Projects' onClick='SITE.LoadPage("projects");' style='height:4vw;'> PROJECTS </button>
+                </div>
+                
             </div>
             
         </main>
@@ -109,15 +121,14 @@
                 </nav>
             </div>
 
-            <div id='games-blacktower' class='content theme-main'>
-                <div class='studio blacktower'>
+            <div id='games-blacktower' class='content theme-main' data-location='blacktower'>
+                <div class='banner'>
                     <img class='logo' src='site/Studios/studio-blacktower.png'>
-                    <div class='banner font-title'>
-                        <h1 class='name'>BLACK TOWER STUDIOS</h1>
-                        <span class='location'>Tokyo, Japan</span>
+                    <div class='title font-title'>
+                        <h1>BLACK TOWER STUDIOS</h1> Tokyo, Japan
                     </div>
-                    <div class='details font-subtitle'>
-                        <div class='role theme-accent'>Gameplay Programmer</div>10/2024 - 02/2025
+                    <div class='subtitle font-subtitle'>
+                        <span class='theme-accent'>Gameplay Programmer</span>10/2024 - 02/2025
                     </div>
                 </div>
                 <div id='project-chainsaw' class='project'>
@@ -139,17 +150,16 @@
                 </div>
             </div>
 
-            <div id='games-sumodigital' class='content theme-main'>
-                <div class='studio sumodigital'>
+            <div id='games-sumodigital' class='content theme-main' data-location='sumodigital'>
+                <div class='banner'>
                     <img class='logo' src='site/Studios/studio-sumodigital.png'>
-                    <div class='banner font-title'>
-                        <h1 class='name'>SUMO DIGITAL</h1>
-                        <span class='location'>Sheffield, England</span>
+                    <div class='title font-title'>
+                        <h1>SUMO DIGITAL</h1> Sheffield, England
                     </div>
-                    <div class='details font-subtitle'>
-                        <div class='role theme-accent'>Gameplay Programmer</div>06/2022 - 07/2024<div class='vr'></div>
-                        <div class='role theme-accent'>Junior Programmer</div>08/2020 - 06/2022<div class='vr'></div>
-                        <div class='role theme-accent'>Placement Programmer</div>07/2018 - 08/2019
+                    <div class='subtitle font-subtitle'>
+                        <span class='theme-accent'>Gameplay Programmer</span>06/2022 - 07/2024<div class='vr'></div>
+                        <span class='theme-accent'>Junior Programmer</span>08/2020 - 06/2022<div class='vr'></div>
+                        <span class='theme-accent'>Placement Programmer</span>07/2018 - 08/2019
                     </div>
                 </div>
                 <div id='project-scramble' class='project'>
@@ -245,14 +255,13 @@
             </div>
 
             <div id='projects-independent' class='content theme-main'>
-                <div class='studio self'>
+                <div class='banner'>
                     <img class='logo' src='site/logo.png'>
-                    <div class='banner font-title'>
-                        <h1 class='name'>Independent Projects</h1>
-                        <span class='location'>192.168.0.1</span>
+                    <div class='title theme-accent font-title'>
+                        <h1>INDEPENDENT PROJECTS</h1> 192.168.0.1
                     </div>
-                    <div class='details font-subtitle'>
-                        <div class='role theme-accent'>Jack of All Trades</div>
+                    <div class='subtitle font-subtitle'>
+                        <span class='theme-accent'>Jack of All Trades</span>
                     </div>
                 </div>
                 <div id='project-portfolio' class='project'>
@@ -318,15 +327,14 @@
                 <script>GAMEPAD.Generate("gamepad");</script>
             </div>
 
-            <div id='projects-university' class='content theme-main'>
-                <div class='studio university'>
+            <div id='projects-university' class='content theme-main' data-location='university'>
+                <div class='banner university'>
                     <img class='logo' src='site/Studios/studio-university.png'>
-                    <div class='banner font-title'>
-                        <h1 class='name'>UNIVERSITY ASSIGNMENTS</h1>
-                        <span class='location'>Sheffield Hallam University</span>
+                    <div class='title font-title'>
+                        <h1>UNIVERSITY ASSIGNMENTS</h1> Sheffield Hallam University
                     </div>
-                    <div class='details font-subtitle'>
-                        <div class='role theme-accent'>BSc Computer Science for Games</div>09/2016 - 08/2020
+                    <div class='subtitle font-subtitle'>
+                        <span class='theme-accent'>BSc Computer Science for Games</span>09/2016 - 08/2020
                     </div>
                 </div>
                 <div id='project-niobium' class='project'>

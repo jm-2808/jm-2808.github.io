@@ -51,6 +51,9 @@ SITE.Hints = Object.freeze([
     "Where's that damn fourth Chaos Emerald",
     "&#8593; &#8594; &#8595; &#8595; &#8595;",
     "*ping* WE'RE RICH *ping* WE'RE RICH *ping* WE'RE RICH",
+    // TV
+    "Secret material: HIDEN Metal [ METAL CLUSTER HOPPER ] It's high quality",
+    "Get ready for BOOST and MAGNUM! Ready? Fight!",
     // Pop Culture
     "The Robotniks have entered the chat",
     "<a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ' target='_blank'>Never gonna give you up</a>",

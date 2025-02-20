@@ -8,6 +8,34 @@
     --box-shadow: rgba(0, 0, 0, 0.4);
 }
 
+/*=== Data ========================================================*/
+/*--- Locations -------------------------*/
+
+.content[data-location="university"] .banner .title   { background: #B60050; color: white; }
+.content[data-location="sumodigital"] .banner .title  { background: #BE1E2D; color: white; }
+.content[data-location="blacktower"] .banner .title   { background: #0A0E11; color: white; }
+
+/*--- Skills ----------------------------*/
+/* Languages */
+i[data-skill="cpp"]     { background: #00599D; color: #FFFFFF; } i[data-skill="cpp"]:before     { content: "c++"; }
+i[data-skill="cs"]      { background: #843489; color: #FFFFFF; } i[data-skill="cs"]:before      { content: "c#"; }
+i[data-skill="uebp"]    { background: #00266B; color: #FFFFFF; } i[data-skill="uebp"]:before    { content: "blueprint"; }
+i[data-skill="lua"]     { background: #000080; color: #FFFFFF; } i[data-skill="lua"]:before     { content: "lua"; }
+i[data-skill="html"]    { background: #E54C25; color: #FFFFFF; } i[data-skill="html"]:before    { content: "html"; }
+i[data-skill="css"]     { background: #42A5F5; color: #FFFFFF; } i[data-skill="css"]:before     { content: "css"; }
+i[data-skill="js"]      { background: #FFCA28; color: #000000; } i[data-skill="js"]:before      { content: "javascript"; }
+i[data-skill="cmd"]     { background: #000000; color: #00AA00; }
+
+/* Programs */
+i[data-skill="unreal"]      { background: #000000; color: #FFFFFF; } i[data-skill="unreal"]:before      { content: "UE"; }
+i[data-skill="unity"]       { background: #FFFFFF; color: #000000; } i[data-skill="unity"]:before       { content: "unity"; }
+i[data-skill="godot"]       { background: #478CBF; color: #FFFFFF; } i[data-skill="godot"]:before       { content: "godot"; }
+i[data-skill="vs"]          { background: #7252AA; color: #FFFFFF; } i[data-skill="vs"]:before          { content: "visual studio"; }
+i[data-skill="vsc"]         { background: #0089D2; color: #FFFFFF; } i[data-skill="vsc"]:before         { content: "visual studio code"; }
+i[data-skill="blender"]     { background: #E87D0D; color: #265787; } i[data-skill="blender"]:before     { content: "blender"; }
+i[data-skill="perforce"]    { background: #F05033; color: #FFFFFF; } i[data-skill="perforce"]:before    { content: "perforce"; }
+i[data-skill="github"]      { background: #0D1827; color: #FFFFFF; } i[data-skill="github"]:before      { content: "github"; }
+
 /*=== General =====================================================*/
 
 [hidden]
@@ -129,8 +157,6 @@ hr
 
 .font-title
 {
-    color: inherit;
-
     font-family: 'Russo One', sans-serif;
     font-weight: 300;
     font-size: 2.5vw;
@@ -140,8 +166,6 @@ hr
 
 .font-subtitle
 {
-    color: inherit;
-
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
     font-size: 1.0vw;
@@ -151,8 +175,6 @@ hr
 
 .font-text
 {
-    color: inherit;
-
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     font-size: 0.8vw;
@@ -238,6 +260,8 @@ button.theme-button svg, a.theme-button svg
 
 #menu #profile h1
 {
+    color: inhert;
+
     font-size: 1.85vw;
 }
 
@@ -497,9 +521,9 @@ main nav button
 
 .content hr { margin: 1vh 0; }
 
-/*--- Studio ------------------------*/
+/*--- Banner ------------------------*/
 
-.studio
+.banner
 {
     position: relative;
     box-sizing: border-box;
@@ -507,12 +531,7 @@ main nav button
     height: 4vw;
 }
 
-.studio.self .banner        { background: #232D6D; color: white; }
-.studio.university .banner  { background: #B60050; color: white; }
-.studio.sumodigital .banner { background: #BE1E2D; color: white; }
-.studio.blacktower .banner  { background: #0A0E11; color: white; }
-
-.studio .logo
+.banner .logo
 {
     display: flex;
     flex-direction: row;
@@ -525,13 +544,13 @@ main nav button
     height: 4vw;
 }
 
-.studio .logo svg
+.banner .logo svg
 {
     width: 2.25vw;
     height: 2.25vw;
 }
 
-.studio .banner
+.banner .title
 {
     display: flex;
     flex-direction: row;
@@ -541,21 +560,18 @@ main nav button
     border-top-left-radius: 0;
     padding-left: 2.75vw;
     height: 2vw;
+
+    font-size: 0.8vw;
 }
 
-.studio .banner .name
+.banner .title h1
 {
     margin-right: 1vw;
 
     font-size: 1.75vw;
 }
 
-.studio .banner .location
-{
-    font-size: 0.8vw;
-}
-
-.studio .details
+.banner .subtitle
 {
     display: flex;
     flex-direction: row;
@@ -566,14 +582,14 @@ main nav button
     font-size: 0.8vw;
 }
 
-.studio .details .role
+.banner .subtitle span
 {
     border-radius: 1vw;
     margin-right: 0.4vw;
     padding: 0 0.5vw;
 }
 
-.studio .details .vr
+.banner .subtitle .vr
 {
     margin: 0 1vw;
     height: 60%;
@@ -733,41 +749,6 @@ i[data-skill]
     font-style: normal;
     font-size: 1.25em;
 }
-
-/* Languages */
-i[data-skill="cpp"]                 { background: #00599D; color: #FFFFFF; }
-i[data-skill="cpp"]:before          { content: "c++"; }
-i[data-skill="cs"]                  { background: #843489; color: #FFFFFF; }
-i[data-skill="cs"]:before           { content: "c#"; }
-i[data-skill="uebp"]                { background: #00266B; color: #FFFFFF; }
-i[data-skill="uebp"]:before         { content: "blueprint"; }
-i[data-skill="lua"]                 { background: #000080; color: #FFFFFF; }
-i[data-skill="lua"]:before          { content: "lua"; }
-i[data-skill="html"]                { background: #E54C25; color: #FFFFFF; }
-i[data-skill="html"]:before         { content: "html"; }
-i[data-skill="css"]                 { background: #42A5F5; color: #FFFFFF; }
-i[data-skill="css"]:before          { content: "css"; }
-i[data-skill="js"]                  { background: #FFCA28; color: #000000; }
-i[data-skill="js"]:before           { content: "javascript"; }
-i[data-skill="cmd"]                 { background: #000000; color: #00AA00; }
-
-/* Programs */
-i[data-skill="unreal"]              { background: #000000; color: #FFFFFF; }
-i[data-skill="unreal"]:before       { content: "UE"; }
-i[data-skill="unity"]               { background: #FFFFFF; color: #000000; }
-i[data-skill="unity"]:before        { content: "unity"; }
-i[data-skill="godot"]               { background: #478CBF; color: #FFFFFF; }
-i[data-skill="godot"]:before        { content: "godot"; }
-i[data-skill="vs"]                  { background: #7252AA; color: #FFFFFF; }
-i[data-skill="vs"]:before           { content: "visual studio"; }
-i[data-skill="vsc"]                 { background: #0089D2; color: #FFFFFF; }
-i[data-skill="vsc"]:before          { content: "visual studio code"; }
-i[data-skill="blender"]             { background: #E87D0D; color: #265787; }
-i[data-skill="blender"]:before      { content: "blender"; }
-i[data-skill="perforce"]            { background: #F05033; color: #FFFFFF; }
-i[data-skill="perforce"]:before     { content: "perforce"; }
-i[data-skill="github"]              { background: #0D1827; color: #FFFFFF; }
-i[data-skill="github"]:before       { content: "github"; }
 
 /*--- Gamepad -----------------------*/
 
