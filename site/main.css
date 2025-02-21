@@ -41,6 +41,7 @@ body
     margin: 0;
 
     font-family: sans-serif;
+    font-size: 1em;
 }
 
 main
@@ -53,6 +54,7 @@ h1, h2, h3
     margin: 0;
 
     font-weight: inherit;
+    font-size: 1em;
 }
 
 a
@@ -154,12 +156,12 @@ body
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
 
-    font-size: 0.8vw;
+    font-size: 1.25em;
 }
 
 .subtext
 {
-    font-size: 0.55vw;
+    font-size: 0.70em;
 }
 
 .quote          { font-style: italic; }
@@ -172,12 +174,12 @@ body
     font-weight: 300;
 }
 
-.menu .title        { font-size: 1.85vw; }
-.loading .title     { font-size: 4.0vw; }
-.block .title       { font-size: 2.5vw; }
-.banner .title      { font-size: 0.9vw; }
-.project .title     { font-size: 1.75vw; }
-.polaroid .title    { font-size: 0.8vw; }
+.menu .title        { font-size: 2.00vw; }
+.loading .title     { font-size: 5.00em; }
+.block .title       { font-size: 3.25em; }
+.banner .title      { font-size: 1.75vw; }
+.project .title     { font-size: 2.15em; }
+.polaroid .title    { font-size: 1.20em; }
 
 .subtitle
 {
@@ -185,9 +187,10 @@ body
     font-weight: 600;
 }
 
-.menu .subtitle     { font-size: 1.2vw; }
-.loading .subtitle  { font-size: 1.2vw; }
-.project .subtitle  { font-size: 0.75vw; }
+.menu .subtitle     { font-size: 1.50em; }
+.loading .subtitle  { font-size: 2.00em; }
+.banner .subtitle   { font-size: 0.90vw; }
+.project .subtitle  { font-size: 1.00em; }
 
 .button
 {
@@ -196,6 +199,8 @@ body
 }
 
 /*=== Layout ======================================================*/
+
+:root { --menu-width: max(16%, 200px); }
 
 .menu
 {
@@ -210,7 +215,7 @@ body
 
     box-sizing: border-box;
     padding: 2vh 1vw;
-    width: 16%;
+    width: var(--menu-width);
     height: 100vh;
 
     text-align: center;
@@ -238,10 +243,10 @@ body
     position: fixed;
     z-index: 5;
     top: 0;
-    left: 16%;
+    left: var(--menu-width);
 
     box-sizing: border-box;
-    width: 84%;
+    width: calc(100% - var(--menu-width));
     height: 100%;
 
     text-align: center;
@@ -255,11 +260,11 @@ body
 
     position: absolute;
     top: 0;
-    left: 16%;
+    left: var(--menu-width);
 
     box-sizing: border-box;
     padding: 5vh 2.5vw 6vh 3.25vw;
-    width: 84%
+    width: calc(100% - var(--menu-width));
 }
 
 .block
@@ -517,7 +522,6 @@ i[data-skill]
     text-align: center;
     font-family: 'Russo One', sans-serif;
     font-style: normal;
-    font-size: 0.8vw;
 }
 
 /*=== Content =====================================================*/
@@ -548,7 +552,7 @@ i[data-skill]
 
 .profile .links .button
 {
-    width: 2.5vw;
+    width: 20%;
 }
 
 .menu nav
@@ -599,7 +603,7 @@ i[data-skill]
 
     box-sizing: border-box;
     margin-bottom: 1.25vh;
-    height: 4vw;
+    min-height: 4vw;
 }
 
 .block .banner .icon
@@ -652,12 +656,12 @@ i[data-skill]
 
 .block .banner .bottom .highlight
 {
-    margin-right: 0.4vw; 
+    margin-right: 0.4vw;
 }
 
 .block .banner .subtitle .vr
 {
-    margin: 0 1vw;
+    margin: 0 2%;
     height: 60%;
 }
 
@@ -810,7 +814,7 @@ i[data-skill]
 
 .polaroid
 {
-    margin: 0.5vw;
+    margin: 0.75vw;
     padding: 1vw;
     width: 20vw;
 
