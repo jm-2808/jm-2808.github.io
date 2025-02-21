@@ -165,8 +165,6 @@ SITE.LoadPage = function(page)
 
         screen.style.pointerEvents = "";
 
-        hint.innerHTML = "";
-
     }, duration);
 
     // Set properties to begin animation
