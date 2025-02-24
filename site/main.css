@@ -16,15 +16,33 @@ i[data-skill="css"]     { background: #42A5F5; color: #FFFFFF; } i[data-skill="c
 i[data-skill="js"]      { background: #FFCA28; color: #000000; } i[data-skill="js"]:before      { content: "javascript"; }
 i[data-skill="cmd"]     { background: #000000; color: #00AA00; }
 
+i[data-skill-logo="cpp"]     { background-image: url("Skills/skill-cpp.png"); }
+i[data-skill-logo="cs"]      { background-image: url("Skills/skill-csharp.png"); }
+i[data-skill-logo="lua"]     { background-image: url("Skills/skill-lua.png"); }
+i[data-skill-logo="html"]    { background-image: url("Skills/skill-html.png"); }
+i[data-skill-logo="css"]     { background-image: url("Skills/skill-css.png"); }
+i[data-skill-logo="js"]      { background-image: url("Skills/skill-javascript.png"); }
+
 /* Programs */
 i[data-skill="unreal"]      { background: #000000; color: #FFFFFF; } i[data-skill="unreal"]:before      { content: "UE"; }
 i[data-skill="unity"]       { background: #FFFFFF; color: #000000; } i[data-skill="unity"]:before       { content: "unity"; }
 i[data-skill="godot"]       { background: #478CBF; color: #FFFFFF; } i[data-skill="godot"]:before       { content: "godot"; }
 i[data-skill="vs"]          { background: #7252AA; color: #FFFFFF; } i[data-skill="vs"]:before          { content: "visual studio"; }
 i[data-skill="vsc"]         { background: #0089D2; color: #FFFFFF; } i[data-skill="vsc"]:before         { content: "visual studio code"; }
+i[data-skill="obsidian"]    { background: #8F62EA; color: #FFFFFF; } i[data-skill="obsidian"]:before    { content: "obsidian"; }
 i[data-skill="blender"]     { background: #E87D0D; color: #265787; } i[data-skill="blender"]:before     { content: "blender"; }
 i[data-skill="perforce"]    { background: #F05033; color: #FFFFFF; } i[data-skill="perforce"]:before    { content: "perforce"; }
 i[data-skill="github"]      { background: #0D1827; color: #FFFFFF; } i[data-skill="github"]:before      { content: "github"; }
+
+i[data-skill-logo="unreal"]     { background-image: url("Skills/skill-unreal.png"); }
+i[data-skill-logo="unity"]      { background-image: url("Skills/skill-unity.png"); }
+i[data-skill-logo="godot"]      { background-image: url("Skills/skill-godot.png"); }
+i[data-skill-logo="vs"]         { background-image: url("Skills/skill-visualstudio.png"); }
+i[data-skill-logo="vsc"]        { background-image: url("Skills/skill-visualstudiocode.png"); }
+i[data-skill-logo="obsidian"]   { background-image: url("Skills/skill-obsidian.png"); }
+i[data-skill-logo="blender"]    { background-image: url("Skills/skill-blender.png"); }
+i[data-skill-logo="perforce"]   { background-image: url("Skills/skill-perforce.png"); }
+i[data-skill-logo="github"]     { background-image: url("Skills/skill-github.png"); }
 
 /*=== General =====================================================*/
 
@@ -297,6 +315,12 @@ body
     align-items: center;
 }
 
+.block.block-empty
+{
+    background: none;
+    box-shadow: none;
+}
+
 .split
 {
     display: flex;
@@ -522,12 +546,31 @@ i[data-skill]
 {
     display: inline-block;
     border-radius: 0.5vw;
-    min-width: 2vw;
     padding: 0.1vh 0.75vw;
+    min-width: 2vw;
 
     text-align: center;
     font-family: 'Russo One', sans-serif;
     font-style: normal;
+}
+
+i[data-skill-logo]
+{
+    width: 4vw;
+    height: 4vw;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.skill
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25vh;
 }
 
 /*=== Content =====================================================*/
@@ -680,14 +723,7 @@ i[data-skill]
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
-    position: relative;
-}
-
-.about svg
-{
-    display: inline-block;
-    margin-right: 0.5vw;
+    gap: 0.5vw;
 }
 
 /*--- Polaroid --------------------------*/
