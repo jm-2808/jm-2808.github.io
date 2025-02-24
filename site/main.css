@@ -828,6 +828,17 @@ i[data-skill]
     transition: box-shadow var(--theme-transition) ease-in-out;
 }
 
+.polaroid.right
+{
+    float: right;
+    transform: rotate(-3deg);
+}
+.polaroid.left
+{
+    float: left;
+    transform: rotate(3deg);
+}
+
 .polaroid img
 {
     max-width: 100%;
