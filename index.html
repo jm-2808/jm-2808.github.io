@@ -47,11 +47,11 @@
                 </label>
             </div>
             <div class='license'>
-                <p class='subtext'>
+                <p>
                     Icons from <a href='https://lucide.dev/' target='_blank'>Lucide</a> (ISC License)<br>
                     Copyright (c) 2020, Lucide Contributors
                 </p>
-                <p class='subtext'>
+                <p>
                     Hosted via <a href='https://pages.github.com/' target='_blank'>Github Pages</a><br>
                     Last Updated - February 2025
                 </p>
@@ -75,7 +75,7 @@
             </div>
 
             <div class='split'>
-                <div class='block center'>
+                <div class='block block-center'>
                     <button class='button title' title='Games' onClick='SITE.LoadPage("games");' style='height:4vw;'> GAMES </button>
                 </div>
 
@@ -100,7 +100,7 @@
                     </p>
                 </div>
 
-                <div class='block center'>
+                <div class='block block-center'>
                     <button class='button title' title='Projects' onClick='SITE.LoadPage("projects");' style='height:4vw;'> PROJECTS </button>
                 </div>
             </div>
@@ -111,21 +111,32 @@
 
             <div class='block'>
                 <h1 class='title'>ABOUT</h1>
-                <p>This page is a work-in-progress, watch this space!</p>
+                <p class='text-large text-center'>Hi, I'm Jack! I'm a gameplay programmer and video game enthusiast with a passion for platformers and shooters</p>
+                <p class='text-center'>I love making games both professionally and in my free time, but I can also be found playing games such as Ratchet & Clank, Warframe, Sonic, Zenless Zone Zero and many more!</p>
             </div>
 
             <div class='split'>
                 <div class='block'>
-                    <h1 class='title'>QUALIFICATIONS</h1>
-                    <p>Gameplay programmer with 5 years industry experience</p>
-                    <p>BSc (1st Class Honours) Computer Science for Games, Sheffield Hallam University</p>
+                    <div class='about'>
+                        <i data-lucide='calendar-clock'></i>
+                        <span class='subtitle'>5 years professional experience</span>
+                    </div>
                 </div>
 
                 <div class='block'>
-                    <h1 class='title'>INTERESTS</h1>
-                    <p>Playing games</p>
-                    <p>Making games (<b>PROJECTS</b> has some things I have made in my spare time)</p>
+                    <div class='about'>
+                        <i data-lucide='award'></i>
+                        <span class='subtitle'>BSc (1st Class Honours) Computer Science for Games</span>
+                    </div>
                 </div>
+            </div>
+
+            <div class='block'>
+                <h1 class='title'>ACCOLADES</h1>
+                <ul>
+                    <li><b>Sumo Digital Award for Game Design (3rd place)</b>, Game Republic Student Showcase 2020</li>
+                    <li><b>Rockstar Leeds Award for Best Team (3rd place)</b>, Game Republic Student Showcase 2020</li>
+                </ul>
             </div>
 
             <div class='block'>
@@ -135,16 +146,16 @@
                 </div>
                 <h1 class='title'>INSPIRATION</h1>
                 <p>
-                    While spontaneity was a notable contributor toward my desire to become a game developer, a large part of it can be attributed to my favourite game: <b>Ratchet & Clank: Going Commando</b> (2003) for the <b>Playstation 2</b>.
+                    A large part of my desire to become a game developer can be attributed to my favourite game: <b>Ratchet & Clank: Going Commando</b> (2003) for the <b>Playstation 2</b>.
                     There are many reasons I love this game, but the reason I cite it as my inspiration to become a game developer can be attributed to a hidden location within the game known as the <b>Insomniac Museum</b>.
                 </p>
                 <p>
                     For anyone who hasn't played a Ratchet & Clank game, the Insomniac Museum is a location which appears throughout the series and features various interactive exhibits featuring aspects of the game's development alongside 
                     developer commentaries. Going Commando was the first game in the series to feature the location and includes content from both itself and the previous game, Ratchet & Clank (2002), with exhibits showcasing:
                     <ul>
-                        <li><b>Developement resources</b> - Notably a large testing area for the player's movement</li>
-                        <li><b>Mechanics demonstrations</b> - Particle effects, breakable meshes and gravity surfaces to name a few</li>
-                        <li><b>Scrapped content</b> - Models for weapons, enemies and objects which were ultimately unused</li>
+                        <li>Developement resources - Notably a large testing area for the player's movement</li>
+                        <li>Mechanics demonstrations - Particle effects, breakable meshes and gravity surfaces to name a few</li>
+                        <li>Scrapped content - Models for weapons, enemies and objects which were ultimately unused</li>
                     </ul>
                     Alongside the exhibits, the accompanying developer commentaries explain, with an often humourous tone, what each exhibit represents and any challenges the item in question presented.
                 </p>
@@ -164,7 +175,7 @@
 
             <div class='block'>
                 <h1 class='title'>GAMES</h1>
-                <p>Browse through games I have worked on professionally</p>
+                <p class='text-large'>Browse through games I have worked on professionally</p>
                 <nav>
                     <button class='button' onClick='SITE.ScrollTo("games-blacktower");'>BLACK TOWER</button>
                     <button class='button' onClick='SITE.ScrollTo("games-sumodigital");'>SUMO DIGITAL</button>
@@ -176,7 +187,7 @@
                 <div class='banner'>
                     <img class='icon' src='site/Studios/studio-blacktower.png'>
                     <div class='top title'>
-                        <h1>BLACK TOWER STUDIOS</h1><span class='subtext'>Tokyo, Japan</span>
+                        <h1>BLACK TOWER STUDIOS</h1><span class='text-small'>Tokyo, Japan</span>
                     </div>
                     <div class='bottom subtitle'>
                         <span class='highlight'>Gameplay Programmer</span>10/2024 - 02/2025
@@ -207,7 +218,7 @@
                 <div class='banner'>
                     <img class='icon' src='site/Studios/studio-sumodigital.png'>
                     <div class='top title'>
-                        <h1>SUMO DIGITAL</h1><span class='subtext'>Sheffield, England</span>
+                        <h1>SUMO DIGITAL</h1><span class='text-small'>Sheffield, England</span>
                     </div>
                     <div class='bottom subtitle'>
                         <span class='highlight'>Gameplay Programmer</span>06/2022 - 07/2024<div class='vr'></div>
@@ -304,7 +315,7 @@
 
             <div class='block'>
                 <h1 class='title'>PROJECTS</h1>
-                <p>Browse through projects I have worked on in my free time (or at university)</p>
+                <p class='text-large'>Browse through projects I have worked on in my free time (or at university)</p>
                 <nav>
                     <button class='button' onClick='SITE.ScrollTo("projects-independent");'>INDEPENDENT</button>
                     <button class='button' onClick='SITE.ScrollTo("projects-university");'>UNIVERSITY</button>
@@ -317,7 +328,7 @@
                 <div class='banner'>
                     <img class='icon' src='site/logo.png'>
                     <div class='top title'>
-                        <h1>INDEPENDENT PROJECTS</h1><span class='subtext'>192.168.0.1</span>
+                        <h1>INDEPENDENT PROJECTS</h1><span class='text-small'>192.168.0.1</span>
                     </div>
                     <div class='bottom subtitle'>
                         <span class='highlight'>Jack of All Trades</span>
@@ -394,7 +405,7 @@
                 <div class='banner'>
                     <img class='icon' src='site/Studios/studio-university.png'>
                     <div class='top title'>
-                        <h1>UNIVERSITY ASSIGNMENTS</h1><span class='subtext'>Sheffield Hallam University</span>
+                        <h1>UNIVERSITY ASSIGNMENTS</h1><span class='text-small'>Sheffield Hallam University</span>
                     </div>
                     <div class='bottom subtitle'>
                         <span class='highlight'>BSc Computer Science for Games</span>09/2016 - 08/2020

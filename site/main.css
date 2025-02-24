@@ -159,12 +159,10 @@ body
     font-size: 1.10em;
 }
 
-.subtext
-{
-    font-size: 0.85em;
-}
+.text-large { font-size: 135%; }
+.text-small { font-size: 65%; }
 
-.banner .title .subtext { font-size: 0.55em; }
+.text-center    { text-align: center; }
 
 .quote          { font-style: italic; }
 .quote:before   { content: "\""; }
@@ -192,12 +190,18 @@ body
 .menu .subtitle     { font-size: 1.60em; }
 .loading .subtitle  { font-size: 2.00em; }
 .banner .subtitle   { font-size: 0.75vw; }
+.about .subtitle    { font-size: 1.25em; }
 .project .subtitle  { font-size: 1.00em; }
 
 .button
 {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
+}
+
+.license
+{
+    font-size: 0.75em;
 }
 
 /*=== Layout ======================================================*/
@@ -285,7 +289,7 @@ body
     gap: 1vw;
 }
 
-.block.center
+.block.block-center
 {
     display: flex;
     flex-direction: row;
@@ -652,6 +656,7 @@ i[data-skill]
     display: flex;
     flex-direction: row;
     align-items: center;
+
     margin-left: 5.5vw;
     height: 1.75vw;
 }
@@ -665,6 +670,66 @@ i[data-skill]
 {
     margin: 0 2%;
     height: 60%;
+}
+
+/*--- About -----------------------------*/
+
+.about
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.about svg
+{
+    display: inline-block;
+    margin-right: 0.5vw;
+}
+
+/*--- Polaroid --------------------------*/
+
+.polaroid
+{
+    margin: 0.75vw;
+    padding: 1vw;
+    width: 20vw;
+
+    background: white;
+    color: black;
+    box-shadow: 0.1vw 0.1vw 0.3vw var(--theme-shadow);
+
+    /* Theme Transition */
+    transition: box-shadow var(--theme-transition) ease-in-out;
+}
+
+.polaroid.right
+{
+    float: right;
+    transform: rotate(-3deg);
+}
+.polaroid.left
+{
+    float: left;
+    transform: rotate(3deg);
+}
+
+.polaroid img
+{
+    max-width: 100%;
+}
+
+.polaroid span
+{
+    display: block;
+    
+    margin-top: 1vh;
+    width: 100%;
+
+    text-align: center;
 }
 
 /*--- Project ---------------------------*/
@@ -810,48 +875,6 @@ i[data-skill]
 
     width: 5vw;
     height: 1.25vw;
-}
-
-/*--- Polaroid --------------------------*/
-
-.polaroid
-{
-    margin: 0.75vw;
-    padding: 1vw;
-    width: 20vw;
-
-    background: white;
-    color: black;
-    box-shadow: 0.1vw 0.1vw 0.3vw var(--theme-shadow);
-
-    /* Theme Transition */
-    transition: box-shadow var(--theme-transition) ease-in-out;
-}
-
-.polaroid.right
-{
-    float: right;
-    transform: rotate(-3deg);
-}
-.polaroid.left
-{
-    float: left;
-    transform: rotate(3deg);
-}
-
-.polaroid img
-{
-    max-width: 100%;
-}
-
-.polaroid span
-{
-    display: block;
-    
-    margin-top: 1vh;
-    width: 100%;
-
-    text-align: center;
 }
 
 /*--- Gamepad -----------------------*/
