@@ -1,47 +1,59 @@
 /*=== Data ========================================================*/
 /*--- Locations -------------------------*/
 
-.block[data-studio="university"] .banner .top   { background: #B60050; color: white; }
-.block[data-studio="sumodigital"] .banner .top  { background: #BE1E2D; color: white; }
-.block[data-studio="blacktower"] .banner .top   { background: #0A0E11; color: white; }
+.block[data-studio="university"] .banner    { --banner-colour: #B60050; --banner-text: white; }
+.block[data-studio="sumodigital"] .banner   { --banner-colour: #BE1E2D; --banner-text: white; }
+.block[data-studio="blacktower"] .banner    { --banner-colour: #0A0E11; --banner-text: white; }
 
 /*--- Skills ----------------------------*/
 /* Languages */
-i[data-skill="cpp"]     { background: #00599D; color: #FFFFFF; } i[data-skill="cpp"]:before     { content: "c++"; }
-i[data-skill="cs"]      { background: #843489; color: #FFFFFF; } i[data-skill="cs"]:before      { content: "c#"; }
-i[data-skill="uebp"]    { background: #00266B; color: #FFFFFF; } i[data-skill="uebp"]:before    { content: "blueprint"; }
-i[data-skill="lua"]     { background: #000080; color: #FFFFFF; } i[data-skill="lua"]:before     { content: "lua"; }
-i[data-skill="html"]    { background: #E54C25; color: #FFFFFF; } i[data-skill="html"]:before    { content: "html"; }
-i[data-skill="css"]     { background: #42A5F5; color: #FFFFFF; } i[data-skill="css"]:before     { content: "css"; }
-i[data-skill="js"]      { background: #FFCA28; color: #000000; } i[data-skill="js"]:before      { content: "javascript"; }
-i[data-skill="cmd"]     { background: #000000; color: #00AA00; }
+i[data-skill="cpp"]         { background: #00599D; color: #FFFFFF; } i[data-skill="cpp"]:before { content: "c++"; }
+i[data-skill-logo="cpp"]    { background-image: url("Skills/skill-cpp.png"); }
 
-i[data-skill-logo="cpp"]     { background-image: url("Skills/skill-cpp.png"); }
-i[data-skill-logo="cs"]      { background-image: url("Skills/skill-csharp.png"); }
-i[data-skill-logo="lua"]     { background-image: url("Skills/skill-lua.png"); }
-i[data-skill-logo="html"]    { background-image: url("Skills/skill-html.png"); }
-i[data-skill-logo="css"]     { background-image: url("Skills/skill-css.png"); }
-i[data-skill-logo="js"]      { background-image: url("Skills/skill-javascript.png"); }
+i[data-skill="cs"]          { background: #843489; color: #FFFFFF; } i[data-skill="cs"]:before { content: "c#"; }
+i[data-skill-logo="cs"]     { background-image: url("Skills/skill-csharp.png"); }
+
+i[data-skill="lua"]         { background: #000080; color: #FFFFFF; } i[data-skill="lua"]:before { content: "lua"; }
+i[data-skill-logo="lua"]    { background-image: url("Skills/skill-lua.png"); }
+
+i[data-skill="html"]        { background: #E54C25; color: #FFFFFF; } i[data-skill="html"]:before { content: "html"; }
+i[data-skill-logo="html"]   { background-image: url("Skills/skill-html.png"); }
+
+i[data-skill="css"]         { background: #42A5F5; color: #FFFFFF; } i[data-skill="css"]:before { content: "css"; }
+i[data-skill-logo="css"]    { background-image: url("Skills/skill-css.png"); }
+
+i[data-skill="js"]          { background: #FFCA28; color: #000000; } i[data-skill="js"]:before { content: "javascript"; }
+i[data-skill-logo="js"]     { background-image: url("Skills/skill-javascript.png"); }
+
+i[data-skill="cmd"]         { background: #000000; color: #00AA00; }
 
 /* Programs */
-i[data-skill="unreal"]      { background: #000000; color: #FFFFFF; } i[data-skill="unreal"]:before      { content: "UE"; }
-i[data-skill="unity"]       { background: #FFFFFF; color: #000000; } i[data-skill="unity"]:before       { content: "unity"; }
-i[data-skill="godot"]       { background: #478CBF; color: #FFFFFF; } i[data-skill="godot"]:before       { content: "godot"; }
-i[data-skill="vs"]          { background: #7252AA; color: #FFFFFF; } i[data-skill="vs"]:before          { content: "visual studio"; }
-i[data-skill="vsc"]         { background: #0089D2; color: #FFFFFF; } i[data-skill="vsc"]:before         { content: "visual studio code"; }
-i[data-skill="obsidian"]    { background: #8F62EA; color: #FFFFFF; } i[data-skill="obsidian"]:before    { content: "obsidian"; }
-i[data-skill="blender"]     { background: #E87D0D; color: #265787; } i[data-skill="blender"]:before     { content: "blender"; }
-i[data-skill="perforce"]    { background: #F05033; color: #FFFFFF; } i[data-skill="perforce"]:before    { content: "perforce"; }
-i[data-skill="github"]      { background: #0D1827; color: #FFFFFF; } i[data-skill="github"]:before      { content: "github"; }
-
+i[data-skill="unreal"]          { background: #000000; color: #FFFFFF; } i[data-skill="unreal"]:before { content: "UE"; }
 i[data-skill-logo="unreal"]     { background-image: url("Skills/skill-unreal.png"); }
+i[data-skill="uebp"]            { background: #00266B; color: #FFFFFF; } i[data-skill="uebp"]:before { content: "blueprint"; }
+
+i[data-skill="unity"]           { background: #FFFFFF; color: #000000; } i[data-skill="unity"]:before { content: "unity"; }
 i[data-skill-logo="unity"]      { background-image: url("Skills/skill-unity.png"); }
+
+i[data-skill="godot"]           { background: #478CBF; color: #FFFFFF; } i[data-skill="godot"]:before { content: "godot"; }
 i[data-skill-logo="godot"]      { background-image: url("Skills/skill-godot.png"); }
+
+i[data-skill="vs"]              { background: #7252AA; color: #FFFFFF; } i[data-skill="vs"]:before { content: "visual studio"; }
 i[data-skill-logo="vs"]         { background-image: url("Skills/skill-visualstudio.png"); }
+
+i[data-skill="vsc"]             { background: #0089D2; color: #FFFFFF; } i[data-skill="vsc"]:before { content: "visual studio code"; }
 i[data-skill-logo="vsc"]        { background-image: url("Skills/skill-visualstudiocode.png"); }
+
+i[data-skill="obsidian"]        { background: #8F62EA; color: #FFFFFF; } i[data-skill="obsidian"]:before { content: "obsidian"; }
 i[data-skill-logo="obsidian"]   { background-image: url("Skills/skill-obsidian.png"); }
+
+i[data-skill="blender"]         { background: #E87D0D; color: #265787; } i[data-skill="blender"]:before { content: "blender"; }
 i[data-skill-logo="blender"]    { background-image: url("Skills/skill-blender.png"); }
+
+i[data-skill="perforce"]        { background: #F05033; color: #FFFFFF; } i[data-skill="perforce"]:before { content: "perforce"; }
 i[data-skill-logo="perforce"]   { background-image: url("Skills/skill-perforce.png"); }
+
+i[data-skill="github"]          { background: #0D1827; color: #FFFFFF; } i[data-skill="github"]:before { content: "github"; }
 i[data-skill-logo="github"]     { background-image: url("Skills/skill-github.png"); }
 
 /*=== General =====================================================*/
@@ -135,10 +147,15 @@ body
     transition: background var(--theme-transition) ease-in-out, color var(--theme-transition) ease-in-out, box-shadow var(--theme-transition) ease-in-out;
 }
 
-.banner .top, .banner .icon
+.banner
 {
-    background: var(--theme-accent-main);
-    color: var(--theme-accent-text);
+    --banner-colour: var(--theme-accent-main);
+    --banner-text: var(--theme-accent-text)
+}
+.banner .icon, .banner > div:nth-of-type(1)
+{
+    background: var(--banner-colour);
+    color: var(--banner-text);
 
     transition: background var(--theme-transition) ease-in-out, color var(--theme-transition) ease-in-out;
 }
@@ -192,12 +209,13 @@ body
     font-weight: 300;
 }
 
-.menu .title        { font-size: 2.00vw; }
-.loading .title     { font-size: 5.00em; }
-.block .title       { font-size: 3.50em; }
-.banner .title      { font-size: 1.75vw; }
-.project .title     { font-size: 2.25em; }
-.polaroid .title    { font-size: 1.20em; }
+.menu .title            { font-size: 2.00vw; }
+.loading .title         { font-size: 5.00em; }
+.block .title           { font-size: 3.50em; }
+.banner .title          { font-size: 1.75vw; }
+.section-list .title    { font-size: 2.00em; }
+.project .title         { font-size: 2.25em; }
+.polaroid .title        { font-size: 1.20em; }
 
 .subtitle
 {
@@ -298,27 +316,31 @@ body
     padding: 1vw;
 }
 
-.block nav
+.block.justify, .block .justify
 {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 1vw;
-}
-
-.block.block-center
-{
-    display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
-.block.block-empty
+.block.empty
 {
     background: none;
     box-shadow: none;
+}
+
+.block .row
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.block .column
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .split
@@ -540,6 +562,62 @@ body
     100%    { transform: rotate(-360deg); }
 }
 
+/*--- Banner ----------------------------*/
+
+.block .banner
+{
+    position: relative;
+
+    box-sizing: border-box;
+    margin-bottom: 1.25vh;
+    min-height: 4vw;
+}
+
+.block .banner .icon
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+
+    border-radius: 50%;
+    width: 4vw;
+    height: 4vw;
+}
+
+.block .banner .icon svg
+{
+    width: 60%;
+    height: 60%;
+}
+
+.block .banner > div:nth-of-type(1) /* Expected .row */
+{
+    gap: 1vw;
+
+    margin-left: 2vw;
+    border-radius: 2vw;
+    border-top-left-radius: 0;
+    padding-left: 2.75vw;
+    height: 2vw;
+}
+
+.block .banner > div:nth-of-type(2) /* Expected .row */
+{
+    gap: 1vw;
+
+    margin-left: 5.5vw;
+    height: 1.75vw;
+}
+
+.block .banner .vr
+{
+    height: 60%;
+}
+
 /*--- Skills ------------------------*/
 
 i[data-skill]
@@ -561,7 +639,7 @@ i[data-skill-logo]
 
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 }
 
 .skill
@@ -571,6 +649,11 @@ i[data-skill-logo]
     justify-content: center;
     align-items: center;
     gap: 0.25vh;
+}
+
+#about .skills 
+{
+    gap: 0.5vw;
 }
 
 /*=== Content =====================================================*/
@@ -644,88 +727,6 @@ i[data-skill-logo]
     flex-grow: 0;
 }
 
-/*--- Banner ----------------------------*/
-
-.block .banner
-{
-    position: relative;
-
-    box-sizing: border-box;
-    margin-bottom: 1.25vh;
-    min-height: 4vw;
-}
-
-.block .banner .icon
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
-    position: absolute;
-    top: 0;
-
-    border-radius: 50%;
-    width: 4vw;
-    height: 4vw;
-}
-
-.block .banner .icon svg
-{
-    width: 60%;
-    height: 60%;
-}
-
-.block .banner .top
-{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    margin-left: 2vw;
-    border-radius: 2vw;
-    border-top-left-radius: 0;
-    padding-left: 2.75vw;
-    height: 2vw;
-}
-
-.block .banner .top h1
-{
-    margin-right: 1vw;
-}
-
-.block .banner .bottom
-{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    margin-left: 5.5vw;
-    height: 1.75vw;
-}
-
-.block .banner .bottom .highlight
-{
-    margin-right: 0.4vw;
-}
-
-.block .banner .subtitle .vr
-{
-    margin: 0 2%;
-    height: 60%;
-}
-
-/*--- About -----------------------------*/
-
-.about
-{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5vw;
-}
-
 /*--- Polaroid --------------------------*/
 
 .polaroid
@@ -768,6 +769,18 @@ i[data-skill-logo]
     text-align: center;
 }
 
+/*--- Sections --------------------------*/
+
+.block .section-list
+{
+    gap: 1vw;
+}
+
+.block .section-list button
+{
+    height: 2.5vw;
+}
+
 /*--- Project ---------------------------*/
 
 :root { --project-transition: .3s; }
@@ -800,7 +813,7 @@ i[data-skill-logo]
     margin-left: 0.45vw;
 }
 
-.project .media iframe
+.project .media .video
 {
     border: none;
     border-radius: 12px;
@@ -842,25 +855,13 @@ i[data-skill-logo]
 
 .project .header
 {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
+    gap: 0.75vw;
 
     margin-bottom: 0.3vh;
 }
 
-.project .header h2
+.project .skills
 {
-    display: inline-block;
-
-    margin-right: 0.75vw;
-}
-
-.project .skill-list
-{
-    display: flex;
-    flex-wrap: wrap;
     gap: 0.3vw;
 
     margin: 1.25vh 0;

@@ -75,11 +75,11 @@
 
             <div class='block'>
                 <div class='banner'>
-                    <div class='icon'><i data-lucide='flag'></i></div>
-                    <div class='top title'>
+                    <i class='icon'><i data-lucide='flag'></i></i>
+                    <div class='row title'>
                         <h1>Much ado about ... me</h1>
                     </div>
-                    <div class='bottom subtitle'>
+                    <div class='row subtitle'>
                         24/02/2024
                     </div>
                 </div>
@@ -89,15 +89,15 @@
             </div>
 
             <div class='split'>
-                <div class='block block-center'>
+                <div class='block justify'>
                     <button class='button title' title='About Me' onClick='SITE.LoadPage("about");' style='height:4vw;'> ABOUT ME </button>
                 </div>
 
-                <div class='block block-center'>
+                <div class='block justify'>
                     <button class='button title' title='Games' onClick='SITE.LoadPage("games");' style='height:4vw;'> GAMES </button>
                 </div>
                 
-                <div class='block block-center'>
+                <div class='block justify'>
                     <button class='button title' title='Projects' onClick='SITE.LoadPage("projects");' style='height:4vw;'> PROJECTS </button>
                 </div>
             </div>
@@ -108,21 +108,21 @@
 
             <div class='block'>
                 <h1 class='title'>ABOUT</h1>
-                <p class='text-large text-center'>Hi, I'm Jack! I'm a gameplay programmer and video game enthusiast with a passion for platformers and shooters</p>
+                <p class='text-large text-center'><b>Hi, I'm Jack! I'm a gameplay programmer and video game enthusiast with a passion for platformers and shooters</b></p>
                 <p class='text-center'>I am very adaptable and quick to learn new programming languages, techniques, and development suites, which has allowed me to collaborate with large teams on multiple AAA games and implement various gameplay systems</p>
                 <p class='text-center'>I love making games both professionally and in my free time, but I can also be found playing games such as Ratchet & Clank, Warframe, Sonic the Hedgehog, Zenless Zone Zero and many more!</p>
             </div>
 
             <div class='split'>
                 <div class='block'>
-                    <div class='about'>
-                        <i data-lucide='calendar-clock'></i><span class='subtitle'>5 years professional experience</span>
+                    <div class='justify'>
+                        <i data-lucide='calendar-clock'></i><span class='subtitle text-large'>5 years professional experience</span>
                     </div>
                 </div>
 
                 <div class='block'>
-                    <div class='about'>
-                        <i data-lucide='award'></i><span class='subtitle'>BSc (1st Class Honours) Computer Science for Games</span>
+                    <div class='justify'>
+                        <i data-lucide='award'></i><span class='subtitle text-large'>BSc (1st Class Honours) Computer Science for Games</span>
                     </div>
                 </div>
             </div>
@@ -137,7 +137,7 @@
 
             <div class='block'>
                 <h1 class='title'>SKILLS</h1>
-                <div class='about'>
+                <div class='justify skills'>
                     <div class='skill'><i data-skill-logo='cpp'></i><i data-skill='cpp'></i></div>
                     <div class='skill'><i data-skill-logo='cs'></i><i data-skill='cs'></i></div>
                     <div class='skill'><i data-skill-logo='lua'></i><i data-skill='lua'></i></div>
@@ -146,7 +146,7 @@
                     <div class='skill'><i data-skill-logo='js'></i><i data-skill='js'></i></div>
                 </div>
                 <br>
-                <div class='about'>
+                <div class='justify skills'>
                     <div class='skill'><i data-skill-logo='unreal'></i><i data-skill='unreal'></i></div>
                     <div class='skill'><i data-skill-logo='unity'></i><i data-skill='unity'></i></div>
                     <div class='skill'><i data-skill-logo='godot'></i><i data-skill='godot'></i></div>
@@ -196,33 +196,33 @@
             <div class='block'>
                 <h1 class='title'>GAMES</h1>
                 <p class='text-large'>Browse through games I have worked on professionally</p>
-                <nav>
-                    <button class='button' onClick='SITE.ScrollTo("games-blacktower");'>BLACK TOWER</button>
-                    <button class='button' onClick='SITE.ScrollTo("games-sumodigital");'>SUMO DIGITAL</button>
-                </nav>
+                <div class='section-list justify'>
+                    <button class='button title' onClick='SITE.ScrollTo("games-blacktower");'>BLACK TOWER</button>
+                    <button class='button title' onClick='SITE.ScrollTo("games-sumodigital");'>SUMO DIGITAL</button>
+                </div>
             </div>
 
             <div id='games-blacktower' data-studio='blacktower' class='block'>
                 
                 <div class='banner'>
                     <img class='icon' src='site/Studios/studio-blacktower.png'>
-                    <div class='top title'>
+                    <div class='row title'>
                         <h1>BLACK TOWER STUDIOS</h1><span class='text-small'>Tokyo, Japan</span>
                     </div>
-                    <div class='bottom subtitle'>
+                    <div class='row subtitle'>
                         <span class='highlight'>Gameplay Programmer</span>10/2024 - 02/2025
                     </div>
                 </div>
 
                 <div id='project-chainsaw' class='project'>
                     <div class='media'>
-                        <iframe src="https://www.youtube.com/embed/ISCbJ9RlDgU" title="The Texas Chain Saw Massacre - Trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <iframe class='video' src="https://www.youtube.com/embed/ISCbJ9RlDgU" title="The Texas Chain Saw Massacre - Trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         <img class='image' src='site/Projects/project-texaschainsaw.png'>
                         <a class='button' href='https://www.txchainsawgame.com/' title='Visit Website' target='_blank'><i data-lucide='external-link'></i></a>
                     </div>
-                    <div class='header'><h2 class='title'>The Texas Chainsaw Massacre</h2><span class='subtitle'>10/2024 - 02/2025</span></div>
-                    <div class='quote'>An asymmetrical horror experience based on the groundbreaking and iconic 1974 horror film</div>
-                    <div class='skill-list'>
+                    <div class='row header'><h2 class='title'>The Texas Chainsaw Massacre</h2><span class='subtitle'>10/2024 - 02/2025</span></div>
+                    <div class='row quote'>An asymmetrical horror experience based on the groundbreaking and iconic 1974 horror film</div>
+                    <div class='row skills'>
                         <i data-skill='cpp'></i><i data-skill='uebp'></i><i data-skill='unreal'>4</i><i data-skill='vs'></i><i data-skill='perforce'></i>
                     </div>
                     <p>
@@ -237,10 +237,10 @@
 
                 <div class='banner'>
                     <img class='icon' src='site/Studios/studio-sumodigital.png'>
-                    <div class='top title'>
+                    <div class='row title'>
                         <h1>SUMO DIGITAL</h1><span class='text-small'>Sheffield, England</span>
                     </div>
-                    <div class='bottom subtitle'>
+                    <div class='row subtitle'>
                         <span class='highlight'>Gameplay Programmer</span>06/2022 - 07/2024<div class='vr'></div>
                         <span class='highlight'>Junior Programmer</span>08/2020 - 06/2022<div class='vr'></div>
                         <span class='highlight'>Placement Programmer</span>07/2018 - 08/2019
@@ -251,9 +251,9 @@
                     <div class='media'>
                         <div class='image'><i data-lucide='package-open'></i></div>
                     </div>
-                    <div class='header'><h2 class='title'>Unannounced Project</h2><span class='subtitle'>08/2023 - 07/2024</span></div>
-                    <div class='quote'>An unannounced multiplayer platformer developed in Unreal Engine 5</div>
-                    <div class='skill-list'>
+                    <div class='row header'><h2 class='title'>Unannounced Project</h2><span class='subtitle'>08/2023 - 07/2024</span></div>
+                    <div class='row quote'>An unannounced multiplayer platformer developed in Unreal Engine 5</div>
+                    <div class='row skills'>
                         <i data-skill='cpp'></i><i data-skill='uebp'></i><i data-skill='unreal'>5</i><i data-skill='vs'></i><i data-skill='perforce'></i>
                     </div>
                     <p>
@@ -272,9 +272,9 @@
                     <div class='media'>
                         <div class='image'><i data-lucide='rocket'></i></div>
                     </div>
-                    <div class='header'><h2 class='title'>Unannounced Project</h2><span class='subtitle'>06/2022 - 07/2023</span></div>
-                    <div class='quote'>An unannounced third-person shooter developed in Unreal Engine 5</div>
-                    <div class='skill-list'>
+                    <div class='row header'><h2 class='title'>Unannounced Project</h2><span class='subtitle'>06/2022 - 07/2023</span></div>
+                    <div class='row quote'>An unannounced third-person shooter developed in Unreal Engine 5</div>
+                    <div class='row skills'>
                         <i data-skill='cpp'></i><i data-skill='uebp'></i><i data-skill='unreal'>5</i><i data-skill='vs'></i><i data-skill='perforce'></i>
                     </div>
                     <p>
@@ -290,9 +290,9 @@
                     <div class='media'>
                         <div class='image'><i data-lucide='trophy'></i></div>
                     </div>
-                    <div class='header'><h2 class='title'>Unannounced Project</h2><span class='subtitle'>11/2020 - 06/2022</span></div>
-                    <div class='quote'>An unannounced sports game developed using an in-house engine</div>
-                    <div class='skill-list'>
+                    <div class='row header'><h2 class='title'>Unannounced Project</h2><span class='subtitle'>11/2020 - 06/2022</span></div>
+                    <div class='row quote'>An unannounced sports game developed using an in-house engine</div>
+                    <div class='row skills'>
                         <i data-skill='cpp'></i><i data-skill='lua'></i><i data-skill='vs'></i><i data-skill='perforce'></i>
                     </div>
                     <p>
@@ -305,20 +305,20 @@
 
                 <div id='project-gingerbread' class='project'>
                     <div class='media'>
-                        <iframe src="https://www.youtube.com/embed/ZOk3fj5ujNM" title="Sackboy: A Big Adventure - Trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <iframe class='video' src="https://www.youtube.com/embed/ZOk3fj5ujNM" title="Sackboy: A Big Adventure - Trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         <img class='image' src='site/Projects/project-sackboy.png'>
                         <a class='button' href='https://www.playstation.com/en-gb/games/sackboy-a-big-adventure/' title='Visit Website' target='_blank'><i data-lucide='external-link'></i></a>
                     </div>
-                    <div class='header'><h2 class='title'>Sackboy: A Big Adventure</h2><span class='subtitle'>08/2020 - 11/2020 | 07/2018 - 08/2019</span></div>
-                    <div class='quote'>Iconic PlayStation® hero Sackboy bursts back into breathtaking action with a huge, fun and frantic 3D multiplayer platforming adventure - and a whole new edgy sackitude!</div>
-                    <div class='skill-list'>
+                    <div class='row header'><h2 class='title'>Sackboy: A Big Adventure</h2><span class='subtitle'>08/2020 - 11/2020 | 07/2018 - 08/2019</span></div>
+                    <div class='row quote'>Iconic PlayStation® hero Sackboy bursts back into breathtaking action with a huge, fun and frantic 3D multiplayer platforming adventure - and a whole new edgy sackitude!</div>
+                    <div class='row skills'>
                         <i data-skill='cpp'></i><i data-skill='uebp'></i><i data-skill='unreal'>4</i><i data-skill='vs'></i><i data-skill='perforce'></i>
                     </div>
                     <p>
                         I worked on multiple areas of this game, both during my placement year and as a full-time employee, including sackboy himself, 
                         an automated testing system to play through test levels then output telemetry results and automated lighting build tools
                     </p>
-                    <div class='skill-list'>
+                    <div class='row skills'>
                         <i data-skill='cs'></i><i data-skill='html'></i><i data-skill='css'></i><i data-skill='js'></i>
                     </div>
                     <p>
@@ -336,21 +336,20 @@
             <div class='block'>
                 <h1 class='title'>PROJECTS</h1>
                 <p class='text-large'>Browse through projects I have worked on in my free time (or at university)</p>
-                <nav>
-                    <button class='button' onClick='SITE.ScrollTo("projects-independent");'>INDEPENDENT</button>
-                    <button class='button' onClick='SITE.ScrollTo("projects-university");'>UNIVERSITY</button>
-                </nav>
+                <div class='section-list justify'>
+                    <button class='button title' onClick='SITE.ScrollTo("projects-independent");'>INDEPENDENT</button>
+                    <button class='button title' onClick='SITE.ScrollTo("projects-university");'>UNIVERSITY</button>
+                </div>
             </div>
-
             
             <div id='projects-independent' class='block'>
 
                 <div class='banner'>
                     <img class='icon' src='site/logo.png'>
-                    <div class='top title'>
+                    <div class='row title'>
                         <h1>INDEPENDENT PROJECTS</h1><span class='text-small'>192.168.0.1</span>
                     </div>
-                    <div class='bottom subtitle'>
+                    <div class='row subtitle'>
                         <span class='highlight'>Jack of All Trades</span>
                     </div>
                 </div>
@@ -360,9 +359,9 @@
                         <div class='image'><i data-lucide='code'></i></div>
                         <a class='button' href='https://github.com/jm-2808/jm-2808.github.io' title='View Source Files' target='_blank'><i data-lucide='github'></i></a>
                     </div>
-                    <div class='header'><h2 class='title'>Portfolio</h2><span class='subtitle'>06/2024 - Current</span></div>
-                    <div class='quote'>You're looking at it</div>
-                    <div class='skill-list'>
+                    <div class='row header'><h2 class='title'>Portfolio</h2><span class='subtitle'>06/2024 - Current</span></div>
+                    <div class='row quote'>You're looking at it</div>
+                    <div class='row skills'>
                         <i data-skill='html'></i><i data-skill='css'></i><i data-skill='js'></i><i data-skill='vsc'></i><i data-skill='github'></i>
                     </div>
                     <p>
@@ -380,9 +379,9 @@
                     <div class='media'>
                         <div class='image'><i data-lucide='bot'></i></div>
                     </div>
-                    <div class='header'><h2 class='title'>Azimov</h2><span class='subtitle'>07/2024 - Current</span></div>
-                    <div class='quote'>"4. A robot may forsake the third rule if the company deems it appropriate"</div>
-                    <div class='skill-list'>
+                    <div class='row header'><h2 class='title'>Azimov</h2><span class='subtitle'>07/2024 - Current</span></div>
+                    <div class='row quote'>"4. A robot may forsake the third rule if the company deems it appropriate"</div>
+                    <div class='row skills'>
                         <i data-skill='cs'></i><i data-skill='godot'> 4.3</i><i data-skill='blender'> 4.2</i><i data-skill='github'></i>
                     </div>
                     <p>
@@ -399,9 +398,9 @@
                         <img class='image' src='site/Projects/project-blackjack.png'>
                         <a class='button' href='https://github.com/jm-2808/sample-blackjack' title='View Sample Files' target='_blank'><i data-lucide='github'></i></a>
                     </div>
-                    <div class='header'><h2 class='title'>Blackjack</h2><span class='subtitle'>2018 / 2020</span></div>
-                    <div class='quote'>"Hit, Stand or Surrender"</div>
-                    <div class='skill-list'>
+                    <div class='row header'><h2 class='title'>Blackjack</h2><span class='subtitle'>2018 / 2020</span></div>
+                    <div class='row quote'>"Hit, Stand or Surrender"</div>
+                    <div class='row skills'>
                         <i data-skill='cpp'></i><i data-skill='vs'></i>
                     </div>
                     <p>
@@ -424,10 +423,10 @@
 
                 <div class='banner'>
                     <img class='icon' src='site/Studios/studio-university.png'>
-                    <div class='top title'>
+                    <div class='row title'>
                         <h1>UNIVERSITY ASSIGNMENTS</h1><span class='text-small'>Sheffield Hallam University</span>
                     </div>
-                    <div class='bottom subtitle'>
+                    <div class='row subtitle'>
                         <span class='highlight'>BSc Computer Science for Games</span>09/2016 - 08/2020
                     </div>
                 </div>
@@ -437,9 +436,9 @@
                         <img class='image' src='site/Projects/project-niobium.png'>
                         <a class='button' href='https://github.com/jm-2808/sample-project_niobium' title='View Sample Files' target='_blank'><i data-lucide='github'></i></a>
                     </div>
-                    <div class='header'><h2 class='title'>Modular Weapon System</h2><span class='subtitle'>09/2019 - 05/2020</span></div>
-                    <div class='quote'>[Project_Niobium] Weapon System Status: Online</div>
-                    <div class='skill-list'>
+                    <div class='row header'><h2 class='title'>Modular Weapon System</h2><span class='subtitle'>09/2019 - 05/2020</span></div>
+                    <div class='row quote'>[Project_Niobium] Weapon System Status: Online</div>
+                    <div class='row skills'>
                         <i data-skill='cpp'></i><i data-skill='uebp'></i><i data-skill='unreal'>4</i><i data-skill='vs'></i><i data-skill='github'></i>
                     </div>
                     <p>
@@ -453,13 +452,13 @@
 
                 <div id='project-rambler' class='project'>
                     <div class='media'>
-                        <iframe src="https://www.youtube.com/embed/tQ39e2bVUx4" title="Stealing Stuff - Trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <iframe class='video' src="https://www.youtube.com/embed/tQ39e2bVUx4" title="Stealing Stuff - Trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         <img class='image' src='site/Projects/project-stealingstuff.png'>
                         <a class='button' href='https://github.com/jm-2808/sample-stealing_stuff' title='View Sample Files' target='_blank'><i data-lucide='github'></i></a>
                     </div>
-                    <div class='header'><h2 class='title'>Stealing Stuff</h2><span class='subtitle'>01/2020 - 05/2020</span></div>
-                    <div class='quote'>You know what they say about 'if it ain't nailed down', but if it is ... find a claw hammer</div>
-                    <div class='skill-list'>
+                    <div class='row header'><h2 class='title'>Stealing Stuff</h2><span class='subtitle'>01/2020 - 05/2020</span></div>
+                    <div class='row quote'>You know what they say about 'if it ain't nailed down', but if it is ... find a claw hammer</div>
+                    <div class='row skills'>
                         <i data-skill='cpp'></i><i data-skill='uebp'></i><i data-skill='unreal'>4</i><i data-skill='vs'></i></i><i data-skill='github'></i>
                     </div>
                     <p>
@@ -479,9 +478,9 @@
                         <img class='image' src='site/Projects/project-dungeonhunt.png'>
                         <a class='button' href='https://github.com/jm-2808/sample-dungeon_hunt' title='View Sample Files' target='_blank'><i data-lucide='github'></i></a>
                     </div>
-                    <div class='header'><h2 class='title'>Dungeon Hunt</h2><span class='subtitle'>09/2019 - 12/2019</span></div>
-                    <div class='quote'>I hope the boss is easy to find</div>
-                    <div class='skill-list'>
+                    <div class='row header'><h2 class='title'>Dungeon Hunt</h2><span class='subtitle'>09/2019 - 12/2019</span></div>
+                    <div class='row quote'>I hope the boss is easy to find</div>
+                    <div class='row skills'>
                         <i data-skill='cpp'></i><i data-skill='cmd'>directX 11</i><i data-skill='vs'></i><i data-skill='github'></i>
                     </div>
                     <p>
