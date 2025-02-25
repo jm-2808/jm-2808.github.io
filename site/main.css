@@ -651,11 +651,6 @@ i[data-skill-logo]
     gap: 0.25vh;
 }
 
-#about .skills 
-{
-    gap: 0.5vw;
-}
-
 /*=== Content =====================================================*/
 /*--- Menu ------------------------------*/
 
@@ -725,6 +720,19 @@ i[data-skill-logo]
 .menu .license
 {
     flex-grow: 0;
+}
+
+/*--- About -----------------------------*/
+
+#about .notable
+{
+    gap: 0.4vw;
+}
+
+
+#about .skills
+{
+    gap: 0.5vw;
 }
 
 /*--- Polaroid --------------------------*/
@@ -862,6 +870,7 @@ i[data-skill-logo]
 
 .project .skills
 {
+    flex-wrap: wrap;
     gap: 0.3vw;
 
     margin: 1.25vh 0;
