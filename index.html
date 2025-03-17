@@ -88,13 +88,13 @@
             </div>
 
             <div class='block'>
-                <script id='changelogbanner1'>SITE.GenerateBanner("changelogbanner1", { title: "Generating Website...", icon: "flag", tags: [{ text: "Changelog", info: "17/03/2024" }] });</script>
+                <script>SITE.GenerateBanner(document.currentScript, { title: "Generating Website...", icon: "lucide-flag", tags: [{ text: "Changelog", info: "17/03/2024" }] });</script>
                 <p>Completed some backend <i data-skill='js'></i> work which should make it easier to add projects in the future!</p>
                 <p class='quote'>Also, the home page seems to have become a changelog of sorts</p>
             </div>
 
             <div class='block'>
-                <script id='changelogbanner2'>SITE.GenerateBanner("changelogbanner2", { title: "Much ado about ... me", icon: "flag", tags: [{ text: "Changelog", info: "24/02/2024" }] });</script>
+                <script>SITE.GenerateBanner(document.currentScript, { title: "Much ado about ... me", icon: "lucide-flag", tags: [{ text: "Changelog", info: "24/02/2024" }] });</script>
                 <p>The "About Me" page is now implemented!</p>
             </div>
 
@@ -140,6 +140,7 @@
                     <div class='skill'><i data-skill-logo='html'></i><i data-skill='html'></i></div>
                     <div class='skill'><i data-skill-logo='css'></i><i data-skill='css'></i></div>
                     <div class='skill'><i data-skill-logo='js'></i><i data-skill='js'></i></div>
+                    <div class='skill'><i data-skill-logo='md'></i><i data-skill='md'></i></div>
                 </div>
                 <br>
                 <div class='justify skills'>
@@ -200,17 +201,13 @@
 
             <div id='games-blacktower' class='block'>
                 
-                <script id='blacktowerbanner'>
-                    SITE.GenerateBanner("blacktowerbanner", { 
-                    title: "BLACK TOWER STUDIOS", subtitle: "Tokyo, Japan", image: "site/Studios/studio-blacktower.png",
-                    tags: [{ text: "Gameplay Programmer", info: "10/2024 - 02/2025" }] });
-                </script>
+                <script>SITE.GenerateBanner(document.currentScript, { title: "BLACK TOWER STUDIOS", subtitle: "Tokyo, Japan", icon: "site/Banners/blacktower.png", tags: [{ text: "Gameplay Programmer", info: "10/2024 - 02/2025" }] });</script>
 
                 <div id='project-chainsaw' class='project'>
                     <script>
-                        SITE.GenerateProject("chainsaw", { 
-                        title: "The Texas Chainsaw Massacre", timespan: "10/2024 - 02/2025", website: "https://www.txchainsawgame.com/", video: "https://www.youtube.com/embed/ISCbJ9RlDgU",
-                        quote: "An asymmetrical horror experience based on the groundbreaking and iconic 1974 horror film",
+                        SITE.GenerateProject(document.currentScript, { title: "The Texas Chainsaw Massacre", timespan: "10/2024 - 02/2025", image: "site/Projects/chainsaw.png", 
+                        website: "https://www.txchainsawgame.com/", video: "https://www.youtube.com/embed/ISCbJ9RlDgU",
+                        tagline: "An asymmetrical horror experience based on the groundbreaking and iconic 1974 horror film",
                         skills: [ "ue4", "cpp", "uebp", "vs", "perforce" ] });
                     </script>
                     <p>
@@ -222,21 +219,16 @@
 
             <div id='games-sumodigital' class='block'>
 
-                <script id='sumodigitalbanner'>
-                    SITE.GenerateBanner("sumodigitalbanner", { 
-                    title: "SUMO DIGITAL", subtitle: "Sheffield, England", image: "site/Studios/studio-sumodigital.png",
-                    tags: [
-                        { text: "Gameplay Programmer", info: "06/2022 - 07/2024" },
-                        { text: "Junior Programmer", info: "08/2020 - 06/2022" },
-                        { text: "Placement Programmer", info: "07/2018 - 08/2019" }
-                    ]});
+                <script>
+                    SITE.GenerateBanner(document.currentScript, { title: "SUMO DIGITAL", subtitle: "Sheffield, England", icon: "site/Banners/sumodigital.png",
+                        tags: [{ text: "Gameplay Programmer", info: "06/2022 - 07/2024" },{ text: "Junior Programmer", info: "08/2020 - 06/2022" },{ text: "Placement Programmer", info: "07/2018 - 08/2019" }]
+                    });
                 </script>
 
                 <div id='project-scramble' class='project'>
-                    <script> 
-                        SITE.GenerateProject("scramble", { 
-                        title: "Unannounced Project", timespan: "08/2023 - 07/2024", placeholder: "package-open",
-                        quote: "An unannounced multiplayer platformer developed in Unreal Engine 5",
+                    <script>
+                        SITE.GenerateProject(document.currentScript, { title: "Unannounced Project", timespan: "08/2023 - 07/2024", image: "lucide-package-open", 
+                        tagline: "An unannounced multiplayer platformer developed in Unreal Engine 5",
                         skills: [ "ue5", "cpp", "uebp", "vs", "perforce" ] });
                     </script>
                     <p>
@@ -245,16 +237,15 @@
                         - Communicating daily with the design and UI disciplines alongside bi-weekly scrums<br>
                         - Owning, implementing and maintaining various gameplay features<br>
                         - Partaking in show-and-tell meetings and feature reviews
-                    </p> 
+                    </p>
                 </div>
 
                 <hr>
 
                 <div id='project-firebird' class='project'>
-                    <script> 
-                        SITE.GenerateProject("firebird", { 
-                        title: "Unannounced Project", timespan: "06/2022 - 07/2023", placeholder: "rocket",
-                        quote: "An unannounced third-person shooter developed in Unreal Engine 5",
+                    <script>
+                        SITE.GenerateProject(document.currentScript, { title: "Unannounced Project", timespan: "06/2022 - 07/2023", image: "lucide-rocket", 
+                        tagline: "An unannounced third-person shooter developed in Unreal Engine 5",
                         skills: [ "ue5", "cpp", "uebp", "vs", "perforce" ] });
                     </script>
                     <p>
@@ -266,10 +257,9 @@
                 <hr>
 
                 <div id='project-cadillac' class='project'>
-                    <script> 
-                        SITE.GenerateProject("cadillac", { 
-                        title: "Unannounced Project", timespan: "11/2020 - 06/2022", placeholder: "trophy",
-                        quote: "An unannounced sports game developed using an in-house engine",
+                    <script>
+                        SITE.GenerateProject(document.currentScript, { title: "Unannounced Project", timespan: "11/2020 - 06/2022", image: "lucide-trophy", 
+                        tagline: "An unannounced sports game developed using an in-house engine",
                         skills: [ "cpp", "lua", "vs", "perforce" ] });
                     </script>
                     <p>
@@ -281,9 +271,9 @@
 
                 <div id='project-gingerbread' class='project'>
                     <script>
-                        SITE.GenerateProject("gingerbread", { 
-                        title: "Sackboy: A Big Adventure", timespan: "08/2020 - 11/2020 | 07/2018 - 08/2019", website: "https://www.playstation.com/en-gb/games/sackboy-a-big-adventure/", video: "https://www.youtube.com/embed/ZOk3fj5ujNM",
-                        quote: "Iconic PlayStation® hero Sackboy bursts back into breathtaking action with a huge, fun and frantic 3D multiplayer platforming adventure - and a whole new edgy sackitude!",
+                        SITE.GenerateProject(document.currentScript, { title: "Sackboy: A Big Adventure", timespan: "08/2020 - 11/2020 | 07/2018 - 08/2019", image: "site/Projects/gingerbread.png", 
+                        website: "https://www.playstation.com/en-gb/games/sackboy-a-big-adventure/", video: "https://www.youtube.com/embed/ZOk3fj5ujNM",
+                        tagline: "Iconic PlayStation® hero Sackboy bursts back into breathtaking action with a huge, fun and frantic 3D multiplayer platforming adventure - and a whole new edgy sackitude!",
                         skills: [ "ue4", "cpp", "uebp", "vs", "perforce", "cs", "html", "css", "js" ] });
                     </script>
                     <p>
@@ -312,17 +302,13 @@
             
             <div id='projects-independent' class='block'>
 
-                <script id='independentprojectsbanner'>
-                    SITE.GenerateBanner("independentprojectsbanner", { 
-                    title: "INDEPENDENT PROJECTS", subtitle: "192.168.0.1", image: "site/logo.png",
-                    tags: [{ text: "Jack of All Trades", info: "" }] });
-                </script>
+                <script>SITE.GenerateBanner(document.currentScript, { title: "INDEPENDENT PROJECTS", subtitle: "192.168.0.1", icon: "site/logo.png", tags: [{ text: "Jack of All Trades", info: "" }] });</script>
 
                 <div id='project-portfolio' class='project'>
-                    <script> 
-                        SITE.GenerateProject("portfolio", { 
-                        title: "Portfolio", timespan: "06/2024 - Current", placeholder: "code", github: "https://github.com/jm-2808/jm-2808.github.io",
-                        quote: "You're looking at it",
+                    <script>
+                        SITE.GenerateProject(document.currentScript, { title: "Portfolio", timespan: "06/2024 - Current", image: "lucide-code", 
+                        website: "https://github.com/jm-2808/jm-2808.github.io",
+                        tagline: "You're looking at it",
                         skills: [ "html", "css", "js", "vsc", "github" ] });
                     </script>
                     <p>
@@ -336,10 +322,9 @@
                 <hr>
 
                 <div id='project-azimov' class='project'>
-                    <script> 
-                        SITE.GenerateProject("azimov", { 
-                        title: "Azimov", timespan: "07/2024 - Current", placeholder: "bot",
-                        quote: "Sir the robots appear to have formed a union",
+                    <script>
+                        SITE.GenerateProject(document.currentScript, { title: "Azimov", timespan: "07/2024 - Current", image: "lucide-bot", 
+                        tagline: "Sir the robots appear to have formed a union",
                         skills: [ "gd4", "cs", "blend4", "github" ] });
                     </script>
                     <p>
@@ -351,10 +336,10 @@
                 <hr>
 
                 <div id='project-blackjack' class='project'>
-                    <script> 
-                        SITE.GenerateProject("blackjack", { 
-                        title: "Blackjack", timespan: "2018 / 2020", github: "https://github.com/jm-2808/sample-blackjack",
-                        quote: "Hit, Stand or Surrender",
+                    <script>
+                        SITE.GenerateProject(document.currentScript, { title: "Blackjack", timespan: "2018 / 2020", image: "site/Projects/blackjack.png", 
+                        website: "https://github.com/jm-2808/sample-blackjack",
+                        tagline: "Hit, Stand or Surrender",
                         skills: [ "cpp", "vs" ] });
                     </script>
                     <p>
@@ -374,17 +359,13 @@
 
             <div id='projects-university' class='block'>
 
-                <script id='universityprojectsbanner'>
-                    SITE.GenerateBanner("universityprojectsbanner", { 
-                    title: "UNIVERSITY ASSIGNMENTS", subtitle: "Sheffield Hallam University", image: "site/Studios/studio-university.png",
-                    tags: [{ text: "BSc Computer Science for Games", info: "09/2016 - 08/2020" }] });
-                </script>
+                <script>SITE.GenerateBanner(document.currentScript, { title: "UNIVERSITY ASSIGNMENTS", subtitle: "Sheffield Hallam University", icon: "site/Banners/university.png", tags: [{ text: "BSc Computer Science for Games", info: "09/2016 - 08/2020" }] });</script>
 
                 <div id='project-niobium' class='project'>
-                    <script> 
-                        SITE.GenerateProject("niobium", { 
-                        title: "Modular Weapon System", timespan: "09/2019 - 05/2020", github: "https://github.com/jm-2808/sample-project_niobium",
-                        quote: "Weapons charged and ready",
+                    <script>
+                        SITE.GenerateProject(document.currentScript, { title: "Modular Weapon System", timespan: "09/2019 - 05/2020", image: "site/Projects/niobium.png", 
+                        website: "https://github.com/jm-2808/sample-project_niobium",
+                        tagline: "Weapons charged and ready",
                         skills: [ "ue4", "cpp", "uebp", "vs", "github" ] });
                     </script>
                     <p>
@@ -396,10 +377,10 @@
                 <hr>
 
                 <div id='project-rambler' class='project'>
-                    <script> 
-                        SITE.GenerateProject("rambler", { 
-                        title: "Stealing Stuff", timespan: "01/2020 - 05/2020", github: "https://github.com/jm-2808/sample-stealing_stuff", video: "https://www.youtube.com/embed/tQ39e2bVUx4",
-                        quote: "You know what they say about 'if it ain't nailed down', but if it is ... find a claw hammer",
+                    <script>
+                        SITE.GenerateProject(document.currentScript, { title: "Stealing Stuff", timespan: "01/2020 - 05/2020", image: "site/Projects/rambler.png", 
+                        website: "https://github.com/jm-2808/sample-stealing_stuff", video: "https://www.youtube.com/embed/tQ39e2bVUx4",
+                        tagline: "You know what they say about 'if it ain't nailed down', but if it is ... find a claw hammer",
                         skills: [ "ue4", "cpp", "uebp", "vs", "github" ] });
                     </script>
                     <p>
@@ -414,10 +395,10 @@
                 <hr>
 
                 <div id='project-dungeon' class='project'>
-                    <script> 
-                        SITE.GenerateProject("dungeon", { 
-                        title: "Dungeon Hunt", timespan: "09/2019 - 12/2019", github: "https://github.com/jm-2808/sample-dungeon_hunt",
-                        quote: "There's a surprising lack of loot in here",
+                    <script>
+                        SITE.GenerateProject(document.currentScript, { title: "Dungeon Hunt", timespan: "09/2019 - 12/2019", image: "site/Projects/dungeon.png", 
+                        website: "https://github.com/jm-2808/sample-dungeon_hunt",
+                        tagline: "There's a surprising lack of loot in here",
                         skills: [ "dx11", "cpp", "vs", "github" ] });
                     </script>
                     <p>
