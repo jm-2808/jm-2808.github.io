@@ -179,6 +179,55 @@ SITE.LoadPage = function(page)
 
 //-----------------------------------------------------------------
 
+SITE.GenerateProject = function(id, data)
+{
+    const project = document.getElementById("project-" + id);
+    
+    project.getElementsByTagName("script")[0].remove();
+    
+    var content = "";
+    
+    var media = "<div class='media'>"
+    if(data.video != undefined)
+    {
+        media += "<iframe class='video' src=\"" + data.video + "\" title=\"Trailer\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>";
+    }
+    if(data.placeholder == undefined)
+    {
+        media += "<img class='image' src='site/Projects/project-" + id + ".png'>";
+    }
+    else
+    {
+        media += "<div class='image'><i data-lucide='" + data.placeholder + "'></i></div>";
+    }
+    if(data.website != undefined)
+    {
+        media += "<a class='button' href='" + data.website + "' title='Visit Website' target='_blank'><i data-lucide='external-link'></i></a>";
+    }
+    if(data.github != undefined)
+    {
+        media += "<a class='button' href='" + data.github + "' title='View Source Files' target='_blank'><i data-lucide='github'></i></a>";
+    }
+    
+    content += media + "</div>";
+    
+    content += "<div class='row header'><h2 class='title'>" + data.title + "</h2><span class='subtitle'>" + data.timespan + "</span></div>";
+    content += "<div class='row quote'>\"" + data.quote + "\"</div>";
+    
+    var skills = "<div class='row skills'>";
+    for (let index = 0; index < data.skills.length; ++index) 
+    {
+        skills += "<i data-skill='" + data.skills[index] + "'></i>";
+    }
+    content += skills + "</div>";
+    
+    content += "<div class='toggle'><button class='button' onClick='SITE.ToggleProject(\""+ id +"\");'>Open</button></div>";
+    
+    project.innerHTML = content + project.innerHTML;
+}
+
+//-----------------------------------------------------------------
+
 SITE.ToggleProject = function(id)
 {
     const project = document.getElementById("project-" + id);
