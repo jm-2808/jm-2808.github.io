@@ -179,38 +179,57 @@ SITE.LoadPage = function(page)
 
 //-----------------------------------------------------------------
 
+SITE.GenerateBanner = function(id, data)
+{
+    const script = document.getElementById(id);
+
+    var content = "<div class='banner'>";
+
+    if(data.image != undefined) { content += "<img class='icon' src='" + data.image + "'>"; }
+    if(data.icon != undefined)  { content += "<i class='icon'><i data-lucide='" + data.icon + "'></i></i>"; }
+
+    content += "<div class='row title'><h1>" + data.title + "</h1>";
+    if(data.subtitle != undefined) { content += "<span class='text-small'>" + data.subtitle + "</span>"; }
+    content += "</div>"
+    
+    content += "<div class='row subtitle'>";
+    for (let index = 0; index < data.tags.length; ++index) 
+    {
+        if(index > 0) { content += "<div class='vr'></div>" };
+        content += "<span class='highlight'>" + data.tags[index].text + "</span>" + data.tags[index].info;
+    }
+    content += "</div>"
+
+    content += "</div>"
+
+    script.insertAdjacentHTML("afterend", content);
+    script.remove();
+}
+
+//-----------------------------------------------------------------
+
 SITE.GenerateProject = function(id, data)
 {
     const project = document.getElementById("project-" + id);
-    
-    project.getElementsByTagName("script")[0].remove();
+    const script = project.getElementsByTagName("script")[0];
     
     var content = "";
     
     var media = "<div class='media'>"
+    
     if(data.video != undefined)
     {
-        media += "<iframe class='video' src=\"" + data.video + "\" title=\"Trailer\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>";
+        media += "<iframe class='video' src='" + data.video + "' title='Trailer' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>";
     }
-    if(data.placeholder == undefined)
-    {
-        media += "<img class='image' src='site/Projects/project-" + id + ".png'>";
-    }
-    else
-    {
-        media += "<div class='image'><i data-lucide='" + data.placeholder + "'></i></div>";
-    }
-    if(data.website != undefined)
-    {
-        media += "<a class='button' href='" + data.website + "' title='Visit Website' target='_blank'><i data-lucide='external-link'></i></a>";
-    }
-    if(data.github != undefined)
-    {
-        media += "<a class='button' href='" + data.github + "' title='View Source Files' target='_blank'><i data-lucide='github'></i></a>";
-    }
-    
+
+    if(data.placeholder == undefined)   { media += "<img class='image' src='site/Projects/project-" + id + ".png'>"; }
+    else                                { media += "<div class='image'><i data-lucide='" + data.placeholder + "'></i></div>"; }
+
+    if(data.website != undefined)     { media += "<a class='button' href='" + data.website + "' title='Visit Website' target='_blank'><i data-lucide='external-link'></i></a>"; }
+    else if(data.github != undefined) { media += "<a class='button' href='" + data.github + "' title='View Source Files' target='_blank'><i data-lucide='github'></i></a>"; }
+
     content += media + "</div>";
-    
+
     content += "<div class='row header'><h2 class='title'>" + data.title + "</h2><span class='subtitle'>" + data.timespan + "</span></div>";
     content += "<div class='row quote'>\"" + data.quote + "\"</div>";
     
@@ -220,10 +239,11 @@ SITE.GenerateProject = function(id, data)
         skills += "<i data-skill='" + data.skills[index] + "'></i>";
     }
     content += skills + "</div>";
+
+    content += "<div class='toggle'><button class='button' onClick='SITE.ToggleProject(\""+ id +"\");'>Open</button></div>"
     
-    content += "<div class='toggle'><button class='button' onClick='SITE.ToggleProject(\""+ id +"\");'>Open</button></div>";
-    
-    project.innerHTML = content + project.innerHTML;
+    script.insertAdjacentHTML("afterend", content);
+    script.remove();
 }
 
 //-----------------------------------------------------------------
