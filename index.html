@@ -48,12 +48,12 @@
             </div>
             <div class='license'>
                 <p>
-                    Icons from <a href='https://lucide.dev/' target='_blank'>Lucide</a> (ISC License)<br>
-                    Copyright (c) 2020, Lucide Contributors
+                    Hosted via <a href='https://pages.github.com/' target='_blank'>Github Pages</a><br>
+                    Last Updated - March 2025
                 </p>
                 <p>
-                    Hosted via <a href='https://pages.github.com/' target='_blank'>Github Pages</a><br>
-                    Last Updated - February 2025
+                    Icons from <a href='https://lucide.dev/' target='_blank'>Lucide</a> (ISC License)<br>
+                    Copyright (c) 2020, Lucide Contributors
                 </p>
             </div>
         </header>
@@ -73,21 +73,6 @@
                 </p>
             </div>
 
-            <div class='block'>
-                <div class='banner'>
-                    <i class='icon'><i data-lucide='flag'></i></i>
-                    <div class='row title'>
-                        <h1>Much ado about ... me</h1>
-                    </div>
-                    <div class='row subtitle'>
-                        24/02/2024
-                    </div>
-                </div>
-                <p>
-                    The "About Me" page is now implemented!
-                </p>
-            </div>
-
             <div class='split'>
                 <div class='block justify'>
                     <button class='button title' title='About Me' onClick='SITE.LoadPage("about");' style='height:4vw;'> ABOUT ME </button>
@@ -100,6 +85,17 @@
                 <div class='block justify'>
                     <button class='button title' title='Projects' onClick='SITE.LoadPage("projects");' style='height:4vw;'> PROJECTS </button>
                 </div>
+            </div>
+
+            <div class='block'>
+                <script>SITE.GenerateBanner(document.currentScript, { title: "Generating Website...", icon: "lucide-flag", tags: [{ text: "Changelog", info: "17/03/2024" }] });</script>
+                <p>Completed some backend <i data-skill='js'></i> work which should make it easier to add projects in the future!</p>
+                <p class='quote'>Also, the home page seems to have become a changelog of sorts</p>
+            </div>
+
+            <div class='block'>
+                <script>SITE.GenerateBanner(document.currentScript, { title: "Much ado about ... me", icon: "lucide-flag", tags: [{ text: "Changelog", info: "24/02/2024" }] });</script>
+                <p>The "About Me" page is now implemented!</p>
             </div>
 
         </main>
@@ -144,16 +140,17 @@
                     <div class='skill'><i data-skill-logo='html'></i><i data-skill='html'></i></div>
                     <div class='skill'><i data-skill-logo='css'></i><i data-skill='css'></i></div>
                     <div class='skill'><i data-skill-logo='js'></i><i data-skill='js'></i></div>
+                    <div class='skill'><i data-skill-logo='md'></i><i data-skill='md'></i></div>
                 </div>
                 <br>
                 <div class='justify skills'>
-                    <div class='skill'><i data-skill-logo='unreal'></i><i data-skill='unreal'></i></div>
+                    <div class='skill'><i data-skill-logo='unreal'></i><i data-skill='ue5'></i></div>
                     <div class='skill'><i data-skill-logo='unity'></i><i data-skill='unity'></i></div>
-                    <div class='skill'><i data-skill-logo='godot'></i><i data-skill='godot'></i></div>
+                    <div class='skill'><i data-skill-logo='godot'></i><i data-skill='gd4'></i></div>
                     <div class='skill'><i data-skill-logo='vs'></i><i data-skill='vs'></i></div>
                     <div class='skill'><i data-skill-logo='vsc'></i><i data-skill='vsc'></i></div>
                     <div class='skill'><i data-skill-logo='obsidian'></i><i data-skill='obsidian'></i></div>
-                    <div class='skill'><i data-skill-logo='blender'></i><i data-skill='blender'></i></div>
+                    <div class='skill'><i data-skill-logo='blender'></i><i data-skill='blend4'></i></div>
                     <div class='skill'><i data-skill-logo='perforce'></i><i data-skill='perforce'></i></div>
                     <div class='skill'><i data-skill-logo='github'></i><i data-skill='github'></i></div>
                 </div>
@@ -202,60 +199,40 @@
                 </div>
             </div>
 
-            <div id='games-blacktower' data-studio='blacktower' class='block'>
-                
-                <div class='banner'>
-                    <img class='icon' src='site/Studios/studio-blacktower.png'>
-                    <div class='row title'>
-                        <h1>BLACK TOWER STUDIOS</h1><span class='text-small'>Tokyo, Japan</span>
-                    </div>
-                    <div class='row subtitle'>
-                        <span class='highlight'>Gameplay Programmer</span>10/2024 - 02/2025
-                    </div>
-                </div>
+            <div id='games-blacktower' class='block'>
+
+                <script>
+                    SITE.GenerateBanner(document.currentScript, { title: "BLACK TOWER STUDIOS", subtitle: "Tokyo, Japan", icon: "site/Banners/blacktower.png", 
+                    tags: [{ text: "Remote", info: "" }, { text: "Gameplay Programmer", info: "10/2024 - 02/2025" }] });
+                </script>
 
                 <div id='project-chainsaw' class='project'>
-                    <div class='media'>
-                        <iframe class='video' src="https://www.youtube.com/embed/ISCbJ9RlDgU" title="The Texas Chain Saw Massacre - Trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        <img class='image' src='site/Projects/project-texaschainsaw.png'>
-                        <a class='button' href='https://www.txchainsawgame.com/' title='Visit Website' target='_blank'><i data-lucide='external-link'></i></a>
-                    </div>
-                    <div class='row header'><h2 class='title'>The Texas Chainsaw Massacre</h2><span class='subtitle'>10/2024 - 02/2025</span></div>
-                    <div class='row quote'>An asymmetrical horror experience based on the groundbreaking and iconic 1974 horror film</div>
-                    <div class='row skills'>
-                        <i data-skill='cpp'></i><i data-skill='uebp'></i><i data-skill='unreal'>4</i><i data-skill='vs'></i><i data-skill='perforce'></i>
-                    </div>
+                    <script>
+                        SITE.GenerateProject(document.currentScript, { title: "The Texas Chainsaw Massacre", timespan: "10/2024 - 02/2025", image: "site/Projects/chainsaw.png", 
+                        website: "https://www.txchainsawgame.com/", video: "https://www.youtube.com/embed/ISCbJ9RlDgU",
+                        tagline: "An asymmetrical horror experience based on the groundbreaking and iconic 1974 horror film",
+                        skills: [ "ue4", "cpp", "uebp", "vs", "perforce" ] });
+                    </script>
                     <p>
                         I worked on providing post-release support and bug fixes for various gameplay features, notably character abilities and environmental objects
                     </p>
-                    <div class='toggle'><button class='button' onClick='SITE.ToggleProject("chainsaw");'>Open</button></div>
                 </div>
 
             </div>
 
-            <div id='games-sumodigital' data-studio='sumodigital' class='block'>
+            <div id='games-sumodigital' class='block'>
 
-                <div class='banner'>
-                    <img class='icon' src='site/Studios/studio-sumodigital.png'>
-                    <div class='row title'>
-                        <h1>SUMO DIGITAL</h1><span class='text-small'>Sheffield, England</span>
-                    </div>
-                    <div class='row subtitle'>
-                        <span class='highlight'>Gameplay Programmer</span>06/2022 - 07/2024<div class='vr'></div>
-                        <span class='highlight'>Junior Programmer</span>08/2020 - 06/2022<div class='vr'></div>
-                        <span class='highlight'>Placement Programmer</span>07/2018 - 08/2019
-                    </div>
-                </div>
+                <script>
+                    SITE.GenerateBanner(document.currentScript, { title: "SUMO DIGITAL", subtitle: "Sheffield, England", icon: "site/Banners/sumodigital.png",
+                    tags: [{ text: "Hybrid/On-Site", info: "" },{ text: "Gameplay Programmer", info: "06/2022 - 07/2024" },{ text: "Junior Programmer", info: "08/2020 - 06/2022" },{ text: "Placement Programmer", info: "07/2018 - 08/2019" }]});
+                </script>
 
                 <div id='project-scramble' class='project'>
-                    <div class='media'>
-                        <div class='image'><i data-lucide='package-open'></i></div>
-                    </div>
-                    <div class='row header'><h2 class='title'>Unannounced Project</h2><span class='subtitle'>08/2023 - 07/2024</span></div>
-                    <div class='row quote'>An unannounced multiplayer platformer developed in Unreal Engine 5</div>
-                    <div class='row skills'>
-                        <i data-skill='cpp'></i><i data-skill='uebp'></i><i data-skill='unreal'>5</i><i data-skill='vs'></i><i data-skill='perforce'></i>
-                    </div>
+                    <script>
+                        SITE.GenerateProject(document.currentScript, { title: "Unannounced Project", timespan: "08/2023 - 07/2024", image: "lucide-package-open", 
+                        tagline: "An unannounced multiplayer platformer developed in Unreal Engine 5",
+                        skills: [ "ue5", "cpp", "uebp", "vs", "perforce" ] });
+                    </script>
                     <p>
                         I worked on and took ownership of various gameplay mechanics, which involved:<br>
                         - Taking design documentation to cost and breaking down into tasks<br>
@@ -263,68 +240,45 @@
                         - Owning, implementing and maintaining various gameplay features<br>
                         - Partaking in show-and-tell meetings and feature reviews
                     </p>
-                    <div class='toggle'><button class='button' onClick='SITE.ToggleProject("scramble");'>Open</button></div>
-                </div>
-
-                <hr>
+                </div><hr>
 
                 <div id='project-firebird' class='project'>
-                    <div class='media'>
-                        <div class='image'><i data-lucide='rocket'></i></div>
-                    </div>
-                    <div class='row header'><h2 class='title'>Unannounced Project</h2><span class='subtitle'>06/2022 - 07/2023</span></div>
-                    <div class='row quote'>An unannounced third-person shooter developed in Unreal Engine 5</div>
-                    <div class='row skills'>
-                        <i data-skill='cpp'></i><i data-skill='uebp'></i><i data-skill='unreal'>5</i><i data-skill='vs'></i><i data-skill='perforce'></i>
-                    </div>
+                    <script>
+                        SITE.GenerateProject(document.currentScript, { title: "Unannounced Project", timespan: "06/2022 - 07/2023", image: "lucide-rocket", 
+                        tagline: "An unannounced third-person shooter developed in Unreal Engine 5",
+                        skills: [ "ue5", "cpp", "uebp", "vs", "perforce" ] });
+                    </script>
                     <p>
                         I worked on various aspects of the player character, including character abilities using the Unreal GAS system and weapons which were designed using a custom modular approach.
                         I was resposible for prototyping the modular weapon system and presenting the proposal in a feature review meeting
                     </p>
-                    <div class='toggle'><button class='button' onClick='SITE.ToggleProject("firebird");'>Open</button></div>
-                </div>
-
-                <hr>
+                </div><hr>
 
                 <div id='project-cadillac' class='project'>
-                    <div class='media'>
-                        <div class='image'><i data-lucide='trophy'></i></div>
-                    </div>
-                    <div class='row header'><h2 class='title'>Unannounced Project</h2><span class='subtitle'>11/2020 - 06/2022</span></div>
-                    <div class='row quote'>An unannounced sports game developed using an in-house engine</div>
-                    <div class='row skills'>
-                        <i data-skill='cpp'></i><i data-skill='lua'></i><i data-skill='vs'></i><i data-skill='perforce'></i>
-                    </div>
+                    <script>
+                        SITE.GenerateProject(document.currentScript, { title: "Unannounced Project", timespan: "11/2020 - 06/2022", image: "lucide-trophy", 
+                        tagline: "An unannounced sports game developed using an in-house engine",
+                        skills: [ "cpp", "lua", "vs", "perforce" ] });
+                    </script>
                     <p>
                         I worked on a system for tracking various stats during gameplay to allow them to be presented to the player, the framework for various smaller gameplay segments and assisted with the implementation of some of these segments
                     </p>
-                    <div class='toggle'><button class='button' onClick='SITE.ToggleProject("cadillac");'>Open</button></div>
-                </div>
-
-                <hr>
+                </div><hr>
 
                 <div id='project-gingerbread' class='project'>
-                    <div class='media'>
-                        <iframe class='video' src="https://www.youtube.com/embed/ZOk3fj5ujNM" title="Sackboy: A Big Adventure - Trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        <img class='image' src='site/Projects/project-sackboy.png'>
-                        <a class='button' href='https://www.playstation.com/en-gb/games/sackboy-a-big-adventure/' title='Visit Website' target='_blank'><i data-lucide='external-link'></i></a>
-                    </div>
-                    <div class='row header'><h2 class='title'>Sackboy: A Big Adventure</h2><span class='subtitle'>08/2020 - 11/2020 | 07/2018 - 08/2019</span></div>
-                    <div class='row quote'>Iconic PlayStation® hero Sackboy bursts back into breathtaking action with a huge, fun and frantic 3D multiplayer platforming adventure - and a whole new edgy sackitude!</div>
-                    <div class='row skills'>
-                        <i data-skill='cpp'></i><i data-skill='uebp'></i><i data-skill='unreal'>4</i><i data-skill='vs'></i><i data-skill='perforce'></i>
-                    </div>
+                    <script>
+                        SITE.GenerateProject(document.currentScript, { title: "Sackboy: A Big Adventure", timespan: "08/2020 - 11/2020 | 07/2018 - 08/2019", image: "site/Projects/gingerbread.png", 
+                        website: "https://www.playstation.com/en-gb/games/sackboy-a-big-adventure/", video: "https://www.youtube.com/embed/ZOk3fj5ujNM",
+                        tagline: "Iconic PlayStation® hero Sackboy bursts back into breathtaking action with a huge, fun and frantic 3D multiplayer platforming adventure - and a whole new edgy sackitude!",
+                        skills: [ "ue4", "cpp", "uebp", "vs", "perforce", "cs", "html", "css", "js" ] });
+                    </script>
                     <p>
                         I worked on multiple areas of this game, both during my placement year and as a full-time employee, including sackboy himself, 
                         an automated testing system to play through test levels then output telemetry results and automated lighting build tools
                     </p>
-                    <div class='row skills'>
-                        <i data-skill='cs'></i><i data-skill='html'></i><i data-skill='css'></i><i data-skill='js'></i>
-                    </div>
                     <p>
                         The automated testing tools were built using a combination of unreal, a c# helper program and server with a web front-end
                     </p>
-                    <div class='toggle'><button class='button' onClick='SITE.ToggleProject("gingerbread");'>Open</button></div>
                 </div>
 
             </div>
@@ -341,74 +295,50 @@
                     <button class='button title' onClick='SITE.ScrollTo("projects-university");'>UNIVERSITY</button>
                 </div>
             </div>
-            
+
             <div id='projects-independent' class='block'>
 
-                <div class='banner'>
-                    <img class='icon' src='site/logo.png'>
-                    <div class='row title'>
-                        <h1>INDEPENDENT PROJECTS</h1><span class='text-small'>192.168.0.1</span>
-                    </div>
-                    <div class='row subtitle'>
-                        <span class='highlight'>Jack of All Trades</span>
-                    </div>
-                </div>
+                <script>SITE.GenerateBanner(document.currentScript, { title: "INDEPENDENT PROJECTS", subtitle: "192.168.0.1", icon: "site/logo.png", tags: [{ text: "Jack of All Trades", info: "01000001 - 01011010" }] });</script>
 
                 <div id='project-portfolio' class='project'>
-                    <div class='media'>
-                        <div class='image'><i data-lucide='code'></i></div>
-                        <a class='button' href='https://github.com/jm-2808/jm-2808.github.io' title='View Source Files' target='_blank'><i data-lucide='github'></i></a>
-                    </div>
-                    <div class='row header'><h2 class='title'>Portfolio</h2><span class='subtitle'>06/2024 - Current</span></div>
-                    <div class='row quote'>You're looking at it</div>
-                    <div class='row skills'>
-                        <i data-skill='html'></i><i data-skill='css'></i><i data-skill='js'></i><i data-skill='vsc'></i><i data-skill='github'></i>
-                    </div>
+                    <script>
+                        SITE.GenerateProject(document.currentScript, { title: "Portfolio Website", timespan: "06/2024 - Current", image: "lucide-code", 
+                        website: "https://github.com/jm-2808/jm-2808.github.io",
+                        tagline: "You're looking at it",
+                        skills: [ "html", "css", "js", "vsc", "github" ] });
+                    </script>
                     <p>
                         This portfolio website was designed and coded by me! My apologies if it breaks on weird resolutions, the page is only designed with 16:9 aspect ratios in mind for now
                     </p>
                     <p>
-                        The site is hosted using <b>Github Pages</b> (See bottom left of the page)
+                        The site is hosted using <a href='https://pages.github.com/' target='_blank'>Github Pages</a> and uses the <a href='https://lucide.dev/' target='_blank'>Lucide</a> icon library (See bottom left of the page)
                     </p>
-                    <div class='toggle'><button class='button' onClick='SITE.ToggleProject("portfolio");'>Open</button></div>
-                </div>
-
-                <hr>
+                </div><hr>
 
                 <div id='project-azimov' class='project'>
-                    <div class='media'>
-                        <div class='image'><i data-lucide='bot'></i></div>
-                    </div>
-                    <div class='row header'><h2 class='title'>Azimov</h2><span class='subtitle'>07/2024 - Current</span></div>
-                    <div class='row quote'>"4. A robot may forsake the third rule if the company deems it appropriate"</div>
-                    <div class='row skills'>
-                        <i data-skill='cs'></i><i data-skill='godot'> 4.3</i><i data-skill='blender'> 4.2</i><i data-skill='github'></i>
-                    </div>
+                    <script>
+                        SITE.GenerateProject(document.currentScript, { title: "Azimov", timespan: "07/2024 - Current", image: "lucide-bot", 
+                        tagline: "Sir the robots appear to have formed a union",
+                        skills: [ "gd4", "cs", "blend4", "github" ] });
+                    </script>
                     <p>
                         Set in a 3D grid-based environment, Azimov tasks the player with using a simple scripting language to program drones and complete various puzzles. 
                         The puzzles range from simple goals, such as helping a single drone reach a destination, to complex manipulation of multiple drones to accomplish tasks simultaneously
                     </p>
-                    <div class='toggle'><button class='button' onClick='SITE.ToggleProject("azimov");'>Open</button></div>
-                </div>
-
-                <hr>
+                </div><hr>
 
                 <div id='project-blackjack' class='project'>
-                    <div class='media'>
-                        <img class='image' src='site/Projects/project-blackjack.png'>
-                        <a class='button' href='https://github.com/jm-2808/sample-blackjack' title='View Sample Files' target='_blank'><i data-lucide='github'></i></a>
-                    </div>
-                    <div class='row header'><h2 class='title'>Blackjack</h2><span class='subtitle'>2018 / 2020</span></div>
-                    <div class='row quote'>"Hit, Stand or Surrender"</div>
-                    <div class='row skills'>
-                        <i data-skill='cpp'></i><i data-skill='vs'></i>
-                    </div>
+                    <script>
+                        SITE.GenerateProject(document.currentScript, { title: "Blackjack", timespan: "2018 / 2020", image: "site/Projects/blackjack.png", 
+                        website: "https://github.com/jm-2808/sample-blackjack",
+                        tagline: "Hit, Stand or Surrender",
+                        skills: [ "cpp", "vs" ] });
+                    </script>
                     <p>
                         A simple windows console application which allows player(s) to engage in a game of Blackjack. Two versions are available:<br>
                         - The older version was made during early university and uses a simple linear execution style<br>
                         - The newer version was made during later university and uses threading to emulate an engine's game/input thread system
                     </p>
-                    <div class='toggle'><button class='button' onClick='SITE.ToggleProject("blackjack");'>Open</button></div>
                 </div>
 
             </div>
@@ -419,48 +349,30 @@
                 <script>GAMEPAD.Generate("gamepad");</script>
             </div>
 
-            <div id='projects-university' data-studio='university' class='block'>
+            <div id='projects-university' class='block'>
 
-                <div class='banner'>
-                    <img class='icon' src='site/Studios/studio-university.png'>
-                    <div class='row title'>
-                        <h1>UNIVERSITY ASSIGNMENTS</h1><span class='text-small'>Sheffield Hallam University</span>
-                    </div>
-                    <div class='row subtitle'>
-                        <span class='highlight'>BSc Computer Science for Games</span>09/2016 - 08/2020
-                    </div>
-                </div>
+                <script>SITE.GenerateBanner(document.currentScript, { title: "UNIVERSITY ASSIGNMENTS", subtitle: "Sheffield Hallam University", icon: "site/Banners/university.png", tags: [{ text: "BSc Computer Science for Games", info: "09/2016 - 08/2020" }] });</script>
 
                 <div id='project-niobium' class='project'>
-                    <div class='media'>
-                        <img class='image' src='site/Projects/project-niobium.png'>
-                        <a class='button' href='https://github.com/jm-2808/sample-project_niobium' title='View Sample Files' target='_blank'><i data-lucide='github'></i></a>
-                    </div>
-                    <div class='row header'><h2 class='title'>Modular Weapon System</h2><span class='subtitle'>09/2019 - 05/2020</span></div>
-                    <div class='row quote'>[Project_Niobium] Weapon System Status: Online</div>
-                    <div class='row skills'>
-                        <i data-skill='cpp'></i><i data-skill='uebp'></i><i data-skill='unreal'>4</i><i data-skill='vs'></i><i data-skill='github'></i>
-                    </div>
+                    <script>
+                        SITE.GenerateProject(document.currentScript, { title: "Modular Weapon System", timespan: "09/2019 - 05/2020", image: "site/Projects/niobium.png", 
+                        website: "https://github.com/jm-2808/sample-project_niobium",
+                        tagline: "Weapons charged and ready",
+                        skills: [ "ue4", "cpp", "uebp", "vs", "github" ] });
+                    </script>
                     <p>
                         My final project at university, this modular weapon system uses 'Cores' to define base attributes of the weapon and 'Modifiers' to alter the weapon's behaviour. 
                         The parameters of these weapons could be altered at runtime to allow the user/player to dynamically adjust and test configurations
                     </p>
-                    <div class='toggle'><button class='button' onClick='SITE.ToggleProject("niobium");'>Open</button></div>
-                </div>
-
-                <hr>
+                </div><hr>
 
                 <div id='project-rambler' class='project'>
-                    <div class='media'>
-                        <iframe class='video' src="https://www.youtube.com/embed/tQ39e2bVUx4" title="Stealing Stuff - Trailer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        <img class='image' src='site/Projects/project-stealingstuff.png'>
-                        <a class='button' href='https://github.com/jm-2808/sample-stealing_stuff' title='View Sample Files' target='_blank'><i data-lucide='github'></i></a>
-                    </div>
-                    <div class='row header'><h2 class='title'>Stealing Stuff</h2><span class='subtitle'>01/2020 - 05/2020</span></div>
-                    <div class='row quote'>You know what they say about 'if it ain't nailed down', but if it is ... find a claw hammer</div>
-                    <div class='row skills'>
-                        <i data-skill='cpp'></i><i data-skill='uebp'></i><i data-skill='unreal'>4</i><i data-skill='vs'></i></i><i data-skill='github'></i>
-                    </div>
+                    <script>
+                        SITE.GenerateProject(document.currentScript, { title: "Stealing Stuff", timespan: "01/2020 - 05/2020", image: "site/Projects/rambler.png", 
+                        website: "https://github.com/jm-2808/sample-stealing_stuff", video: "https://www.youtube.com/embed/tQ39e2bVUx4",
+                        tagline: "You know what they say about 'if it ain't nailed down', but if it is ... find a claw hammer",
+                        skills: [ "ue4", "cpp", "uebp", "vs", "github" ] });
+                    </script>
                     <p>
                         A group project from my final year, Stealing Stuff is an arcade-style game where players sneak around and steal everything that isn't nailed down, working together as a team to steal larger items. 
                         I acted as the <b>Lead Programmer</b> for this project, which involved delegating tasks to other programmers on the team
@@ -468,25 +380,18 @@
                     <p>
                         This project achieved <b>3rd place</b> in both the <b>Sumo Digital Award for Game Design</b> and <b>Rockstar Leeds Award for Best Team</b> categories at the Game Republic Student Showcase 2020
                     </p>
-                    <div class='toggle'><button class='button' onClick='SITE.ToggleProject("rambler");'>Open</button></div>
-                </div>
-
-                <hr>
+                </div><hr>
 
                 <div id='project-dungeon' class='project'>
-                    <div class='media'>
-                        <img class='image' src='site/Projects/project-dungeonhunt.png'>
-                        <a class='button' href='https://github.com/jm-2808/sample-dungeon_hunt' title='View Sample Files' target='_blank'><i data-lucide='github'></i></a>
-                    </div>
-                    <div class='row header'><h2 class='title'>Dungeon Hunt</h2><span class='subtitle'>09/2019 - 12/2019</span></div>
-                    <div class='row quote'>I hope the boss is easy to find</div>
-                    <div class='row skills'>
-                        <i data-skill='cpp'></i><i data-skill='cmd'>directX 11</i><i data-skill='vs'></i><i data-skill='github'></i>
-                    </div>
+                    <script>
+                        SITE.GenerateProject(document.currentScript, { title: "Dungeon Hunt", timespan: "09/2019 - 12/2019", image: "site/Projects/dungeon.png", 
+                        website: "https://github.com/jm-2808/sample-dungeon_hunt",
+                        tagline: "There's a surprising lack of loot in here",
+                        skills: [ "dx11", "cpp", "vs", "github" ] });
+                    </script>
                     <p>
                         A group project from my final year, Dungeon Hunt is a first person combat game developed using the DirectX API where the player makes their way through a series of levels using weapons to defeat enemy drones
                     </p>
-                    <div class='toggle'><button class='button' onClick='SITE.ToggleProject("dungeon");'>Open</button></div>
                 </div>
 
             </div>

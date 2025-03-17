@@ -179,20 +179,114 @@ SITE.LoadPage = function(page)
 
 //-----------------------------------------------------------------
 
-SITE.ToggleProject = function(id)
+SITE.Generate = function(script)
 {
-    const project = document.getElementById("project-" + id);
-    const toggle = project.getElementsByClassName("toggle")[0];
-    const button = toggle.firstElementChild;
+    const parent = script.parentElement;
+
+    content = "<h1 class='title'>" + parent.id + "</h1>";
+
+    script.insertAdjacentHTML("afterend", content);
+    script.remove();
+}
+
+//-----------------------------------------------------------------
+
+SITE.GenerateBanner = function(script, data)
+{
+    var icon = "<i class='icon'></i>";
+    if(data.icon != undefined)
+    {
+        if(data.icon.startsWith("lucide-"))
+        {
+            var lucide = data.icon.replace("lucide-", "");
+            icon = "<i class='icon'><i data-lucide='" + lucide + "'></i></i>";
+        }
+        else
+        {
+            icon = "<img class='icon' src='" + data.icon + "'>";
+        }
+    }
+
+    var title = "<h1>" + data.title + "</h1>";
+    if(data.subtitle != undefined) { title += "<span class='text-small'>" + data.subtitle + "</span>"; }
     
+    var subtitle = "";
+    for (let index = 0; index < data.tags.length; ++index) 
+    {
+        if(index > 0) { subtitle += "<div class='vr'></div>" };
+        subtitle += "<span class='highlight'>" + data.tags[index].text + "</span>" + data.tags[index].info;
+    }
+
+    var content = "<div class='banner'>" + icon + "<div class='row title'>" + title + "</div><div class='row subtitle'>" + subtitle + "</div></div>";
+    script.insertAdjacentHTML("afterend", content);
+    script.remove();
+}
+
+//-----------------------------------------------------------------
+
+SITE.GenerateProject = function(script, data)
+{
+    var website = "";
+    if(data.website != undefined)
+    {
+        var title = (data.website.includes("github.com") ? "View Source Files" : "Visit Website" );
+        var icon = (data.website.includes("github.com") ? "github" : "external-link" );
+        website = "<a class='button' href='" + data.website + "' title='" + title + "' target='_blank'><i data-lucide='" + icon + "'></i></a>";
+    }
+
+    var video = ""
+    if(data.video != undefined)
+    {
+        video = "<iframe class='video' src='" + data.video + "' title='Trailer' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>";
+    }
+
+    var image = "<div class='image'><i data-lucide='cog'></i></div>"
+    if(data.image != undefined)
+    {
+        if(data.image.startsWith("lucide-"))
+        {
+            var lucide = data.image.replace("lucide-", "");
+            image = "<i class='image'><i data-lucide='" + lucide + "'></i></i>";
+        }
+        else
+        {
+            image = "<img class='image' src='" + data.image + "'>";
+        }
+    }
+
+    var media = "<div class='media'>" + website + video + image + "</div>";
+    var header = "<div class='row header'><h2 class='title'>" + data.title + "</h2><span class='subtitle'>" + data.timespan + "</span></div>";
+    var tagline = "<div class='row quote'>\"" + data.tagline + "\"</div>";
+
+    var skills = "<div class='row skills'>";
+    for (let index = 0; index < data.skills.length; ++index) 
+    {
+        skills += "<i data-skill='" + data.skills[index] + "'></i>";
+    }
+    skills += "</div>";
+
+    var toggle = "<div class='toggle'><button class='button' onClick='SITE.ToggleProject(this);'>Open</button></div>"
+    
+    var content = media + header + tagline + skills + toggle;
+    script.insertAdjacentHTML("afterend", content);
+    script.remove();
+}
+
+//-----------------------------------------------------------------
+
+SITE.ToggleProject = function(toggle)
+{
+    const outer = toggle.parentElement;
+    const project = outer.parentElement;
+
     if(!project.classList.contains("open"))
     {
         project.classList.add("open");
         
         project.style.height = project.scrollHeight + "px";
-        project.style.paddingBottom = button.scrollHeight + "px";
-        toggle.style.height = button.scrollHeight + "px";
-        button.innerHTML = "Close";
+        project.style.paddingBottom = toggle.scrollHeight + "px";
+        outer.style.height = toggle.scrollHeight + "px";
+        toggle.textContent = "Close";
     }
     else
     {
@@ -200,8 +294,8 @@ SITE.ToggleProject = function(id)
         
         project.style.height = "";
         project.style.paddingBottom = "";
-        toggle.style.height = "";
-        button.innerHTML = "Open";
+        outer.style.height = "";
+        toggle.textContent = "Open";
     }
 }
 

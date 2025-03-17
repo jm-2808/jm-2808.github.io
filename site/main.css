@@ -1,60 +1,64 @@
 /*=== Data ========================================================*/
 /*--- Locations -------------------------*/
 
-.block[data-studio="university"] .banner    { --banner-colour: #B60050; --banner-text: white; }
-.block[data-studio="sumodigital"] .banner   { --banner-colour: #BE1E2D; --banner-text: white; }
-.block[data-studio="blacktower"] .banner    { --banner-colour: #0A0E11; --banner-text: white; }
+.block#projects-university .banner  { --banner-colour: #B60050; --banner-text: white; }
+.block#games-sumodigital .banner    { --banner-colour: #BE1E2D; --banner-text: white; }
+.block#games-blacktower .banner     { --banner-colour: #0A0E11; --banner-text: white; }
 
 /*--- Skills ----------------------------*/
 /* Languages */
 i[data-skill="cpp"]         { background: #00599D; color: #FFFFFF; } i[data-skill="cpp"]:before { content: "c++"; }
-i[data-skill-logo="cpp"]    { background-image: url("Skills/skill-cpp.png"); }
+i[data-skill-logo="cpp"]    { background-image: url("Skills/cpp.png"); }
 
 i[data-skill="cs"]          { background: #843489; color: #FFFFFF; } i[data-skill="cs"]:before { content: "c#"; }
-i[data-skill-logo="cs"]     { background-image: url("Skills/skill-csharp.png"); }
+i[data-skill-logo="cs"]     { background-image: url("Skills/csharp.png"); }
 
 i[data-skill="lua"]         { background: #000080; color: #FFFFFF; } i[data-skill="lua"]:before { content: "lua"; }
-i[data-skill-logo="lua"]    { background-image: url("Skills/skill-lua.png"); }
+i[data-skill-logo="lua"]    { background-image: url("Skills/lua.png"); }
 
 i[data-skill="html"]        { background: #E54C25; color: #FFFFFF; } i[data-skill="html"]:before { content: "html"; }
-i[data-skill-logo="html"]   { background-image: url("Skills/skill-html.png"); }
+i[data-skill-logo="html"]   { background-image: url("Skills/html.png"); }
 
 i[data-skill="css"]         { background: #42A5F5; color: #FFFFFF; } i[data-skill="css"]:before { content: "css"; }
-i[data-skill-logo="css"]    { background-image: url("Skills/skill-css.png"); }
+i[data-skill-logo="css"]    { background-image: url("Skills/css.png"); }
 
 i[data-skill="js"]          { background: #FFCA28; color: #000000; } i[data-skill="js"]:before { content: "javascript"; }
-i[data-skill-logo="js"]     { background-image: url("Skills/skill-javascript.png"); }
+i[data-skill-logo="js"]     { background-image: url("Skills/javascript.png"); }
 
-i[data-skill="cmd"]         { background: #000000; color: #00AA00; }
+i[data-skill="md"]          { background: #000000; color: #FFFFFF; } i[data-skill="md"]:before { content: "markdown"; }
+i[data-skill-logo="md"]     { background-image: url("Skills/markdown.png"); }
+
+i[data-skill="dx11"]         { background: #000000; color: #00AA00; } i[data-skill="dx11"]:before { content: "directX 11"; }
 
 /* Programs */
-i[data-skill="unreal"]          { background: #000000; color: #FFFFFF; } i[data-skill="unreal"]:before { content: "UE"; }
-i[data-skill-logo="unreal"]     { background-image: url("Skills/skill-unreal.png"); }
+i[data-skill="ue4"]             { background: #000000; color: #FFFFFF; } i[data-skill="ue4"]:before { content: "UE4"; }
+i[data-skill="ue5"]             { background: #000000; color: #FFFFFF; } i[data-skill="ue5"]:before { content: "UE5"; }
+i[data-skill-logo="unreal"]     { background-image: url("Skills/unreal.png"); }
 i[data-skill="uebp"]            { background: #00266B; color: #FFFFFF; } i[data-skill="uebp"]:before { content: "blueprint"; }
 
 i[data-skill="unity"]           { background: #FFFFFF; color: #000000; } i[data-skill="unity"]:before { content: "unity"; }
-i[data-skill-logo="unity"]      { background-image: url("Skills/skill-unity.png"); }
+i[data-skill-logo="unity"]      { background-image: url("Skills/unity.png"); }
 
-i[data-skill="godot"]           { background: #478CBF; color: #FFFFFF; } i[data-skill="godot"]:before { content: "godot"; }
-i[data-skill-logo="godot"]      { background-image: url("Skills/skill-godot.png"); }
+i[data-skill="gd4"]             { background: #478CBF; color: #FFFFFF; } i[data-skill="gd4"]:before { content: "godot 4"; }
+i[data-skill-logo="godot"]      { background-image: url("Skills/godot.png"); }
 
 i[data-skill="vs"]              { background: #7252AA; color: #FFFFFF; } i[data-skill="vs"]:before { content: "visual studio"; }
-i[data-skill-logo="vs"]         { background-image: url("Skills/skill-visualstudio.png"); }
+i[data-skill-logo="vs"]         { background-image: url("Skills/visualstudio.png"); }
 
 i[data-skill="vsc"]             { background: #0089D2; color: #FFFFFF; } i[data-skill="vsc"]:before { content: "visual studio code"; }
-i[data-skill-logo="vsc"]        { background-image: url("Skills/skill-visualstudiocode.png"); }
+i[data-skill-logo="vsc"]        { background-image: url("Skills/visualstudiocode.png"); }
 
 i[data-skill="obsidian"]        { background: #8F62EA; color: #FFFFFF; } i[data-skill="obsidian"]:before { content: "obsidian"; }
-i[data-skill-logo="obsidian"]   { background-image: url("Skills/skill-obsidian.png"); }
+i[data-skill-logo="obsidian"]   { background-image: url("Skills/obsidian.png"); }
 
-i[data-skill="blender"]         { background: #E87D0D; color: #265787; } i[data-skill="blender"]:before { content: "blender"; }
-i[data-skill-logo="blender"]    { background-image: url("Skills/skill-blender.png"); }
+i[data-skill="blend4"]          { background: #E87D0D; color: #265787; } i[data-skill="blend4"]:before { content: "blender 4"; }
+i[data-skill-logo="blender"]    { background-image: url("Skills/blender.png"); }
 
 i[data-skill="perforce"]        { background: #F05033; color: #FFFFFF; } i[data-skill="perforce"]:before { content: "perforce"; }
-i[data-skill-logo="perforce"]   { background-image: url("Skills/skill-perforce.png"); }
+i[data-skill-logo="perforce"]   { background-image: url("Skills/perforce.png"); }
 
 i[data-skill="github"]          { background: #0D1827; color: #FFFFFF; } i[data-skill="github"]:before { content: "github"; }
-i[data-skill-logo="github"]     { background-image: url("Skills/skill-github.png"); }
+i[data-skill-logo="github"]     { background-image: url("Skills/github.png"); }
 
 /*=== General =====================================================*/
 
@@ -200,8 +204,6 @@ body
 .text-center    { text-align: center; }
 
 .quote          { font-style: italic; }
-.quote:before   { content: "\""; }
-.quote:after    { content: "\""; }
 
 .title
 {
@@ -607,9 +609,9 @@ body
 
 .block .banner > div:nth-of-type(2) /* Expected .row */
 {
-    gap: 1vw;
+    gap: 0.8vw;
 
-    margin-left: 5.5vw;
+    margin-left: 4.8vw;
     height: 1.75vw;
 }
 
