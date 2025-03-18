@@ -609,9 +609,9 @@ body
 
 .block .banner > div:nth-of-type(2) /* Expected .row */
 {
-    gap: 1vw;
+    gap: 0.8vw;
 
-    margin-left: 5.5vw;
+    margin-left: 4.8vw;
     height: 1.75vw;
 }
 
