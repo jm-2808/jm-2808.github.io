@@ -22,8 +22,17 @@ i[data-skill-logo="html"]   { background-image: url("Skills/html.png"); }
 i[data-skill="css"]         { background: #42A5F5; color: #FFFFFF; } i[data-skill="css"]:before { content: "css"; }
 i[data-skill-logo="css"]    { background-image: url("Skills/css.png"); }
 
-i[data-skill="js"]          { background: #FFCA28; color: #000000; } i[data-skill="js"]:before { content: "javascript"; }
+i[data-skill="js"]          { background: #FFCA28; color: #323330; } i[data-skill="js"]:before { content: "javascript"; }
 i[data-skill-logo="js"]     { background-image: url("Skills/javascript.png"); }
+
+i[data-skill="ts"]          { background: #3178C6; color: #FFFFFF; } i[data-skill="ts"]:before { content: "typescript"; }
+i[data-skill-logo="ts"]     { background-image: url("Skills/typescript.png"); }
+
+i[data-skill="json"]        { background: #595959; color: #FFFFFF; } i[data-skill="json"]:before { content: "json"; }
+i[data-skill-logo="json"]   { background-image: url("Skills/json.png"); }
+
+i[data-skill="xml"]        { background: #F29C1F; color: #FFFFFF; } i[data-skill="xml"]:before { content: "xml"; }
+i[data-skill-logo="xml"]   { background-image: url("Skills/xml.png"); }
 
 i[data-skill="md"]          { background: #000000; color: #FFFFFF; } i[data-skill="md"]:before { content: "markdown"; }
 i[data-skill-logo="md"]     { background-image: url("Skills/markdown.png"); }
@@ -200,6 +209,7 @@ body
 
 .text-large { font-size: 135%; }
 .text-small { font-size: 65%; }
+.text-tiny { font-size: 40%; }
 
 .text-center    { text-align: center; }
 
@@ -732,9 +742,16 @@ i[data-skill-logo]
 }
 
 
-#about .skills
+#about .row.skills 
+{
+    gap: 5.0vw;
+}
+#about .skills .column .row
 {
     gap: 0.5vw;
+    flex-wrap: wrap;
+
+    margin-bottom: 0.75vh;
 }
 
 /*--- Polaroid --------------------------*/
