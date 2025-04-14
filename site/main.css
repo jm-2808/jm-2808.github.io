@@ -7,67 +7,37 @@
 
 /*--- Skills ----------------------------*/
 /* Languages */
-i[data-skill="cpp"]         { background: #00599D; color: #FFFFFF; } i[data-skill="cpp"]:before { content: "c++"; }
-i[data-skill-logo="cpp"]    { background-image: url("Skills/cpp.png"); }
+i[data-skill="cpp"]     { --skill-background: #00599C; --skill-colour: #FFFFFF; --skill-text: "c++"; --skill-icon: url("Skills/cpp.png");  }
+i[data-skill="cs"]      { --skill-background: #390091; --skill-colour: #FFFFFF; --skill-text: "c#"; --skill-icon: url("Skills/csharp.png");  }
+i[data-skill="lua"]     { --skill-background: #000080; --skill-colour: #FFFFFF; --skill-text: "lua"; --skill-icon: url("Skills/lua.png"); --skill-shadow: 0.2;  }
+i[data-skill="html"]    { --skill-background: #E54C25; --skill-colour: #FFFFFF; --skill-text: "html"; --skill-icon: url("Skills/html.png");  }
+i[data-skill="css"]     { --skill-background: #264DE4; --skill-colour: #FFFFFF; --skill-text: "css"; --skill-icon: url("Skills/css.png");  }
+i[data-skill="js"]      { --skill-background: #F0DB4F; --skill-colour: #323330; --skill-text: "javascript"; --skill-icon: url("Skills/javascript.png");  }
+i[data-skill="ts"]      { --skill-background: #3178C6; --skill-colour: #FFFFFF; --skill-text: "typescript"; --skill-icon: url("Skills/typescript.png");  }
 
-i[data-skill="cs"]          { background: #843489; color: #FFFFFF; } i[data-skill="cs"]:before { content: "c#"; }
-i[data-skill-logo="cs"]     { background-image: url("Skills/csharp.png"); }
+i[data-skill="json"]    { --skill-background: #595959; --skill-colour: #FFFFFF; --skill-text: "json"; --skill-icon: url("Skills/json.png");  }
+i[data-skill="xml"]     { --skill-background: #F29C1F; --skill-colour: #FFFFFF; --skill-text: "xml"; --skill-icon: url("Skills/xml.png");  }
 
-i[data-skill="lua"]         { background: #000080; color: #FFFFFF; } i[data-skill="lua"]:before { content: "lua"; }
-i[data-skill-logo="lua"]    { background-image: url("Skills/lua.png"); }
-
-i[data-skill="html"]        { background: #E54C25; color: #FFFFFF; } i[data-skill="html"]:before { content: "html"; }
-i[data-skill-logo="html"]   { background-image: url("Skills/html.png"); }
-
-i[data-skill="css"]         { background: #42A5F5; color: #FFFFFF; } i[data-skill="css"]:before { content: "css"; }
-i[data-skill-logo="css"]    { background-image: url("Skills/css.png"); }
-
-i[data-skill="js"]          { background: #FFCA28; color: #323330; } i[data-skill="js"]:before { content: "javascript"; }
-i[data-skill-logo="js"]     { background-image: url("Skills/javascript.png"); }
-
-i[data-skill="ts"]          { background: #3178C6; color: #FFFFFF; } i[data-skill="ts"]:before { content: "typescript"; }
-i[data-skill-logo="ts"]     { background-image: url("Skills/typescript.png"); }
-
-i[data-skill="json"]        { background: #595959; color: #FFFFFF; } i[data-skill="json"]:before { content: "json"; }
-i[data-skill-logo="json"]   { background-image: url("Skills/json.png"); }
-
-i[data-skill="xml"]        { background: #F29C1F; color: #FFFFFF; } i[data-skill="xml"]:before { content: "xml"; }
-i[data-skill-logo="xml"]   { background-image: url("Skills/xml.png"); }
-
-i[data-skill="md"]          { background: #000000; color: #FFFFFF; } i[data-skill="md"]:before { content: "markdown"; }
-i[data-skill-logo="md"]     { background-image: url("Skills/markdown.png"); }
-
-i[data-skill="dx11"]         { background: #000000; color: #00AA00; } i[data-skill="dx11"]:before { content: "directX 11"; }
+i[data-skill="dx11"]    { --skill-background: #000000; --skill-colour: #00AA00; --skill-text: "directX 11"; --skill-icon: "";  }  
 
 /* Programs */
-i[data-skill="ue4"]             { background: #000000; color: #FFFFFF; } i[data-skill="ue4"]:before { content: "UE4"; }
-i[data-skill="ue5"]             { background: #000000; color: #FFFFFF; } i[data-skill="ue5"]:before { content: "UE5"; }
-i[data-skill-logo="unreal"]     { background-image: url("Skills/unreal.png"); }
-i[data-skill="uebp"]            { background: #00266B; color: #FFFFFF; } i[data-skill="uebp"]:before { content: "blueprint"; }
+i[data-skill="ue4"]     { --skill-background: #000000; --skill-colour: #FFFFFF; --skill-text: "UE4"; --skill-icon: url("Skills/unreal.png");  }
+i[data-skill="ue5"]     { --skill-background: #000000; --skill-colour: #FFFFFF; --skill-text: "UE5"; --skill-icon: url("Skills/unreal.png");  }
+i[data-skill="uebp"]    { --skill-background: #00266B; --skill-colour: #FFFFFF; --skill-text: "blueprint"; --skill-icon: url("Skills/unreal.png"); }
 
-i[data-skill="unity"]           { background: #FFFFFF; color: #000000; } i[data-skill="unity"]:before { content: "unity"; }
-i[data-skill-logo="unity"]      { background-image: url("Skills/unity.png"); }
+i[data-skill="unity"]   { --skill-background: #FFFFFF; --skill-colour: #000000; --skill-text: "unity"; --skill-icon: url("Skills/unity.png");  }
 
-i[data-skill="gd4"]             { background: #478CBF; color: #FFFFFF; } i[data-skill="gd4"]:before { content: "godot 4"; }
-i[data-skill-logo="godot"]      { background-image: url("Skills/godot.png"); }
+i[data-skill="gd4"]     { --skill-background: #478CBF; --skill-colour: #FFFFFF; --skill-text: "godot 4+"; --skill-icon: url("Skills/godot.png"); --skill-shadow: 0.1;  }
 
-i[data-skill="vs"]              { background: #7252AA; color: #FFFFFF; } i[data-skill="vs"]:before { content: "visual studio"; }
-i[data-skill-logo="vs"]         { background-image: url("Skills/visualstudio.png"); }
+i[data-skill="vs"]      { --skill-background: #BB8BF3; --skill-colour: #FFFFFF; --skill-text: "visual studio"; --skill-icon: url("Skills/visualstudio.png"); }
+i[data-skill="vsc"]     { --skill-background: #23A9F2; --skill-colour: #FFFFFF; --skill-text: "vs code"; --skill-icon: url("Skills/visualstudiocode.png"); }
+i[data-skill="pfv"]     { --skill-background: #F05033; --skill-colour: #FFFFFF; --skill-text: "perforce"; --skill-icon: url("Skills/perforce.png");  }
+i[data-skill="github"]  { --skill-background: #0D1827; --skill-colour: #FFFFFF; --skill-text: "github"; --skill-icon: url("Skills/github.png");  }
 
-i[data-skill="vsc"]             { background: #0089D2; color: #FFFFFF; } i[data-skill="vsc"]:before { content: "visual studio code"; }
-i[data-skill-logo="vsc"]        { background-image: url("Skills/visualstudiocode.png"); }
-
-i[data-skill="obsidian"]        { background: #8F62EA; color: #FFFFFF; } i[data-skill="obsidian"]:before { content: "obsidian"; }
-i[data-skill-logo="obsidian"]   { background-image: url("Skills/obsidian.png"); }
-
-i[data-skill="blend4"]          { background: #E87D0D; color: #265787; } i[data-skill="blend4"]:before { content: "blender 4"; }
-i[data-skill-logo="blender"]    { background-image: url("Skills/blender.png"); }
-
-i[data-skill="perforce"]        { background: #F05033; color: #FFFFFF; } i[data-skill="perforce"]:before { content: "perforce"; }
-i[data-skill-logo="perforce"]   { background-image: url("Skills/perforce.png"); }
-
-i[data-skill="github"]          { background: #0D1827; color: #FFFFFF; } i[data-skill="github"]:before { content: "github"; }
-i[data-skill-logo="github"]     { background-image: url("Skills/github.png"); }
+/* Other */
+i[data-skill="blend4"]      { --skill-background: #EA7600; --skill-colour: #265787; --skill-text: "blender 4+"; --skill-icon: url("Skills/blender.png"); --skill-shadow: 0.15; }
+i[data-skill="obsidian"]    { --skill-background: #8F62EA; --skill-colour: #FFFFFF; --skill-text: "obsidian"; --skill-icon: url("Skills/obsidian.png");  }
+i[data-skill="md"]          { --skill-background: #000000; --skill-colour: #FFFFFF; --skill-text: "markdown"; --skill-icon: url("Skills/markdown.png");  }
 
 /*=== General =====================================================*/
 
@@ -642,25 +612,32 @@ i[data-skill]
     text-align: center;
     font-family: 'Russo One', sans-serif;
     font-style: normal;
+
+    background: var(--skill-background); 
+    color: var(--skill-colour);
 }
 
-i[data-skill-logo]
+i[data-skill]:before
 {
-    width: 4vw;
-    height: 4vw;
+    content: var(--skill-text);
+}
 
+i[data-skill] .icon
+{
+    display: block;
+    margin: auto;
+    padding: 0.5vh 0;
+    width: 5vw;
+    height: 5vw;
+
+    background: var(--skill-text);
+
+    background-image: var(--skill-icon);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-}
+    background-size: contain;
 
-.skill
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.25vh;
+    filter: drop-shadow(1px 1px rgba(0, 0, 0, var(--skill-shadow))) drop-shadow(1px -1px rgba(0, 0, 0, var(--skill-shadow))) drop-shadow(-1px -1px rgba(0, 0, 0, var(--skill-shadow))) drop-shadow(-1px 1px rgba(0, 0, 0, var(--skill-shadow)));
 }
 
 /*=== Content =====================================================*/
@@ -742,7 +719,7 @@ i[data-skill-logo]
 }
 
 
-#about .row.skills 
+#about .skills
 {
     gap: 5.0vw;
 }
@@ -754,7 +731,7 @@ i[data-skill-logo]
     margin-bottom: 0.75vh;
 }
 
-/*--- Polaroid --------------------------*/
+
 
 .polaroid
 {
