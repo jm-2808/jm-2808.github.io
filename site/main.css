@@ -29,14 +29,15 @@ i[data-skill="unity"]   { --skill-background: #FFFFFF; --skill-colour: #000000; 
 
 i[data-skill="gd4"]     { --skill-background: #478CBF; --skill-colour: #FFFFFF; --skill-text: "godot 4+"; --skill-icon: url("Skills/godot.png"); --skill-shadow: 0.1;  }
 
-i[data-skill="vs"]      { --skill-background: #BB8BF3; --skill-colour: #FFFFFF; --skill-text: "visual studio"; --skill-icon: url("Skills/visualstudio.png"); }
-i[data-skill="vsc"]     { --skill-background: #23A9F2; --skill-colour: #FFFFFF; --skill-text: "vs code"; --skill-icon: url("Skills/visualstudiocode.png"); }
+i[data-skill="vs"]      { --skill-background: #BB8BF3; --skill-colour: #FFFFFF; --skill-text: "visual studio"; --skill-icon: url("Skills/visualstudio.png"); --skill-shadow: 0.1; }
+i[data-skill="vsc"]     { --skill-background: #23A9F2; --skill-colour: #FFFFFF; --skill-text: "vs code"; --skill-icon: url("Skills/visualstudiocode.png"); --skill-shadow: 0.1; }
 i[data-skill="pfv"]     { --skill-background: #F05033; --skill-colour: #FFFFFF; --skill-text: "perforce"; --skill-icon: url("Skills/perforce.png");  }
 i[data-skill="github"]  { --skill-background: #0D1827; --skill-colour: #FFFFFF; --skill-text: "github"; --skill-icon: url("Skills/github.png");  }
 
 /* Other */
+i[data-skill="nodejs"]      { --skill-background: #689F63; --skill-colour: #333333; --skill-text: "node.js"; --skill-icon: url("Skills/nodejs.png"); --skill-shadow: 0.1; }
 i[data-skill="blend4"]      { --skill-background: #EA7600; --skill-colour: #265787; --skill-text: "blender 4+"; --skill-icon: url("Skills/blender.png"); --skill-shadow: 0.15; }
-i[data-skill="obsidian"]    { --skill-background: #8F62EA; --skill-colour: #FFFFFF; --skill-text: "obsidian"; --skill-icon: url("Skills/obsidian.png");  }
+i[data-skill="obsidian"]    { --skill-background: #8F62EA; --skill-colour: #FFFFFF; --skill-text: "obsidian"; --skill-icon: url("Skills/obsidian.png"); --skill-shadow: 0.1;  }
 i[data-skill="md"]          { --skill-background: #000000; --skill-colour: #FFFFFF; --skill-text: "markdown"; --skill-icon: url("Skills/markdown.png");  }
 
 /*=== General =====================================================*/
