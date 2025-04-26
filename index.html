@@ -24,8 +24,8 @@
                 <img class='logo' src='site/logo.png'>
                 <h1 class='title'>Jack Magnay</h1><hr><h2 class='subtitle'>Game Developer</h2>
                 <div class='links'>
-                    <a class='button' title='View CV' href='https://drive.google.com/file/d/1_PTcyZpu6s96YmVSy9Tj0wgc9CwT_OcZ/view?usp=sharing' target='_blank'><i data-lucide='file-user'></i></a>
                     <a class='button' title='Mail' href='mailto:jack.magnay.2808@gmail.com' target='_blank'><i data-lucide='mail'></i></a>
+                    <a class='button' title='View CV' href='https://drive.google.com/file/d/1_PTcyZpu6s96YmVSy9Tj0wgc9CwT_OcZ/view?usp=sharing' target='_blank'><i data-lucide='file-user'></i></a>
                     <a class='button' title='MobyGames' href='https://www.mobygames.com/person/1144805/jack-magnay/' target='_blank'><i data-lucide='fish'></i></a>
                     <a class='button' title='LinkedIn' href='https://www.linkedin.com/in/jack-magnay-a70595316/' target='_blank'><i data-lucide='linkedin'></i></a>
                     <a class='button' title='Github' href='https://github.com/jm-2808' target='_blank'><i data-lucide='github'></i></a>
@@ -68,9 +68,7 @@
 
             <div class='block'>
                 <h1 class='title'>HOME</h1>
-                <p>
-                    Watch this space!
-                </p>
+                <p>Watch this space!</p>
             </div>
 
             <div class='split'>
@@ -85,6 +83,11 @@
                 <div class='block justify'>
                     <button class='button title' title='Projects' onClick='SITE.LoadPage("projects");' style='height:4vw;'> PROJECTS </button>
                 </div>
+            </div>
+
+            <div class='block'>
+                <script>SITE.GenerateBanner(document.currentScript, { title: "20,000 word essay", icon: "lucide-flag", tags: [{ text: "Changelog", info: "26/04/2024" }] });</script>
+                <p>Updated projects with significantly longer descriptions, detailing my involvement with each project and features I was responsible for</p>
             </div>
 
             <div class='block'>
@@ -112,7 +115,7 @@
             <div class='split'>
                 <div class='block'>
                     <div class='justify notable'>
-                        <i data-lucide='calendar-clock'></i><span class='subtitle text-large'>5 years professional experience</span>
+                        <i data-lucide='calendar-clock'></i><span class='subtitle text-large'>10 years experience (5 years in industry)</span>
                     </div>
                 </div>
 
@@ -126,8 +129,13 @@
             <div class='block'>
                 <h1 class='title'>ACCOLADES</h1>
                 <ul>
-                    <li><b>Sumo Digital Award for Game Design (3rd place)</b>, Game Republic Student Showcase 2020</li>
-                    <li><b>Rockstar Leeds Award for Best Team (3rd place)</b>, Game Republic Student Showcase 2020</li>
+                    <li>
+                        <b>Game Republic Student Showcase 2020</b> ( <a href='https://www.youtube.com/watch?v=gAlKd8imVcU' target='_blank'>Showcase</a> ) - "Stealing Stuff"
+                        <ul>
+                            <li>Sumo Digital Award for Game Design - 3rd place</li>
+                            <li>Rockstar Leeds Award for Best Team - 3rd place</li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
 
@@ -232,7 +240,13 @@
                         skills: [ "ue4", "cpp", "uebp", "vs", "pfv" ] });
                     </script>
                     <p>
-                        I worked on providing post-release support and bug fixes for various gameplay features, notably character abilities and environmental objects
+                        My responsibilities for this game were focused on post-release support, primarily fixing various gameplay features in response to submitted bug reports from players. 
+                        I provided fixes for a variety of features, including:
+                        <ul>
+                            <li><b>Character Abilities</b> such as family member traps</li>
+                            <li><b>Character Perks</b> such as increased victim lockpick difficulty</li>
+                            <li><b>Environment Objects</b> such as the Well underground entrances</li>
+                        </ul>
                     </p>
                 </div>
 
@@ -252,11 +266,14 @@
                         skills: [ "ue5", "cpp", "uebp", "vs", "pfv" ] });
                     </script>
                     <p>
-                        I worked on and took ownership of various gameplay mechanics, which involved:<br>
-                        - Taking design documentation to cost and breaking down into tasks<br>
-                        - Communicating daily with the design and UI disciplines alongside bi-weekly scrums<br>
-                        - Owning, implementing and maintaining various gameplay features<br>
-                        - Partaking in show-and-tell meetings and feature reviews
+                        My responsibilities for this game were focused on development of overarching gameplay mechanics, which included game modes with their associated objects and HUDs.
+                        Due to my ownership of these mechanics, this role involved:
+                        <ul>
+                            <li>Owning, implementing and maintaining various gameplay features</li>
+                            <li>Taking design documentation to cost and breaking down into tasks</li>
+                            <li>Communicating daily with the design and UI disciplines alongside bi-weekly scrums</li>
+                            <li>Partaking in show-and-tell meetings and feature reviews</li>
+                        </ul>
                     </p>
                 </div><hr>
 
@@ -267,8 +284,26 @@
                         skills: [ "ue5", "cpp", "uebp", "vs", "pfv" ] });
                     </script>
                     <p>
-                        I worked on various aspects of the player character, including character abilities using the Unreal GAS system and weapons which were designed using a custom modular approach.
-                        I was resposible for prototyping the modular weapon system and presenting the proposal in a feature review meeting
+                        My responsibilities for this game were focused on development of the player abilities and player equipment. 
+                        The game used a combination of Unreal's <b>Gameplay Ability System (GAS)</b> and a custom state machine approach to implement the character, which I used to implement both a death/respawn cycle and one of the player's primary movement abilities
+                    </p>
+                    <p>
+                        Later in development, I was tasked with taking ownership of the weapon system and prototyping a new modular approach, which would allow the design team to quickly iterate and construct weapons.
+                        I collaborated with both programmers and designers to produce a prototype system, then presented the proposal in a feature review meeting
+                    </p>
+                    <p> 
+                        The modular weapon blueprint was comprised of UObject "modules", which fell into one of two categories:
+                        <ul>
+                            <li><b>Essential</b> modules were for mechanics such as the firing mechanism (eg. automatic, semi-auto, manual, burst, etc.)</li>
+                            <li><b>Optional</b> modules were for mechanics such as FOV changes and player stat changes (eg. a movement speed decrease which could be used for heavy weapons)</li>
+                        </ul>
+                        These modules were then applied to sections of the blueprint which dictated when they would be active:
+                        <ul>
+                            <li><b>Primary</b> modules were active while <em>not</em> aiming</li>
+                            <li><b>Secondary</b> modules were active while aiming</li>
+                            <li><b>Shared</b> modules were always active while the weapon was held</li>
+                        </ul>
+                        The primary section required all of it's essential modules to be set, as these dictated the base functions of the weapon, however secondary did not and would use the module specified in the primary section if null, which allowed the weapon to have different mechanics depending on aim, eg. changing to an underbarrel grenade launcher while aiming
                     </p>
                 </div><hr>
 
@@ -279,7 +314,15 @@
                         skills: [ "cpp", "lua", "vs", "pfv" ] });
                     </script>
                     <p>
-                        I worked on a system for tracking various stats during gameplay to allow them to be presented to the player, the framework for various smaller gameplay segments and assisted with the implementation of some of these segments
+                        My responsibilities for this game were focused on development of various supplementary gameplay systems
+                    </p>
+                    <p>
+                        The first of these systems was a statistics tracking system, which would record information about individual players and teams during gameplay, then collate and present the stats to the player during gameplay and after a match.
+                        This system was structured like an API within the in-house engine, allowing various areas of the game to simply reference the system and record statistics
+                    </p>
+                    <p>
+                        The second system was a framework for smaller gameplay segments (minigames).
+                        Once the system was implemented, I then worked with fellow programmers to implement numerous minigames, which took the existing mechanics of the main game and altered them to allow players to practice mechanics in new and interesting ways
                     </p>
                 </div><hr>
 
@@ -288,14 +331,27 @@
                         SITE.GenerateProject(document.currentScript, { title: "Sackboy: A Big Adventure", timespan: "08/2020 - 11/2020 | 07/2018 - 08/2019", image: "site/Projects/gingerbread.png", 
                         website: "https://www.playstation.com/en-gb/games/sackboy-a-big-adventure/", video: "https://www.youtube.com/embed/ZOk3fj5ujNM",
                         tagline: "Iconic PlayStation® hero Sackboy bursts back into breathtaking action with a huge, fun and frantic 3D multiplayer platforming adventure - and a whole new edgy sackitude!",
-                        skills: [ "ue4", "cpp", "uebp", "vs", "pfv", "cs", "html", "css", "js" ] });
+                        skills: [ "ue4", "cpp", "uebp", "vs", "pfv", "cs", "html", "css", "js", "nodejs" ] });
                     </script>
                     <p>
-                        I worked on multiple areas of this game, both during my placement year and as a full-time employee, including sackboy himself, 
-                        an automated testing system to play through test levels then output telemetry results and automated lighting build tools
+                        As a Junior Programmer in the months leading up to the game's release, my responsibilities for this game were focused on developing and maintaining Sackboy. 
+                        My tasks primarily revolved around polishing Sackboy's abilities, with notable fixes I personally implemented including:
+                        <ul>
+                            <li>If the player pushes a crate into certain areas, they can jump between the wall and the crate and infinitely fall, which was entertaingly fixed by triggering Sackboy's "slap tornado" and destroying the crate</li>
+                            <li>While holding an object and attempting to ledge grab, the object would be released and often fall off the edge of the ledge, which was fixed by automatically throwing the object before ledge grabbing</li>
+                            <li>While holding an object and walking near certain ledges, the object would slide on to the ledge and cause Sackboy to helplessly dangle, which was fixed by raising the held object if it was too close to a ledge</li>
+                        </ul>
                     </p>
                     <p>
-                        The automated testing tools were built using a combination of unreal, a c# helper program and server with a web front-end
+                        As a Placement Programmer during the pre-alpha/alpha stages of development, my responsibilities for this game were focused on developing an automated testing system, which was comprised of multiple parts:
+                        <ul>
+                            <li><i data-skill='ue4'></i> The virtual controller, which allowed the system to produce inputs and emulate how a player would interact with the game</li>
+                            <li><i data-skill='ue4'></i> The script system, which used a specialised manager actor to run sequences of actions authored within a level blueprint and output results to the console</li>
+                            <li><i data-skill='cs'></i> The runner application, which would download the latest stable package <span class='text-tiny'>mcpackageface</span> and run it on devkit, then parse the logs for results and publish along with footage and screenshots</li>
+                            <li><i data-skill='nodejs'></i> The server, which received data from the runner(s) and stored it within a node database, while also issuing requests for tests to the runner(s)</li>
+                            <li><i data-skill='html'></i> The web frontend, which allowed users to view a history of tests for a particular test map or game level, then either watch the recording of the test or view screenshots of results</li>
+                        </ul>
+                        I also later worked with the core-tech and art teams to adapt a lightweight version of the runner/server which could be used for automated lighting builds
                     </p>
                 </div>
 
@@ -325,12 +381,8 @@
                         tagline: "You're looking at it",
                         skills: [ "html", "css", "js", "vsc", "github" ] });
                     </script>
-                    <p>
-                        This portfolio website was designed and coded by me! My apologies if it breaks on weird resolutions, the page is only designed with 16:9 aspect ratios in mind for now
-                    </p>
-                    <p>
-                        The site is hosted using <a href='https://pages.github.com/' target='_blank'>Github Pages</a> and uses the <a href='https://lucide.dev/' target='_blank'>Lucide</a> icon library (See bottom left of the page)
-                    </p>
+                    <p>This portfolio website was designed and coded by me! My apologies if it breaks on weird resolutions, the page is only designed with 16:9 aspect ratios in mind for now</p>
+                    <p>The site is hosted using <a href='https://pages.github.com/' target='_blank'>Github Pages</a> and uses the <a href='https://lucide.dev/' target='_blank'>Lucide</a> icon library (See bottom left of the page)</p>
                 </div><hr>
 
                 <div id='project-azimov' class='project'>
@@ -340,8 +392,24 @@
                         skills: [ "gd4", "cs", "blend4", "github" ] });
                     </script>
                     <p>
-                        Set in a 3D grid-based environment, Azimov tasks the player with using a simple scripting language to program drones and complete various puzzles. 
+                        Azimov (named after famous science fiction writer Isaac Azimov) is a programming puzzle game which tasks the player with using a simple scripting language to program drones and complete various puzzles.
                         The puzzles range from simple goals, such as helping a single drone reach a destination, to complex manipulation of multiple drones to accomplish tasks simultaneously
+                    </p>
+                    <p>
+                        Azimov is set in a 3D grid-based environment and uses a lockstep timing system to ensure actions performed by all entities occur in "cycles", 
+                        eg. a piston may operate over the space of 5 cycles: extending on the 1st cycle, remaining extended for 3 cycles, then retracting on the 5th cycle.
+                        The scriptable drones also conform to these cycles and their commands represent an action that can be performed in a single cycle, with optional parameters where appropriate.
+                        An example drone script could be:
+                        <ul>
+                            <li><b>MOVE 5</b> - Move forwards 5 spaces (each move will take 1 cycle)</li>
+                            <li><b>TURN RIGHT</b> - Turn 90° clockwise</li>
+                            <li><b>GRAB</b> - Grab the object in the space ahead of the drone</li>
+                            <li><b>TURN LEFT</b> - Turn 90° anticlockwise</li>
+                            <li><b>MOVE 3</b> - Move forwards 3 spaces</li>
+                            <li><b>DROP</b> - Drop the held object in the space ahead of the drone</li>
+                            <li>etc.</li>
+                        </ul>
+                        Once the drones have been scripted, the player can execute the program and watch the drone(s) perform the scripted actions in an attempt to complete the puzzle
                     </p>
                 </div><hr>
 
@@ -353,9 +421,14 @@
                         skills: [ "cpp", "vs" ] });
                     </script>
                     <p>
-                        A simple windows console application which allows player(s) to engage in a game of Blackjack. Two versions are available:<br>
-                        - The older version was made during early university and uses a simple linear execution style<br>
-                        - The newer version was made during later university and uses threading to emulate an engine's game/input thread system
+                        During university, I developed a simple windows console version of the popular card game "Blackjack" in my free time to practice skills I had learned.
+                        I developed 2 versions of the game:
+                        <ul>
+                            <li>The older version was a complete application developed during my second year of university and uses a simple linear execution style</li>
+                            <li>The newer version was an experiement developed during my third year of university and uses threading to allow the game code and input detection to run simultaneously</li>
+                        </ul>
+                        Both versions feature the same gameplay of entering player names, then taking turns to perform an action each round until either a player or the dealer wins.
+                        An stl vector of cards is used during gameplay to represent the deck, which allowed the cards to be shuffled like a physical version of the game and prevented duplicate cards from being generated.
                     </p>
                 </div>
 
@@ -379,8 +452,20 @@
                         skills: [ "ue4", "cpp", "uebp", "vs", "github" ] });
                     </script>
                     <p>
-                        My final project at university, this modular weapon system uses 'Cores' to define base attributes of the weapon and 'Modifiers' to alter the weapon's behaviour. 
-                        The parameters of these weapons could be altered at runtime to allow the user/player to dynamically adjust and test configurations
+                        My final project at university, this project is focused on a weapon which can be altered dynamically at runtime through the use of components and parameters
+                    </p>
+                    <p>
+                        The modular weapon exists as a generic weapon with basic fire and reload functions, but the behaviour of the weapon is offloaded to it's components:
+                        <ul>
+                            <li>The <b>Core</b> defines the base weapon type and attributes and therefore only one can be equipped</li>
+                            <li><b>Modifiers</b> define various additional properties, such as Ricochet or Homing, and any number of these can be equipped simultaneously</li>
+                        </ul>
+                        Each component has various <b>Parameters</b>, which are UObject derived data classes that encapsulate various types (boolean, integer, float, custom, etc.).
+                        Parameters use delegates to allow the component to detect and react to changes, such as disabling other parameters or updating internal variables in response to a change.
+                        Through the in-game user interface, the player could both change the components on the weapon and view and modify the parameters of each component to rapidly iterate
+                    </p>
+                    <p>
+                        The system also provides the ability to save to/load from a string, allowing users to share their creations, and was designed to be expanded to allow the users to save configurations in-game for later use
                     </p>
                 </div><hr>
 
@@ -392,11 +477,27 @@
                         skills: [ "ue4", "cpp", "uebp", "vs", "github" ] });
                     </script>
                     <p>
-                        A group project from my final year, Stealing Stuff is an arcade-style game where players sneak around and steal everything that isn't nailed down, working together as a team to steal larger items. 
-                        I acted as the <b>Lead Programmer</b> for this project, which involved delegating tasks to other programmers on the team
+                        A group project from my final year, Stealing Stuff is an arcade-style game where players sneak around to steal everything that isn't nailed down and work together as a team to steal larger items. 
+                        This project achieved <b>3rd place</b> in both the <b>Sumo Digital Award for Game Design</b> and <b>Rockstar Leeds Award for Best Team</b> categories at the Game Republic Student Showcase 2020
                     </p>
                     <p>
-                        This project achieved <b>3rd place</b> in both the <b>Sumo Digital Award for Game Design</b> and <b>Rockstar Leeds Award for Best Team</b> categories at the Game Republic Student Showcase 2020
+                        I acted as the group's <b>Lead Programmer</b> for this project, which alongside my programming responsiblities also involved delegating tasks to other programmers on the team. 
+                        I worked on multiple core systems of the game, including but not limited to:
+                        <ul>
+                            <li><b>Multiplayer Camera</b> - The camera was designed to provide a 2.5D perspective and will adjust its distance to ensure that all active players are kept on screen</li>
+                            <li>
+                                <b>Character Controls</b> - Third person character controls, with movement, sprinting, a dash and the pickup/drop abilities. The movement has 2 different types: 
+                                <ul>
+                                    <li>"Standard" movement is world relative, allowing the player to move based on cardinal directions</li>
+                                    <li>"Transport" movement is held object relative, allowing the player to push/pull the object with forward/backward input and rotate the object with sideways input</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <b>Object Interaction</b> - Most objects in the game can be picked up, from small household items to large vehicles. 
+                                Each object has a required "lift force", which is determined by it's weight, and this dictates how many players are required to lift an object and how fast they can move while doing so. 
+                                While moving larger objects, the system determines a "pivot point" for the held object based on the respective grab locations of each player and feeds that information back to the players to drive their "Transport" movement mode
+                            </li>
+                        </ul>
                     </p>
                 </div><hr>
 
@@ -408,7 +509,7 @@
                         skills: [ "dx11", "cpp", "vs", "github" ] });
                     </script>
                     <p>
-                        A group project from my final year, Dungeon Hunt is a first person combat game developed using the DirectX API where the player makes their way through a series of levels using weapons to defeat enemy drones
+                        A group project from my final year, Dungeon Hunt is a first person combat game developed using the DirectX API where the player makes their way through a series of levels using weapons to defeat enemy drones.
                     </p>
                 </div>
 
