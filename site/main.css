@@ -18,7 +18,8 @@ i[data-skill="ts"]      { --skill-background: #3178C6; --skill-colour: #FFFFFF; 
 i[data-skill="json"]    { --skill-background: #595959; --skill-colour: #FFFFFF; --skill-text: "json"; --skill-icon: url("Skills/json.png");  }
 i[data-skill="xml"]     { --skill-background: #F29C1F; --skill-colour: #FFFFFF; --skill-text: "xml"; --skill-icon: url("Skills/xml.png");  }
 
-i[data-skill="dx11"]    { --skill-background: #000000; --skill-colour: #00AA00; --skill-text: "directX 11"; --skill-icon: "";  }  
+i[data-skill="dx11"]    { --skill-background: #000000; --skill-colour: #00AA00; --skill-text: "directX 11";  }
+i[data-skill="openxr"]  { --skill-background: #542072; --skill-colour: #FFFFFF; --skill-text: "openXR";  }
 
 /* Programs */
 i[data-skill="ue4"]     { --skill-background: #000000; --skill-colour: #FFFFFF; --skill-text: "UE4"; --skill-icon: url("Skills/unreal.png");  }
@@ -27,7 +28,7 @@ i[data-skill="uebp"]    { --skill-background: #00266B; --skill-colour: #FFFFFF; 
 
 i[data-skill="unity"]   { --skill-background: #FFFFFF; --skill-colour: #000000; --skill-text: "unity"; --skill-icon: url("Skills/unity.png");  }
 
-i[data-skill="gd4"]     { --skill-background: #478CBF; --skill-colour: #FFFFFF; --skill-text: "godot 4+"; --skill-icon: url("Skills/godot.png"); --skill-shadow: 0.1;  }
+i[data-skill="gd4"]     { --skill-background: #478CBF; --skill-colour: #FFFFFF; --skill-text: "godot 4"; --skill-icon: url("Skills/godot.png"); --skill-shadow: 0.1;  }
 
 i[data-skill="vs"]      { --skill-background: #BB8BF3; --skill-colour: #FFFFFF; --skill-text: "visual studio"; --skill-icon: url("Skills/visualstudio.png"); --skill-shadow: 0.1; }
 i[data-skill="vsc"]     { --skill-background: #23A9F2; --skill-colour: #FFFFFF; --skill-text: "vs code"; --skill-icon: url("Skills/visualstudiocode.png"); --skill-shadow: 0.1; }
@@ -36,7 +37,7 @@ i[data-skill="github"]  { --skill-background: #0D1827; --skill-colour: #FFFFFF; 
 
 /* Other */
 i[data-skill="nodejs"]      { --skill-background: #689F63; --skill-colour: #333333; --skill-text: "node.js"; --skill-icon: url("Skills/nodejs.png"); --skill-shadow: 0.1; }
-i[data-skill="blend4"]      { --skill-background: #EA7600; --skill-colour: #265787; --skill-text: "blender 4+"; --skill-icon: url("Skills/blender.png"); --skill-shadow: 0.15; }
+i[data-skill="blend4"]      { --skill-background: #EA7600; --skill-colour: #265787; --skill-text: "blender 4"; --skill-icon: url("Skills/blender.png"); --skill-shadow: 0.15; }
 i[data-skill="obsidian"]    { --skill-background: #8F62EA; --skill-colour: #FFFFFF; --skill-text: "obsidian"; --skill-icon: url("Skills/obsidian.png"); --skill-shadow: 0.1;  }
 i[data-skill="md"]          { --skill-background: #000000; --skill-colour: #FFFFFF; --skill-text: "markdown"; --skill-icon: url("Skills/markdown.png");  }
 

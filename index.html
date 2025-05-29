@@ -11,14 +11,18 @@
         <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap'>
         <script src='https://unpkg.com/lucide@latest'></script>
 
-        <!-- Style/Code -->
+        <!-- Theme -->
         <link id='theme-style' rel='stylesheet' href='site/Themes/dark.css'>
+
+        <!-- Style/Code -->
         <link rel='stylesheet' href='site/main.css'>
         <script src='site/main.js'></script>
+        <script src='site/data.js'></script>
 
     </head>
     <body>
 
+        <!-- Main -->
         <header class='menu'>
             <div class='profile'>
                 <img class='logo' src='site/logo.png'>
@@ -42,19 +46,13 @@
             </div>
             <div class='theme'>
                 <label class='toggle'>
-                    <input id='theme-toggle' type='checkbox' onclick='SITE.LoadTheme("toggle");'>
+                    <input id='theme-toggle' type='checkbox' onclick='SITE.SetTheme("toggle");'>
                     <span class='slider'><i class='icon left' data-lucide='moon'></i><i class='icon right' data-lucide='sun'></i></span>
                 </label>
             </div>
             <div class='license'>
-                <p>
-                    Hosted via <a href='https://pages.github.com/' target='_blank'>Github Pages</a><br>
-                    Last Updated - March 2025
-                </p>
-                <p>
-                    Icons from <a href='https://lucide.dev/' target='_blank'>Lucide</a> (ISC License)<br>
-                    Copyright (c) 2020, Lucide Contributors
-                </p>
+                <p>Hosted via <a href='https://pages.github.com/' target='_blank'>Github Pages</a><br>Last Updated - March 2025</p>
+                <p>Icons from <a href='https://lucide.dev/' target='_blank'>Lucide</a> (ISC License)<br>Copyright (c) 2020, Lucide Contributors</p>
             </div>
         </header>
 
@@ -64,6 +62,7 @@
             <div id='loading-hint' class='subtitle'>A loading screen tip should appear momentarily...</div>
         </div>
 
+        <!-- Home -->
         <main id='home' class='content'>
 
             <div class='block'>
@@ -72,37 +71,35 @@
             </div>
 
             <div class='split'>
-                <div class='block justify'>
-                    <button class='button title' title='About Me' onClick='SITE.LoadPage("about");' style='height:4vw;'> ABOUT ME </button>
-                </div>
-
-                <div class='block justify'>
-                    <button class='button title' title='Games' onClick='SITE.LoadPage("games");' style='height:4vw;'> GAMES </button>
-                </div>
-                
-                <div class='block justify'>
-                    <button class='button title' title='Projects' onClick='SITE.LoadPage("projects");' style='height:4vw;'> PROJECTS </button>
-                </div>
+                <div class='block justify'><button class='button title' title='About Me' onClick='SITE.LoadPage("about");' style='height:4vw;'> ABOUT ME </button></div>
+                <div class='block justify'><button class='button title' title='Games' onClick='SITE.LoadPage("games");' style='height:4vw;'> GAMES </button></div>
+                <div class='block justify'><button class='button title' title='Projects' onClick='SITE.LoadPage("projects");' style='height:4vw;'> PROJECTS </button></div>
             </div>
 
             <div class='block'>
-                <script>SITE.GenerateBanner(document.currentScript, { title: "20,000 word essay", icon: "lucide-flag", tags: [{ text: "Changelog", info: "26/04/2024" }] });</script>
-                <p>Updated projects with significantly longer descriptions, detailing my involvement with each project and features I was responsible for</p>
+                <script>SITE.Generate("banner", DATA.Banners.News("A new reality", "29/05/2025"));</script>
+                <p class='text-large text-center'>Updated page generation code and added another independent project</p>
             </div>
 
             <div class='block'>
-                <script>SITE.GenerateBanner(document.currentScript, { title: "Generating Website...", icon: "lucide-flag", tags: [{ text: "Changelog", info: "17/03/2024" }] });</script>
-                <p>Completed some backend <i data-skill='js'></i> work which should make it easier to add projects in the future!</p>
-                <p class='quote'>Also, the home page seems to have become a changelog of sorts</p>
+                <script>SITE.Generate("banner", DATA.Banners.News("20,000 word essay", "26/04/2025"));</script>
+                <p class='text-large text-center'>Updated projects with significantly longer descriptions, detailing my involvement with each project and features I was responsible for</p>
             </div>
 
             <div class='block'>
-                <script>SITE.GenerateBanner(document.currentScript, { title: "Much ado about ... me", icon: "lucide-flag", tags: [{ text: "Changelog", info: "24/02/2024" }] });</script>
-                <p>The "About Me" page is now implemented!</p>
+                <script>SITE.Generate("banner", DATA.Banners.News("Generating Website...", "17/03/2025"));</script>
+                <p class='text-large text-center'>Completed some backend <i data-skill='js'></i> work which should make it easier to add projects in the future!</p>
+                <p class='text-center quote'>Also, the home page seems to have become a changelog of sorts</p>
+            </div>
+
+            <div class='block'>
+                <script>SITE.Generate("banner", DATA.Banners.News("Much ado about ... me", "24/02/2025"));</script>
+                <p class='text-large text-center'>The "About Me" page is now implemented!</p>
             </div>
 
         </main>
 
+        <!-- About -->
         <main id='about' class='content' hidden>
 
             <div class='block'>
@@ -113,17 +110,8 @@
             </div>
 
             <div class='split'>
-                <div class='block'>
-                    <div class='justify notable'>
-                        <i data-lucide='calendar-clock'></i><span class='subtitle text-large'>10 years experience (5 years in industry)</span>
-                    </div>
-                </div>
-
-                <div class='block'>
-                    <div class='justify notable'>
-                        <i data-lucide='award'></i><span class='subtitle text-large'>BSc (1st Class Honours) Computer Science for Games</span>
-                    </div>
-                </div>
+                <div class='block'><div class='justify notable'><i data-lucide='calendar-clock'></i><span class='subtitle text-large'>10 years experience (5 years in industry)</span></div></div>
+                <div class='block'><div class='justify notable'><i data-lucide='award'></i><span class='subtitle text-large'>BSc (1st Class Honours) Computer Science for Games</span></div></div>
             </div>
 
             <div class='block'>
@@ -131,10 +119,7 @@
                 <ul>
                     <li>
                         <b>Game Republic Student Showcase 2020</b> ( <a href='https://www.youtube.com/watch?v=gAlKd8imVcU' target='_blank'>Showcase</a> ) - "Stealing Stuff"
-                        <ul>
-                            <li>Sumo Digital Award for Game Design - 3rd place</li>
-                            <li>Rockstar Leeds Award for Best Team - 3rd place</li>
-                        </ul>
+                        <ul><li>Sumo Digital Award for Game Design - 3rd place</li><li>Rockstar Leeds Award for Best Team - 3rd place</li></ul>
                     </li>
                 </ul>
             </div>
@@ -208,12 +193,13 @@
                 </p>
                 <br>
                 <p>
-                    <em>For anyone who has played Ratchet & Clank: Going Commando, I would like to give a notable mention to the Planet Boldan "power line exploit" for allowing me to visit the museum at reasonable hours of the day</em>
+                    <em>For anyone who has played Ratchet & Clank: Going Commando, I would like to give a notable mention to the Planet Boldan "power line exploit" for allowing me to visit the museum at *reasonable* hours of the day</em>
                 </p>
             </div>
 
         </main>
 
+        <!-- Games -->
         <main id='games' class='content' hidden>
 
             <div class='block'>
@@ -227,18 +213,10 @@
 
             <div id='games-blacktower' class='block'>
 
-                <script>
-                    SITE.GenerateBanner(document.currentScript, { title: "BLACK TOWER STUDIOS", subtitle: "Tokyo, Japan", icon: "site/Banners/blacktower.png", 
-                    tags: [{ text: "Remote", info: "" }, { text: "Gameplay Programmer", info: "10/2024 - 02/2025" }] });
-                </script>
+                <script>SITE.Generate("banner", DATA.Banners.BlackTower);</script>
 
                 <div id='project-chainsaw' class='project'>
-                    <script>
-                        SITE.GenerateProject(document.currentScript, { title: "The Texas Chainsaw Massacre", timespan: "10/2024 - 02/2025", image: "site/Projects/chainsaw.png", 
-                        website: "https://www.txchainsawgame.com/", video: "https://www.youtube.com/embed/ISCbJ9RlDgU",
-                        tagline: "An asymmetrical horror experience based on the groundbreaking and iconic 1974 horror film",
-                        skills: [ "ue4", "cpp", "uebp", "vs", "pfv" ] });
-                    </script>
+                    <script>SITE.Generate("project", DATA.Projects.BlackTower.Chainsaw);</script>
                     <p>
                         My responsibilities for this game were focused on post-release support, primarily fixing various gameplay features in response to submitted bug reports from players. 
                         I provided fixes for a variety of features, including:
@@ -254,17 +232,10 @@
 
             <div id='games-sumodigital' class='block'>
 
-                <script>
-                    SITE.GenerateBanner(document.currentScript, { title: "SUMO DIGITAL", subtitle: "Sheffield, England", icon: "site/Banners/sumodigital.png",
-                    tags: [{ text: "Hybrid/On-Site", info: "" },{ text: "Gameplay Programmer", info: "06/2022 - 07/2024" },{ text: "Junior Programmer", info: "08/2020 - 06/2022" },{ text: "Placement Programmer", info: "07/2018 - 08/2019" }]});
-                </script>
+                <script>SITE.Generate("banner", DATA.Banners.SumoDigital);</script>
 
                 <div id='project-scramble' class='project'>
-                    <script>
-                        SITE.GenerateProject(document.currentScript, { title: "Unannounced Project", timespan: "08/2023 - 07/2024", image: "lucide-package-open", 
-                        tagline: "An unannounced multiplayer platformer developed in Unreal Engine 5",
-                        skills: [ "ue5", "cpp", "uebp", "vs", "pfv" ] });
-                    </script>
+                    <script>SITE.Generate("project", DATA.Projects.SumoDigital.Scramble);</script>
                     <p>
                         My responsibilities for this game were focused on development of overarching gameplay mechanics, which included game modes with their associated objects and HUDs.
                         Due to my ownership of these mechanics, this role involved:
@@ -278,11 +249,7 @@
                 </div><hr>
 
                 <div id='project-firebird' class='project'>
-                    <script>
-                        SITE.GenerateProject(document.currentScript, { title: "Unannounced Project", timespan: "06/2022 - 07/2023", image: "lucide-rocket", 
-                        tagline: "An unannounced third-person shooter developed in Unreal Engine 5",
-                        skills: [ "ue5", "cpp", "uebp", "vs", "pfv" ] });
-                    </script>
+                    <script>SITE.Generate("project", DATA.Projects.SumoDigital.Firebird);</script>
                     <p>
                         My responsibilities for this game were focused on development of the player abilities and player equipment. 
                         The game used a combination of Unreal's <b>Gameplay Ability System (GAS)</b> and a custom state machine approach to implement the character, which I used to implement both a death/respawn cycle and one of the player's primary movement abilities
@@ -299,20 +266,16 @@
                         </ul>
                         These modules were then applied to sections of the blueprint which dictated when they would be active:
                         <ul>
-                            <li><b>Primary</b> modules were active while <em>not</em> aiming</li>
-                            <li><b>Secondary</b> modules were active while aiming</li>
                             <li><b>Shared</b> modules were always active while the weapon was held</li>
+                            <li><b>Hipfire</b> modules were active while <em>not</em> aiming</li>
+                            <li><b>Aiming</b> modules were active while aiming</li>
                         </ul>
-                        The primary section required all of it's essential modules to be set, as these dictated the base functions of the weapon, however secondary did not and would use the module specified in the primary section if null, which allowed the weapon to have different mechanics depending on aim, eg. changing to an underbarrel grenade launcher while aiming
+                        <b>Hipfire</b> and <b>Aiming</b> both had properties for <b>Essential</b> modules, which allowed the weapon to have different mechanics depending on aim (eg. changing to an underbarrel weapon while aiming), though <b>Aiming</b> would use the modules specified in <b>Hipfire</b> if left undefined
                     </p>
                 </div><hr>
 
                 <div id='project-cadillac' class='project'>
-                    <script>
-                        SITE.GenerateProject(document.currentScript, { title: "Unannounced Project", timespan: "11/2020 - 06/2022", image: "lucide-trophy", 
-                        tagline: "An unannounced sports game developed using an in-house engine",
-                        skills: [ "cpp", "lua", "vs", "pfv" ] });
-                    </script>
+                    <script>SITE.Generate("project", DATA.Projects.SumoDigital.Cadillac);</script>
                     <p>
                         My responsibilities for this game were focused on development of various supplementary gameplay systems
                     </p>
@@ -327,12 +290,7 @@
                 </div><hr>
 
                 <div id='project-gingerbread' class='project'>
-                    <script>
-                        SITE.GenerateProject(document.currentScript, { title: "Sackboy: A Big Adventure", timespan: "08/2020 - 11/2020 | 07/2018 - 08/2019", image: "site/Projects/gingerbread.png", 
-                        website: "https://www.playstation.com/en-gb/games/sackboy-a-big-adventure/", video: "https://www.youtube.com/embed/ZOk3fj5ujNM",
-                        tagline: "Iconic PlayStation® hero Sackboy bursts back into breathtaking action with a huge, fun and frantic 3D multiplayer platforming adventure - and a whole new edgy sackitude!",
-                        skills: [ "ue4", "cpp", "uebp", "vs", "pfv", "cs", "html", "css", "js", "nodejs" ] });
-                    </script>
+                    <script>SITE.Generate("project", DATA.Projects.SumoDigital.Gingerbread);</script>
                     <p>
                         As a Junior Programmer in the months leading up to the game's release, my responsibilities for this game were focused on developing and maintaining Sackboy. 
                         My tasks primarily revolved around polishing Sackboy's abilities, with notable fixes I personally implemented including:
@@ -359,6 +317,7 @@
 
         </main>
 
+        <!-- Projects -->
         <main id='projects' class='content' hidden>
 
             <div class='block'>
@@ -372,25 +331,16 @@
 
             <div id='projects-independent' class='block'>
 
-                <script>SITE.GenerateBanner(document.currentScript, { title: "INDEPENDENT PROJECTS", subtitle: "192.168.0.1", icon: "site/logo.png", tags: [{ text: "Jack of All Trades", info: "01000001 - 01011010" }] });</script>
+                <script>SITE.Generate("banner", DATA.Banners.Independent);</script>
 
                 <div id='project-portfolio' class='project'>
-                    <script>
-                        SITE.GenerateProject(document.currentScript, { title: "Portfolio Website", timespan: "06/2024 - Current", image: "lucide-code", 
-                        website: "https://github.com/jm-2808/jm-2808.github.io",
-                        tagline: "You're looking at it",
-                        skills: [ "html", "css", "js", "vsc", "github" ] });
-                    </script>
+                    <script>SITE.Generate("project", DATA.Projects.Portfolio);</script>
                     <p>This portfolio website was designed and coded by me! My apologies if it breaks on weird resolutions, the page is only designed with 16:9 aspect ratios in mind for now</p>
                     <p>The site is hosted using <a href='https://pages.github.com/' target='_blank'>Github Pages</a> and uses the <a href='https://lucide.dev/' target='_blank'>Lucide</a> icon library (See bottom left of the page)</p>
                 </div><hr>
 
                 <div id='project-azimov' class='project'>
-                    <script>
-                        SITE.GenerateProject(document.currentScript, { title: "Azimov", timespan: "07/2024 - Current", image: "lucide-bot", 
-                        tagline: "Sir the robots appear to have formed a union",
-                        skills: [ "gd4", "cs", "blend4", "github" ] });
-                    </script>
+                    <script>SITE.Generate("project", DATA.Projects.Independent.Azimov);</script>
                     <p>
                         Azimov (named after famous science fiction writer Isaac Azimov) is a programming puzzle game which tasks the player with using a simple scripting language to program drones and complete various puzzles.
                         The puzzles range from simple goals, such as helping a single drone reach a destination, to complex manipulation of multiple drones to accomplish tasks simultaneously
@@ -413,13 +363,23 @@
                     </p>
                 </div><hr>
 
+                <div id='project-arcana' class='project'>
+                    <script>SITE.Generate("project", DATA.Projects.Independent.Arcana);</script>
+                    <p>
+                        I decided to learn about VR development in my spare time, which lead to the creation of a simple demo project in <i data-skill='ue4'></i> featuring basic world interaction and a simple magic system.
+                    </p>
+                    <p>
+                        Using a <b>Valve Index</b>, I explored the hand tracking API and created a simple system which could detect surfaces and use IK to allow the hands and fingers to stop when encountering a surface.
+                        I then expanded this system to determine a grip strength based on how closed the virtual hands were, which allowed the user to pickup objects if they were securely grasped or lifted with two hands.
+                    </p>
+                    <p>
+                        Finally, I added the magic system which allowed the user to draw "sigils" which could be combined to form spells.
+                        Drawing was done by using the index finger (while holding a button with the thumb) to link points in the space in front of the player and was inspired by pattern-style phone lock screens
+                    </p>
+                </div><hr>
+
                 <div id='project-blackjack' class='project'>
-                    <script>
-                        SITE.GenerateProject(document.currentScript, { title: "Blackjack", timespan: "2018 / 2020", image: "site/Projects/blackjack.png", 
-                        website: "https://github.com/jm-2808/sample-blackjack",
-                        tagline: "Hit, Stand or Surrender",
-                        skills: [ "cpp", "vs" ] });
-                    </script>
+                    <script> SITE.Generate("project", DATA.Projects.Independent.Blackjack); </script>
                     <p>
                         During university, I developed a simple windows console version of the popular card game "Blackjack" in my free time to practice skills I had learned.
                         I developed 2 versions of the game:
@@ -442,15 +402,10 @@
 
             <div id='projects-university' class='block'>
 
-                <script>SITE.GenerateBanner(document.currentScript, { title: "UNIVERSITY ASSIGNMENTS", subtitle: "Sheffield Hallam University", icon: "site/Banners/university.png", tags: [{ text: "BSc Computer Science for Games", info: "09/2016 - 08/2020" }] });</script>
+                <script>SITE.Generate("banner", DATA.Banners.University);</script>
 
                 <div id='project-niobium' class='project'>
-                    <script>
-                        SITE.GenerateProject(document.currentScript, { title: "Modular Weapon System", timespan: "09/2019 - 05/2020", image: "site/Projects/niobium.png", 
-                        website: "https://github.com/jm-2808/sample-project_niobium",
-                        tagline: "Weapons charged and ready",
-                        skills: [ "ue4", "cpp", "uebp", "vs", "github" ] });
-                    </script>
+                    <script>SITE.Generate("project", DATA.Projects.University.Niobium);</script>
                     <p>
                         My final project at university, this project is focused on a weapon which can be altered dynamically at runtime through the use of components and parameters
                     </p>
@@ -470,12 +425,7 @@
                 </div><hr>
 
                 <div id='project-rambler' class='project'>
-                    <script>
-                        SITE.GenerateProject(document.currentScript, { title: "Stealing Stuff", timespan: "01/2020 - 05/2020", image: "site/Projects/rambler.png", 
-                        website: "https://github.com/jm-2808/sample-stealing_stuff", video: "https://www.youtube.com/embed/tQ39e2bVUx4",
-                        tagline: "You know what they say about 'if it ain't nailed down', but if it is ... find a claw hammer",
-                        skills: [ "ue4", "cpp", "uebp", "vs", "github" ] });
-                    </script>
+                    <script>SITE.Generate("project", DATA.Projects.University.Rambler);</script>
                     <p>
                         A group project from my final year, Stealing Stuff is an arcade-style game where players sneak around to steal everything that isn't nailed down and work together as a team to steal larger items. 
                         This project achieved <b>3rd place</b> in both the <b>Sumo Digital Award for Game Design</b> and <b>Rockstar Leeds Award for Best Team</b> categories at the Game Republic Student Showcase 2020
@@ -502,12 +452,7 @@
                 </div><hr>
 
                 <div id='project-dungeon' class='project'>
-                    <script>
-                        SITE.GenerateProject(document.currentScript, { title: "Dungeon Hunt", timespan: "09/2019 - 12/2019", image: "site/Projects/dungeon.png", 
-                        website: "https://github.com/jm-2808/sample-dungeon_hunt",
-                        tagline: "There's a surprising lack of loot in here",
-                        skills: [ "dx11", "cpp", "vs", "github" ] });
-                    </script>
+                    <script>SITE.Generate("project", DATA.Projects.University.Dungeon);</script>
                     <p>
                         A group project from my final year, Dungeon Hunt is a first person combat game developed using the DirectX API where the player makes their way through a series of levels using weapons to defeat enemy drones.
                     </p>

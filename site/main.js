@@ -1,3 +1,11 @@
+//=== Site ============================================================================================
+
+var SITE = SITE || {}; 
+
+//-----------------------------------------------------------------
+
+SITE.Page = "blank";
+
 //=== Events ==========================================================================================
 // Delayed Page Open
 
@@ -20,7 +28,7 @@ window.onload = function()
 
 window.onscroll = function() 
 {
-    if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)
+    if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 50)
     {
         document.getElementById("scroll-top-button").style.display = "";
     }
@@ -30,38 +38,76 @@ window.onscroll = function()
     }
 }
 
-//=== Site ============================================================================================
+//=== Design ==========================================================================================
 
-var SITE = SITE || {}; 
+SITE.Generate = function(type, data)
+{
+    const script = document.currentScript;
+    var content = "";
 
-//-----------------------------------------------------------------
+    if(type === "banner") //------------------------------------------------
+    {
+        var icon = "<i class='icon'></i>";
+        if(data.icon)
+        {
+            icon = (data.icon.startsWith("lucide-") ? "<i class='icon'><i data-lucide='" + data.icon.replace("lucide-", "") + "'></i></i>" : "<img class='icon' src='" + data.icon + "'>");
+        }
 
-SITE.Page = "blank";
+        var title = "<h1>" + data.title + "</h1>" + ( data.subtitle ? "<span class='text-small'>" + data.subtitle + "</span>" : "" );
 
-//-----------------------------------------------------------------
+        var notes = "";
+        for (let index = 0; index < data.notes.length; ++index) 
+        {
+            notes += ((index > 0) ? "<div class='vr'></div>" : "") + "<span class='highlight'>" + data.notes[index].tag + "</span>" + data.notes[index].text;
+        }
 
-SITE.Hints = Object.freeze([
-    // General
-    "This loading screen is purely aesthetic",
-    "Cannot find 'Package McPackageface'",
-    "&#8593; &#8593; &#8595; &#8595; &#8592; &#8594; &#8592; &#8594; B A",
-    // Games
-    "Press A to jump",
-    "Gotta go fast",
-    "Where's that damn fourth Chaos Emerald",
-    "&#8593; &#8594; &#8595; &#8595; &#8595;",
-    "*ping* WE'RE RICH *ping* WE'RE RICH *ping* WE'RE RICH",
-    // TV
-    "Secret material: HIDEN Metal [ METAL CLUSTER HOPPER ] It's high quality",
-    "Get ready for BOOST and MAGNUM! Ready? Fight!",
-    // Pop Culture
-    "The Robotniks have entered the chat",
-    "<a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ' target='_blank'>Never gonna give you up</a>",
-    "<a href='https://www.youtube.com/watch?v=Nk6tzVF1wQc' target='_blank'>idonevenevenwannasellittyouanyway</a>",
-    "transcendental cha-cha time"
-]);
+        content = "<div class='banner'>" + icon + "<div class='row title'>" + title + "</div><div class='row subtitle'>" + notes + "</div></div>";
+    }
+    else if(type === "project") //------------------------------------------
+    {
+        var website = "";
+        if(data.website)
+        {
+            var title = (data.website.includes("github.com") ? "View Source Files" : "Visit Website" );
+            var icon = (data.website.includes("github.com") ? "github" : "external-link" );
+            website = "<a class='button' href='" + data.website + "' title='" + title + "' target='_blank'><i data-lucide='" + icon + "'></i></a>";
+        }
 
-//-----------------------------------------------------------------
+        var video = "";
+        if(data.video)
+        {
+            video = "<iframe class='video' src='" + data.video + "' title='Trailer'></iframe>";
+            //video = "<iframe class='video' src='" + data.video + "' title='Trailer' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>";
+        }
+
+        var image = "<div class='image'><i data-lucide='cog'></i></div>";
+        if(data.image)
+        {
+            image = (data.image.startsWith("lucide-") ? "<i class='image'><i data-lucide='" + data.image.replace("lucide-", "") + "'></i></i>" : "<img class='image' src='" + data.image + "'>");
+        }
+
+        var header = "<div class='row header'><h2 class='title'>" + data.title + "</h2><span class='subtitle'>" + data.duration + "</span></div>";
+        var tagline = "<div class='row quote'>\"" + data.tagline + "\"</div>";
+
+        var skills = "<div class='row skills'>";
+        for (let index = 0; index < data.skills.length; ++index) 
+        {
+            skills += "<i data-skill='" + data.skills[index] + "'></i>";
+        }
+        skills += "</div>";
+
+        content = "<div class='media'>" + website + video + image + "</div>" + header + tagline + skills + "<div class='toggle'><button class='button' onClick='SITE.ToggleProject(this);'>Open</button></div>";
+    }
+    else //-----------------------------------------------------------------
+    {
+        content += "<h1 class='title'>ERROR</h1>";
+    }
+
+    script.insertAdjacentHTML("afterend", content);
+    script.remove();
+}
+
+//=== Function ========================================================================================
 
 SITE.SetTitle = function(title)
 {
@@ -70,19 +116,16 @@ SITE.SetTitle = function(title)
 
 //-----------------------------------------------------------------
 
-SITE.ShuffleHint = function()
+SITE.SetTheme = function(theme)
 {
-    const element = document.getElementById("loading-hint");
-
-    var hint = "";
-    do
+    if(theme == "toggle")
     {
-        const index = Math.floor(Math.random() * SITE.Hints.length);
-        var hint = SITE.Hints[index];
-    } 
-    while(hint == element.innerHTML)
-    
-    element.innerHTML = hint;
+        const toggle = document.getElementById("theme-toggle");
+        theme = (toggle.checked ? "light" : "dark");
+    }
+
+    const style = document.getElementById("theme-style");
+    style.href = "site/Themes/" + theme + ".css";
 }
 
 //-----------------------------------------------------------------
@@ -110,16 +153,19 @@ SITE.ScrollTo = function(id)
 
 //-----------------------------------------------------------------
 
-SITE.LoadTheme = function(theme)
+SITE.ShuffleHint = function()
 {
-    if(theme == "toggle")
-    {
-        const toggle = document.getElementById("theme-toggle");
-        theme = (toggle.checked ? "light" : "dark");
-    }
+    const element = document.getElementById("loading-hint");
 
-    const style = document.getElementById("theme-style");
-    style.href = "site/Themes/" + theme + ".css";
+    var hint = "";
+    do
+    {
+        const index = Math.floor(Math.random() * DATA.Hints.length);
+        var hint = DATA.Hints[index];
+    } 
+    while(hint == element.innerHTML)
+    
+    element.innerHTML = hint;
 }
 
 //-----------------------------------------------------------------
@@ -175,101 +221,6 @@ SITE.LoadPage = function(page)
 
     screen.style.opacity = 1;
     screen.style.pointerEvents = "auto";
-}
-
-//-----------------------------------------------------------------
-
-SITE.Generate = function(script)
-{
-    const parent = script.parentElement;
-
-    content = "<h1 class='title'>" + parent.id + "</h1>";
-
-    script.insertAdjacentHTML("afterend", content);
-    script.remove();
-}
-
-//-----------------------------------------------------------------
-
-SITE.GenerateBanner = function(script, data)
-{
-    var icon = "<i class='icon'></i>";
-    if(data.icon != undefined)
-    {
-        if(data.icon.startsWith("lucide-"))
-        {
-            var lucide = data.icon.replace("lucide-", "");
-            icon = "<i class='icon'><i data-lucide='" + lucide + "'></i></i>";
-        }
-        else
-        {
-            icon = "<img class='icon' src='" + data.icon + "'>";
-        }
-    }
-
-    var title = "<h1>" + data.title + "</h1>";
-    if(data.subtitle != undefined) { title += "<span class='text-small'>" + data.subtitle + "</span>"; }
-    
-    var subtitle = "";
-    for (let index = 0; index < data.tags.length; ++index) 
-    {
-        if(index > 0) { subtitle += "<div class='vr'></div>" };
-        subtitle += "<span class='highlight'>" + data.tags[index].text + "</span>" + data.tags[index].info;
-    }
-
-    var content = "<div class='banner'>" + icon + "<div class='row title'>" + title + "</div><div class='row subtitle'>" + subtitle + "</div></div>";
-    script.insertAdjacentHTML("afterend", content);
-    script.remove();
-}
-
-//-----------------------------------------------------------------
-
-SITE.GenerateProject = function(script, data)
-{
-    var website = "";
-    if(data.website != undefined)
-    {
-        var title = (data.website.includes("github.com") ? "View Source Files" : "Visit Website" );
-        var icon = (data.website.includes("github.com") ? "github" : "external-link" );
-        website = "<a class='button' href='" + data.website + "' title='" + title + "' target='_blank'><i data-lucide='" + icon + "'></i></a>";
-    }
-
-    var video = ""
-    if(data.video != undefined)
-    {
-        video = "<iframe class='video' src='" + data.video + "' title='Trailer' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>";
-    }
-
-    var image = "<div class='image'><i data-lucide='cog'></i></div>"
-    if(data.image != undefined)
-    {
-        if(data.image.startsWith("lucide-"))
-        {
-            var lucide = data.image.replace("lucide-", "");
-            image = "<i class='image'><i data-lucide='" + lucide + "'></i></i>";
-        }
-        else
-        {
-            image = "<img class='image' src='" + data.image + "'>";
-        }
-    }
-
-    var media = "<div class='media'>" + website + video + image + "</div>";
-    var header = "<div class='row header'><h2 class='title'>" + data.title + "</h2><span class='subtitle'>" + data.timespan + "</span></div>";
-    var tagline = "<div class='row quote'>\"" + data.tagline + "\"</div>";
-
-    var skills = "<div class='row skills'>";
-    for (let index = 0; index < data.skills.length; ++index) 
-    {
-        skills += "<i data-skill='" + data.skills[index] + "'></i>";
-    }
-    skills += "</div>";
-
-    var toggle = "<div class='toggle'><button class='button' onClick='SITE.ToggleProject(this);'>Open</button></div>"
-    
-    var content = media + header + tagline + skills + toggle;
-    script.insertAdjacentHTML("afterend", content);
-    script.remove();
 }
 
 //-----------------------------------------------------------------
