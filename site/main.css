@@ -4,6 +4,7 @@
 .block#projects-university .banner  { --banner-colour: #B60050; --banner-text: white; }
 .block#games-sumodigital .banner    { --banner-colour: #BE1E2D; --banner-text: white; }
 .block#games-blacktower .banner     { --banner-colour: #0A0E11; --banner-text: white; }
+.block#games-blazinggriffin .banner { --banner-colour: #F05623; --banner-text: white; }
 
 /*--- Skills ----------------------------*/
 /* Languages */

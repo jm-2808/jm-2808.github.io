@@ -52,6 +52,11 @@ DATA.Banners = Object.freeze({
     BlackTower: {
         title: "BLACK TOWER STUDIOS", subtitle: "Tokyo, Japan", icon: "site/Banners/blacktower.png",
         notes: [ { tag: "Remote", text: "" }, { tag: "Gameplay Programmer", text: "10/2024 - 02/2025" } ]
+    },
+ 
+    BlazingGriffin: {
+        title: "BLAZING GRIFFIN", subtitle: "Glasgow, Scotland", icon: "site/Banners/blazinggriffin.png",
+        notes: [ { tag: "Remote", text: "" }, { tag: "Gameplay Programmer", text: "10/2025 - Current" } ]
     }
 });
 
@@ -115,8 +120,9 @@ DATA.Projects = Object.freeze({
             skills: [ "ue5", "cpp", "uebp", "vs", "pfv" ]
         },
         Scramble: {
-            title: "Unannounced Project", duration: "08/2023 - 07/2024", tagline: "An unannounced multiplayer platformer developed in Unreal Engine 5",
-            image: "lucide-package-open", video: "", website: "",
+            title: "Project D5", duration: "08/2023 - 07/2024", 
+            tagline: "A slapstick party-platformer royale set in a weird and wonderful alien galaxy deep in the farthest reaches of space where you compete for fame and glory in the galaxy's most popular gameshow!",
+            image: "lucide-package-open", video: "", website: "https://store.steampowered.com/app/3734070/Project_D5/",
             skills: [ "ue5", "cpp", "uebp", "vs", "pfv" ]
         }
     },
