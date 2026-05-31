@@ -1,480 +1,582 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme='dark'>
     <head>
 
-        <title>JM | LOADING...</title>
+        <title>JM | PORTFOLIO</title>
         <!--<link rel='icon' type='image/x-icon' href='assets/favicon.ico'>-->
-        
-        <!-- External Fonts/Icons -->
-        <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Russo+One&display=swap'>
-        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins:ital,wght@0,600,700;1,600,700&display=swap'>
-        <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap'>
-        <script src='https://unpkg.com/lucide@latest'></script>
 
-        <!-- Theme -->
-        <link id='theme-style' rel='stylesheet' href='site/Themes/dark.css'>
+        <!-- Metadata -->
+        <meta name='viewport' content='width=device-width'>
+        <meta property='og:title' content='JM | PORTFOLIO'/>
+        <meta property='og:description' content='Portfolio site for gameplay programmer Jack Magnay'/>
+        <meta property='og:image' content='https://jm-2808.github.io/Assets/logo.png'/>
+        <meta property='og:url' content='https://jm-2808.github.io/'/>
+        
+        <!-- External -->
+        <script src='https://unpkg.com/lucide@1.16.0/dist/umd/lucide.min.js'></script>
 
         <!-- Style/Code -->
-        <link rel='stylesheet' href='site/main.css'>
-        <script src='site/main.js'></script>
-        <script src='site/data.js'></script>
+        <link rel='stylesheet' href='style.css'>
+        <script src='code.js'></script>
 
     </head>
     <body>
 
-        <!-- Main -->
-        <header class='menu'>
-            <div class='profile'>
-                <img class='logo' src='site/logo.png'>
-                <h1 class='title'>Jack Magnay</h1><hr><h2 class='subtitle'>Game Developer</h2>
-                <div class='links'>
-                    <a class='button' title='Mail' href='mailto:jack.magnay.2808@gmail.com' target='_blank'><i data-lucide='mail'></i></a>
-                    <a class='button' title='View CV' href='https://drive.google.com/file/d/1_PTcyZpu6s96YmVSy9Tj0wgc9CwT_OcZ/view?usp=sharing' target='_blank'><i data-lucide='file-user'></i></a>
-                    <a class='button' title='MobyGames' href='https://www.mobygames.com/person/1144805/jack-magnay/' target='_blank'><i data-lucide='fish'></i></a>
-                    <a class='button' title='LinkedIn' href='https://www.linkedin.com/in/jack-magnay-a70595316/' target='_blank'><i data-lucide='linkedin'></i></a>
-                    <a class='button' title='Github' href='https://github.com/jm-2808' target='_blank'><i data-lucide='github'></i></a>
-                </div>
+        <header>
+            <div id='profile'>
+                <img class='logo' src='Assets/logo.png'>
+                <h1>JACK MAGNAY</h1>
+                <button id='menubutton' onclick='Menu();'><i data-lucide='menu'></i></button>
             </div>
-            <nav>
-                <button class='text-button title' title='Home' onClick='SITE.LoadPage("home");'> <i data-lucide='house'></i>HOME </button>
-                <button class='text-button title' title='About Me' onClick='SITE.LoadPage("about");'> <i data-lucide='person-standing'></i>ABOUT ME </button>
-                <button class='text-button title' title='Games' onClick='SITE.LoadPage("games");'> <i data-lucide='gamepad-2'></i>GAMES </button>
-                <button class='text-button title' title='Projects' onClick='SITE.LoadPage("projects");'> <i data-lucide='brain-circuit'></i>PROJECTS </button>
+            <nav id='navigation'>
+                <button onclick='Focus("top");'>HOME</button>
+                <button onclick='Focus("games");'>GAMES</button>
+                <button onclick='Focus("projects");'>PROJECTS</button>
+                <button onclick='Focus("about");'>ABOUT</button>
             </nav>
-            <div class='scroll'>
-                <button id='scroll-top-button' class='button' title='Return to the top of the page' onClick='SITE.ScrollTo("top");' style='display:none;'><i data-lucide='arrow-up-to-line'></i></button>
-            </div>
-            <div class='theme'>
-                <label class='toggle'>
-                    <input id='theme-toggle' type='checkbox' onclick='SITE.SetTheme("toggle");'>
-                    <span class='slider'><i class='icon left' data-lucide='moon'></i><i class='icon right' data-lucide='sun'></i></span>
-                </label>
-            </div>
-            <div class='license'>
-                <p>Hosted via <a href='https://pages.github.com/' target='_blank'>Github Pages</a><br>Last Updated - March 2025</p>
-                <p>Icons from <a href='https://lucide.dev/' target='_blank'>Lucide</a> (ISC License)<br>Copyright (c) 2020, Lucide Contributors</p>
-            </div>
         </header>
 
-        <div id='loading-screen' class='loading'>
-            <h1 class='title'>NOW LOADING...</h1>
-            <div class='spinner'><div class='outer'></div><div class='inner'></div></div>
-            <div id='loading-hint' class='subtitle'>A loading screen tip should appear momentarily...</div>
-        </div>
-
-        <!-- Home -->
-        <main id='home' class='content'>
-
-            <div class='block'>
-                <h1 class='title'>HOME</h1>
-                <p>Watch this space!</p>
-            </div>
-
-            <div class='split'>
-                <div class='block justify'><button class='button title' title='About Me' onClick='SITE.LoadPage("about");' style='height:4vw;'> ABOUT ME </button></div>
-                <div class='block justify'><button class='button title' title='Games' onClick='SITE.LoadPage("games");' style='height:4vw;'> GAMES </button></div>
-                <div class='block justify'><button class='button title' title='Projects' onClick='SITE.LoadPage("projects");' style='height:4vw;'> PROJECTS </button></div>
-            </div>
-
-            <div class='block'>
-                <script>SITE.Generate("banner", DATA.Banners.News("New Projects!", "27/10/2025"));</script>
-                <p class='text-large text-center'>Updated a project which was announced and added a section for a new studio!</p>
-            </div>
-
-            <div class='block'>
-                <script>SITE.Generate("banner", DATA.Banners.News("A new reality", "29/05/2025"));</script>
-                <p class='text-large text-center'>Updated page generation code and added another independent project</p>
-            </div>
-
-            <div class='block'>
-                <script>SITE.Generate("banner", DATA.Banners.News("20,000 word essay", "26/04/2025"));</script>
-                <p class='text-large text-center'>Updated projects with significantly longer descriptions, detailing my involvement with each project and features I was responsible for</p>
-            </div>
-
-            <div class='block'>
-                <script>SITE.Generate("banner", DATA.Banners.News("Generating Website...", "17/03/2025"));</script>
-                <p class='text-large text-center'>Completed some backend <i data-skill='js'></i> work which should make it easier to add projects in the future!</p>
-                <p class='text-center quote'>Also, the home page seems to have become a changelog of sorts</p>
-            </div>
-
-            <div class='block'>
-                <script>SITE.Generate("banner", DATA.Banners.News("Much ado about ... me", "24/02/2025"));</script>
-                <p class='text-large text-center'>The "About Me" page is now implemented!</p>
-            </div>
-
-        </main>
-
-        <!-- About -->
-        <main id='about' class='content' hidden>
-
-            <div class='block'>
-                <h1 class='title'>ABOUT</h1>
-                <p class='text-large text-center'><b>Hi, I'm Jack! I'm a gameplay programmer and video game enthusiast with a passion for platformers and shooters</b></p>
-                <p class='text-center'>I am very adaptable and quick to learn new programming languages, techniques, and development suites, which has allowed me to collaborate with large teams on multiple AAA games and implement various gameplay systems</p>
-                <p class='text-center'>I love making games both professionally and in my free time, but I can also be found playing games such as Ratchet & Clank, Warframe, Sonic the Hedgehog, Zenless Zone Zero and many more!</p>
-            </div>
-
-            <div class='split'>
-                <div class='block'><div class='justify notable'><i data-lucide='calendar-clock'></i><span class='subtitle text-large'>10 years experience (5 years in industry)</span></div></div>
-                <div class='block'><div class='justify notable'><i data-lucide='award'></i><span class='subtitle text-large'>BSc (1st Class Honours) Computer Science for Games</span></div></div>
-            </div>
-
-            <div class='block'>
-                <h1 class='title'>ACCOLADES</h1>
-                <ul>
-                    <li>
-                        <b>Game Republic Student Showcase 2020</b> ( <a href='https://www.youtube.com/watch?v=gAlKd8imVcU' target='_blank'>Showcase</a> ) - "Stealing Stuff"
-                        <ul><li>Sumo Digital Award for Game Design - 3rd place</li><li>Rockstar Leeds Award for Best Team - 3rd place</li></ul>
-                    </li>
-                </ul>
-            </div>
-
-            <div class='block'>
-                <h1 class='title'>SKILLS</h1>
-                <div class='row justify skills'>
-                    <div class='column'>
-                        <div class='row'>
-                            <i data-skill='cpp'><i class='icon'></i></i>
-                            <i data-skill='cs'><i class='icon'></i></i>
-                            <i data-skill='lua'><i class='icon'></i></i>
-                        </div>
-                        <div class='row'>
-                            <i data-skill='html'><i class='icon'></i></i>
-                            <i data-skill='css'><i class='icon'></i></i>
-                            <i data-skill='js'><i class='icon'></i></i>
-                            <i data-skill='ts'><i class='icon'></i></i>
-                        </div>
-                        <div class='row'>
-                            <i data-skill='json'><i class='icon'></i></i>
-                            <i data-skill='xml'><i class='icon'></i></i>
-                            <i data-skill='md'><i class='icon'></i></i>
-                        </div>
-                    </div>
-                    <div class='column'>
-                        <div class='row'>
-                            <i data-skill='ue4'><i class='icon'></i></i>
-                            <i data-skill='ue5'><i class='icon'></i></i>
-                            <i data-skill='unity'><i class='icon'></i></i>
-                            <i data-skill='gd4'><i class='icon'></i></i>
-                        </div>
-                        <div class='row'>
-                            <i data-skill='vs'><i class='icon'></i></i>
-                            <i data-skill='vsc'><i class='icon'></i></i>
-                            <i data-skill='pfv'><i class='icon'></i></i>
-                            <i data-skill='github'><i class='icon'></i></i>
-                        </div>
-                        <div class='row'>
-                            <i data-skill='nodejs'><i class='icon'></i></i>
-                            <i data-skill='blend4'><i class='icon'></i></i>
-                            <i data-skill='obsidian'><i class='icon'></i></i>
-                        </div>
+        <main>
+            <section id='banner'>
+                <div class='marquee'>
+                    <div class='reel'>
+                        <script>Reel(["Assets/Images/gingerbread.png", "Assets/Images/scramble.png", "Assets/Images/stealingstuff.png" ]);</script>
                     </div>
                 </div>
-            </div>
-
-            <div class='block'>
-                <div class='polaroid right'>
-                    <img src='site/Assets/insomniacmuseum.png'>
-                    <span class='title'>Insomniac Museum, Planet Burbank<br>Ratchet & Clank: Going Commando (2003)</span>
+                <div class='info vignette'>
+                    <h1>Hi, I'm Jack</h2>
+                    <h2>A passionate gameplay programmer and video game enthusiast!</h3>
+                    <hr class='fade'>
+                    <nav>
+                        <button onclick='Focus("games");'>GAMES</button>
+                        <button onclick='Focus("projects");'>PROJECTS</button>
+                        <button onclick='Focus("about");'>ABOUT</button>
+                    </nav>
                 </div>
-                <h1 class='title'>INSPIRATION</h1>
-                <p>
-                    A large part of my desire to become a game developer can be attributed to my favourite game: <b>Ratchet & Clank: Going Commando</b> (2003) for the <b>Playstation 2</b>.
-                    There are many reasons I love this game, but the reason I cite it as my inspiration to become a game developer can be attributed to a hidden location within the game known as the <b>Insomniac Museum</b>.
-                </p>
-                <p>
-                    For anyone who hasn't played a Ratchet & Clank game, the Insomniac Museum is a location which appears throughout the series and features various interactive exhibits featuring aspects of the game's development alongside 
-                    developer commentaries. Going Commando was the first game in the series to feature the location and includes content from both itself and the previous game, Ratchet & Clank (2002), with exhibits showcasing:
-                    <ul>
-                        <li>Developement resources - Notably a large testing area for the player's movement</li>
-                        <li>Mechanics demonstrations - Particle effects, breakable meshes and gravity surfaces to name a few</li>
-                        <li>Scrapped content - Models for weapons, enemies and objects which were ultimately unused</li>
-                    </ul>
-                    Alongside the exhibits, the accompanying developer commentaries explain, with an often humourous tone, what each exhibit represents and any challenges the item in question presented.
-                </p>
-                <p>
-                    The museum left a lasting impression, showing the passion of the developers and showcasing work which may have otherwise gone unnoticed or unused, and provides a insight into the game development process at the time.
-                    It also showed me that the development process can be just as fun as the game itself ... and that programmers are often so hopped up on caffeine they may bounce off the walls.
-                </p>
-                <br>
-                <p>
-                    <em>For anyone who has played Ratchet & Clank: Going Commando, I would like to give a notable mention to the Planet Boldan "power line exploit" for allowing me to visit the museum at *reasonable* hours of the day</em>
-                </p>
-            </div>
+            </section>
+            <section id='content'>
+                <div id='games'>
+                    <h1 class='title'><i data-lucide='joystick'></i> GAMES</h1>
+                    <div class='shelf'>
 
+                        <article id='twinrealms' class='display'>
+                            <div class='cover'>
+                                <div class='art'><i data-lucide='heart'></i></div>
+                                <a class='logo' title='Blazing Griffin'><i data-miscicon='blazinggriffin'></i></a>
+                            </div>
+                            <div class='summary'>
+                                <h1>Unnannounced Title</h1>
+                                <span>10/2025 - Present</span>
+                                <div class='links'></div>
+                                <div class='skills'>
+                                    <a title='Unity'><i data-simpleicon='unity'></i></a>
+                                    <a title='C#'><i data-miscicon='csharp'></i></a>
+                                    <a title='Visual Studio'><i data-miscicon='visualstudio'></i></a>
+                                    <a title='FMOD'><i data-simpleicon='fmod'></i></a>
+                                    <a title='Sourcetree'><i data-simpleicon='sourcetree'></i></a>
+                                    <a title='Trello'><i data-simpleicon='trello'></i></a>
+                                </div>
+                            </div>
+                            <div class='details'>
+                                <button class='toggle'><i data-lucide='chevron-up'></i></button>
+                                <div class='content'>
+                                    <span class='context'>Unannounced third-person RPG</span>
+                                    <p>My role involves developing gameplay mechanics and system and contribution to design discussions</p>
+                                    <p>
+                                        Watch this space!
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article id='chainsaw' class='display'>
+                            <div class='cover'>
+                                <img class='art' src='Assets/Images/chainsaw.png'>
+                                <a class='logo' title='Black Tower Studios'><i data-miscicon='blacktowerstudios'></i></a>
+                            </div>
+                            <div class='summary'>
+                                <h1>The Texas Chainsaw Massacre</h1>
+                                <span>10/2024 - 02/2025</span>
+                                <div class='links'>
+                                    <a title='Website' href='https://www.txchainsawgame.com/' target='_blank'><i data-lucide='globe'></i></a>
+                                    <a title='Xbox' href='https://www.xbox.com/en-GB/games/store/the-texas-chain-saw-massacre/9P9F54WDBGH6' target='_blank'><i data-miscicon='xbox'></i></a>
+                                    <a title='PlayStation' href='https://www.playstation.com/en-gb/games/the-texas-chain-saw-massacre/' target='_blank'><i data-simpleicon='playstation'></i></a>
+                                    <a title='Steam' href='https://store.steampowered.com/app/1433140/The_Texas_Chain_Saw_Massacre/' target='_blank'><i data-simpleicon='steam'></i></a>
+                                    <a title='Trailer' href='https://www.youtube.com/watch?v=ISCbJ9RlDgU' target='_blank'><i data-lucide='film'></i></a>
+                                </div>
+                                <div class='skills'>
+                                    <a title='Unreal Engine 4'><i data-simpleicon='unrealengine'></i></a>
+                                    <a title='C++'><i data-simpleicon='cplusplus'></i></a>
+                                    <a title='Visual Studio'><i data-miscicon='visualstudio'></i></a>
+                                    <a title='Perforce'><i data-simpleicon='perforce'></i></a>
+                                </div>
+                            </div>
+                            <div class='details'>
+                                <button class='toggle'><i data-lucide='chevron-up'></i></button>
+                                <div class='content'>
+                                    <p>My role involved providing post-release support and bug-fixing gameplay features in response to player submitted bug reports.</p>
+                                    <p>Features which I provided fixes for included character abilities, character perks and environment objects.</p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article id='scramble' class='display'>
+                            <div class='cover'>
+                                <img class='art' src='Assets/Images/scramble.png'>
+                                <a class='logo' title='Sumo Digital'><i data-miscicon='sumodigital'></i></a>
+                            </div>
+                            <div class='summary'>
+                                <h1>Project D5</h1>
+                                <span>08/2023 - 07/2024</span>
+                                <div class='links'>
+                                    <a title='Steam' href='https://store.steampowered.com/app/3734070/Project_D5/' target='_blank'><i data-simpleicon='steam'></i></a>
+                                </div>
+                                <div class='skills'>
+                                    <a title='Unreal Engine 5'><i data-simpleicon='unrealengine'></i></a>
+                                    <a title='C++'><i data-simpleicon='cplusplus'></i></a>
+                                    <a title='Visual Studio'><i data-miscicon='visualstudio'></i></a>
+                                    <a title='Perforce'><i data-simpleicon='perforce'></i></a>
+                                </div>
+                            </div>
+                            <div class='details'>
+                                <button class='toggle'><i data-lucide='chevron-up'></i></button>
+                                <div class='content'>
+                                    <p>My role involved taking ownership of a prototype game mode, which included any mechanics, player abilities, environment objects and HUDs.</p>
+                                    <p>
+                                        Implementing on the game mode required taking design documentation to cost and breaking down into tasks, then programming the required features.
+                                        Daily communication with design and art teams alongside bi-weekly scrums allowed for rapid iteration, while show-and-tell meetings and feature reviews ensured visibility to any shareholders.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article id='firebird' class='display'>
+                            <div class='cover'>
+                                <div class='art'><i data-lucide='bomb'></i></div>
+                                <a class='logo' title='Sumo Digital'><i data-miscicon='sumodigital'></i></a>
+                            </div>
+                            <div class='summary'>
+                                <h1>Unreleased Project</h1>
+                                <span>06/2022 - 07/2023</span>
+                                <div class='links'></div>
+                                <div class='skills'>
+                                    <a title='Unreal Engine 5'><i data-simpleicon='unrealengine'></i></a>
+                                    <a title='C++'><i data-simpleicon='cplusplus'></i></a>
+                                    <a title='Visual Studio'><i data-miscicon='visualstudio'></i></a>
+                                    <a title='Perforce'><i data-simpleicon='perforce'></i></a>
+                                </div>
+                            </div>
+                            <div class='details'>
+                                <button class='toggle'><i data-lucide='chevron-up'></i></button>
+                                <div class='content'>
+                                    <span class='context'>Unreleased third-person shooter</span>
+                                    <p>My role was divided into two areas of gameplay: prototyping player states and designing a modular weapon system.</p>
+                                    <hr class='fade'>
+                                    <p>
+                                        Player states utilised a combination of the <i data-simpleicon='unrealengine'></i> Gameplay Ability System (GAS) and a custom state machine implementation.
+                                        I was responsible for implementing the death/respawn cycle along with the states required for one of the game's primary movement abilities.
+                                    </p>
+                                    <hr class='fade'>
+                                    <p>
+                                        The modular weapon system was designed to overhaul the existing static weapon system and allow the design team to experiment with various firearm mechanics to quickly iterate on weapon archetypes.
+                                        I was given ownership of the system and collaborated with code and design teams to construct a prototype, which was presented to stakeholders in a feature review meeting.
+                                    </p>
+                                    <p>
+                                        The system used UObject "modules" which encapsulated various mechanics and variations of mechanics, such as firing mechanisms, ammunition types and stat changes.
+                                        These modules could be instanced in editor to edit properties and then compiled in a weapon Blueprint which had sections to allow modules to be active always, while hipfiring or while aiming.
+                                    </p>
+                                    <p>
+                                        For example, a configuration with an automatic trigger and standard rounds in hipfire and a semi-auto trigger, explosive rounds and FOV modifier while aiming could be used for an assault rifle with an underbarrel grenade launcher.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article id='cadillac' class='display'>
+                            <div class='cover'>
+                                <div class='art'><i data-lucide='trophy'></i></div>
+                                <a class='logo' title='Sumo Digital'><i data-miscicon='sumodigital'></i></a>
+                            </div>
+                            <div class='summary'>
+                                <h1>Unreleased Project</h1>
+                                <span>11/2020 - 06/2022</span>
+                                <div class='links'></div>
+                                <div class='skills'>
+                                    <a title='In-house Engine'><i data-lucide='cog'></i></a>
+                                    <a title='C++'><i data-simpleicon='cplusplus'></i></a>
+                                    <a title='Visual Studio'><i data-miscicon='visualstudio'></i></a>
+                                    <a title='Dear ImGui'><i data-lucide='app-window'></i></a>
+                                    <a title='Perforce'><i data-simpleicon='perforce'></i></a>
+                                </div>
+                            </div>
+                            <div class='details'>
+                                <button class='toggle'><i data-lucide='chevron-up'></i></button>
+                                <div class='content'>
+                                    <span class='context'>Unreleased sports game</span>
+                                    <p>My role involved developing frameworks for various supplementary gameplay systems, which were used as the base for various aspects of the game.</p>
+                                    <hr class='fade'>
+                                    <p>
+                                        The first system would track various statistics during gameplay, including information about individual players and teams as a whole.
+                                        The system was structured as an API within the in-house engine, which allowed various areas of the game to simply reference the system and utilise the statisitics it had recorded.
+                                        Much of this information was collated and presented to the player both during and after matches.
+                                    </p>
+                                    <hr class='fade'>
+                                    <p>
+                                        The second system managed running smaller gameplay segments (minigames), which the player could use to practice important gameplay mechanics in fun and abstract scenarios.
+                                        Once the system was implemented, I collaborated with fellow programmers and we were each given primary ownership of a minigame, though development was still done as a team.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article id='gingerbread' class='display'>
+                            <div class='cover'>
+                                <img class='art' src='Assets/Images/gingerbread.png'>
+                                <a class='logo' title='Sumo Digital'><i data-miscicon='sumodigital'></i></a>
+                            </div>
+                            <div class='summary'>
+                                <h1>Sackboy: A Big Adventure</h1>
+                                <span>08/2020 - 11/2020 | 07/2018 - 08/2019</span>
+                                <div class='links'>
+                                    <a title='PlayStation' href='https://www.playstation.com/en-gb/games/sackboy-a-big-adventure/' target='_blank'><i data-simpleicon='playstation'></i></a>
+                                    <a title='Steam' href='https://store.steampowered.com/app/1599660/Sackboy_A_Big_Adventure/' target='_blank'><i data-simpleicon='steam'></i></a>
+                                    <a title='Trailer' href='https://www.youtube.com/watch?v=ZOk3fj5ujNM' target='_blank'><i data-lucide='film'></i></a>
+                                </div>
+                                <div class='skills'>
+                                    <a title='Unreal Engine 4'><i data-simpleicon='unrealengine'></i></a>
+                                    <a title='C++'><i data-simpleicon='cplusplus'></i></a>
+                                    <a title='Visual Studio'><i data-miscicon='visualstudio'></i></a>
+                                    <a title='Perforce'><i data-simpleicon='perforce'></i></a>
+                                </div>
+                            </div>
+                            <div class='details'>
+                                <button class='toggle'><i data-lucide='chevron-up'></i></button>
+                                <div class='content'>
+                                    <p>My role was divided into two timeframes, which each had a different development focus.</p>
+                                    <hr class='fade'>
+                                    <p>
+                                        My later role was during the months leading up to the game's release and involved maintaining and polishing Sackboy's abilities.
+                                        Some notable features I was responsible for include:
+                                    </p>
+                                    <ul>
+                                        <li>Certain areas provided the means for the player to get stuck between a sloped wall and a crate, which was fixed with the entertaining solution of automatically triggering Sackboy's "slap tornado" to destroy the crate.</li>
+                                        <li>Ledge grabbing while holding an object would inconveniently drop the object and so an automatic throw and catch was added to ensure the behaviours would stylishly avoid eachother without the object falling.</li>
+                                        <li>While holding a large crate Sackboy could slide the crate over some high steps, resulting in him helplessly dangling from beneath the crate, which was fixed by giving his arms a minimal amount of stretching to raise the object.</li>
+                                    </ul>
+                                    <hr class='fade'>
+                                    <p>
+                                        My earlier role was during my <b><i data-lucide='graduation-cap'></i> Placement</b> in the game's pre-alpha/alpha stages of development, where I was responsible for developing an "automated player" for QA and testing purposes.
+                                        The system used a manager to send actions to one or more virtual controllers, which would be scripted in Level Blueprint and would include periodic result outputs to the logs.
+                                        Once compiled into a build, an external <a title='C#'><i data-miscicon='csharp'></i></a> Runner application could download the latest stable package <span style='font-size:0.4em'>mcpackageface</span>, run a specified level on a devkit and collate the results from the logs.
+                                        The results would then be sent to a <a title='Node.js'><i data-simpleicon='nodedotjs'></i></a> Server, which had the dual purpose of storing results to be viewed from a <a title='HTML5'><i data-simpleicon='html5'></i></a> web frontend and allowing users to request a specific test to be run.
+                                    </p>
+                                    <p>I additionally collaborated with the core-tech and art teams to adapt a lightweight version of the Runner/Server to be used for automated lighting builds.</p>
+                                </div>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+                <div id='projects'>
+                    <h1 class='title'><i data-lucide='brain-circuit'></i> PROJECTS</h1>
+                    <div class='shelf'>
+
+                        <article id='azimov' class='display'>
+                            <div class='cover'>
+                                <img class='art' src='Assets/Images/azimov.png'>
+                                <a class='logo' title='Personal'><i data-lucide='person-standing'></i></a>
+                            </div>
+                            <div class='summary'>
+                                <h1>Azimov</h1>
+                                <span>07/2024 - Present</span>
+                                <div class='links'></div>
+                                <div class='skills'>
+                                    <a title='Godot 4'><i data-simpleicon='godotengine'></i></a>
+                                    <a title='C#'><i data-miscicon='csharp'></i></a>
+                                    <a title='Visual Studio Code'><i data-miscicon='visualstudiocode'></i></a>
+                                    <a title='Blender'><i data-simpleicon='blender'></i></a>
+                                    <a title='GitHub'><i data-simpleicon='github'></i></a>
+                                    <a title='Obsidian'><i data-simpleicon='obsidian'></i></a>
+                                </div>
+                            </div>
+                            <div class='details'>
+                                <button class='toggle'><i data-lucide='chevron-up'></i></button>
+                                <div class='content'>
+                                    <p>
+                                        Named after famous science-fiction writer <b>Isaac Azimov</b> and inspired by the game <i data-simpleicon='steam'></i> <a href='https://store.steampowered.com/app/1578160/Bots_Are_Stupid/' target='_blank'>Bots Are Stupid</a>, 
+                                        the player controls one or more drones using a simple scripting language to complete tasks ranging from simple navigation to complex parallel control.
+                                    </p>
+                                    <p>
+                                        The project uses a 3D grid-based environment and lockstep timing system, with each step being referred to as a "cycle".
+                                        This ensures the scripting language to remains simple, as each action occurs over a single cycle, and allows the player to more easily sync actions to the world.
+                                        To assist with iteration, world's simulation can be started and stopped at any time by the player, allowing them to observe the world before scripting and validate completed scripts.
+                                    </p>
+                                    <hr class='fade'>
+                                    <p>
+                                        An example drone script for simple object manipulation is as follows:<br><br> 
+                                        <span style='font-family:monospace'>
+                                            repeat 5<br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;move forward<br>
+                                            turn right<br>
+                                            repeat 3<br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;move forward<br>
+                                            grab<br>
+                                            repeat 6<br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;move backward<br>
+                                            repeat 2<br>
+                                            &nbsp;&nbsp;&nbsp;&nbsp;turn left<br>
+                                            drop
+                                        </span>
+                                    </p>
+                                    <hr class='fade'>
+                                    <p>
+                                        The project also features a Minecraft Redstone inspired "circuit" system which drives the puzzle logic, allowing the player to visually identify features such as connections, timers and buttons through physical wires and components in the world.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article id='sariel' class='display'>
+                            <div class='cover'>
+                                <div class='art'><i data-lucide='sparkles'></i></div>
+                                <a class='logo' title='Personal'><i data-lucide='person-standing'></i></a>
+                            </div>
+                            <div class='summary'>
+                                <h1>VR Experiment</h1>
+                                <span>04/2022 - 06/2022</span>
+                                <div class='links'></div>
+                                <div class='skills'>
+                                    <a title='VR'><i data-lucide='rectangle-goggles'></i></a>
+                                    <a title='Unreal Engine 4'><i data-simpleicon='unrealengine'></i></a>
+                                    <a title='C++'><i data-simpleicon='cplusplus'></i></a>
+                                    <a title='Visual Studio'><i data-miscicon='visualstudio'></i></a>
+                                    <a title='GitHub'><i data-simpleicon='github'></i></a>
+                                </div>
+                            </div>
+                            <div class='details'>
+                                <button class='toggle'><i data-lucide='chevron-up'></i></button>
+                                <div class='content'>
+                                    <p>An experiment with <i data-simpleicon='unrealengine'></i> Unreal's VR API which included basic world interaction and a simple gesture-based "magic" system.</p>
+                                    <p>
+                                        The experiment used a <b><i data-simpleicon='steam'></i> Valve Index</b> to allow for hand tracking, which was enhanced with a system to detect in-world surfaces and feed the data to the hand's IK to stop individual fingers on surfaces.
+                                        The system could also record the user's grip strength based on the weighted average of the hand's curl values, allowing the user to pick up objects with an "interaction" component simply by having a secure grip on the object.
+                                        Two-handed lifting was also supported and the object would determine a pivot point based on the grab positions to assist in making object manipulation feel more natural.
+                                    </p>
+                                    <p>
+                                        The "magic" system was added on top of the base framework to prototype a game mechanic concept I had at the time.
+                                        The system used a combination of hand signs and an "aspect" system to produce various effects. 
+                                        Aspects were created using the index finger while holding a button with the thumb to link points on a grid in front of the player and draw shapes, which was inspired by pattern-style phone lock screens.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article id='rambler' class='display'>
+                            <div class='cover'>
+                                <img class='art' src='Assets/Images/stealingstuff.png'>
+                                <a class='logo' title='University'><i data-lucide='graduation-cap'></i></a>
+                            </div>
+                            <div class='summary'>
+                                <h1>Stealing Stuff</h1>
+                                <span>01/2020 - 05/2020</span>
+                                <div class='links'>
+                                    <a title='Github' href='https://github.com/jm-2808/sample-stealing_stuff' target='_blank'><i data-simpleicon='github'></i></a>
+                                    <a title='Trailer' href='https://www.youtube.com/watch?v=tQ39e2bVUx4' target='_blank'><i data-lucide='film'></i></a>
+                                </div>
+                                <div class='skills'>
+                                    <a title='Unreal Engine 4'><i data-simpleicon='unrealengine'></i></a>
+                                    <a title='C++'><i data-simpleicon='cplusplus'></i></a>
+                                    <a title='Visual Studio'><i data-miscicon='visualstudio'></i></a>
+                                    <a title='GitHub'><i data-simpleicon='github'></i></a>
+                                    <a title='Trello'><i data-simpleicon='trello'></i></a>
+                                </div>
+                            </div>
+                            <div class='details'>
+                                <button class='toggle'><i data-lucide='chevron-up'></i></button>
+                                <div class='content'>
+                                    <p>An arcade-style game developed for a final year university group assignment where a team of players is tasked with sneaking around a neighbourhood and stealing every object which isn't nailed down.</p>
+                                    <hr class='fade'>
+                                    <p class='awards'>
+                                        <a href='https://www.youtube.com/watch?v=gAlKd8imVcU' target='_blank'>Game Republic Student Showcase 2020</a><br>
+                                        This project achieved <i data-lucide='medal'></i> 3rd place in both the <b><i data-lucide='trophy'></i> Sumo Digital Award for Game Design</b> and <b><i data-lucide='trophy'></i> Rockstar Leeds Award for Best Team</b> categories
+                                    </p>
+                                    <hr class='fade'>
+                                    <p>
+                                        My role involved acting as the lead programmer, which alongside programming various gameplay mechanics additionally involed delegating tasks to the other programmers.
+                                        I implemented many of the game's core mechanics, including but not limited to:
+                                    </p>
+                                    <ul>
+                                        <li>Dynamic character controls with two distinct modes: world relative and object relative. World relative was the default and moved along cardinal directions, while object relative moved to push/pull/rotate a large object.</li>
+                                        <li>A multiplayer camera rig which provided a 2.5D perspective and would adjust its distance from a focal point to enure all active players remained on screen.</li>
+                                        <li>
+                                            The object interaction system which allowed players to pickup and drop objects. Smaller objects had a low lift force and could be moved alone, while larger objects had a high lift force and required multiple players to move.
+                                            When moving larger objects, the object determines a pivot point based on the player grab positions which is used to drive the player's object relative movement mode.
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article id='niobium' class='display'>
+                            <div class='cover'>
+                                <img class='art' src='Assets/Images/modularweapons.png'>
+                                <a class='logo' title='University'><i data-lucide='graduation-cap'></i></a>
+                            </div>
+                            <div class='summary'>
+                                <h1>Modular Weapons</h1>
+                                <span>09/2019 - 05/2020</span>
+                                <div class='links'>
+                                    <a title='Github' href='https://github.com/jm-2808/sample-project_niobium' target='_blank'><i data-simpleicon='github'></i></a>
+                                </div>
+                                <div class='skills'>
+                                    <a title='Unreal Engine 4'><i data-simpleicon='unrealengine'></i></a>
+                                    <a title='C++'><i data-simpleicon='cplusplus'></i></a>
+                                    <a title='Visual Studio'><i data-miscicon='visualstudio'></i></a>
+                                    <a title='GitHub'><i data-simpleicon='github'></i></a>
+                                </div>
+                            </div>
+                            <div class='details'>
+                                <button class='toggle'><i data-lucide='chevron-up'></i></button>
+                                <div class='content'>
+                                    <p>
+                                        A modular weapon system developed for a final year university assignment which empowers the user to construct weapons from modules and modify properties at runtime.
+                                        This project would later be used as inspiration for a more refined system developed for an unreleased project during my time at <b><i data-miscicon='sumodigital'></i> Sumo Digital</b>.
+                                    </p>
+                                    <p>
+                                        The system is comprised of the main weapon Blueprint and numerous UObject modules which are inserted at runtime, either through manual selection or by using the save/load system to load a configuration from a generated string.
+                                        Modules are split into "cores" and "modifiers":
+                                    </p>
+                                    <ul>
+                                        <li>
+                                            Cores encapsulate base weapon attributes, such as the weapon archetype, trigger type, damage, fire rate, reload speed, etc.
+                                            Cores are named after data structures, such as "scalar" which fires a single projectile (rifle), "struct" which fires many projectiles simultaneously (shotgun) and "vector" which fires a beam.
+                                        </li>
+                                        <li>Modifiers add additional behaviours to projectiles, such as ricochet or homing, and were designed to be able to function in parallel with eachother</li>
+                                    </ul>
+                                    <p>
+                                        Once a module has been inserted into the weapon it can be selected in the runtime interface to modify its properties.
+                                        These properties use small structs representing specific data types (boolean, integer, float, custom, etc.) with delegates to allow the weapon to detect changes and react appropriately.
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article id='blackjack' class='display'>
+                            <div class='cover'>
+                                <img class='art' src='Assets/Images/blackjack.png'>
+                                <a class='logo' title='Personal'><i data-lucide='person-standing'></i></a>
+                            </div>
+                            <div class='summary'>
+                                <h1>Blackjack</h1>
+                                <span>02/2018</span>
+                                <div class='links'>
+                                    <a title='Github' href='https://github.com/jm-2808/sample-blackjack' target='_blank'><i data-simpleicon='github'></i></a>
+                                </div>
+                                <div class='skills'>
+                                    <a title='C++'><i data-simpleicon='cplusplus'></i></a>
+                                    <a title='Visual Studio'><i data-miscicon='visualstudio'></i></a>
+                                    <a title='GitHub'><i data-simpleicon='github'></i></a>
+                                </div>
+                            </div>
+                            <div class='details'>
+                                <button class='toggle'><i data-lucide='chevron-up'></i></button>
+                                <div class='content'>
+                                    <p>A simple windows console version of the popular card game "Blackjack" developed in my free time to practice skills learned during university.</p>
+                                    <p>
+                                        The project featured a standard turn based approach, where players would perform an action each round until a winner was determined.
+                                        Players could enter a name before starting and a simple AI player known as "Dealer" was also present, allowing the game to be played with only a single player.
+                                        An STL vector represented the deck and was used to store cards, which provided out-of-the-box shuffling and card duplication prevention.
+                                    </p>
+                                    <p>A second iteration was later created in 2020 with the same mechanics using threading to produce a game engine style separation between gameplay and input.</p>
+                                </div>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+                <div id='about'>
+                    <h1 class='title'><i data-lucide='person-standing'></i> ABOUT</h1>
+                    <article class='bio'>
+                        <img class='logo' src='Assets/logo.png'>
+                        <div>
+                            <p>
+                                Hi! I'm Jack, a UK-based gameplay programmer with <b><i data-lucide='calendar-clock'></i> 10 years experience</b>.
+                                I graduated from university with First-class Honours in <b><i data-lucide='graduation-cap'></i> BSc. Computer Science for Games</b> and have commercial experience working in award-winning studios 
+                                such as <i data-miscicon='sumodigital'></i> <a title='Sumo Digital' href='https://www.sumo-digital.com/'>Sumo Digital</a> and <i data-miscicon='blazinggriffin'></i> <a title='Blazing Griffin' href='https://www.blazinggriffin.com/'>Blazing Griffin</a>.
+                                I am very creative, adaptable and quick to learn new programming languages, techniques, and development suites, which has allowed me to collaborate effectively with multi-disciplinary teams on numerous AAA and indie games.
+                            </p>
+                            <hr class='fade'>
+                            <p>
+                                When I'm not working hard on my latest commercial project, I can often be found prototyping game mechanics and designing my own games (some of which can be seen above).
+                                I am incredibly passionate about game development; I love translating creativity and imagination into interactive experiences which can be enjoyed by a wide range of audiences!
+                            </p>
+                        </div>
+                    </article>
+                    <article class='skills'>
+                        <div class='column'>
+                            <h3>Languages</h3>
+                            <div class='group'>
+                                <span><i data-simpleicon='cplusplus'></i>C++</span>
+                                <span><i data-miscicon='csharp'></i>C#</span>
+                                <span><i data-simpleicon='lua'></i>Lua</span>
+                                <span><i data-simpleicon='typescript'></i>TypeScript</span>
+                                <span><i data-simpleicon='javascript'></i>JavaScript</span>
+                                <span><i data-simpleicon='html5'></i>HTML5</span>
+                                <span><i data-simpleicon='css'></i>CSS</span>
+                                <span><i data-simpleicon='json'></i>JSON</span>
+                            </div>
+                        </div>
+                        <div class='column'>
+                            <h3>Development</h3>
+                            <div class='group'>
+                                <span><i data-simpleicon='unrealengine'></i>Unreal</span>
+                                <span><i data-simpleicon='unity'></i>Unity</span>
+                                <span><i data-simpleicon='godotengine'></i>Godot</span>
+                                <span><i data-simpleicon='nodedotjs'></i>Node.js</span>
+                            </div>
+                        </div>
+                        <div class='column'>
+                            <h3>Tools</h3>
+                            <div class='group'>
+                                <span><i data-miscicon='visualstudio'></i>Visual<br>Studio</span>
+                                <span><i data-miscicon='visualstudiocode'></i>VS<br>Code</span>
+                                <span><i data-lucide='app-window'></i>Dear<br>ImGui</span>
+                                <span><i data-simpleicon='blender'></i>Blender</span>
+                                <span><i data-simpleicon='fmod'></i>FMOD</span>
+                            </div>
+                        </div>
+                        <div class='column'>
+                            <h3>Production</h3>
+                            <div class='group'>
+                                <span><i data-simpleicon='git'></i>Git</span>
+                                <span><i data-simpleicon='github'></i>GitHub</span>
+                                <span><i data-simpleicon='perforce'></i>Perforce</span>
+                                <span><i data-simpleicon='sourcetree'></i>Sourcetree</span>
+                                <span><i data-simpleicon='trello'></i>Trello</span>
+                                <span><i data-miscicon='azuredevops'></i>Azure<br>DevOps</span>
+                                <span><i data-simpleicon='obsidian'></i>Obsidian</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
         </main>
 
-        <!-- Games -->
-        <main id='games' class='content' hidden>
-
-            <div class='block'>
-                <h1 class='title'>GAMES</h1>
-                <p class='text-large'>Browse through games I have worked on professionally</p>
-                <div class='section-list justify'>
-                    <button class='button title' onClick='SITE.ScrollTo("games-blazinggriffin");'>BLAZING GRIFFIN</button>
-                    <button class='button title' onClick='SITE.ScrollTo("games-blacktower");'>BLACK TOWER</button>
-                    <button class='button title' onClick='SITE.ScrollTo("games-sumodigital");'>SUMO DIGITAL</button>
-                </div>
+        <footer>
+            <div id='hosting'>
+                <p>Hosted via <a title='Github Pages' href='https://pages.github.com/' target='_blank'>Github Pages</a></p>
+                <p><em>Last Updated: May 2026</em></p>
             </div>
-
-            <div id='games-blazinggriffin' class='block'>
-
-                <script>SITE.Generate("banner", DATA.Banners.BlazingGriffin);</script>
-
-                <p class='text-large'>Watch this space!</p>
-
+            <div id='links'>
+                <a title='Mail' href='mailto:jack.magnay.2808@gmail.com' target='_blank'><i data-lucide='mail'></i></a>
+                <a title='LinkedIn' href='https://www.linkedin.com/in/jack-magnay-a70595316/' target='_blank'><i data-miscicon='linkedin'></i></a>
+                <a title='Github' href='https://github.com/jm-2808' target='_blank'><i data-simpleicon='github'></i></a>
             </div>
-
-            <div id='games-blacktower' class='block'>
-
-                <script>SITE.Generate("banner", DATA.Banners.BlackTower);</script>
-
-                <div id='project-chainsaw' class='project'>
-                    <script>SITE.Generate("project", DATA.Projects.BlackTower.Chainsaw);</script>
-                    <p>
-                        My responsibilities for this game were focused on post-release support, primarily fixing various gameplay features in response to submitted bug reports from players. 
-                        I provided fixes for a variety of features, including:
-                        <ul>
-                            <li><b>Character Abilities</b> such as family member traps</li>
-                            <li><b>Character Perks</b> such as increased victim lockpick difficulty</li>
-                            <li><b>Environment Objects</b> such as the Well underground entrances</li>
-                        </ul>
-                    </p>
-                </div>
-
+            <div id='licences'>
+                <p><a title='Lucide' href='https://lucide.dev/' target='_blank'>Lucide [v1.16.0]</a> (ISC License)<br>Copyright (c) 2020, Lucide Contributors</p>
+                <p><a title='Simple Icons' href='https://simpleicons.org/' target='_blank'>Simple Icons [v16.20]</a> (CC0 License)<br>Maintained by Simple Icons Contributors</p>
             </div>
-
-            <div id='games-sumodigital' class='block'>
-
-                <script>SITE.Generate("banner", DATA.Banners.SumoDigital);</script>
-
-                <div id='project-scramble' class='project'>
-                    <script>SITE.Generate("project", DATA.Projects.SumoDigital.Scramble);</script>
-                    <p>
-                        My responsibilities for this game were focused on development of overarching gameplay mechanics, which included game modes with their associated objects and HUDs.
-                        Due to my ownership of these mechanics, this role involved:
-                        <ul>
-                            <li>Owning, implementing and maintaining various gameplay features</li>
-                            <li>Taking design documentation to cost and breaking down into tasks</li>
-                            <li>Communicating daily with the design and UI disciplines alongside bi-weekly scrums</li>
-                            <li>Partaking in show-and-tell meetings and feature reviews</li>
-                        </ul>
-                    </p>
-                </div><hr>
-
-                <div id='project-firebird' class='project'>
-                    <script>SITE.Generate("project", DATA.Projects.SumoDigital.Firebird);</script>
-                    <p>
-                        My responsibilities for this game were focused on development of the player abilities and player equipment. 
-                        The game used a combination of Unreal's <b>Gameplay Ability System (GAS)</b> and a custom state machine approach to implement the character, which I used to implement both a death/respawn cycle and one of the player's primary movement abilities
-                    </p>
-                    <p>
-                        Later in development, I was tasked with taking ownership of the weapon system and prototyping a new modular approach, which would allow the design team to quickly iterate and construct weapons.
-                        I collaborated with both programmers and designers to produce a prototype system, then presented the proposal in a feature review meeting
-                    </p>
-                    <p> 
-                        The modular weapon blueprint was comprised of UObject "modules", which fell into one of two categories:
-                        <ul>
-                            <li><b>Essential</b> modules were for mechanics such as the firing mechanism (eg. automatic, semi-auto, manual, burst, etc.)</li>
-                            <li><b>Optional</b> modules were for mechanics such as FOV changes and player stat changes (eg. a movement speed decrease which could be used for heavy weapons)</li>
-                        </ul>
-                        These modules were then applied to sections of the blueprint which dictated when they would be active:
-                        <ul>
-                            <li><b>Shared</b> modules were always active while the weapon was held</li>
-                            <li><b>Hipfire</b> modules were active while <em>not</em> aiming</li>
-                            <li><b>Aiming</b> modules were active while aiming</li>
-                        </ul>
-                        <b>Hipfire</b> and <b>Aiming</b> both had properties for <b>Essential</b> modules, which allowed the weapon to have different mechanics depending on aim (eg. changing to an underbarrel weapon while aiming), though <b>Aiming</b> would use the modules specified in <b>Hipfire</b> if left undefined
-                    </p>
-                </div><hr>
-
-                <div id='project-cadillac' class='project'>
-                    <script>SITE.Generate("project", DATA.Projects.SumoDigital.Cadillac);</script>
-                    <p>
-                        My responsibilities for this game were focused on development of various supplementary gameplay systems
-                    </p>
-                    <p>
-                        The first of these systems was a statistics tracking system, which would record information about individual players and teams during gameplay, then collate and present the stats to the player during gameplay and after a match.
-                        This system was structured like an API within the in-house engine, allowing various areas of the game to simply reference the system and record statistics
-                    </p>
-                    <p>
-                        The second system was a framework for smaller gameplay segments (minigames).
-                        Once the system was implemented, I then worked with fellow programmers to implement numerous minigames, which took the existing mechanics of the main game and altered them to allow players to practice mechanics in new and interesting ways
-                    </p>
-                </div><hr>
-
-                <div id='project-gingerbread' class='project'>
-                    <script>SITE.Generate("project", DATA.Projects.SumoDigital.Gingerbread);</script>
-                    <p>
-                        As a Junior Programmer in the months leading up to the game's release, my responsibilities for this game were focused on developing and maintaining Sackboy. 
-                        My tasks primarily revolved around polishing Sackboy's abilities, with notable fixes I personally implemented including:
-                        <ul>
-                            <li>If the player pushes a crate into certain areas, they can jump between the wall and the crate and infinitely fall, which was entertaingly fixed by triggering Sackboy's "slap tornado" and destroying the crate</li>
-                            <li>While holding an object and attempting to ledge grab, the object would be released and often fall off the edge of the ledge, which was fixed by automatically throwing the object before ledge grabbing</li>
-                            <li>While holding an object and walking near certain ledges, the object would slide on to the ledge and cause Sackboy to helplessly dangle, which was fixed by raising the held object if it was too close to a ledge</li>
-                        </ul>
-                    </p>
-                    <p>
-                        As a Placement Programmer during the pre-alpha/alpha stages of development, my responsibilities for this game were focused on developing an automated testing system, which was comprised of multiple parts:
-                        <ul>
-                            <li><i data-skill='ue4'></i> The virtual controller, which allowed the system to produce inputs and emulate how a player would interact with the game</li>
-                            <li><i data-skill='ue4'></i> The script system, which used a specialised manager actor to run sequences of actions authored within a level blueprint and output results to the console</li>
-                            <li><i data-skill='cs'></i> The runner application, which would download the latest stable package <span class='text-tiny'>mcpackageface</span> and run it on devkit, then parse the logs for results and publish along with footage and screenshots</li>
-                            <li><i data-skill='nodejs'></i> The server, which received data from the runner(s) and stored it within a node database, while also issuing requests for tests to the runner(s)</li>
-                            <li><i data-skill='html'></i> The web frontend, which allowed users to view a history of tests for a particular test map or game level, then either watch the recording of the test or view screenshots of results</li>
-                        </ul>
-                        I also later worked with the core-tech and art teams to adapt a lightweight version of the runner/server which could be used for automated lighting builds
-                    </p>
-                </div>
-
-            </div>
-
-        </main>
-
-        <!-- Projects -->
-        <main id='projects' class='content' hidden>
-
-            <div class='block'>
-                <h1 class='title'>PROJECTS</h1>
-                <p class='text-large'>Browse through projects I have worked on in my free time (or at university)</p>
-                <div class='section-list justify'>
-                    <button class='button title' onClick='SITE.ScrollTo("projects-independent");'>INDEPENDENT</button>
-                    <button class='button title' onClick='SITE.ScrollTo("projects-university");'>UNIVERSITY</button>
-                </div>
-            </div>
-
-            <div id='projects-independent' class='block'>
-
-                <script>SITE.Generate("banner", DATA.Banners.Independent);</script>
-
-                <div id='project-portfolio' class='project'>
-                    <script>SITE.Generate("project", DATA.Projects.Portfolio);</script>
-                    <p>This portfolio website was designed and coded by me! My apologies if it breaks on weird resolutions, the page is only designed with 16:9 aspect ratios in mind for now</p>
-                    <p>The site is hosted using <a href='https://pages.github.com/' target='_blank'>Github Pages</a> and uses the <a href='https://lucide.dev/' target='_blank'>Lucide</a> icon library (See bottom left of the page)</p>
-                </div><hr>
-
-                <div id='project-azimov' class='project'>
-                    <script>SITE.Generate("project", DATA.Projects.Independent.Azimov);</script>
-                    <p>
-                        Azimov (named after famous science fiction writer Isaac Azimov) is a programming puzzle game which tasks the player with using a simple scripting language to program drones and complete various puzzles.
-                        The puzzles range from simple goals, such as helping a single drone reach a destination, to complex manipulation of multiple drones to accomplish tasks simultaneously
-                    </p>
-                    <p>
-                        Azimov is set in a 3D grid-based environment and uses a lockstep timing system to ensure actions performed by all entities occur in "cycles", 
-                        eg. a piston may operate over the space of 5 cycles: extending on the 1st cycle, remaining extended for 3 cycles, then retracting on the 5th cycle.
-                        The scriptable drones also conform to these cycles and their commands represent an action that can be performed in a single cycle, with optional parameters where appropriate.
-                        An example drone script could be:
-                        <ul>
-                            <li><b>MOVE 5</b> - Move forwards 5 spaces (each move will take 1 cycle)</li>
-                            <li><b>TURN RIGHT</b> - Turn 90° clockwise</li>
-                            <li><b>GRAB</b> - Grab the object in the space ahead of the drone</li>
-                            <li><b>TURN LEFT</b> - Turn 90° anticlockwise</li>
-                            <li><b>MOVE 3</b> - Move forwards 3 spaces</li>
-                            <li><b>DROP</b> - Drop the held object in the space ahead of the drone</li>
-                            <li>etc.</li>
-                        </ul>
-                        Once the drones have been scripted, the player can execute the program and watch the drone(s) perform the scripted actions in an attempt to complete the puzzle
-                    </p>
-                </div><hr>
-
-                <div id='project-arcana' class='project'>
-                    <script>SITE.Generate("project", DATA.Projects.Independent.Arcana);</script>
-                    <p>
-                        I decided to learn about VR development in my spare time, which lead to the creation of a simple demo project in <i data-skill='ue4'></i> featuring basic world interaction and a simple magic system.
-                    </p>
-                    <p>
-                        Using a <b>Valve Index</b>, I explored the hand tracking API and created a simple system which could detect surfaces and use IK to allow the hands and fingers to stop when encountering a surface.
-                        I then expanded this system to determine a grip strength based on how closed the virtual hands were, which allowed the user to pickup objects if they were securely grasped or lifted with two hands.
-                    </p>
-                    <p>
-                        Finally, I added the magic system which allowed the user to draw "sigils" which could be combined to form spells.
-                        Drawing was done by using the index finger (while holding a button with the thumb) to link points in the space in front of the player and was inspired by pattern-style phone lock screens
-                    </p>
-                </div><hr>
-
-                <div id='project-blackjack' class='project'>
-                    <script> SITE.Generate("project", DATA.Projects.Independent.Blackjack); </script>
-                    <p>
-                        During university, I developed a simple windows console version of the popular card game "Blackjack" in my free time to practice skills I had learned.
-                        I developed 2 versions of the game:
-                        <ul>
-                            <li>The older version was a complete application developed during my second year of university and uses a simple linear execution style</li>
-                            <li>The newer version was an experiement developed during my third year of university and uses threading to allow the game code and input detection to run simultaneously</li>
-                        </ul>
-                        Both versions feature the same gameplay of entering player names, then taking turns to perform an action each round until either a player or the dealer wins.
-                        An stl vector of cards is used during gameplay to represent the deck, which allowed the cards to be shuffled like a physical version of the game and prevented duplicate cards from being generated.
-                    </p>
-                </div>
-
-            </div>
-
-            <div id='gamepad' class='gamepad-container'>
-                <link rel='stylesheet' href='arcade/gamepad.css'>
-                <script src='arcade/gamepad.js'></script>
-                <script>GAMEPAD.Generate("gamepad");</script>
-            </div>
-
-            <div id='projects-university' class='block'>
-
-                <script>SITE.Generate("banner", DATA.Banners.University);</script>
-
-                <div id='project-niobium' class='project'>
-                    <script>SITE.Generate("project", DATA.Projects.University.Niobium);</script>
-                    <p>
-                        My final project at university, this project is focused on a weapon which can be altered dynamically at runtime through the use of components and parameters
-                    </p>
-                    <p>
-                        The modular weapon exists as a generic weapon with basic fire and reload functions, but the behaviour of the weapon is offloaded to it's components:
-                        <ul>
-                            <li>The <b>Core</b> defines the base weapon type and attributes and therefore only one can be equipped</li>
-                            <li><b>Modifiers</b> define various additional properties, such as Ricochet or Homing, and any number of these can be equipped simultaneously</li>
-                        </ul>
-                        Each component has various <b>Parameters</b>, which are UObject derived data classes that encapsulate various types (boolean, integer, float, custom, etc.).
-                        Parameters use delegates to allow the component to detect and react to changes, such as disabling other parameters or updating internal variables in response to a change.
-                        Through the in-game user interface, the player could both change the components on the weapon and view and modify the parameters of each component to rapidly iterate
-                    </p>
-                    <p>
-                        The system also provides the ability to save to/load from a string, allowing users to share their creations, and was designed to be expanded to allow the users to save configurations in-game for later use
-                    </p>
-                </div><hr>
-
-                <div id='project-rambler' class='project'>
-                    <script>SITE.Generate("project", DATA.Projects.University.Rambler);</script>
-                    <p>
-                        A group project from my final year, Stealing Stuff is an arcade-style game where players sneak around to steal everything that isn't nailed down and work together as a team to steal larger items. 
-                        This project achieved <b>3rd place</b> in both the <b>Sumo Digital Award for Game Design</b> and <b>Rockstar Leeds Award for Best Team</b> categories at the Game Republic Student Showcase 2020
-                    </p>
-                    <p>
-                        I acted as the group's <b>Lead Programmer</b> for this project, which alongside my programming responsiblities also involved delegating tasks to other programmers on the team. 
-                        I worked on multiple core systems of the game, including but not limited to:
-                        <ul>
-                            <li><b>Multiplayer Camera</b> - The camera was designed to provide a 2.5D perspective and will adjust its distance to ensure that all active players are kept on screen</li>
-                            <li>
-                                <b>Character Controls</b> - Third person character controls, with movement, sprinting, a dash and the pickup/drop abilities. The movement has 2 different types: 
-                                <ul>
-                                    <li>"Standard" movement is world relative, allowing the player to move based on cardinal directions</li>
-                                    <li>"Transport" movement is held object relative, allowing the player to push/pull the object with forward/backward input and rotate the object with sideways input</li>
-                                </ul>
-                            </li>
-                            <li>
-                                <b>Object Interaction</b> - Most objects in the game can be picked up, from small household items to large vehicles. 
-                                Each object has a required "lift force", which is determined by it's weight, and this dictates how many players are required to lift an object and how fast they can move while doing so. 
-                                While moving larger objects, the system determines a "pivot point" for the held object based on the respective grab locations of each player and feeds that information back to the players to drive their "Transport" movement mode
-                            </li>
-                        </ul>
-                    </p>
-                </div><hr>
-
-                <div id='project-dungeon' class='project'>
-                    <script>SITE.Generate("project", DATA.Projects.University.Dungeon);</script>
-                    <p>
-                        A group project from my final year, Dungeon Hunt is a first person combat game developed using the DirectX API where the player makes their way through a series of levels using weapons to defeat enemy drones.
-                    </p>
-                </div>
-
-            </div>
-
-        </main>
+        </footer>
 
     </body>
 </html>

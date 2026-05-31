@@ -1,0 +1,141 @@
+/*=== Fonts =================================================================================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=swap');
+
+/*----------------------------------------------------------------*/
+
+body
+{
+    font-family: 'Urbanist', sans-serif;
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
+/*----------------------------------------------------------------*/
+
+a
+{
+    color: inherit;
+
+    font-weight: bold;
+}
+
+/*----------------------------------------------------------------*/
+
+b
+{
+    font-weight: bold;
+}
+
+/*----------------------------------------------------------------*/
+
+h1
+{
+    margin: 0;
+
+    font-family: 'Urbanist', sans-serif;
+    font-size: 5rem;
+    font-weight: 700;
+}
+
+@media (max-width: 767px)
+{
+    h1.title
+    {
+        font-size: 4rem;
+    }
+}
+
+h2
+{
+    margin: 0;
+
+    font-family: 'Urbanist', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 600;
+}
+
+h3
+{
+    margin: 0;
+
+    font-family: 'Urbanist', sans-serif;
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+/*----------------------------------------------------------------*/
+
+button
+{
+    font-family: 'Smooch Sans', sans-serif;
+    font-size: 2rem;
+    font-weight: 650;
+    text-decoration: none;
+}
+
+/*----------------------------------------------------------------*/
+
+button:hover
+{
+    font-weight: 850;
+}
+
+/*--- Overrides --------------------------------------------------*/
+
+#profile h1
+{
+    font-family: 'Smooch Sans', sans-serif;
+    font-size: 2.5rem;
+}
+
+/*----------------------------------------------------------------*/
+
+#banner h2
+{
+    font-size: 1.75rem;
+}
+
+#banner button
+{
+    font-size: 2.5rem;
+}
+
+/*----------------------------------------------------------------*/
+
+#content h1
+{
+    font-family: 'Smooch Sans', sans-serif;
+}
+
+/*----------------------------------------------------------------*/
+
+.display h1
+{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.75em;
+}
+
+/*----------------------------------------------------------------*/
+
+#about .bio
+{
+    font-size: 110%;
+}
+
+#about .skills
+{
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 0.9em;
+}
+
+/*----------------------------------------------------------------*/
+
+#links a
+{
+    font-size: 2em;
+}
+
+/*===========================================================================================================================*/

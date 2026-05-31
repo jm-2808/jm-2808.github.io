@@ -1,0 +1,33 @@
+/*=== Themes ================================================================================================================*/
+
+/*--- Dark -------------------------------------------------------*/
+
+:root, [data-theme='dark']
+{
+    --theme-menu-bg: #121214;
+    --theme-menu-fg: #242427;
+    --theme-menu-tx: #FFFFFF;
+    --theme-body-bg: #161618;
+    --theme-body-fg: #1B1B1F;
+    --theme-body-tx: #FFFFFF;
+    --theme-accent-bg: #232D6D;
+    --theme-accent-fg: #466DA8;
+    --theme-accent-tx: #FFFFFF;
+}
+
+/*--- Light ------------------------------------------------------*/
+
+[data-theme='light']
+{
+    --theme-menu-bg: #FFFFFF;
+    --theme-menu-fg: #CFCDCB;
+    --theme-menu-tx: #000000;
+    --theme-body-bg: #F4ECE6;
+    --theme-body-fg: #E8E6E6;
+    --theme-body-tx: #000000;
+    --theme-accent-bg: #232D6D;
+    --theme-accent-fg: #466DA8;
+    --theme-accent-tx: #FFFFFF;
+}
+
+/*===========================================================================================================================*/
