@@ -13,7 +13,7 @@
         <meta property='og:url' content='https://jm-2808.github.io/'/>
         
         <!-- External -->
-        <script src='https://unpkg.com/lucide@1.16.0/dist/umd/lucide.min.js'></script>
+        <script src='https://unpkg.com/lucide@1.35.0/dist/umd/lucide.min.js'></script>
 
         <!-- Style/Code -->
         <link rel='stylesheet' href='style.css'>
@@ -45,7 +45,7 @@
                 </div>
                 <div class='info vignette'>
                     <h1>Hi, I'm Jack</h2>
-                    <h2>A passionate gameplay programmer and video game enthusiast!</h3>
+                    <h2>A passionate gameplay developer and video game enthusiast!</h3>
                     <hr class='fade'>
                     <nav>
                         <button onclick='Focus("games");'>GAMES</button>
@@ -57,7 +57,33 @@
             <section id='content'>
                 <div id='games'>
                     <h1 class='title'><i data-lucide='joystick'></i> GAMES</h1>
+                    <div class='guide'>Click the arrow at the bottom of each display to read more about the project!</div>
                     <div class='shelf'>
+
+                        <article id='rainbow' class='display'>
+                            <div class='cover'>
+                                <div class='art'><i data-lucide='bird'></i></div>
+                                <a class='logo' title='Unnamed Team'><i data-lucide='turtle'></i></a>
+                            </div>
+                            <div class='summary'>
+                                <h1>Unnannounced Title</h1>
+                                <span>10/2026 - Present</span>
+                                <div class='links'>Unannounced third-person platformer</div>
+                                <div class='skills'>
+                                    <a title='Godot 4'><i data-simpleicon='godotengine'></i></a>
+                                    <a title='C#'><i data-miscicon='csharp'></i></a>
+                                    <a title='Visual Studio'><i data-miscicon='visualstudio'></i></a>
+                                    <a title='GitHub'><i data-simpleicon='github'></i></a>
+                                </div>
+                            </div>
+                            <div class='details'>
+                                <button class='toggle'><i data-lucide='chevron-up'></i></button>
+                                <div class='content'>
+                                    <p>Currently in the pitching stage, with a playable vertical slice in development and ongoing discussions with publishers to secure funding!</p>
+                                    <p>Watch this space!</p>
+                                </div>
+                            </div>
+                        </article>
 
                         <article id='twinrealms' class='display'>
                             <div class='cover'>
@@ -67,7 +93,7 @@
                             <div class='summary'>
                                 <h1>Unnannounced Title</h1>
                                 <span>10/2025 - 09/2026</span>
-                                <div class='links'></div>
+                                <div class='links'>Unannounced third-person RPG</div>
                                 <div class='skills'>
                                     <a title='Unity'><i data-simpleicon='unity'></i></a>
                                     <a title='C#'><i data-miscicon='csharp'></i></a>
@@ -79,7 +105,6 @@
                             <div class='details'>
                                 <button class='toggle'><i data-lucide='chevron-up'></i></button>
                                 <div class='content'>
-                                    <span class='context'>Unannounced third-person RPG</span>
                                     <p>My role involved owning, designing and developing various core mechanics of the game, including player abilities, environment puzzle logic and an inventory system/UI.</p>
                                     <p>
                                         As the project was initially developed by a small close-knit team, I maintained daily communication with the art and design members and work was regularly shown through weekly show-and-tell meetings.
@@ -172,7 +197,7 @@
                             <div class='summary'>
                                 <h1>Unreleased Project</h1>
                                 <span>06/2022 - 07/2023</span>
-                                <div class='links'></div>
+                                <div class='links'>Unreleased third-person shooter</div>
                                 <div class='skills'>
                                     <a title='Unreal Engine 5'><i data-simpleicon='unrealengine'></i></a>
                                     <a title='C++'><i data-simpleicon='cplusplus'></i></a>
@@ -184,7 +209,6 @@
                             <div class='details'>
                                 <button class='toggle'><i data-lucide='chevron-up'></i></button>
                                 <div class='content'>
-                                    <span class='context'>Unreleased third-person shooter</span>
                                     <p>My role was divided into two areas of gameplay: prototyping player states and designing a modular weapon system.</p>
                                     <hr class='fade'>
                                     <p>
@@ -215,7 +239,7 @@
                             <div class='summary'>
                                 <h1>Unreleased Project</h1>
                                 <span>11/2020 - 06/2022</span>
-                                <div class='links'></div>
+                                <div class='links'>Unreleased sports game</div>
                                 <div class='skills'>
                                     <a title='In-house Engine'><i data-lucide='cog'></i></a>
                                     <a title='C++'><i data-simpleicon='cplusplus'></i></a>
@@ -228,8 +252,7 @@
                             <div class='details'>
                                 <button class='toggle'><i data-lucide='chevron-up'></i></button>
                                 <div class='content'>
-                                    <span class='context'>Unreleased sports game</span>
-                                    <p>My role involved developing frameworks for various supplementary gameplay systems, which were used as the base for various aspects of the game.</p>
+                                    <p>My role involved developing frameworks for various supplementary gameplay systems using the in-house system, which were used as the base for various aspects of the game.</p>
                                     <hr class='fade'>
                                     <p>
                                         The first system would track various statistics during gameplay, including information about individual players and teams as a whole.
@@ -296,7 +319,49 @@
                 </div>
                 <div id='projects'>
                     <h1 class='title'><i data-lucide='brain-circuit'></i> PROJECTS</h1>
+                    <div class='guide'>Click the arrow at the bottom of each display to read more about the project!</div>
                     <div class='shelf'>
+
+                        <article id='nova' class='display'>
+                            <div class='cover'>
+                                <div class='art'><i data-lucide='galaxy'></i></div>
+                                <a class='logo' title='Personal'><i data-lucide='person-standing'></i></a>
+                            </div>
+                            <div class='summary'>
+                                <h1>Godot Toolkit</h1>
+                                <span>01/2026 - Present</span>
+                                <div class='links'>Technical walkthrough and selected code samples available upon request!</div>
+                                <div class='skills'>
+                                    <a title='Godot 4'><i data-simpleicon='godotengine'></i></a>
+                                    <a title='C#'><i data-miscicon='csharp'></i></a>
+                                    <a title='Visual Studio'><i data-miscicon='visualstudio'></i></a>
+                                    <a title='GitHub'><i data-simpleicon='github'></i></a>
+                                    <a title='Obsidian'><i data-simpleicon='obsidian'></i></a>
+                                </div>
+                            </div>
+                            <div class='details'>
+                                <button class='toggle'><i data-lucide='chevron-up'></i></button>
+                                <div class='content'>
+                                    <p>A framework/toolkit which provides out-of-the-box features inspired by <i data-simpleicon='unrealengine'></i> Unreal and <i data-simpleicon='unity'></i> Unity, including:</p>
+                                    <ul>
+                                        <li>Specialised "Actor", "Mechanism" and "Structure" physics body <b>Entities</b> with built-in time scaling, supporting hybrid <span style='font-family:monospace'>Rigidbody</span> / <span style='font-family:monospace'>CharacterBody</span> dynamic physics simulation and animated/static environmnental objects.</li>
+                                        <li>Modular <b>Component</b> nodes which can be attached to any node for composing and extending behaviour and acquired through <span style='font-family:monospace'>Component.Get&lt;TYPE&gt;(node);</span>.</li>
+                                        <li>The <b>Observer</b> floating camera which manages a stack of transform source nodes, allowing seamless transitions between viewpoints with configuration resources defining transition properties between two named sources.</li>
+                                        <li>
+                                            A <b>Controller</b> node representing a physical player, which can possess any node and provides events to custom nodes implementing the <span style='font-family:monospace'>Controller.IPawn</span> interface.
+                                            The toolkit's <b>Input</b> component can gate input polling based it's parent's possession state provided it inherits the pawn interface.
+                                        </li>
+                                        <li>The <b>Logic</b> hybrid state machine / behaviour tree system using composable "Scopes" and "Tasks", which supports nested logic structures and priority-based transition behaviour.</li>
+                                        <li>
+                                            An Unreal GAS inspired gameplay system comprised of <b>Attribute</b>, <b>Effect</b> and <b>Tag</b> components.
+                                            The attribute component defines and manages attributes and attribute containers, including specialised containers for health/stamina/energy/etc. resource pools, which can then be modified by applying effects to the effect component.
+                                            Effects can also apply "executions", either instantly, over a duration or periodically, allowing for complex behaviour such as damage, healing and non-modifier logic.
+                                        </li>
+                                    </ul>
+                                    <p>Elements of this toolkit have been adapted for an unnannounced title by <b><i data-lucide='turtle'></i> Unnamed Team</b> currently in the pitch phase of development.</p>
+                                </div>
+                            </div>
+                        </article>
 
                         <article id='azimov' class='display'>
                             <div class='cover'>
@@ -306,7 +371,7 @@
                             <div class='summary'>
                                 <h1>Azimov</h1>
                                 <span>07/2024 - Present</span>
-                                <div class='links'></div>
+                                <div class='links'>Showcase and selected code samples available upon request!</div>
                                 <div class='skills'>
                                     <a title='Godot 4'><i data-simpleicon='godotengine'></i></a>
                                     <a title='C#'><i data-miscicon='csharp'></i></a>
@@ -517,7 +582,7 @@
                         <img class='logo' src='Assets/logo.png'>
                         <div>
                             <p>
-                                Hi! I'm Jack, a UK-based gameplay programmer with <b><i data-lucide='calendar-clock'></i> 10 years experience</b>.
+                                Hi! I'm Jack, a UK-based gameplay programmer and designer with <b><i data-lucide='calendar-clock'></i> 11 years experience</b>.
                                 I graduated from university with First-class Honours in <b><i data-lucide='graduation-cap'></i> BSc. Computer Science for Games</b> and have commercial experience working in award-winning studios 
                                 such as <i data-miscicon='sumodigital'></i> <a title='Sumo Digital' href='https://www.sumo-digital.com/'>Sumo Digital</a> and <i data-miscicon='blazinggriffin'></i> <a title='Blazing Griffin' href='https://www.blazinggriffin.com/'>Blazing Griffin</a>.
                                 I am very creative, adaptable and quick to learn new programming languages, techniques, and development suites, which has allowed me to collaborate effectively with multi-disciplinary teams on numerous AAA and indie games.
